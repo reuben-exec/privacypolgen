@@ -1,0 +1,746 @@
+{
+  "meta": {
+    "code": "ka",
+    "name": "Georgian",
+    "nativeName": "ქართული",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "მთავარი",
+    "generator": "გენერატორი",
+    "examples": "მაგალითები",
+    "pricing": "ფასები",
+    "brand": "PrivacyPolGen",
+    "generate": "გენერაცია",
+    "ariaToggleTheme": "თემის გადართვა",
+    "ariaThemeDark": "ნათელ თემაზე გადასვლა",
+    "ariaThemeLight": "მუქ თემაზე გადასვლა"
+  },
+  "hero": {
+    "badge": "უფასო სამუდამოდ · რეგისტრაცია არ არის საჭირო · GDPR · CCPA · COPPA",
+    "heading": "შექმენით კონფიდენციალურობის პოლიტიკა",
+    "headingAccent": "60 წამში.",
+    "subheading": "უპასუხეთ 5 სწრაფ კითხვას. მიიღეთ სრული, ადვოკატის დონის კონფიდენციალურობის პოლიტიკა, რომელიც თქვენს ბიზნესს მორგებულია. დააკოპირეთ, გააზიარეთ ან განათავსეთ საჯარო გვერდზე.",
+    "cta": "შექმენით თქვენი პოლიტიკა",
+    "ctaExamples": "იხილეთ მაგალითები",
+    "footnote": "ანგარიში არ არის საჭირო · მონაცემები სერვერზე არ იგზავნება · გენერირებული პოლიტიკა URL-შია დაშიფრული"
+  },
+  "trustBar": {
+    "label": "მუშაობს თქვენს მიერ უკვე გამოყენებულ ინსტრუმენტებთან",
+    "more": "+ ბევრი სხვა"
+  },
+  "features": {
+    "label": "ფუნქციები",
+    "heading": "ყველაფერი რაც გჭირდებათ. არაფერი რაც არ გჭირდებათ.",
+    "subtext": "კონფიდენციალურობის პოლიტიკის გენერატორი, შემუშავებული ინდი დეველოპერების, პატარა გუნდების და ნებისმიერისთვის, ვისაც ნამდვილი პოლიტიკა სჭირდება $500 ადვოკატის გადახდის გარეშე.",
+    "cards": {
+      "laws": {
+        "title": "კანონები წინასწარ მოცემულია",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD და PDPA-SG. აირჩიეთ თქვენი ბიზნესისთვის შესაფერისი."
+      },
+      "stack": {
+        "title": "თქვენს სტეკს მორგებული",
+        "body": "აირჩიეთ 25+ პოპულარული მესამე მხარის სერვისიდან (Stripe, Google Analytics, Plausible, Mailchimp…) და ჩვენ ავტომატურად ვამატებთ სწორ გამჟღავნებებს."
+      },
+      "url": {
+        "title": "გასაზიარებელი საჯარო URL",
+        "body": "ყოველ პოლიტიკას აქვს უნიკალური გასაზიარებელი URL. განათავსეთ თქვენს დომეინში ან გაუგზავნეთ თქვენს ადვოკატს განხილვისთვის."
+      },
+      "export": {
+        "title": "ნებისმიერ ადგილას ექსპორტი",
+        "body": "დააკოპირეთ Markdown, HTML ან უბრალო ტექსტის სახით. Premium ამატებს PDF და DOCX ექსპორტს."
+      },
+      "legal": {
+        "title": "ნამდვილი სამართლებრივი ტექსტი, არა Lorem Ipsum",
+        "body": "ხელით დაწერილი დებულებები, რომლებიც GDPR, CCPA და COPPA-ს რეალურ სექციებს მიუთითებენ."
+      },
+      "privacy": {
+        "title": "ნული მონაცემები, ნული თვალთვალი",
+        "body": "თქვენი პასუხები თავად URL-შია დაშიფრული. ჩვენ არ ვმართავთ backend-ს და არ ვხედავთ თქვენი პოლიტიკის შინაარსს."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "როგორ მუშაობს",
+    "heading": "ხუთი ნაბიჯი. დაახლოებით ერთი წუთი.",
+    "steps": {
+      "business": {
+        "title": "მოგვიყევით თქვენი ბიზნესის შესახებ",
+        "body": "სახელი, URL, ბიზნესის ტიპი და სად მოქმედებთ. ჩვენ ვიყენებთ ნაგულისხმევ მნიშვნელობებს საერთო შემთხვევებისთვის."
+      },
+      "data": {
+        "title": "აირჩიეთ რას აგროვებთ",
+        "body": "მონიშნეთ თქვენს მიერ შეგროვებული მონაცემების სახეები. სახელები, ელ-ფოსტები, გადახდები, ანალიტიკა და ა.შ."
+      },
+      "services": {
+        "title": "ჩამოთვალეთ თქვენი სერვისები",
+        "body": "Stripe, Google Analytics, Mailchimp და ა.შ. ჩვენ ვამატებთ სწორ მესამე მხარის გამჟღავნებებს."
+      },
+      "laws": {
+        "title": "აირჩიეთ გამოსადეგი კანონები",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. ნაგულისხმევად დავაყენებთ ყველაზე მკაცრ საერთო შემთხვევას."
+      },
+      "policy": {
+        "title": "მიიღეთ თქვენი პოლიტიკა",
+        "body": "დააკოპირეთ Markdown, HTML ან უბრალო ტექსტის სახით. გააზიარეთ საჯარო URL-ით. ნებისმიერ დროს განაახლეთ."
+      }
+    }
+  },
+  "comparison": {
+    "label": "შედარება",
+    "heading": "PrivacyPolGen vs. ალტერნატივები.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "ადვოკატი",
+    "colPaidTemplate": "ფასიანი შაბლონი",
+    "rows": {
+      "price": "ფასი",
+      "time": "დასრულების დრო",
+      "gdprCovers": "GDPR / CCPA დაფარვა",
+      "tailored": "სტეკზე მორგებული",
+      "updatable": "თვით განახლებადი",
+      "url": "გასაზიარებელი URL",
+      "review": "ადვოკატის განხილვა"
+    },
+    "values": {
+      "free": "$0",
+      "seconds": "~60 წამი",
+      "days": "დღეებიდან კვირებამდე",
+      "daysShort": "დღეები",
+      "yes": "დიახ",
+      "yesCustom": "დიახ (მორგებული)",
+      "yesTemplate": "დიახ (შაბლონი)",
+      "yesServices": "დიახ (25+ სერვისი)",
+      "yesAttorney": "დიახ (ადვოკატი)",
+      "partially": "ნაწილობრივ",
+      "no": "არა",
+      "pdfOnly": "მხოლოდ PDF",
+      "recommended": "რეკომენდებული",
+      "included": "ჩართულია",
+      "lawyerPrice": "$500+ per draft",
+      "paidPrice": "$50–$200 / month"
+    }
+  },
+  "pricing": {
+    "label": "ფასები",
+    "heading": "ყველასთვის უფასო. Premium დახვეწილი ფუნქციებისთვის.",
+    "subtext": "ძირითადი გენერატორი უფასოა და უფასო იქნება. Premium გუნდებისთვისაა, ვისაც ექსპორტი და მორგება სჭირდება.",
+    "plans": {
+      "free": {
+        "name": "უფასო",
+        "price": "$0",
+        "period": "სამუდამოდ",
+        "description": "პირადი პროექტებისთვის, ბლოგებისთვის და პატარა საიტებისთვის.",
+        "cta": "შექმენით თქვენი პოლიტიკა",
+        "features": [
+          "სრული კონფიდენციალურობის პოლიტიკა Markdown, HTML და უბრალო ტექსტში",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "ყველა 25+ მესამე მხარის სერვისის გამჟღავნება",
+          "გასაზიარებელი საჯარო URL",
+          "ულიმიტო გენერაციები",
+          "ანგარიში არ არის საჭირო"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$19",
+        "period": "ერთჯერადი",
+        "description": "ბიზნესებისთვის, ვისაც დახვეწილი ექსპორტი და ინტეგრაციები სჭირდება.",
+        "cta": "განაახლეთ Premium-ზე",
+        "ctaComingSoon": "მალე გამოვა",
+        "badge": "ყველაზე სასარგებლო",
+        "features": [
+          "ყველაფერი უფასო პაკეტში",
+          "PDF და DOCX ექსპორტი",
+          "Cookie ბანერის კოდის გენერატორი",
+          "მორგებული ბრენდინგი (თქვენი ლოგო + ფერები)",
+          "განთავსებული პოლიტიკის გვერდი მორგებული დომეინით",
+          "ვერსიის ისტორია და სხვაობები",
+          "პრიორიტეტული მხარდაჭერა"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "კითხვები, პასუხგაცემულია.",
+    "items": [
+      {
+        "q": "ნამდვილად უფასოა ეს კონფიდენციალურობის პოლიტიკის გენერატორი?",
+        "a": "დიახ. შეგიძლიათ სრულიად უფასოდ გენერირება, კოპირება და განთავსება. Premium დონე დაგეგმილია PDF/DOCX ექსპორტით, მაგრამ ძირითადი გენერატორი ყოველთვის უფასო იქნება."
+      },
+      {
+        "q": "საჭიროა თუ არა ანგარიში კონფიდენციალურობის პოლიტიკის გენერირებისთვის?",
+        "a": "ანგარიში არ არის საჭირო. უბრალოდ უპასუხეთ ჩვენი ოსტატის კითხვებს და ჩვენ გენერირებთ თქვენს პოლიტიკას. თქვენი პასუხები გასაზიარებელ URL-შია დაშიფრული — ჩვენს სერვერებზე არაფერი იგზავნება."
+      },
+      {
+        "q": "გენერირებული პოლიტიკა იურიდიულად სავალდებულოა?",
+        "a": "გენერირებული პოლიტიკა საწყისი შაბლონია, რომელიც ფარავს ყველაზე გავრცელებულ სამართლებრივ მოთხოვნებს (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). თუმცა, ყველა ბიზნესი განსხვავებულია. ჩვენ გირჩევთ, საბოლოო პოლიტიკა ადვოკატმა განიხილოს, განსაკუთრებით რეგულირებად ინდუსტრიებში."
+      },
+      {
+        "q": "სად ინახება ჩემი მონაცემები?",
+        "a": "არსად. ჩვენ ვიყენებთ კლიენტის მხარის შეკუმშვას (DEFLATE + Base64 URL-უსაფრთხო დაშიფრვა) თქვენი პასუხების URL ჰეშში ჩასაყენებლად. როცა URL-ს გააზიარებთ, მიმღების ბრაუზერი პოლიტიკას ადგილობრივად დეშიფრავს. ჩვენ არ ვმართავთ backend-ს, არ ვინახავთ ოსტატის პასუხებს და არ გვაქვს წვდომა თქვენი პოლიტიკის შინაარსზე."
+      },
+      {
+        "q": "შემიძლია პოლიტიკის რედაქტირება გენერირების შემდეგ?",
+        "a": "დიახ. უბრალოდ რედაქტირება მოახდინეთ markdown-ს ან HTML-ს ნებისმიერ ტექსტურ რედაქტორში და განათავსეთ ფაილი თქვენს საკუთარ ვებსაიტზე. Premium დონე შესთავაზებს რედაქტირებად რედაქტირებას ვერსიის ისტორიით."
+      },
+      {
+        "q": "ფარავს თუ არა ეს GDPR, CCPA და სხვა კანონებს?",
+        "a": "დიახ. აირჩიეთ თქვენი ბიზნესისთვის გამოსადეგი კანონები ოსტატის მე-4 ნაბიჯში და ჩვენ შევიტანთ შესაბამის დებულებებს (GDPR სამართლებრივი საფუძველი, CCPA opt-out, COPPA მშობლის თანხმობა, PIPEDA წვდომის უფლებები, LGPD სამართლებრივი საფუძველი, PDPA-SG თანხმობის მექანიზმები)."
+      },
+      {
+        "q": "რა განსხვავებაა უფასო და Premium დონეებს შორის?",
+        "a": "უფასო გაძლევთ სრულ კონფიდენციალურობის პოლიტიკას markdown-ში, HTML-ში და უბრალო ტექსტში. Premium ამატებს PDF და DOCX ექსპორტს, Cookie ბანერის კოდის გენერაციას, მორგებულ ბრენდინგს და განთავსებულ პოლიტიკის გვერდებს ვერსიის ისტორიით."
+      },
+      {
+        "q": "როგორ დავამატო პოლიტიკა ჩემს ვებსაიტზე?",
+        "a": "შექმენით გვერდი თქვენს საიტზე (მაგ., /privacy), ჩასვით HTML გამომავალი და დაუკავშირეთ ქვედა კოლონტიტულიდან. თუ გინდათ განთავსებული ვერსია, გააზიარეთ გენერირებული /p?h=... URL — ის დამოუკიდებელი საჯარო გვერდივით მუშაობს."
+      },
+      {
+        "q": "განახლდება თუ არა ჩემი პოლიტიკა კანონების შეცვლისას?",
+        "a": "თქვენს მიერ გენერირებული პოლიტიკა სტატიკური დოკუმენტია გარკვეულ მომენტში. თუ კონფიდენციალურობის კანონები შეიცვლება, მოგიწევთ მისი ხელახლა გენერირება და საიტზე ვერსიის განახლება. ჩვენ განვაახლებთ ჩვენი დებულებების ბიბლიოთეკას უწყვეტად."
+      },
+      {
+        "q": "შემიძლია ეს გამოვიყენო კლიენტის პროექტისთვის?",
+        "a": "რა თქმა უნდა. შეგიძლიათ გენერირება ულიმიტო კლიენტის პროექტებისთვის უფასო დონეზე. ჩვენ გთხოვთ, არ გაავრცელოთ გენერატორი და არ გაყიდოთ გამომავალი შეუცვლელად, როგორც კონკურენტული სერვისი."
+      },
+      {
+        "q": "შეიცავს თუ არა პოლიტიკა Cookie სექციას?",
+        "a": "დიახ — თუ ოსტატის მე-2 ნაბიჯში 'Cookies'-ს აირჩევთ, ჩვენ ვრთავთ სრულ Cookie სექციას, აღწერით აუცილებელი, ანალიტიკური, პრეფერენციის და მარკეტინგის Cookie-ები. ასევე ჩამოვთვლით, რომელ Cookie-ებს შეიძლება დააყენოს თითოეულმა ინტეგრირებულმა სერვისმა."
+      },
+      {
+        "q": "რა მოხდება, თუ არ ვიცი რომელი კანონები მოქმედებს?",
+        "a": "ჩვენ ნაგულისხმევად ვირჩევთ GDPR, CCPA/CPRA და CalOPPA-ს ყველასთვის (რაც ყველაზე მკაცრ საერთო შემთხვევას ფარავს). თუ არ ხართ დარწმუნებული, ნაგულისხმევის დატოვება ჩვეულებრივ ყველაზე უსაფრთხო არჩევანია — მეტი კანონის დაფარვა არასდროს ავნებს და პოლიტიკა ისევ მოქმედი იქნება იმ იურისდიქციებში, სადაც კანონი არ მოქმედებს."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "გენერატორი",
+    "heading": "შექმენით თქვენი კონფიდენციალურობის პოლიტიკა",
+    "subtext": "ხუთი ნაბიჯი. დაახლოებით ერთი წუთი. თქვენი პასუხები თქვენს ბრაუზერში რჩება — სერვერზე არაფერი იგზავნება."
+  },
+  "examplesPage": {
+    "breadcrumb": "მაგალითები",
+    "heading": "იხილეთ ნამდვილი პოლიტიკები, გენერირებული PrivacyPolGen-ის მიერ.",
+    "subtext": "დააჭირეთ ნებისმიერ მაგალითს სრული პოლიტიკის გასახსნელად. თითოეული სრულად კლიენტის მხარეს არის გენერირებული URL-ში დაშიფრული პასუხებიდან.",
+    "openPolicy": "გახსენით პოლიტიკა",
+    "ctaLabel": "გინდათ მორგებული?",
+    "cta": "შექმენით თქვენი საკუთარი",
+    "samples": {
+      "blog": {
+        "description": "Minimal data collection: email via newsletter, basic analytics, cookies. Covers GDPR, CCPA, CalOPPA.",
+        "title": "Personal blog with newsletter"
+      },
+      "ecommerce": {
+        "description": "Online store: addresses, payments, advertising pixels. Covers GDPR, CCPA, CalOPPA, COPPA.",
+        "title": "E-commerce store with ads"
+      },
+      "mobile": {
+        "description": "iOS/Android app: accounts, usage data, push notifications. Covers GDPR, CCPA, CalOPPA, LGPD.",
+        "title": "Mobile app with analytics"
+      },
+      "saas": {
+        "description": "Full SaaS: user accounts, payments via Stripe, email via SendGrid, analytics. Covers GDPR, CCPA, CalOPPA, PIPEDA.",
+        "title": "SaaS application with payments"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "ფასები",
+    "heading": "მარტივი, სამართლიანი ფასები.",
+    "subtext": "ძირითადი გენერატორი ყველასთვის უფასოა. Premium გუნდებისთვისაა, ვისაც დახვეწილი ექსპორტი და ინტეგრაციები სჭირდება."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "გვერდი ვერ მოიძებნა",
+    "message": "გვერდი, რომელსაც ეძებთ, არ არსებობს. გინდათ კონფიდენციალურობის პოლიტიკის გენერირება?",
+    "backHome": "← მთავარზე დაბრუნება",
+    "generate": "გენერირება პოლიტიკა",
+    "messageLead": "The page you're looking for doesn't exist. Want to",
+    "messageLink": "generate a privacy policy",
+    "messageTrail": "instead?"
+  },
+  "homeCta": {
+    "heading": "მზად ხართ თქვენი კონფიდენციალურობის პოლიტიკის გასაგზავნად?",
+    "subtext": "გენერირეთ თქვენი ერთ წუთში. უფასო, სამუდამოდ.",
+    "cta": "შექმენით თქვენი პოლიტიკა"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — შექმენით კონფიდენციალურობის პოლიტიკა 60 წამში.",
+    "jsonLdDescription": "უფასო კონფიდენციალურობის პოლიტიკის გენერატორი ვებსაიტების, SaaS-ის, ელექტრონული კომერციის და მობილური აპლიკაციებისთვის.",
+    "index": {
+      "title": "PrivacyPolGen — უფასო კონფიდენციალურობის პოლიტიკის გენერატორი (GDPR, CCPA, COPPA)",
+      "description": "შექმენით სრული, ადვოკატის დონის კონფიდენციალურობის პოლიტიკა თქვენი ვებსაიტისთვის, SaaS-ისთვის, ელექტრონული კომერციისთვის ან მობილური აპლიკაციისთვის 60 წამში. უფასო, რეგისტრაცია არ არის საჭირო, მონაცემები სერვერზე არ იგზავნება."
+    },
+    "generate": {
+      "title": "შექმენით თქვენი კონფიდენციალურობის პოლიტიკა — PrivacyPolGen",
+      "description": "უპასუხეთ 5 სწრაფ კითხვას და მიიღეთ სრული, ადვოკატის დონის კონფიდენციალურობის პოლიტიკა. უფასო, რეგისტრაცია არ არის საჭირო."
+    },
+    "pricing": {
+      "title": "ფასები — PrivacyPolGen",
+      "description": "PrivacyPolGen სამუდამოდ უფასოა. Premium ამატებს PDF/DOCX ექსპორტს, მორგებულ ბრენდინგს და განთავსებულ პოლიტიკის გვერდებს."
+    },
+    "examples": {
+      "title": "მაგალითი კონფიდენციალურობის პოლიტიკები — PrivacyPolGen",
+      "description": "იხილეთ ნამდვილი კონფიდენციალურობის პოლიტიკები, გენერირებული PrivacyPolGen-ის მიერ სხვადასხვა ბიზნესის ტიპისთვის: ბლოგები, SaaS, ელექტრონული კომერცია და მობილური აპლიკაციები."
+    },
+    "terms": {
+      "title": "Terms of Service — PrivacyPolGen",
+      "description": "PrivacyPolGen Terms of Service — terms governing the use of our free privacy policy generator."
+    },
+    "privacy": {
+      "title": "Privacy Policy — PrivacyPolGen",
+      "description": "PrivacyPolGen's own privacy policy — we collect no personal data. Everything runs client-side in your browser."
+    },
+    "contact": {
+      "title": "Contact — PrivacyPolGen",
+      "description": "Get in touch with PrivacyPolGen. Reach us at support@privacypolgen.com."
+    },
+    "policy": {
+      "title": "კონფიდენციალურობის პოლიტიკა — PrivacyPolGen",
+      "description": "იხილეთ კონფიდენციალურობის პოლიტიკა, გენერირებული PrivacyPolGen-ის მიერ."
+    },
+    "notFound": {
+      "title": "გვერდი ვერ მოიძებნა — PrivacyPolGen",
+      "description": "გვერდი, რომელსაც ეძებთ, არ არსებობს."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "Terms of Service",
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing or using PrivacyPolGen (the \"Service\"), operated by PrivacyPolGen (\"we,\" \"us,\" or \"our\"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, do not use the Service."
+      },
+      "description": {
+        "title": "2. Description of Service",
+        "body": "PrivacyPolGen is a free, client-side privacy policy generator. We provide templated legal language based on your inputs to help you create a starting-point privacy policy for your website, application, or business. The Service runs entirely in your browser — no data you enter is transmitted to, stored on, or processed by our servers."
+      },
+      "notLegalAdvice": {
+        "title": "3. Not Legal Advice",
+        "body": "The content generated by PrivacyPolGen is for informational purposes only and does not constitute legal advice. We are not a law firm, we are not your attorneys, and the use of this Service does not create an attorney-client relationship. You should not act or refrain from acting based on any content generated by the Service without first consulting a qualified attorney licensed in your jurisdiction. The generated policy is a starting template and may not address all legal requirements applicable to your specific situation, business model, or industry."
+      },
+      "noWarranties": {
+        "title": "4. Disclaimer of Warranties",
+        "body": "THE SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ACCURACY. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR THAT ANY GENERATED CONTENT WILL BE COMPLETE, ACCURATE, OR LEGALLY SUFFICIENT FOR YOUR NEEDS."
+      },
+      "limitationLiability": {
+        "title": "5. Limitation of Liability",
+        "body": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE SERVICE — INCLUDING BUT NOT LIMITED TO ANY FINES, PENALTIES, OR LEGAL LIABILITIES INCURRED AS A RESULT OF USING A GENERATED POLICY. OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF $1.00 OR THE AMOUNT YOU HAVE PAID US IN THE PRECEDING TWELVE MONTHS."
+      },
+      "indemnification": {
+        "title": "6. Indemnification",
+        "body": "You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service, the privacy policy you generate, or your violation of these Terms."
+      },
+      "intellectualProperty": {
+        "title": "7. Intellectual Property",
+        "body": "The Service, including its text, templates, clauses, and structure, is owned by us and protected by copyright and other intellectual property laws. The privacy policy you generate is yours to use, modify, and distribute for any lawful purpose. However, you may not copy, redistribute, or resell the generator itself or the underlying clause templates as a competing service."
+      },
+      "thirdParty": {
+        "title": "8. Third-Party Services",
+        "body": "The Service may display references to third-party services (e.g., analytics, payment processors). These references are provided for informational purposes only. We are not responsible for the content, privacy practices, or terms of any third-party services referenced in generated policies."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "body": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \"Last updated\" date. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. We encourage you to review these Terms periodically."
+      },
+      "governingLaw": {
+        "title": "10. Governing Law",
+        "body": "These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of laws principles. Any disputes arising under these Terms shall be resolved exclusively in the courts of [Your Jurisdiction]."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "body": "If you have any questions about these Terms, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "Privacy Policy",
+    "heading": "Our Privacy Policy",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "body": "PrivacyPolGen (\"we,\" \"us,\" or \"our\") operates the website at privacypolgen.com (the \"Service\"). This page explains our approach to privacy — which, in short, is that we collect almost nothing.",
+        "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on our side. The privacy policy generator runs entirely in your browser."
+      },
+      "noCollection": {
+        "title": "Information We Do NOT Collect",
+        "body": "We do not collect, store, or process any personal information about you. Specifically:",
+        "list": [
+          "No account data: We do not require or support user accounts.",
+          "No personal information: We do not ask for or collect your name, email address, or any other personal identifier.",
+          "No payment information: The Service is free. We do not process payments.",
+          "No analytics: We do not run any analytics, tracking pixels, or telemetry on our site.",
+          "No cookies for tracking: We do not use cookies for analytics, advertising, or any tracking purposes.",
+          "No policy data: The answers you provide in the generator wizard are encoded directly into the URL. They are never sent to, stored on, or processed by any server."
+        ]
+      },
+      "technical": {
+        "title": "Technical Data",
+        "body": "Our hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. We do not access, analyze, or share this data."
+      },
+      "localStorage": {
+        "title": "Local Storage",
+        "body": "We use your browser's localStorage to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. We cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "body": "We use the following third-party services, which have their own privacy practices:",
+        "list": [
+          "Fonts (Google Fonts): Font files are loaded from Google's servers. Google may collect information about font requests per its privacy policy. We self-host where possible to minimize this.",
+          "Hosting: Our static site is served via our hosting provider. Standard server logs may be retained temporarily for security and operational purposes."
+        ]
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "body": "Since we collect no personal data, there is nothing to retain. Any server logs kept by our hosting provider are subject to their retention policies and are not accessed by us."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "body": "Because we collect no personal data, there is no personal data for us to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by our hosting provider, please contact us and we will investigate in good faith."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "body": "If we change this privacy policy, we will update the \"Last updated\" date at the top. Since we collect no data, changes are likely to be rare and minor."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "If you have questions about this privacy policy, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Contact",
+    "heading": "Get in touch",
+    "subtext": "Questions, feedback, or just saying hi? We'd love to hear from you.",
+    "email": {
+      "title": "Email",
+      "body": "We typically respond within 24 hours."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "Report issues or contribute."
+    },
+    "feature": {
+      "title": "Feature Request",
+      "body": "Have an idea? We'd love to hear it."
+    },
+    "legal": {
+      "title": "Legal Inquiry",
+      "body": "For legal questions or requests."
+    }
+  },
+  "footer": {
+    "tagline": "უფასო კონფიდენციალურობის პოლიტიკის გენერატორი ვებსაიტებისთვის, SaaS აპლიკაციებისთვის, ელექტრონული კომერციისთვის და მობილური აპლიკაციებისთვის. GDPR, CCPA, COPPA-თან შესაბამისობა. ანგარიში არ არის საჭირო.",
+    "productHeading": "პროდუქტი",
+    "productGenerator": "გენერატორი",
+    "productExamples": "მაგალითები",
+    "productPricing": "ფასები",
+    "legalHeading": "სამართლებრივი",
+    "legalPrivacy": "კონფიდენციალურობის პოლიტიკა",
+    "legalTerms": "პირობები",
+    "legalContact": "კონტაქტი",
+    "copyright": "სამართლებრივი რჩევა არ არის. კონსულტაციისთვის მიმართეთ ადვოკატს.",
+    "credit": "შემუშავებულია Astro-თი · ინდი დეველოპერებისთვის შექმნილი"
+  },
+  "wizard": {
+    "stepTitles": [
+      "ბიზნესი",
+      "მონაცემები",
+      "სერვისები",
+      "კანონები",
+      "კონტაქტი"
+    ],
+    "step1": {
+      "heading": "მოგვიყევით თქვენი ბიზნესის შესახებ",
+      "subtitle": "ჩვენ ამას ნაგულისხმევად გამოვიყენებთ თქვენი პოლიტიკის მთელ მანძილზე.",
+      "labelBusinessName": "ბიზნესის სახელი *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "ვებსაიტის URL *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "ბიზნესის ტიპი",
+      "labelJurisdiction": "მთავარი იურისდიქცია"
+    },
+    "step2": {
+      "heading": "რა მონაცემებს აგროვებთ?",
+      "subtitle": "მონიშნეთ ყველაფერი რაც მოქმედებს. ჩვენ წინასწარ ამოვირჩიეთ თქვენი ბიზნესის ტიპისთვის საერთო ელემენტები."
+    },
+    "step3": {
+      "heading": "რომელ მესამე მხარის სერვისებს იყენებთ?",
+      "subtitle": "ჩვენ დავამატებთ შესაბამის გამჟღავნებებს თითოეულისთვის."
+    },
+    "step4": {
+      "heading": "რომელი კანონები მოქმედებს?",
+      "subtitle": "ჩვენ ნაგულისხმევად ვირჩევთ ყველაზე მკაცრ საერთო შემთხვევას. ნაგულისხმევის დატოვება ჩვეულებრივ ყველაზე უსაფრთხოა."
+    },
+    "step5": {
+      "heading": "როგორ შეუძლიათ მომხმარებლებს თქვენთან დაკავშირება?",
+      "subtitle": "ეს ელ-ფოსტა თქვენს პოლიტიკაში ჩანს და GDPR & CCPA-ით საჭიროა.",
+      "labelEmail": "საკონტაქტო ელ-ფოსტა *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "მყავს მონაცემთა დაცვის ოფიცერი (DPO)",
+      "descDpo": "საჭიროა GDPR-ის ქვეშ ზოგიერთი ბიზნესისთვის. აირჩიეთ, თუ დანიშნული გყავთ.",
+      "labelDpoEmail": "DPO ელ-ფოსტა",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "უკან",
+      "continue": "გაგრძელება",
+      "generate": "გენერაცია პოლიტიკა"
+    },
+    "validation": {
+      "required": "გთხოვთ შეავსოთ სავალდებულო ველები"
+    },
+    "result": {
+      "heading": "თქვენი კონფიდენციალურობის პოლიტიკა მზადაა.",
+      "subtitle": "დააკოპირეთ Markdown, HTML ან უბრალო ტექსტის სახით. ან გააზიარეთ საჯარო ბმული ქვემოთ.",
+      "publicLink": "საჯარო ბმული",
+      "copyLink": "ბმულის კოპირება",
+      "openTab": "გახსენით ახალ ჩანართში",
+      "editAnswers": "← რედაქტირება თქვენი პასუხები",
+      "toastSuccess": "ბმული დაკოპირდა — ჩასვით ნებისმიერ ადგილას",
+      "toastError": "კოპირება ვერ მოხერხდა — აირჩიეთ და დააკოპირეთ ხელით"
+    },
+    "preview": {
+      "livePreview": "ცოცხალი წინასწარი ხედი",
+      "business": "ბიზნესი",
+      "dataCollected": "შეგროვებული მონაცემები",
+      "services": "სერვისები",
+      "laws": "კანონები",
+      "item_one": "ელემენტი",
+      "item_other": "ელემენტები",
+      "service_one": "სერვისი",
+      "service_other": "სერვისები",
+      "more": "მეტი"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Marketing, design, or development agency with client work and contact forms.",
+        "name": "Agency / Studio"
+      },
+      "ecommerce": {
+        "description": "Online store selling physical or digital products with shopping cart and checkout.",
+        "name": "E-commerce Store"
+      },
+      "mobile-app": {
+        "description": "iOS or Android app with in-app accounts, analytics, and possibly push notifications.",
+        "name": "Mobile App"
+      },
+      "personal-blog": {
+        "description": "A personal blog or content site. Typically collects emails via newsletter and uses basic analytics.",
+        "name": "Personal Blog"
+      },
+      "portfolio": {
+        "description": "Personal portfolio or agency site showcasing work. Minimal data collection.",
+        "name": "Portfolio Website"
+      },
+      "saas": {
+        "description": "Software-as-a-service web application with user accounts, payments, and integrations.",
+        "name": "SaaS Application"
+      }
+    },
+    "dataGroups": {
+      "account": "Account",
+      "identity": "Identity",
+      "marketing": "Marketing",
+      "technical": "Technical",
+      "transaction": "Transaction"
+    },
+    "dataTypes": {
+      "addresses": "Mailing or billing addresses",
+      "ads": "Advertising identifiers and conversion data",
+      "analytics": "Analytics and behavioral data",
+      "companies": "Company or organization name",
+      "cookies": "Cookies and similar tracking technologies",
+      "device-info": "Device and browser information",
+      "emails": "Email addresses",
+      "ip-addresses": "IP addresses",
+      "location-data": "Approximate geographic location",
+      "names": "First and last name",
+      "payments": "Payment information (processed by our payment provider, not stored on our servers)",
+      "phones": "Phone numbers",
+      "usage-data": "Usage data and activity logs",
+      "user-accounts": "Account credentials (usernames, hashed passwords)"
+    },
+    "jurisdictions": {
+      "au": "Australia",
+      "br": "Brazil",
+      "ca": "Canada",
+      "de": "Germany",
+      "dk": "Denmark",
+      "es": "Spain",
+      "fr": "France",
+      "gb": "United Kingdom",
+      "global": "Global",
+      "ie": "Ireland",
+      "in": "India",
+      "it": "Italy",
+      "jp": "Japan",
+      "mx": "Mexico",
+      "nl": "Netherlands",
+      "no": "Norway",
+      "nz": "New Zealand",
+      "se": "Sweden",
+      "sg": "Singapore",
+      "us": "United States"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Requires commercial websites that collect personal information from California users to post a conspicuous privacy policy.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "California, USA"
+      },
+      "ccpa": {
+        "description": "California state privacy law. Grants California residents rights over their personal information, including the right to know, delete, and opt out of sale.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "California, USA"
+      },
+      "coppa": {
+        "description": "Federal law governing the online collection of personal information from children under 13.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "United States (under 13)"
+      },
+      "gdpr": {
+        "description": "EU/EEA/UK comprehensive data protection law. Requires explicit consent, data subject rights, and lawful basis for processing.",
+        "fullName": "General Data Protection Regulation",
+        "name": "GDPR",
+        "region": "European Union + EEA + UK"
+      },
+      "lgpd": {
+        "description": "Brazil's comprehensive data protection law, modeled after the GDPR.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brazil"
+      },
+      "pipeda": {
+        "description": "Canadian federal privacy law governing the collection, use, and disclosure of personal information in commercial activities.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Canada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Advertising",
+      "analytics": "Analytics",
+      "authentication": "Authentication",
+      "emailMarketing": "Email Marketing",
+      "infrastructure": "Infrastructure",
+      "media": "Media",
+      "payments": "Payments"
+    },
+    "services": {
+      "aws": {
+        "description": "Cloud hosting and storage.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, DDoS protection, and DNS services.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "Email marketing platform for creators and small businesses.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "OAuth login using a Facebook account.",
+        "name": "Facebook Login"
+      },
+      "facebook-pixel": {
+        "description": "Conversion tracking and audience-building for Facebook and Instagram ads.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Contextual advertising network by Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Web traffic and user behavior analytics provided by Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "OAuth login using a Google account.",
+        "name": "Google Sign-In"
+      },
+      "lemonsqueezy": {
+        "description": "Merchant of record for digital product sales and subscriptions.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "Email newsletter delivery and audience management.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Product analytics for tracking user actions within web and mobile apps.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Online payment processor supporting PayPal balance and linked accounts.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Privacy-friendly analytics that don't use cookies or collect personal data.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Transactional email delivery service.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Payment processing for credit card transactions.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Embedded Vimeo videos on our pages.",
+        "name": "Vimeo Embeds"
+      },
+      "youtube-embeds": {
+        "description": "Embedded YouTube videos on our pages.",
+        "name": "YouTube Embeds"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "უბრალო ტექსტი"
+    },
+    "copy": "{{format}} კოპირება",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "პოლიტიკის წინასწარი ხედი",
+    "copied": "დაკოპირდა",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "URL-ში პოლიტიკის ჰეში ვერ მოიძებნა. ჯერ გენერირეთ პოლიტიკა.",
+    "errorInvalid": "ეს პოლიტიკის ბმული არასწორი ან დაზიანებულია. გთხოვთ გენერირეთ ახალი.",
+    "generateNew": "გენერირება ახალი პოლიტიკა",
+    "loading": "პოლიტიკა იტვირთება…",
+    "title": "{{businessName}} — კონფიდენციალურობის პოლიტიკა",
+    "lastUpdated": "ბოლოს განახლდა: {{date}}",
+    "generateOwn": "შექმენით თქვენი საკუთარი →"
+  },
+  "copied": "Copied",
+  "copy": "Copy",
+  "empty": "Nothing here yet — start by entering your business details.",
+  "langSwitcher": {
+    "listboxLabel": "Select language",
+    "toggleLabel": "Switch language"
+  },
+  "next": "Next",
+  "prev": "Previous",
+  "preview": "Preview",
+  "selectall": "Select all",
+  "validation": {
+    "contactEmail": "Please enter a valid email address",
+    "required": "Please fill in the required fields"
+  }
+}

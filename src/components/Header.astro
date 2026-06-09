@@ -1,0 +1,50 @@
+---
+// src/components/Header.astro
+import ThemeToggle from './ThemeToggle.astro';
+import LangSwitcher from './LangSwitcher.astro';
+
+const nav = [
+  { href: '/', label: 'Home', i18nKey: 'header.home' },
+  { href: '/generate', label: 'Generator', i18nKey: 'header.generator' },
+  { href: '/examples', label: 'Examples', i18nKey: 'header.examples' },
+  { href: '/pricing', label: 'Pricing', i18nKey: 'header.pricing' },
+];
+const pathname = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur-md">
+  <div class="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group">
+      <img
+        src="/logo.png"
+        alt=""
+        width="28"
+        height="28"
+        class="logo-invert h-7 w-7 rounded-md"
+      />
+      <span class="font-semibold tracking-tight" data-i18n="header.brand">PrivacyPolGen</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 text-sm">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          data-i18n={item.i18nKey}
+          class:list={[
+            'px-3 py-1.5 rounded-md transition-colors',
+            pathname === item.href
+              ? 'text-fg bg-bg-elevated'
+              : 'text-fg-muted hover:text-fg hover:bg-bg-elevated',
+          ]}
+        >{item.label}</a>
+      ))}
+    </nav>
+    <div class="flex items-center gap-2">
+      <ThemeToggle />
+      <a
+        href="/generate"
+        class="inline-flex h-8 items-center rounded-button bg-fg text-bg text-sm font-medium px-3.5 transition-opacity hover:opacity-90"
+        data-i18n="header.generate"
+      >Generate</a>
+      <LangSwitcher />
+    </div>
+  </div>
+</header>

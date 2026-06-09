@@ -1,0 +1,45 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+<footer class="border-t border-border mt-24">
+  <div class="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-4">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 mb-3">
+        <img
+          src="/logo.png"
+          alt=""
+          width="28"
+          height="28"
+          class="logo-invert h-7 w-7 rounded-md"
+        />
+        <span class="font-semibold tracking-tight" data-i18n="header.brand">PrivacyPolGen</span>
+      </div>
+      <p class="text-fg-muted text-sm max-w-sm" data-i18n="footer.tagline">
+        Free privacy policy generator for websites, SaaS apps, e-commerce stores, and mobile apps. GDPR, CCPA, COPPA compliant. No account required.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm font-medium mb-3" data-i18n="footer.productHeading">Product</h4>
+      <ul class="space-y-2 text-sm text-fg-muted">
+        <li><a class="hover:text-fg transition-colors" href="/generate" data-i18n="footer.productGenerator">Generator</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/examples" data-i18n="footer.productExamples">Examples</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/pricing" data-i18n="footer.productPricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-sm font-medium mb-3" data-i18n="footer.legalHeading">Legal</h4>
+      <ul class="space-y-2 text-sm text-fg-muted">
+        <li><a class="hover:text-fg transition-colors" href="/privacy" data-i18n="footer.legalPrivacy">Privacy Policy</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/terms" data-i18n="footer.legalTerms">Terms</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/contact" data-i18n="footer.legalContact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-border">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-fg-faint">
+      <p>© {year} PrivacyPolGen. <span data-i18n="footer.copyright">Not legal advice. Consult an attorney for your specific situation.</span></p>
+      <p data-i18n="footer.credit">Built with Astro · Made for indie developers</p>
+    </div>
+  </div>
+</footer>

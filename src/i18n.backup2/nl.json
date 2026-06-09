@@ -1,0 +1,746 @@
+{
+  "meta": {
+    "code": "nl",
+    "name": "Dutch",
+    "nativeName": "Nederlands",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "Home",
+    "generator": "Generator",
+    "examples": "Voorbeelden",
+    "pricing": "Prijzen",
+    "brand": "PrivacyPolGen",
+    "generate": "Genereren",
+    "ariaToggleTheme": "Thema wisselen",
+    "ariaThemeDark": "Schakel over naar licht thema",
+    "ariaThemeLight": "Schakel over naar donker thema"
+  },
+  "hero": {
+    "badge": "Gratis voor altijd · Geen aanmelding · GDPR · CCPA · COPPA",
+    "heading": "Genereer een privacybeleid",
+    "headingAccent": "in minder dan 60 seconden.",
+    "subheading": "Beantwoord 5 snelle vragen. Ontvang een compleet, advocaat-waardig privacybeleid op maat voor uw bedrijf. Kopieer, deel of host het als een openbare pagina.",
+    "cta": "Genereer uw beleid",
+    "ctaExamples": "Bekijk voorbeelden",
+    "footnote": "Geen account · Geen data naar een server · Gegenereerd beleid is gecodeerd in de URL"
+  },
+  "trustBar": {
+    "label": "Werkt met de tools die u al gebruikt",
+    "more": "+ nog veel meer"
+  },
+  "features": {
+    "label": "Functies",
+    "heading": "Alles wat u nodig heeft. Niets wat u niet nodig heeft.",
+    "subtext": "Een privacybeleid-generator ontworpen voor indie-ontwikkelaars, kleine teams en iedereen die een echt beleid nodig heeft zonder een advocaat $500 te betalen.",
+    "cards": {
+      "laws": {
+        "title": "Wetten standaard gedekt",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD en PDPA-SG. Selecteer de wetten die relevant zijn voor uw bedrijf."
+      },
+      "stack": {
+        "title": "Op maat voor uw stack",
+        "body": "Kies uit 25+ populaire externe diensten (Stripe, Google Analytics, Plausible, Mailchimp…) en wij voegen automatisch de juiste openbaarmakingen toe."
+      },
+      "url": {
+        "title": "Deelbare openbare URL",
+        "body": "Elk beleid krijgt een unieke deelbare URL. Host het op uw domein of stuur het naar uw advocaat voor review."
+      },
+      "export": {
+        "title": "Overal exporteren",
+        "body": "Kopieer als Markdown, HTML of platte tekst. Premium voegt PDF- en DOCX-export toe."
+      },
+      "legal": {
+        "title": "Echte juridische tekst, geen Lorem Ipsum",
+        "body": "Handgeschreven clausules die verwijzen naar de daadwerkelijke secties van GDPR, CCPA en COPPA die ze naleven."
+      },
+      "privacy": {
+        "title": "Nul data, nul tracking",
+        "body": "Uw antwoorden worden gecodeerd in de URL zelf. We draaien geen backend en zien uw beleidsinhoud niet."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "Hoe het werkt",
+    "heading": "Vijf stappen. Ongeveer een minuut.",
+    "steps": {
+      "business": {
+        "title": "Vertel ons over uw bedrijf",
+        "body": "Naam, URL, bedrijfstype en waar u actief bent. We gebruiken standaardwaarden voor veelvoorkomende gevallen."
+      },
+      "data": {
+        "title": "Kies wat u verzamelt",
+        "body": "Vink de soorten data aan die u verzamelt. Namen, e-mails, betalingen, analytics, etc."
+      },
+      "services": {
+        "title": "Lijst uw diensten op",
+        "body": "Stripe, Google Analytics, Mailchimp, etc. We voegen de juiste externe openbaarmakingen toe."
+      },
+      "laws": {
+        "title": "Kies toepasselijke wetten",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. Standaard selecteren we het strengste geval."
+      },
+      "policy": {
+        "title": "Ontvang uw beleid",
+        "body": "Kopieer als Markdown, HTML of platte tekst. Deel via een openbare URL. Werk op elk moment bij."
+      }
+    }
+  },
+  "comparison": {
+    "label": "Vergelijking",
+    "heading": "PrivacyPolGen vs. de alternatieven.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "Advocaat",
+    "colPaidTemplate": "Betaald sjabloon",
+    "rows": {
+      "price": "Prijs",
+      "time": "Tijd om te voltooien",
+      "gdprCovers": "GDPR / CCPA dekking",
+      "tailored": "Op maat voor uw stack",
+      "updatable": "Zelf bij te werken",
+      "url": "Deelbare URL",
+      "review": "Advocaten-review"
+    },
+    "values": {
+      "free": "$0",
+      "seconds": "~60 seconden",
+      "days": "Dagen tot weken",
+      "daysShort": "Dagen",
+      "yes": "Ja",
+      "yesCustom": "Ja (op maat)",
+      "yesTemplate": "Ja (sjabloon)",
+      "yesServices": "Ja (25+ diensten)",
+      "yesAttorney": "Ja (advocaat)",
+      "partially": "Gedeeltelijk",
+      "no": "Nee",
+      "pdfOnly": "Alleen PDF",
+      "recommended": "Aanbevolen",
+      "included": "Inbegrepen",
+      "lawyerPrice": "$500+ per draft",
+      "paidPrice": "$50–$200 / month"
+    }
+  },
+  "pricing": {
+    "label": "Prijzen",
+    "heading": "Gratis voor iedereen. Premium voor de verfijnde functies.",
+    "subtext": "De kerngenerator is gratis en zal gratis blijven. Premium is voor teams die exports en aanpassingen nodig hebben.",
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "price": "$0",
+        "period": "voor altijd",
+        "description": "Voor persoonlijke projecten, blogs en kleine sites.",
+        "cta": "Genereer uw beleid",
+        "features": [
+          "Compleet privacybeleid in Markdown, HTML en platte tekst",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "Alle 25+ externe dienst-openbaarmakingen",
+          "Deelbare openbare URL",
+          "Onbeperkt opnieuw genereren",
+          "Geen account vereist"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$19",
+        "period": "eenmalig",
+        "description": "Voor bedrijven die verfijnde exports en integraties nodig hebben.",
+        "cta": "Upgrade naar Premium",
+        "ctaComingSoon": "Binnenkort beschikbaar",
+        "badge": "Meest nuttig",
+        "features": [
+          "Alles in Gratis",
+          "PDF- en DOCX-export",
+          "Cookie-banner codegenerator",
+          "Aangepaste branding (uw logo + kleuren)",
+          "Gehost beleidspagina's met aangepast domein",
+          "Versiegeschiedenis & verschillen",
+          "Prioriteitsondersteuning"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Vragen, beantwoord.",
+    "items": [
+      {
+        "q": "Is deze privacybeleid-generator echt gratis?",
+        "a": "Ja. U kunt het resulterende privacybeleid volledig gratis genereren, kopiëren en hosten. We hebben een Premium-tier gepland met PDF/DOCX-exports, maar de kerngenerator zal altijd gratis zijn."
+      },
+      {
+        "q": "Heb ik een account nodig om een privacybeleid te genereren?",
+        "a": "Geen account vereist. Beantwoord gewoon de vragen in onze wizard en we genereren uw beleid. Uw antwoorden worden gecodeerd in de deelbare URL zelf — niets wordt naar onze servers gestuurd."
+      },
+      {
+        "q": "Is het gegenereerde beleid juridisch bindend?",
+        "a": "Het gegenereerde beleid is een startsjabloon dat de meest voorkomende juridische vereisten dekt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Elk bedrijf is echter anders. We raden ten zeerste aan om het definitieve beleid door een advocaat te laten beoordelen voordat u erop vertrouwt, vooral in gereguleerde sectoren."
+      },
+      {
+        "q": "Waar worden mijn gegevens opgeslagen?",
+        "a": "Nergens. We gebruiken client-side compressie (DEFLATE + Base64 URL-veilige codering) om uw antwoorden in de URL-hash te verpakken. Wanneer u de URL deelt, decodeert de browser van de ontvanger het beleid lokaal. We draaien geen backend, loggen geen wizard-antwoorden en hebben geen toegang tot uw beleidsinhoud."
+      },
+      {
+        "q": "Kan ik het beleid bewerken na het genereren?",
+        "a": "Ja. Bewerk gewoon de markdown of HTML in een willekeurige teksteditor en host het bestand op uw eigen website. Premium zal bewerkbare in-app bewerking met versiegeschiedenis aanbieden."
+      },
+      {
+        "q": "Dekt dit GDPR, CCPA en andere wetten?",
+        "a": "Ja. Selecteer de wetten die op uw bedrijf van toepassing zijn in Stap 4 van de wizard, en we voegen de juiste clausules toe (GDPR-grondslag, CCPA-afmelding, COPPA-ouderlijke toestemming, PIPEDA-toegangsrechten, LGPD-grondslag, PDPA-SG-toestemmingsmechanismen)."
+      },
+      {
+        "q": "Wat is het verschil tussen de gratis en Premium tiers?",
+        "a": "Gratis geeft u een compleet privacybeleid in markdown, HTML en platte tekst — kopieer/plak in uw site. Premium voegt PDF- en DOCX-export, cookie-banner codegeneratie, aangepaste branding en gehoste beleidspagina's met versiegeschiedenis toe."
+      },
+      {
+        "q": "Hoe voeg ik het beleid toe aan mijn website?",
+        "a": "Maak een pagina op uw site (bijv. /privacy), plak de HTML-output en link het vanuit uw footer. Als u een gehoste versie wilt, deel de gegenereerde /p?h=... URL — het werkt als een zelfstandige openbare pagina."
+      },
+      {
+        "q": "Wordt mijn beleid bijgewerkt als wetten veranderen?",
+        "a": "Het beleid dat u genereert is een statisch document op een bepaald moment. Als privacywetten veranderen, moet u het opnieuw genereren en de versie op uw site bijwerken. We werken onze clausulebibliotheek continu bij en de wizard is altijd in sync met huidige best practices."
+      },
+      {
+        "q": "Kan ik dit gebruiken voor een klantproject?",
+        "a": "Absoluut. U kunt onbeperkt beleid genereren voor klantprojecten op de gratis tier. We vragen alleen om de generator niet door te distribueren of de output ongewijzigd te verkopen als concurrerende dienst."
+      },
+      {
+        "q": "Bevat het beleid een cookie-sectie?",
+        "a": "Ja — als u 'Cookies' selecteert in Stap 2 van de wizard, voegen we een volledige cookie-sectie toe die essentiële, analytische, voorkeurs- en marketingcookies beschrijft. We lijsten ook welke externe cookies elke geïntegreerde dienst kan plaatsen."
+      },
+      {
+        "q": "Wat als ik niet weet welke wetten op mij van toepassing zijn?",
+        "a": "We selecteren standaard GDPR, CCPA/CPRA en CalOPPA voor iedereen (wat het strengste geval dekt). Als u niet zeker bent, is het standaard laten staan meestal de veiligste keuze — meer wetten dekken doet nooit kwaad en het beleid blijft geldig in rechtsgebieden waar de wet niet van toepassing is."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "Generator",
+    "heading": "Bouw uw privacybeleid",
+    "subtext": "Vijf stappen. Ongeveer een minuut. Uw antwoorden blijven in uw browser — niets wordt naar een server gestuurd."
+  },
+  "examplesPage": {
+    "breadcrumb": "Voorbeelden",
+    "heading": "Bekijk echte beleidsregels gegenereerd door PrivacyPolGen.",
+    "subtext": "Klik op een voorbeeld om het volledige beleid te openen. Elk wordt volledig client-side gegenereerd uit de antwoorden gecodeerd in de URL.",
+    "openPolicy": "Open beleid",
+    "ctaLabel": "Wilt u een op maat gemaakt?",
+    "cta": "Genereer uw eigen",
+    "samples": {
+      "blog": {
+        "description": "Minimal data collection: email via newsletter, basic analytics, cookies. Covers GDPR, CCPA, CalOPPA.",
+        "title": "Personal blog with newsletter"
+      },
+      "ecommerce": {
+        "description": "Online store: addresses, payments, advertising pixels. Covers GDPR, CCPA, CalOPPA, COPPA.",
+        "title": "E-commerce store with ads"
+      },
+      "mobile": {
+        "description": "iOS/Android app: accounts, usage data, push notifications. Covers GDPR, CCPA, CalOPPA, LGPD.",
+        "title": "Mobile app with analytics"
+      },
+      "saas": {
+        "description": "Full SaaS: user accounts, payments via Stripe, email via SendGrid, analytics. Covers GDPR, CCPA, CalOPPA, PIPEDA.",
+        "title": "SaaS application with payments"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "Prijzen",
+    "heading": "Eerlijke, simpele prijzen.",
+    "subtext": "De kerngenerator is gratis voor iedereen. Premium is voor teams die verfijnde exports en integraties nodig hebben."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "Pagina niet gevonden",
+    "message": "De pagina die u zoekt bestaat niet. Wilt u in plaats daarvan een privacybeleid genereren?",
+    "backHome": "← Terug naar home",
+    "generate": "Genereer een beleid",
+    "messageLead": "The page you're looking for doesn't exist. Want to",
+    "messageLink": "generate a privacy policy",
+    "messageTrail": "instead?"
+  },
+  "homeCta": {
+    "heading": "Klaar om uw privacybeleid uit te brengen?",
+    "subtext": "Genereer het uwe in minder dan een minuut. Gratis, voor altijd.",
+    "cta": "Genereer uw beleid"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — genereer een privacybeleid in 60 seconden.",
+    "jsonLdDescription": "Gratis privacybeleid-generator voor websites, SaaS, e-commerce en mobiele apps.",
+    "index": {
+      "title": "PrivacyPolGen — Gratis privacybeleid-generator (GDPR, CCPA, COPPA)",
+      "description": "Genereer een compleet, advocaat-waardig privacybeleid voor uw website, SaaS, e-commerce of mobiele app in minder dan 60 seconden. Gratis, geen aanmelding, geen data naar een server."
+    },
+    "generate": {
+      "title": "Genereer uw privacybeleid — PrivacyPolGen",
+      "description": "Beantwoord 5 snelle vragen en ontvang een compleet, advocaat-waardig privacybeleid op maat. Gratis, geen aanmelding."
+    },
+    "pricing": {
+      "title": "Prijzen — PrivacyPolGen",
+      "description": "PrivacyPolGen is gratis voor altijd. Premium voegt PDF/DOCX-export, aangepaste branding en gehoste beleidspagina's toe."
+    },
+    "examples": {
+      "title": "Voorbeeld privacybeleid — PrivacyPolGen",
+      "description": "Bekijk echte privacybeleid gegenereerd door PrivacyPolGen voor verschillende bedrijfstypen: blogs, SaaS, e-commerce en mobiele apps."
+    },
+    "terms": {
+      "title": "Terms of Service — PrivacyPolGen",
+      "description": "PrivacyPolGen Terms of Service — terms governing the use of our free privacy policy generator."
+    },
+    "privacy": {
+      "title": "Privacy Policy — PrivacyPolGen",
+      "description": "PrivacyPolGen's own privacy policy — we collect no personal data. Everything runs client-side in your browser."
+    },
+    "contact": {
+      "title": "Contact — PrivacyPolGen",
+      "description": "Get in touch with PrivacyPolGen. Reach us at support@privacypolgen.com."
+    },
+    "policy": {
+      "title": "Privacybeleid — PrivacyPolGen",
+      "description": "Bekijk een privacybeleid gegenereerd door PrivacyPolGen."
+    },
+    "notFound": {
+      "title": "Pagina niet gevonden — PrivacyPolGen",
+      "description": "De pagina die u zoekt bestaat niet."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "Terms of Service",
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing or using PrivacyPolGen (the \"Service\"), operated by PrivacyPolGen (\"we,\" \"us,\" or \"our\"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, do not use the Service."
+      },
+      "description": {
+        "title": "2. Description of Service",
+        "body": "PrivacyPolGen is a free, client-side privacy policy generator. We provide templated legal language based on your inputs to help you create a starting-point privacy policy for your website, application, or business. The Service runs entirely in your browser — no data you enter is transmitted to, stored on, or processed by our servers."
+      },
+      "notLegalAdvice": {
+        "title": "3. Not Legal Advice",
+        "body": "The content generated by PrivacyPolGen is for informational purposes only and does not constitute legal advice. We are not a law firm, we are not your attorneys, and the use of this Service does not create an attorney-client relationship. You should not act or refrain from acting based on any content generated by the Service without first consulting a qualified attorney licensed in your jurisdiction. The generated policy is a starting template and may not address all legal requirements applicable to your specific situation, business model, or industry."
+      },
+      "noWarranties": {
+        "title": "4. Disclaimer of Warranties",
+        "body": "THE SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ACCURACY. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR THAT ANY GENERATED CONTENT WILL BE COMPLETE, ACCURATE, OR LEGALLY SUFFICIENT FOR YOUR NEEDS."
+      },
+      "limitationLiability": {
+        "title": "5. Limitation of Liability",
+        "body": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE SERVICE — INCLUDING BUT NOT LIMITED TO ANY FINES, PENALTIES, OR LEGAL LIABILITIES INCURRED AS A RESULT OF USING A GENERATED POLICY. OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF $1.00 OR THE AMOUNT YOU HAVE PAID US IN THE PRECEDING TWELVE MONTHS."
+      },
+      "indemnification": {
+        "title": "6. Indemnification",
+        "body": "You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service, the privacy policy you generate, or your violation of these Terms."
+      },
+      "intellectualProperty": {
+        "title": "7. Intellectual Property",
+        "body": "The Service, including its text, templates, clauses, and structure, is owned by us and protected by copyright and other intellectual property laws. The privacy policy you generate is yours to use, modify, and distribute for any lawful purpose. However, you may not copy, redistribute, or resell the generator itself or the underlying clause templates as a competing service."
+      },
+      "thirdParty": {
+        "title": "8. Third-Party Services",
+        "body": "The Service may display references to third-party services (e.g., analytics, payment processors). These references are provided for informational purposes only. We are not responsible for the content, privacy practices, or terms of any third-party services referenced in generated policies."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "body": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \"Last updated\" date. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. We encourage you to review these Terms periodically."
+      },
+      "governingLaw": {
+        "title": "10. Governing Law",
+        "body": "These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of laws principles. Any disputes arising under these Terms shall be resolved exclusively in the courts of [Your Jurisdiction]."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "body": "If you have any questions about these Terms, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "Privacy Policy",
+    "heading": "Our Privacy Policy",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "body": "PrivacyPolGen (\"we,\" \"us,\" or \"our\") operates the website at privacypolgen.com (the \"Service\"). This page explains our approach to privacy — which, in short, is that we collect almost nothing.",
+        "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on our side. The privacy policy generator runs entirely in your browser."
+      },
+      "noCollection": {
+        "title": "Information We Do NOT Collect",
+        "body": "We do not collect, store, or process any personal information about you. Specifically:",
+        "list": [
+          "No account data: We do not require or support user accounts.",
+          "No personal information: We do not ask for or collect your name, email address, or any other personal identifier.",
+          "No payment information: The Service is free. We do not process payments.",
+          "No analytics: We do not run any analytics, tracking pixels, or telemetry on our site.",
+          "No cookies for tracking: We do not use cookies for analytics, advertising, or any tracking purposes.",
+          "No policy data: The answers you provide in the generator wizard are encoded directly into the URL. They are never sent to, stored on, or processed by any server."
+        ]
+      },
+      "technical": {
+        "title": "Technical Data",
+        "body": "Our hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. We do not access, analyze, or share this data."
+      },
+      "localStorage": {
+        "title": "Local Storage",
+        "body": "We use your browser's localStorage to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. We cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "body": "We use the following third-party services, which have their own privacy practices:",
+        "list": [
+          "Fonts (Google Fonts): Font files are loaded from Google's servers. Google may collect information about font requests per its privacy policy. We self-host where possible to minimize this.",
+          "Hosting: Our static site is served via our hosting provider. Standard server logs may be retained temporarily for security and operational purposes."
+        ]
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "body": "Since we collect no personal data, there is nothing to retain. Any server logs kept by our hosting provider are subject to their retention policies and are not accessed by us."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "body": "Because we collect no personal data, there is no personal data for us to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by our hosting provider, please contact us and we will investigate in good faith."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "body": "If we change this privacy policy, we will update the \"Last updated\" date at the top. Since we collect no data, changes are likely to be rare and minor."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "If you have questions about this privacy policy, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Contact",
+    "heading": "Get in touch",
+    "subtext": "Questions, feedback, or just saying hi? We'd love to hear from you.",
+    "email": {
+      "title": "Email",
+      "body": "We typically respond within 24 hours."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "Report issues or contribute."
+    },
+    "feature": {
+      "title": "Feature Request",
+      "body": "Have an idea? We'd love to hear it."
+    },
+    "legal": {
+      "title": "Legal Inquiry",
+      "body": "For legal questions or requests."
+    }
+  },
+  "footer": {
+    "tagline": "Gratis privacybeleid-generator voor websites, SaaS-apps, e-commerce winkels en mobiele apps. GDPR, CCPA, COPPA-compatibel. Geen account vereist.",
+    "productHeading": "Product",
+    "productGenerator": "Generator",
+    "productExamples": "Voorbeelden",
+    "productPricing": "Prijzen",
+    "legalHeading": "Juridisch",
+    "legalPrivacy": "Privacybeleid",
+    "legalTerms": "Voorwaarden",
+    "legalContact": "Contact",
+    "copyright": "Geen juridisch advies. Raadpleeg een advocaat voor uw specifieke situatie.",
+    "credit": "Gebouwd met Astro · Gemaakt voor indie-ontwikkelaars"
+  },
+  "wizard": {
+    "stepTitles": [
+      "Bedrijf",
+      "Data",
+      "Diensten",
+      "Wetten",
+      "Contact"
+    ],
+    "step1": {
+      "heading": "Vertel ons over uw bedrijf",
+      "subtitle": "We gebruiken deze als standaardwaarden in uw hele beleid.",
+      "labelBusinessName": "Bedrijfsnaam *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "Website-URL *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "Bedrijfstype",
+      "labelJurisdiction": "Primaire jurisdictie"
+    },
+    "step2": {
+      "heading": "Welke data verzamelt u?",
+      "subtitle": "Vink alles aan wat van toepassing is. We hebben standaard items geselecteerd voor uw bedrijfstype."
+    },
+    "step3": {
+      "heading": "Welke externe diensten gebruikt u?",
+      "subtitle": "We voegen de juiste openbaarmakingen toe voor elke dienst."
+    },
+    "step4": {
+      "heading": "Welke wetten zijn op u van toepassing?",
+      "subtitle": "We selecteren standaard het strengste geval. De standaardwaarden laten staan is meestal het veiligst."
+    },
+    "step5": {
+      "heading": "Hoe kunnen gebruikers contact met u opnemen?",
+      "subtitle": "Dit e-mailadres verschijnt in uw beleid en is vereist door GDPR & CCPA.",
+      "labelEmail": "Contact-e-mail *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "Ik heb een Data Protection Officer (DPO)",
+      "descDpo": "Vereist voor sommige bedrijven onder GDPR. Selecteer als u er een heeft aangesteld.",
+      "labelDpoEmail": "DPO-e-mail",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "Terug",
+      "continue": "Doorgaan",
+      "generate": "Genereer beleid"
+    },
+    "validation": {
+      "required": "Vul de verplichte velden in"
+    },
+    "result": {
+      "heading": "Uw privacybeleid is gereed.",
+      "subtitle": "Kopieer het als Markdown, HTML of platte tekst. Of deel de openbare link hieronder.",
+      "publicLink": "Openbare link",
+      "copyLink": "Link kopiëren",
+      "openTab": "Openen in nieuw tabblad",
+      "editAnswers": "← Bewerk uw antwoorden",
+      "toastSuccess": "Link gekopieerd — plak het overal",
+      "toastError": "Kopiëren mislukt — selecteer en kopieer handmatig"
+    },
+    "preview": {
+      "livePreview": "Live voorbeeld",
+      "business": "Bedrijf",
+      "dataCollected": "Verzamelde data",
+      "services": "Diensten",
+      "laws": "Wetten",
+      "item_one": "item",
+      "item_other": "items",
+      "service_one": "dienst",
+      "service_other": "diensten",
+      "more": "meer"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Marketing, design, or development agency with client work and contact forms.",
+        "name": "Agency / Studio"
+      },
+      "ecommerce": {
+        "description": "Online store selling physical or digital products with shopping cart and checkout.",
+        "name": "E-commerce Store"
+      },
+      "mobile-app": {
+        "description": "iOS or Android app with in-app accounts, analytics, and possibly push notifications.",
+        "name": "Mobile App"
+      },
+      "personal-blog": {
+        "description": "A personal blog or content site. Typically collects emails via newsletter and uses basic analytics.",
+        "name": "Personal Blog"
+      },
+      "portfolio": {
+        "description": "Personal portfolio or agency site showcasing work. Minimal data collection.",
+        "name": "Portfolio Website"
+      },
+      "saas": {
+        "description": "Software-as-a-service web application with user accounts, payments, and integrations.",
+        "name": "SaaS Application"
+      }
+    },
+    "dataGroups": {
+      "account": "Account",
+      "identity": "Identity",
+      "marketing": "Marketing",
+      "technical": "Technical",
+      "transaction": "Transaction"
+    },
+    "dataTypes": {
+      "addresses": "Mailing or billing addresses",
+      "ads": "Advertising identifiers and conversion data",
+      "analytics": "Analytics and behavioral data",
+      "companies": "Company or organization name",
+      "cookies": "Cookies and similar tracking technologies",
+      "device-info": "Device and browser information",
+      "emails": "Email addresses",
+      "ip-addresses": "IP addresses",
+      "location-data": "Approximate geographic location",
+      "names": "First and last name",
+      "payments": "Payment information (processed by our payment provider, not stored on our servers)",
+      "phones": "Phone numbers",
+      "usage-data": "Usage data and activity logs",
+      "user-accounts": "Account credentials (usernames, hashed passwords)"
+    },
+    "jurisdictions": {
+      "au": "Australia",
+      "br": "Brazil",
+      "ca": "Canada",
+      "de": "Germany",
+      "dk": "Denmark",
+      "es": "Spain",
+      "fr": "France",
+      "gb": "United Kingdom",
+      "global": "Global",
+      "ie": "Ireland",
+      "in": "India",
+      "it": "Italy",
+      "jp": "Japan",
+      "mx": "Mexico",
+      "nl": "Netherlands",
+      "no": "Norway",
+      "nz": "New Zealand",
+      "se": "Sweden",
+      "sg": "Singapore",
+      "us": "United States"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Requires commercial websites that collect personal information from California users to post a conspicuous privacy policy.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "California, USA"
+      },
+      "ccpa": {
+        "description": "California state privacy law. Grants California residents rights over their personal information, including the right to know, delete, and opt out of sale.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "California, USA"
+      },
+      "coppa": {
+        "description": "Federal law governing the online collection of personal information from children under 13.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "United States (under 13)"
+      },
+      "gdpr": {
+        "description": "EU/EEA/UK comprehensive data protection law. Requires explicit consent, data subject rights, and lawful basis for processing.",
+        "fullName": "General Data Protection Regulation",
+        "name": "GDPR",
+        "region": "European Union + EEA + UK"
+      },
+      "lgpd": {
+        "description": "Brazil's comprehensive data protection law, modeled after the GDPR.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brazil"
+      },
+      "pipeda": {
+        "description": "Canadian federal privacy law governing the collection, use, and disclosure of personal information in commercial activities.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Canada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Advertising",
+      "analytics": "Analytics",
+      "authentication": "Authentication",
+      "emailMarketing": "Email Marketing",
+      "infrastructure": "Infrastructure",
+      "media": "Media",
+      "payments": "Payments"
+    },
+    "services": {
+      "aws": {
+        "description": "Cloud hosting and storage.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, DDoS protection, and DNS services.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "Email marketing platform for creators and small businesses.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "OAuth login using a Facebook account.",
+        "name": "Facebook Login"
+      },
+      "facebook-pixel": {
+        "description": "Conversion tracking and audience-building for Facebook and Instagram ads.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Contextual advertising network by Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Web traffic and user behavior analytics provided by Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "OAuth login using a Google account.",
+        "name": "Google Sign-In"
+      },
+      "lemonsqueezy": {
+        "description": "Merchant of record for digital product sales and subscriptions.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "Email newsletter delivery and audience management.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Product analytics for tracking user actions within web and mobile apps.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Online payment processor supporting PayPal balance and linked accounts.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Privacy-friendly analytics that don't use cookies or collect personal data.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Transactional email delivery service.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Payment processing for credit card transactions.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Embedded Vimeo videos on our pages.",
+        "name": "Vimeo Embeds"
+      },
+      "youtube-embeds": {
+        "description": "Embedded YouTube videos on our pages.",
+        "name": "YouTube Embeds"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Platte tekst"
+    },
+    "copy": "{{format}} kopiëren",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "Beleidsvoorbeeld",
+    "copied": "Gekopieerd",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "Geen beleids-hash gevonden in de URL. Genereer eerst een beleid.",
+    "errorInvalid": "Deze beleidslink is ongeldig of beschadigd. Genereer alstublieft een nieuwe.",
+    "generateNew": "Genereer een nieuw beleid",
+    "loading": "Beleid laden…",
+    "title": "{{businessName}} — Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: {{date}}",
+    "generateOwn": "Genereer uw eigen →"
+  },
+  "copied": "Copied",
+  "copy": "Copy",
+  "empty": "Nothing here yet — start by entering your business details.",
+  "langSwitcher": {
+    "listboxLabel": "Select language",
+    "toggleLabel": "Switch language"
+  },
+  "next": "Next",
+  "prev": "Previous",
+  "preview": "Preview",
+  "selectall": "Select all",
+  "validation": {
+    "contactEmail": "Please enter a valid email address",
+    "required": "Please fill in the required fields"
+  }
+}

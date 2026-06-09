@@ -1,0 +1,101 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import SeoHead from '@/components/SeoHead.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: 'website' | 'article';
+  noindex?: boolean;
+  /** Hide the header/footer chrome (used on /p policy view) */
+  bare?: boolean;
+}
+
+const { title, description, canonical, ogType, noindex, bare = false } = Astro.props;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {/* hreflang for 17 languages */}
+    {[ 'ar', 'bn', 'de', 'en', 'es', 'fr', 'hi', 'ja', 'ka', 'ko', 'nl', 'pt', 'ru', 'ta', 'tr', 'vi', 'zh' ].map(lang => (
+      <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    {/* FOUC prevention: set data-theme and data-lang on <html> synchronously before paint.
+        Priority for theme: stored user choice > OS preference > dark fallback.
+        Priority for lang: stored user choice > no attribute (defaults to English). */}
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('ppg-theme');
+          var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          var theme = stored === 'light' || stored === 'dark' ? stored : (prefersLight ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        try {
+          var storedLang = localStorage.getItem('ppg-lang');
+          var validLangs = ['de','es','ko','ja','zh','ar','fr','ru','pt','hi','ta','ka','vi','nl','tr','bn'];
+          if (storedLang && validLangs.indexOf(storedLang) !== -1) {
+            document.documentElement.setAttribute('data-lang', storedLang);
+          }
+        } catch (e) {
+          // localStorage may be blocked
+        }
+      })();
+    </script>
+    <SeoHead title={title} description={description} canonical={canonical} ogType={ogType} noindex={noindex} />
+
+    {/* i18n: load translations if a non-English locale is preferred.
+        Module scripts are deferred by default, so the DOM is ready.
+        Also listen for localechange events from LangSwitcher (no page reload). */}
+    <script>
+      import { applyTranslations, getCurrentLocale, loadTranslations, resetTranslations } from '@/lib/i18n';
+
+      async function initI18n(locale?: string) {
+        const targetLocale = locale || getCurrentLocale();
+        const translations = await loadTranslations(targetLocale);
+        if (translations && Object.keys(translations).length > 0) {
+          applyTranslations(translations, targetLocale);
+        } else {
+          resetTranslations();
+        }
+      }
+
+      // Initial load — module scripts are deferred, DOM is parsed
+      initI18n();
+
+      // React to language switches from LangSwitcher without page reload
+      window.addEventListener('localechange', (e: Event) => {
+        const detail = (e as CustomEvent).detail;
+        if (detail?.locale) initI18n(detail.locale);
+      });
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col antialiased bg-bg text-fg">
+    {!bare && <Header />}
+    <main class="flex-1">
+      <slot />
+    </main>
+    {!bare && <Footer />}
+  </body>
+</html>

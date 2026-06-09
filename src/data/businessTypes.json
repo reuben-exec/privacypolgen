@@ -1,0 +1,56 @@
+[
+  {
+    "id": "personal-blog",
+    "name": "Personal Blog",
+    "description": "A personal blog or content site. Typically collects emails via newsletter and uses basic analytics.",
+    "icon": "BookOpen",
+    "defaultData": ["emails", "analytics", "cookies"],
+    "defaultServices": ["google-analytics", "mailchimp"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa"]
+  },
+  {
+    "id": "saas",
+    "name": "SaaS Application",
+    "description": "Software-as-a-service web application with user accounts, payments, and integrations.",
+    "icon": "Cloud",
+    "defaultData": ["emails", "names", "user-accounts", "payments", "usage-data", "analytics", "cookies"],
+    "defaultServices": ["google-analytics", "stripe", "sendgrid", "cloudflare", "aws"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa"]
+  },
+  {
+    "id": "ecommerce",
+    "name": "E-commerce Store",
+    "description": "Online store selling physical or digital products with shopping cart and checkout.",
+    "icon": "ShoppingCart",
+    "defaultData": ["emails", "names", "addresses", "payments", "analytics", "cookies", "ads"],
+    "defaultServices": ["google-analytics", "stripe", "paypal", "google-adsense", "facebook-pixel", "cloudflare"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa", "coppa"]
+  },
+  {
+    "id": "mobile-app",
+    "name": "Mobile App",
+    "description": "iOS or Android app with in-app accounts, analytics, and possibly push notifications.",
+    "icon": "Smartphone",
+    "defaultData": ["emails", "user-accounts", "usage-data", "analytics", "device-info"],
+    "defaultServices": ["mixpanel", "sendgrid", "aws"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa", "coppa"]
+  },
+  {
+    "id": "portfolio",
+    "name": "Portfolio Website",
+    "description": "Personal portfolio or agency site showcasing work. Minimal data collection.",
+    "icon": "Briefcase",
+    "defaultData": ["emails", "analytics", "cookies"],
+    "defaultServices": ["plausible", "cloudflare"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa"]
+  },
+  {
+    "id": "agency",
+    "name": "Agency / Studio",
+    "description": "Marketing, design, or development agency with client work and contact forms.",
+    "icon": "Building",
+    "defaultData": ["emails", "names", "companies", "analytics", "cookies", "ads"],
+    "defaultServices": ["google-analytics", "mailchimp", "google-adsense", "facebook-pixel", "cloudflare"],
+    "defaultLaws": ["gdpr", "ccpa", "caloppa", "pipeda"]
+  }
+]

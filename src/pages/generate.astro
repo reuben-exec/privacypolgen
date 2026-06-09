@@ -1,0 +1,21 @@
+---
+// src/pages/generate.astro
+import Layout from '@/layouts/Layout.astro';
+import Wizard from '@/components/Wizard';
+---
+<Layout
+  title="Generate your privacy policy — PrivacyPolGen"
+  description="Answer 5 quick questions and get a complete, lawyer-grade privacy policy tailored to your business. Free, no signup."
+>
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <p class="text-xs uppercase tracking-widest text-fg-faint mb-2" data-i18n="generatorPage.breadcrumb">Generator</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="generatorPage.heading">Build your privacy policy</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl" data-i18n="generatorPage.subtext">Five steps. About a minute. Your answers stay in your browser — nothing is sent to a server.</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <Wizard client:load />
+  </section>
+</Layout>

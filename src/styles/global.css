@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
+
+  /* Dark mode palette (default — see [data-theme="light"] for light overrides) */
+  --color-bg: #000000;
+  --color-bg-elevated: #0a0a0a;
+  --color-bg-card: #0c0c0c;
+  --color-bg-hover: #161616;
+  --color-border: #1f1f1f;
+  --color-border-strong: #2a2a2a;
+  --color-fg: #ededed;
+  --color-fg-muted: #888888;
+  --color-fg-faint: #555555;
+  --color-accent: #ffffff;
+  --color-accent-fg: #000000;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+
+  /* Hero gradient glow stops (theme-aware) */
+  --hero-glow-1: rgba(255, 255, 255, 0.06);
+  --hero-glow-2: rgba(255, 255, 255, 0.03);
+
+  --radius-card: 8px;
+  --radius-button: 6px;
+
+  /* Vercel Level-5 stacked shadow (dropdown/modal elevation) */
+  --shadow-dropdown: 0px 1px 1px rgba(0,0,0,0.02), 0px 8px 16px -4px rgba(0,0,0,0.06), 0px 24px 32px -8px rgba(0,0,0,0.10);
+}
+
+/* Light theme — overrides default @theme tokens. Activated by
+   <html data-theme="light">, which is set by an inline script in
+   <head> before paint (see Layout.astro). */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #fafafa;
+  --color-bg-card: #f5f5f5;
+  --color-bg-hover: #f0f0f0;
+  --color-border: #e5e5e5;
+  --color-border-strong: #d4d4d4;
+  --color-fg: #0a0a0a;
+  --color-fg-muted: #666666;
+  --color-fg-faint: #999999;
+  --color-accent: #0a0a0a;
+  --color-accent-fg: #ffffff;
+
+  /* In light mode, hero gets a subtle dark vignette at the top
+     so the white-on-white headline still has depth. */
+  --hero-glow-1: rgba(0, 0, 0, 0.05);
+  --hero-glow-2: rgba(0, 0, 0, 0.02);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    color-scheme: dark light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-fg-faint);
+  }
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-radius: var(--radius-button);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition: all 150ms ease;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-accent-fg);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent);
+    opacity: 0.9;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-fg);
+    border: 1px solid var(--color-border-strong);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-bg-hover);
+    border-color: var(--color-fg-faint);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-fg-muted);
+  }
+  .btn-ghost:hover {
+    color: var(--color-fg);
+    background-color: var(--color-bg-hover);
+  }
+
+  .btn-lg {
+    height: 2.75rem;
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+  }
+
+  .card-hover {
+    transition: border-color 200ms ease, background-color 200ms ease;
+  }
+  .card-hover:hover {
+    border-color: var(--color-border-strong);
+    background-color: var(--color-bg-elevated);
+  }
+
+  .input {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-button);
+    color: var(--color-fg);
+    font-size: 0.875rem;
+    transition: border-color 150ms ease, background-color 150ms ease;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--color-fg-faint);
+    background-color: var(--color-bg);
+  }
+  .input::placeholder {
+    color: var(--color-fg-faint);
+  }
+
+  .label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-fg);
+    margin-bottom: 0.375rem;
+  }
+
+  .help-text {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-fg-muted);
+    margin-top: 0.375rem;
+  }
+
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .container-narrow {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .container-wide {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Subtle gradient backdrop for hero (theme-aware via --hero-glow-* vars) */
+  .hero-gradient {
+    background-image:
+      radial-gradient(circle at 50% 0%, var(--hero-glow-1) 0%, transparent 60%),
+      radial-gradient(circle at 80% 30%, var(--hero-glow-2) 0%, transparent 50%);
+  }
+
+  /* Code block style */
+  .code-block {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    background-color: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 1rem;
+    overflow-x: auto;
+    color: var(--color-fg);
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .animate-fade-in {
+    animation: fadeIn 200ms ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 250ms ease-out;
+  }
+
+  /* Theme toggle icon visibility — driven by data-theme on <html> */
+  .theme-icon-sun,
+  .theme-icon-moon {
+    width: 1rem;
+    height: 1rem;
+  }
+  [data-theme="dark"] .theme-icon-sun {
+    display: block;
+  }
+  [data-theme="dark"] .theme-icon-moon {
+    display: none;
+  }
+  [data-theme="light"] .theme-icon-sun {
+    display: none;
+  }
+  [data-theme="light"] .theme-icon-moon {
+    display: block;
+  }
+
+  /* Logo that uses a white-on-transparent brand mark needs inversion
+     on light backgrounds so the icon stays visible. */
+  [data-theme="light"] .logo-invert {
+    filter: invert(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

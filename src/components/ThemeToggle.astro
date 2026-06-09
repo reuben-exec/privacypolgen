@@ -1,0 +1,83 @@
+---
+// src/components/ThemeToggle.astro
+// Lightweight dark/light theme switcher. No React island.
+// The initial data-theme is set on <html> by the inline script in
+// Layout.astro (before paint, so no FOUC). This component just flips it
+// and writes the user's choice to localStorage.
+---
+<button
+  type="button"
+  class="theme-toggle inline-flex h-8 w-8 items-center justify-center rounded-button border border-border text-fg-muted transition-colors hover:bg-bg-hover hover:text-fg"
+  data-i18n-aria="header.ariaToggleTheme"
+  data-i18n-title="header.ariaToggleTheme"
+  aria-label="Toggle theme"
+  title="Toggle theme"
+>
+  <svg
+    class="theme-icon-sun"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+  </svg>
+  <svg
+    class="theme-icon-moon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script is:inline>
+  (function () {
+    function syncLabel(theme) {
+      var btn = document.querySelector('.theme-toggle');
+      if (!btn) return;
+      var lang = 'en';
+      try { lang = localStorage.getItem('ppg-lang') || 'en'; } catch (_) {}
+      if (lang !== 'en') {
+        // In non-English, the i18n system will handle ARIA via data-i18n-aria.
+        // For the dynamic switch label, we'll still set it based on theme.
+        try {
+          var translations = JSON.parse(sessionStorage.getItem('ppg-translations-' + lang) || '{}');
+          var key = theme === 'dark' ? 'header.ariaThemeDark' : 'header.ariaThemeLight';
+          var label = key.split('.').reduce(function(o, k) { return o && o[k]; }, translations);
+          if (label) { btn.setAttribute('aria-label', label); return; }
+        } catch (_) {}
+      }
+      btn.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+      );
+    }
+    // Initialize label from the theme the inline head script set.
+    var initial = document.documentElement.getAttribute('data-theme') || 'dark';
+    syncLabel(initial);
+
+    document.addEventListener('click', function (e) {
+      var target = e.target instanceof Element ? e.target : null;
+      if (!target) return;
+      var btn = target.closest('.theme-toggle');
+      if (!btn) return;
+      var current = document.documentElement.getAttribute('data-theme') || 'dark';
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('ppg-theme', next); } catch (_) {}
+      syncLabel(next);
+    });
+  })();
+</script>

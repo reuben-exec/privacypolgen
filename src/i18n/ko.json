@@ -1,0 +1,762 @@
+{
+  "meta": {
+    "code": "ko",
+    "name": "Korean",
+    "nativeName": "한국어",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "홈",
+    "generator": "생성기",
+    "examples": "예시",
+    "pricing": "요금",
+    "brand": "PrivacyPolGen",
+    "generate": "생성",
+    "ariaToggleTheme": "테마 전환",
+    "ariaThemeLight": "라이트 테마로 전환",
+    "ariaThemeDark": "다크 테마로 전환"
+  },
+  "hero": {
+    "badge": "영원 무료 · 가입 불필요 · GDPR · CCPA · COPPA",
+    "heading": "개인정보 처리방침을 생성하세요",
+    "headingAccent": "60초 이내에.",
+    "subheading": "5가지 간단한 질문에 답하세요. 귀하의 비즈니스에 맞춤화된 완전하고 변호사 수준의 개인정보 처리방침을 받아보세요. 복사하거나, 공유하거나, 공개 페이지로 호스팅할 수 있습니다.",
+    "cta": "개인정보 처리방침 생성하기",
+    "ctaExamples": "예시 보기",
+    "footnote": "계정 불필요 · 서버에 데이터 전송 없음 · 생성된 처리방침은 URL에 인코딩됨"
+  },
+  "trustBar": {
+    "label": "이미 사용 중인 도구와 호환됩니다",
+    "more": "+ 그 외 다수"
+  },
+  "features": {
+    "label": "기능",
+    "heading": "필요한 모든 것. 불필요한 것은 없음.",
+    "subtext": "인디 개발자, 소규모 팀, 그리고 변호사에게 $500를 지불하지 않고도 진정한 처리방침이 필요한 모든 분들을 위해 설계된 개인정보 처리방침 생성기입니다.",
+    "cards": {
+      "laws": {
+        "title": "법률 기본 지원",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG. 귀하의 비즈니스에 적용되는 법률을 선택하세요."
+      },
+      "stack": {
+        "title": "귀하의 기술 스택에 맞춤화",
+        "body": "25개 이상의 인기 있는 타사 서비스(Stripe, Google Analytics, Plausible, Mailchimp…) 중에서 선택하면 적절한 공개 사항을 자동으로 추가합니다."
+      },
+      "url": {
+        "title": "공유 가능한 공개 URL",
+        "body": "각 처리방침에는 고유한 공유 가능 URL이 부여됩니다. 귀하의 도메인에서 호스팅하거나 변호사에게 검토를 위해 전송하세요."
+      },
+      "export": {
+        "title": "어디서든 내보내기",
+        "body": "Markdown, HTML 또는 일반 텍스트로 복사하세요. 프리미엄에서는 PDF 및 DOCX 내보내기를 추가합니다."
+      },
+      "legal": {
+        "title": "실제 법적 문구, 로렘 입숨이 아님",
+        "body": "GDPR, CCPA, COPPA의 실제 조항을 참조하는 수작업으로 작성된 조항입니다."
+      },
+      "privacy": {
+        "title": "데이터 제로, 추적 제로",
+        "body": "귀하의 답변은 URL 자체에 인코딩됩니다. 백엔드를 운영하지 않으며 귀하의 처리방침 내용을 보지 않습니다."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "작동 방식",
+    "heading": "5단계. 약 1분.",
+    "steps": {
+      "business": {
+        "title": "비즈니스에 대해 알려주세요",
+        "body": "이름, URL, 비즈니스 유형 및 운영 지역입니다. 일반적인 경우 기본값을 사용합니다."
+      },
+      "data": {
+        "title": "수집하는 데이터를 선택하세요",
+        "body": "수집하는 데이터 유형을 체크하세요. 이름, 이메일, 결제, 분석 등입니다."
+      },
+      "services": {
+        "title": "서비스를 나열하세요",
+        "body": "Stripe, Google Analytics, Mailchimp 등입니다. 적절한 타사 공개 사항을 추가합니다."
+      },
+      "laws": {
+        "title": "적용 법률을 선택하세요",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. 기본적으로 가장 엄격한 일반 사례를 선택합니다."
+      },
+      "policy": {
+        "title": "처리방침을 받아보세요",
+        "body": "Markdown, HTML 또는 일반 텍스트로 복사하세요. 공개 URL로 공유하세요. 언제든지 업데이트할 수 있습니다."
+      }
+    }
+  },
+  "comparison": {
+    "label": "비교",
+    "heading": "PrivacyPolGen vs. 대안 서비스.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "변호사",
+    "colPaidTemplate": "유료 템플릿",
+    "rows": {
+      "price": "가격",
+      "time": "소요 시간",
+      "gdprCovers": "GDPR / CCPA 범위",
+      "tailored": "기술 스택 맞춤화",
+      "updatable": "자체 업데이트 가능",
+      "url": "공유 가능 URL",
+      "review": "변호사 검토"
+    },
+    "values": {
+      "free": "₩0",
+      "seconds": "약 60초",
+      "days": "수일~수주",
+      "daysShort": "수일",
+      "yes": "예",
+      "yesCustom": "예 (맞춤)",
+      "yesTemplate": "예 (템플릿)",
+      "yesServices": "예 (25+ 서비스)",
+      "yesAttorney": "예 (변호사)",
+      "partially": "부분적",
+      "no": "아니오",
+      "pdfOnly": "PDF만",
+      "recommended": "권장",
+      "included": "포함됨",
+      "lawyerPrice": "$500+ per draft",
+      "paidPrice": "$50–$200 / month"
+    }
+  },
+  "pricing": {
+    "label": "요금",
+    "heading": "모두 무료. 프리미엄은 더 나은 기능을 위해.",
+    "subtext": "핵심 생성기는 무료이며 계속 무료로 유지됩니다. 프리미엄은 내보내기와 맞춤 설정이 필요한 팀을 위한 것입니다.",
+    "plans": {
+      "free": {
+        "name": "무료",
+        "price": "₩0",
+        "period": "영원히",
+        "description": "개인 프로젝트, 블로그 및 소규모 사이트용.",
+        "cta": "개인정보 처리방침 생성하기",
+        "features": [
+          "Markdown, HTML 및 일반 텍스트로 된 완전한 개인정보 처리방침",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "25개 이상의 타사 서비스 공개 사항 전부",
+          "공유 가능한 공개 URL",
+          "무제한 재생성",
+          "계정 불필요"
+        ]
+      },
+      "premium": {
+        "name": "프리미엄",
+        "price": "₩19",
+        "period": "일회성",
+        "description": "내보내기와 통합이 필요한 기업용.",
+        "cta": "프리미엄 업그레이드",
+        "ctaComingSoon": "출시 예정",
+        "badge": "가장 유용",
+        "features": [
+          "무료 기능 모두 포함",
+          "PDF 및 DOCX 내보내기",
+          "쿠키 배너 코드 생성기",
+          "맞춤 브랜딩 (귀하의 로고 + 색상)",
+          "맞춤 도메인 호스팅 처리방침 페이지",
+          "버전 기록 및 변경 사항",
+          "우선 지원"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "질문과 답변.",
+    "items": [
+      {
+        "q": "이 개인정보 처리방침 생성기는 정말 무료인가요?",
+        "a": "네. 생성, 복사 및 호스팅이 완전히 무료입니다. PDF/DOCX 내보내기와 다 페이지 처리방침을 포함한 프리미엄 등급을 계획하고 있지만, 핵심 생성기는 항상 무료로 유지됩니다."
+      },
+      {
+        "q": "개인정보 처리방침을 생성하려면 계정이 필요한가요?",
+        "a": "계정 불필요입니다. 마법사에서 질문에 답하면 처리방침이 생성됩니다. 귀하의 답변은 공유 가능한 URL 자체에 인코딩됩니다 — 서버로 아무것도 전송되지 않습니다."
+      },
+      {
+        "q": "생성된 처리방침은 법적 구속력이 있나요?",
+        "a": "생성된 처리방침은 가장 일반적인 법적 요구 사항(GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG)을 포함하는 시작 템플릿입니다. 그러나 모든 비즈니스는 다릅니다. 특히 규제 산업(의료, 금융, 아동 서비스)에서 운영하는 경우, 최종 처리방침을 사용하기 전에 변호사의 검토를 강력히 권장합니다."
+      },
+      {
+        "q": "데이터는 어디에 저장되나요?",
+        "a": "어디에도 저장되지 않습니다. 클라이언트 측 압축(DEFLATE + Base64 URL 안전 인코딩)을 사용하여 답변을 URL 해시에 패키징합니다. URL을 공유하면 수신자의 브라우저가 처리방침을 로컬에서 디코딩합니다. 백엔드를 운영하지 않으며, 마법사 답변을 기록하지 않으며, 처리방침 내용에 접근할 수 없습니다."
+      },
+      {
+        "q": "생성 후에 처리방침을 편집할 수 있나요?",
+        "a": "네. 모든 텍스트 편집기에서 Markdown 또는 HTML을 편집한 후 파일을 귀하의 웹사이트에 호스팅하면 됩니다. 출력은 귀하의 것이며 자유롭게 수정할 수 있습니다. 프리미엄 등급에서는 버전 기록과 함께 앱 내 편집 기능을 제공할 예정입니다."
+      },
+      {
+        "q": "GDPR, CCPA 및 기타 법률을 포함하나요?",
+        "a": "네. 마법사 4단계에서 귀하의 비즈니스에 적용되는 법률을 선택하면 해당 조항(GDPR 법적 근거, CCPA 옵트아웃, COPPA 부모 동의, PIPEDA 접근 권한, LGPD 법적 근거, PDPA-SG 동의 메커니즘)이 포함됩니다."
+      },
+      {
+        "q": "무료 등급과 프리미엄 등급의 차이점은 무엇인가요?",
+        "a": "무료에서는 Markdown, HTML 및 일반 텍스트로 된 완전한 개인정보 처리방침을 제공합니다. 프리미엄에서는 PDF 및 DOCX 내보내기, 쿠키 배너 코드 생성, 맞춤 브랜딩, 버전 기록이 있는 호스팅 처리방침 페이지가 추가됩니다."
+      },
+      {
+        "q": "웹사이트에 처리방침을 어떻게 추가하나요?",
+        "a": "웹사이트에 페이지(예: /privacy)를 만들고 HTML 출력을 붙여넣은 후 푸터에서 링크하세요. 호스팅 버전을 원하면 생성된 /p?h=... URL을 공유하세요. 독립형 공개 페이지로 작동합니다."
+      },
+      {
+        "q": "법률이 변경되면 처리방침이 업데이트되나요?",
+        "a": "생성한 처리방침은 특정 시점의 정적 문서입니다. 개인정보 보호법이 변경되면 재생성하여 사이트의 버전을 업데이트해야 합니다. 조항 라이브러리를 지속적으로 업데이트하며, 마법사는 항상 현재 모범 사례를 반영합니다."
+      },
+      {
+        "q": "고객 프로젝트에 사용할 수 있나요?",
+        "a": "물론입니다. 무료 등급에서 무제한 고객 프로젝트의 처리방침을 생성할 수 있습니다. 생성기 자체를 재배포하거나 출력을 수정하지 않고 경쟁 서비스로 재판매하지 않기를 요청드립니다."
+      },
+      {
+        "q": "처리방침에 쿠키 섹션이 포함되나요?",
+        "a": "네 — 마법사 2단계에서 '쿠키'를 선택하면 필수, 분석, 환경 설정 및 마케팅 쿠키를 설명하는 전체 쿠키 섹션이 포함됩니다. 또한 통합하는 각 서비스가 설정할 수 있는 타사 쿠키도 나열합니다."
+      },
+      {
+        "q": "어떤 법률이 적용되는지 모르면 어떻게 하나요?",
+        "a": "모든 사용자에 대해 기본적으로 GDPR, CCPA/CPRA 및 CalOPPA를 선택합니다(가장 엄격한 일반 사례를 충족). 확신이 없으면 기본값을 유지하는 것이 일반적으로 가장 안전합니다 — 법률을 많이 포함하는 것은 해가 되지 않으며, 해당 법률이 적용되지 않는 관할권에서도 처리방침은 유효합니다."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "생성기",
+    "heading": "개인정보 처리방침을 만들어보세요",
+    "subtext": "5단계. 약 1분. 귀하의 답변은 브라우저에만 저장됩니다 — 서버로 아무것도 전송되지 않습니다."
+  },
+  "examplesPage": {
+    "breadcrumb": "예시",
+    "heading": "PrivacyPolGen이 생성한 실제 처리방침을 확인하세요.",
+    "subtext": "각 예시를 클릭하면 전체 처리방침을 열 수 있습니다. 각 처리방침은 URL에 인코딩된 답변을 통해 클라이언트 측에서 완전히 생성됩니다.",
+    "openPolicy": "처리방침 열기",
+    "ctaLabel": "맞춤형을 원하시나요?",
+    "cta": "직접 생성하기",
+    "samples": {
+      "blog": {
+        "description": "Minimal data collection: email via newsletter, basic analytics, cookies. Covers GDPR, CCPA, CalOPPA.",
+        "title": "Personal blog with newsletter"
+      },
+      "ecommerce": {
+        "description": "Online store: addresses, payments, advertising pixels. Covers GDPR, CCPA, CalOPPA, COPPA.",
+        "title": "E-commerce store with ads"
+      },
+      "mobile": {
+        "description": "iOS/Android app: accounts, usage data, push notifications. Covers GDPR, CCPA, CalOPPA, LGPD.",
+        "title": "Mobile app with analytics"
+      },
+      "saas": {
+        "description": "Full SaaS: user accounts, payments via Stripe, email via SendGrid, analytics. Covers GDPR, CCPA, CalOPPA, PIPEDA.",
+        "title": "SaaS application with payments"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "요금",
+    "heading": "간단하고 공정한 가격.",
+    "subtext": "핵심 생성기는 모두 무료입니다. 프리미엄은 내보내기와 통합이 필요한 팀을 위한 것입니다."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "페이지를 찾을 수 없음",
+    "message": "찾으려는 페이지가 존재하지 않습니다. 대신 개인정보 처리방침을 생성하시겠습니까?",
+    "backHome": "← 홈으로",
+    "generate": "처리방침 생성하기",
+    "messageLead": "The page you're looking for doesn't exist. Want to",
+    "messageLink": "generate a privacy policy",
+    "messageTrail": "instead?"
+  },
+  "homeCta": {
+    "heading": "개인정보 처리방침을 준비하셨나요?",
+    "subtext": "1분 이내에 생성하세요. 무료, 영원히.",
+    "cta": "개인정보 처리방침 생성하기"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — 60초 만에 개인정보 처리방침을 생성하세요.",
+    "jsonLdDescription": "웹사이트, SaaS, 전자상거래 및 모바일 앱을 위한 무료 개인정보 처리방침 생성기.",
+    "index": {
+      "title": "PrivacyPolGen — 무료 개인정보 처리방침 생성기 (GDPR, CCPA, COPPA)",
+      "description": "웹사이트, SaaS, 전자상거래 또는 모바일 앱을 위한 완전하고 변호사 수준의 개인정보 처리방침을 60초 이내에 생성하세요. 무료, 가입 불필요, 서버에 데이터 전송 없음."
+    },
+    "generate": {
+      "title": "개인정보 처리방침 생성 — PrivacyPolGen",
+      "description": "5가지 간단한 질문에 답하여 귀하의 비즈니스에 맞춤화된 완전하고 변호사 수준의 개인정보 처리방침을 받아보세요. 무료, 가입 불필요."
+    },
+    "pricing": {
+      "title": "요금 — PrivacyPolGen",
+      "description": "PrivacyPolGen은 영원 무료입니다. 프리미엄에서는 PDF/DOCX 내보내기, 맞춤 브랜딩 및 호스팅 처리방침 페이지를 제공합니다."
+    },
+    "examples": {
+      "title": "개인정보 처리방침 예시 — PrivacyPolGen",
+      "description": "블로그, SaaS, 전자상거래 및 모바일 앱 등 다양한 비즈니스 유형에 대해 PrivacyPolGen이 생성한 실제 개인정보 처리방침을 확인하세요."
+    },
+    "terms": {
+      "title": "서비스 약관 — 개인 정보 보호PolGen",
+      "description": "PrivacyPolGen 서비스 약관 — 무료 개인정보 보호정책 생성기 사용에 적용되는 약관입니다."
+    },
+    "privacy": {
+      "title": "개인정보 보호정책 — PrivacyPolGen",
+      "description": "PrivacyPolGen의 자체 개인 정보 보호 정책 — 우리는 개인 데이터를 수집하지 않습니다. 모든 것이 브라우저에서 클라이언트 측에서 실행됩니다."
+    },
+    "contact": {
+      "title": "연락처 — PrivacyPolGen",
+      "description": "PrivacyPolGen에 문의하세요. support@privacypolgen.com으로 문의하세요."
+    },
+    "policy": {
+      "title": "개인정보 처리방침 — PrivacyPolGen",
+      "description": "PrivacyPolGen이 생성한 개인정보 처리방침을 확인하세요."
+    },
+    "notFound": {
+      "title": "페이지를 찾을 수 없음 — PrivacyPolGen",
+      "description": "찾으려는 페이지가 존재하지 않습니다."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "서비스 약관",
+    "heading": "서비스 약관",
+    "lastUpdated": "최종 업데이트 날짜: 2026년 6월 8일",
+    "sections": {
+      "intro": {
+        "title": "1. 약관 동의",
+        "body": "PrivacyPolGen(\"당사\", \"당사\" 또는 \"당사의\")이 운영하는 PrivacyPolGen(\"서비스\")에 액세스하거나 이를 사용함으로써 귀하는 본 서비스 약관을 준수할 것에 동의합니다. 본 약관 전체에 동의하지 않는 경우 서비스를 이용하지 마십시오."
+      },
+      "description": {
+        "title": "2. 서비스 설명",
+        "body": "PrivacyPolGen은 무료 클라이언트 측 개인 정보 보호 정책 생성기입니다. 당사는 귀하의 웹사이트, 애플리케이션 또는 비즈니스에 대한 시작점 개인정보 보호정책을 만드는 데 도움이 되도록 귀하의 입력을 기반으로 템플릿화된 법적 언어를 제공합니다. 서비스는 전적으로 귀하의 브라우저에서 실행됩니다. 귀하가 입력한 어떠한 데이터도 당사 서버로 전송되거나 저장되거나 처리되지 않습니다."
+      },
+      "notLegalAdvice": {
+        "title": "3. 법적 조언이 아님",
+        "body": "PrivacyPolGen이 생성한 콘텐츠는 정보 제공 목적으로만 제공되며 법적 조언을 구성하지 않습니다. 당사는 법률 회사도 아니고 귀하의 변호사도 아니며, 본 서비스의 사용으로 인해 변호사-고객 관계가 형성되지 않습니다. 귀하는 귀하의 관할권에서 허가를 받은 자격을 갖춘 변호사와 먼저 상담하지 않고 서비스에서 생성된 콘텐츠를 기반으로 행동하거나 행동을 자제해서는 안 됩니다. 생성된 정책은 시작 템플릿이며 특정 상황, 비즈니스 모델 또는 산업에 적용되는 모든 법적 요구 사항을 다루지 않을 수 있습니다."
+      },
+      "noWarranties": {
+        "title": "4. 보증의 부인",
+        "body": "서비스는 명시적이든 묵시적이든 어떠한 종류의 보증도 없이 \"있는 그대로\", \"이용 가능한 상태로\" 제공됩니다. 해당 법률이 허용하는 최대 범위 내에서 당사는 상품성, 특정 목적에의 적합성, 소유권, 비침해 등에 대한 보증을 포함하되 이에 국한되지 않고 명시적, 묵시적, 법적 또는 기타 모든 보증을 부인합니다. 정확성. 당사는 서비스가 중단되지 않거나 오류가 없거나 안전하거나 생성된 콘텐츠가 완전하거나 정확하거나 법적으로 귀하의 요구에 충분할 것이라고 보증하지 않습니다."
+      },
+      "limitationLiability": {
+        "title": "5. 책임의 제한",
+        "body": "해당 법률이 허용하는 최대 한도 내에서 당사는 어떠한 경우에도 이익 손실, 데이터 손실, 사용 손실, 영업권 손실 또는 기타 무형적 손실을 포함하되 이에 국한되지 않는 간접적, 부수적, 특수적, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다. 또는 생성된 정책 사용의 결과로 발생하는 벌금, 처벌 또는 법적 책임을 포함하되 이에 국한되지 않는 서비스 사용 또는 사용 불가능과 관련됩니다. 본 약관 또는 서비스와 관련하여 발생하는 모든 청구에 대해 귀하에 대한 당사의 총 책임은 $1.00 또는 귀하가 지난 12개월 동안 당사에 지불한 금액 중 더 큰 금액을 초과하지 않습니다."
+      },
+      "indemnification": {
+        "title": "6. 면책",
+        "body": "귀하는 귀하의 서비스 사용, 귀하가 생성한 개인 정보 보호 정책 또는 본 약관 위반으로 인해 발생하거나 이와 관련하여 발생하는 모든 청구, 책임, 손해, 판결, 판정, 손실, 비용, 비용 또는 수수료(합리적인 변호사 비용 포함)로부터 당사를 변호하고 면책하며 피해를 주지 않을 것에 동의합니다."
+      },
+      "intellectualProperty": {
+        "title": "7. 지적재산권",
+        "body": "텍스트, 템플릿, 조항 및 구조를 포함한 서비스는 당사의 소유이며 저작권 및 기타 지적재산권법에 의해 보호됩니다. 귀하가 생성한 개인 정보 보호 정책은 귀하가 합법적인 목적으로 사용, 수정 및 배포할 수 있습니다. 그러나 생성기 자체 또는 기본 조항 템플릿을 경쟁 서비스로 복사, 재배포 또는 재판매할 수 없습니다."
+      },
+      "thirdParty": {
+        "title": "8. 제3자 서비스",
+        "body": "서비스는 제3자 서비스(예: 분석, 결제 처리자)에 대한 참조를 표시할 수 있습니다. 이러한 참조 자료는 정보 제공의 목적으로만 제공됩니다. 당사는 생성된 정책에 참조된 제3자 서비스의 콘텐츠, 개인 정보 보호 관행 또는 조건에 대해 책임을 지지 않습니다."
+      },
+      "changes": {
+        "title": "9. 약관 변경",
+        "body": "당사는 언제든지 본 약관을 수정할 권리를 보유합니다. 변경 사항은 업데이트된 \"최종 업데이트\" 날짜와 함께 이 페이지에 게시됩니다. 변경 후에도 서비스를 계속 사용하면 새 약관에 동의하는 것으로 간주됩니다. 우리는 귀하가 본 약관을 정기적으로 검토할 것을 권장합니다."
+      },
+      "governingLaw": {
+        "title": "10. 준거법",
+        "body": "본 약관은 국제사법 원칙에 관계없이 미국 델라웨어주 법률의 적용을 받고 이에 따라 해석됩니다. 본 약관에 따라 발생하는 모든 분쟁은 델라웨어주 법원에서만 해결됩니다. 이 섹션의 어떤 내용도 귀하의 국가 또는 거주 국가의 해당 소비자 보호법에 따른 귀하의 권리를 제한하지 않습니다. 귀하가 의무적인 소비자 보호가 적용되는 관할권(유럽 연합 및 영국을 포함하되 이에 국한되지 않음)의 거주자인 경우 해당 보호는 영향을 받지 않습니다."
+      },
+      "contact": {
+        "title": "11. 연락처",
+        "body": "본 약관에 대해 질문이 있는 경우 support@privacypolgen.com으로 문의하시기 바랍니다."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "개인 정보 보호 정책",
+    "heading": "우리의 개인 정보 보호 정책",
+    "lastUpdated": "최종 업데이트 날짜: 2026년 6월 8일",
+    "sections": {
+      "intro": {
+        "title": "소개",
+        "body": "PrivacyPolGen(\"당사\" 또는 \"당사\")은 Privacypolgen.com(\"서비스\")에서 웹사이트를 운영합니다. 이 페이지에서는 개인정보 보호에 대한 당사의 접근 방식을 설명합니다. 즉, 당사는 거의 아무것도 수집하지 않는다는 것입니다.",
+        "body2": "대부분의 온라인 서비스와 달리 PrivacyPolGen에는 백엔드 서버가 없습니다. 우리 측에는 데이터베이스, 사용자 계정, 분석 추적 및 데이터 저장소가 없습니다. 개인 정보 보호 정책 생성기는 전적으로 귀하의 브라우저에서 실행됩니다."
+      },
+      "noCollection": {
+        "title": "우리가 수집하지 않는 정보",
+        "body": "당사는 귀하에 관한 어떠한 개인정보도 수집, 저장 또는 처리하지 않습니다. 구체적으로:",
+        "list": [
+          "계정 데이터 없음: 사용자 계정을 요구하거나 지원하지 않습니다.",
+          "개인 정보 없음: 당사는 귀하의 이름, 이메일 주소 또는 기타 개인 식별 정보를 요청하거나 수집하지 않습니다.",
+          "결제 정보 없음: 서비스는 무료입니다. 우리는 지불을 처리하지 않습니다.",
+          "분석 없음: 당사 사이트에서는 분석, 추적 픽셀 또는 원격 측정을 실행하지 않습니다.",
+          "추적용 쿠키 없음: 당사는 분석, 광고 또는 기타 추적 목적으로 쿠키를 사용하지 않습니다.",
+          "정책 데이터 없음: 생성기 마법사에서 제공하는 답변이 URL로 직접 인코딩됩니다. 어떠한 서버로도 전송되거나, 저장되거나, 처리되지 않습니다."
+        ]
+      },
+      "technical": {
+        "title": "기술 데이터",
+        "body": "당사의 호스팅 제공업체는 귀하의 IP 주소, 브라우저 유형 및 요청된 페이지와 같은 표준 서버 로그 데이터를 자동으로 수집할 수 있습니다. 이 데이터는 웹사이트 서비스 및 남용 방지를 위한 운영 목적으로만 사용됩니다. 우리는 이 데이터에 접근, 분석 또는 공유하지 않습니다."
+      },
+      "localStorage": {
+        "title": "로컬 저장소",
+        "body": "당사는 귀하 브라우저의 localStorage를 사용하여 귀하가 선택한 테마(밝음/어두움)와 언어 선택이라는 두 가지 기본 설정을 기억합니다. 이 데이터는 귀하의 장치에 유지됩니다. 우리는 그것에 접근할 수 없으며 어디에도 전송되지 않습니다. 브라우저 설정을 통해 언제든지 이러한 정보를 지울 수 있습니다."
+      },
+      "thirdParty": {
+        "title": "제3자 서비스",
+        "body": "당사는 자체 개인정보 보호 관행을 갖고 있는 다음과 같은 제3자 서비스를 사용합니다.",
+        "list": [
+          "글꼴(Google Fonts): 글꼴 파일은 Google 서버에서 로드됩니다. Google은 개인정보취급방침에 따라 글꼴 요청에 대한 정보를 수집할 수 있습니다. 이를 최소화하기 위해 가능한 경우 자체 호스팅을 진행합니다.",
+          "호스팅: 당사의 정적 사이트는 호스팅 제공업체를 통해 제공됩니다. 표준 서버 로그는 보안 및 운영 목적으로 일시적으로 보관될 수 있습니다."
+        ]
+      },
+      "dataRetention": {
+        "title": "데이터 보존",
+        "body": "개인정보를 수집하지 않기 때문에 보유할 내용이 없습니다. 당사의 호스팅 제공업체가 보관하는 모든 서버 로그에는 해당 업체의 보존 정책이 적용되며 당사는 이에 접근하지 않습니다."
+      },
+      "yourRights": {
+        "title": "귀하의 권리",
+        "body": "당사는 개인 데이터를 수집하지 않기 때문에 당사가 제공, 수정 또는 삭제할 개인 데이터가 없습니다. 호스팅 제공업체가 서버 로그에 실수로 캡처한 데이터에 대해 우려 사항이 있는 경우 당사에 문의해 주시면 성실히 조사하겠습니다."
+      },
+      "changes": {
+        "title": "본 정책의 변경 사항",
+        "body": "본 개인정보취급방침을 변경할 경우 상단의 '최종 업데이트' 날짜를 업데이트하겠습니다. 데이터를 수집하지 않기 때문에 변경 사항은 드물고 사소한 것일 수 있습니다."
+      },
+      "contact": {
+        "title": "연락하다",
+        "body": "본 개인정보 보호정책에 대해 질문이 있는 경우 support@privacypolgen.com으로 문의하시기 바랍니다."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "연락하다",
+    "heading": "연락하세요",
+    "subtext": "질문, 피드백, 아니면 그냥 인사만 하시나요? 우리는 당신의 의견을 듣고 싶습니다.",
+    "email": {
+      "title": "이메일",
+      "body": "우리는 일반적으로 24시간 이내에 응답합니다."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "문제를 보고하거나 기여하세요."
+    },
+    "feature": {
+      "title": "기능 요청",
+      "body": "아이디어가 있나요? 우리는 그것을 듣고 싶습니다."
+    },
+    "legal": {
+      "title": "법적 문의",
+      "body": "법적 질문이나 요청의 경우."
+    }
+  },
+  "footer": {
+    "tagline": "웹사이트, SaaS 앱, 전자상거래 스토어 및 모바일 앱을 위한 무료 개인정보 처리방침 생성기. GDPR, CCPA, COPPA 준수. 계정 불필요.",
+    "productHeading": "제품",
+    "productGenerator": "생성기",
+    "productExamples": "예시",
+    "productPricing": "요금",
+    "legalHeading": "법적 정보",
+    "legalPrivacy": "개인정보 처리방침",
+    "legalTerms": "이용약관",
+    "legalContact": "문의",
+    "copyright": "법적 조언이 아닙니다. 귀하의 특정 상황에 대해 법률 전문가에게 문의하세요.",
+    "credit": "Astro로 제작 · 인디 개발자를 위해 만들어짐"
+  },
+  "wizard": {
+    "stepTitles": [
+      "비즈니스",
+      "데이터",
+      "서비스",
+      "법률",
+      "연락처"
+    ],
+    "step1": {
+      "heading": "비즈니스에 대해 알려주세요",
+      "subtitle": "이 정보는 처리방침 전체에 걸쳐 기본값으로 사용됩니다.",
+      "labelBusinessName": "사업체명 *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "웹사이트 URL *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "비즈니스 유형",
+      "labelJurisdiction": "주요 관할권"
+    },
+    "step2": {
+      "heading": "어떤 데이터를 수집하나요?",
+      "subtitle": "해당되는 모든 항목을 체크하세요. 귀하의 비즈니스 유형에 맞는 일반 항목을 미리 선택했습니다."
+    },
+    "step3": {
+      "heading": "어떤 타사 서비스를 사용하나요?",
+      "subtitle": "각 서비스에 대한 적절한 공개 사항을 추가합니다."
+    },
+    "step4": {
+      "heading": "어떤 법률이 적용되나요?",
+      "subtitle": "기본적으로 가장 엄격한 일반 사례를 선택합니다. 기본값을 유지하는 것이 일반적으로 가장 안전합니다."
+    },
+    "step5": {
+      "heading": "사용자가 어떻게 연락할 수 있나요?",
+      "subtitle": "이 이메일은 처리방침에 표시되며 GDPR 및 CCPA에서 요구합니다.",
+      "labelEmail": "연락처 이메일 *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "개인정보보호책임자(DPO)가 있습니다",
+      "descDpo": "일부 사업체에 GDPR에서 요구합니다. 임명한 경우 선택하세요.",
+      "labelDpoEmail": "DPO 이메일",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "뒤로",
+      "continue": "계속",
+      "generate": "처리방침 생성"
+    },
+    "validation": {
+      "required": "필수 항목을 입력해 주세요"
+    },
+    "result": {
+      "heading": "개인정보 처리방침이 준비되었습니다.",
+      "subtitle": "Markdown, HTML 또는 일반 텍스트로 복사하세요. 또는 아래 공개 링크를 공유하세요.",
+      "publicLink": "공개 링크",
+      "copyLink": "링크 복사",
+      "openTab": "새 탭에서 열기",
+      "editAnswers": "← 답변 편집",
+      "toastSuccess": "링크가 복사되었습니다 — 어디든 붙여넣으세요",
+      "toastError": "복사 실패 — 수동으로 선택하여 복사하세요"
+    },
+    "preview": {
+      "livePreview": "실시간 미리보기",
+      "business": "비즈니스",
+      "typeToSee": "회사 정보를 입력하여 정책을 미리보세요",
+      "website": "웹사이트",
+      "businessType": "유형",
+      "jurisdiction": "관하권",
+      "collectSentence": "우리는 서비스를 제공하기 위해 {types}을(를) 수집합니다.",
+      "placeholders": {
+        "business": "[귀하의 업체 이름]",
+        "website": "[your-website.com]",
+        "type": "[업종 선택]",
+        "jurisdiction": "[관할권을 선택하세요]"
+      },
+      "sections": {
+        "intro": "소개",
+        "dataCollection": "당사가 수집하는 정보",
+        "personalInfo": "귀하가 제공하는 개인 정보",
+        "dataUsage": "당사가 귀하의 정보를 사용하는 방법",
+        "cookies": "쿠키 및 추적",
+        "thirdParty": "제3자 서비스",
+        "yourRights": "귀하의 개인정보 보호 권리",
+        "children": "아동의 개인정보 보호",
+        "dataSecurity": "데이터 보안 및 보관",
+        "contact": "연락처 정보"
+      },
+      "sectionsGenerated": "생성된 섹션"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Marketing, design, or development agency with client work and contact forms.",
+        "name": "Agency / Studio"
+      },
+      "ecommerce": {
+        "description": "Online store selling physical or digital products with shopping cart and checkout.",
+        "name": "E-commerce Store"
+      },
+      "mobile-app": {
+        "description": "iOS or Android app with in-app accounts, analytics, and possibly push notifications.",
+        "name": "Mobile App"
+      },
+      "personal-blog": {
+        "description": "A personal blog or content site. Typically collects emails via newsletter and uses basic analytics.",
+        "name": "Personal Blog"
+      },
+      "portfolio": {
+        "description": "Personal portfolio or agency site showcasing work. Minimal data collection.",
+        "name": "Portfolio Website"
+      },
+      "saas": {
+        "description": "Software-as-a-service web application with user accounts, payments, and integrations.",
+        "name": "SaaS Application"
+      }
+    },
+    "dataGroups": {
+      "account": "Account",
+      "identity": "Identity",
+      "marketing": "Marketing",
+      "technical": "Technical",
+      "transaction": "Transaction"
+    },
+    "dataTypes": {
+      "addresses": "Mailing or billing addresses",
+      "ads": "Advertising identifiers and conversion data",
+      "analytics": "Analytics and behavioral data",
+      "companies": "Company or organization name",
+      "cookies": "Cookies and similar tracking technologies",
+      "device-info": "Device and browser information",
+      "emails": "Email addresses",
+      "ip-addresses": "IP addresses",
+      "location-data": "Approximate geographic location",
+      "names": "First and last name",
+      "payments": "Payment information (processed by our payment provider, not stored on our servers)",
+      "phones": "Phone numbers",
+      "usage-data": "Usage data and activity logs",
+      "user-accounts": "Account credentials (usernames, hashed passwords)"
+    },
+    "jurisdictions": {
+      "au": "Australia",
+      "br": "Brazil",
+      "ca": "Canada",
+      "de": "Germany",
+      "dk": "Denmark",
+      "es": "Spain",
+      "fr": "France",
+      "gb": "United Kingdom",
+      "global": "Global",
+      "ie": "Ireland",
+      "in": "India",
+      "it": "Italy",
+      "jp": "Japan",
+      "mx": "Mexico",
+      "nl": "Netherlands",
+      "no": "Norway",
+      "nz": "New Zealand",
+      "se": "Sweden",
+      "sg": "Singapore",
+      "us": "United States"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Requires commercial websites that collect personal information from California users to post a conspicuous privacy policy.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "California, USA"
+      },
+      "ccpa": {
+        "description": "California state privacy law. Grants California residents rights over their personal information, including the right to know, delete, and opt out of sale.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "California, USA"
+      },
+      "coppa": {
+        "description": "Federal law governing the online collection of personal information from children under 13.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "United States (under 13)"
+      },
+      "gdpr": {
+        "description": "EU/EEA/UK comprehensive data protection law. Requires explicit consent, data subject rights, and lawful basis for processing.",
+        "fullName": "General Data Protection Regulation",
+        "name": "GDPR",
+        "region": "European Union + EEA + UK"
+      },
+      "lgpd": {
+        "description": "Brazil's comprehensive data protection law, modeled after the GDPR.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brazil"
+      },
+      "pipeda": {
+        "description": "Canadian federal privacy law governing the collection, use, and disclosure of personal information in commercial activities.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Canada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Advertising",
+      "analytics": "Analytics",
+      "authentication": "Authentication",
+      "emailMarketing": "Email Marketing",
+      "infrastructure": "Infrastructure",
+      "media": "Media",
+      "payments": "Payments"
+    },
+    "services": {
+      "aws": {
+        "description": "Cloud hosting and storage.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, DDoS protection, and DNS services.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "Email marketing platform for creators and small businesses.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "OAuth login using a Facebook account.",
+        "name": "Facebook Login"
+      },
+      "facebook-pixel": {
+        "description": "Conversion tracking and audience-building for Facebook and Instagram ads.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Contextual advertising network by Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Web traffic and user behavior analytics provided by Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "OAuth login using a Google account.",
+        "name": "Google Sign-In"
+      },
+      "lemonsqueezy": {
+        "description": "Merchant of record for digital product sales and subscriptions.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "Email newsletter delivery and audience management.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Product analytics for tracking user actions within web and mobile apps.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Online payment processor supporting PayPal balance and linked accounts.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Privacy-friendly analytics that don't use cookies or collect personal data.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Transactional email delivery service.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Payment processing for credit card transactions.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Embedded Vimeo videos on our pages.",
+        "name": "Vimeo Embeds"
+      },
+      "youtube-embeds": {
+        "description": "Embedded YouTube videos on our pages.",
+        "name": "YouTube Embeds"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "일반 텍스트"
+    },
+    "copy": "{{format}} 복사",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "처리방침 미리보기",
+    "copied": "복사됨",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "URL에서 처리방침 해시를 찾을 수 없습니다. 먼저 처리방침을 생성하세요.",
+    "errorInvalid": "이 처리방침 링크가 유효하지 않거나 손상되었습니다. 새 처리방침을 생성해 주세요.",
+    "generateNew": "새 처리방침 생성",
+    "loading": "처리방침 로딩 중…",
+    "title": "{{businessName}} — 개인정보 처리방침",
+    "lastUpdated": "마지막 업데이트: {{date}}",
+    "generateOwn": "직접 생성하기 →"
+  },
+  "copied": "Copied",
+  "copy": "Copy",
+  "empty": "Nothing here yet — start by entering your business details.",
+  "langSwitcher": {
+    "listboxLabel": "Select language",
+    "toggleLabel": "Switch language"
+  },
+  "next": "Next",
+  "prev": "Previous",
+  "preview": "Preview",
+  "selectall": "Select all",
+  "validation": {
+    "contactEmail": "Please enter a valid email address",
+    "required": "Please fill in the required fields"
+  }
+}

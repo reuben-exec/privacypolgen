@@ -1,0 +1,762 @@
+{
+  "meta": {
+    "code": "tr",
+    "name": "Turkish",
+    "nativeName": "Türkçe",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "Ana Sayfa",
+    "generator": "Oluşturucu",
+    "examples": "Örnekler",
+    "pricing": "Fiyatlandırma",
+    "brand": "PrivacyPolGen",
+    "generate": "Oluştur",
+    "ariaToggleTheme": "Tema değiştir",
+    "ariaThemeDark": "Açık temaya geç",
+    "ariaThemeLight": "Koyu temaya geç"
+  },
+  "hero": {
+    "badge": "Sonsuza kadar ücretsiz · Kayıt gerekmez · GDPR · CCPA · COPPA",
+    "heading": "Bir gizlilik politikası oluşturun",
+    "headingAccent": "60 saniyeden kısa sürede.",
+    "subheading": "5 hızlı soruyu cevaplayın. İşinize özel, avukat düzeyinde, eksiksiz bir gizlilik politikası alın. Kopyalayın, paylaşın veya herkese açık sayfa olarak barındırın.",
+    "cta": "Politikanızı oluşturun",
+    "ctaExamples": "Örnekleri görüntüle",
+    "footnote": "Hesap gerekmez · Sunucuya veri gönderilmez · Oluşturulan politika URL'ye kodlanır"
+  },
+  "trustBar": {
+    "label": "Zaten kullandığınız araçlarla çalışır",
+    "more": "+ birçoğu daha"
+  },
+  "features": {
+    "label": "Özellikler",
+    "heading": "İhtiyacınız olan her şey. İhtiyacınız olmayan hiçbir şey.",
+    "subtext": "Bağımsız geliştiriciler, küçük ekipler ve bir avukata $500 ödemeden gerçek bir politikaya ihtiyaç duyan herkes için tasarlanmış bir gizlilik politikası oluşturucusu.",
+    "cards": {
+      "laws": {
+        "title": "Yasalar kutudan çıktığı kadarıyla kapsanıyor",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD ve PDPA-SG. İşinize uyanları seçin."
+      },
+      "stack": {
+        "title": "Stack'ınıza özel",
+        "body": "25+ popüler üçüncü taraf hizmetten (Stripe, Google Analytics, Plausible, Mailchimp…) seçim yapın ve doğru açıklamaları otomatik olarak ekleyelim."
+      },
+      "url": {
+        "title": "Paylaşılabilir herkese açık URL",
+        "body": "Her politika benzersiz bir paylaşılabilir URL alır. Etki alanınızda barındırın veya avukatınıza inceleme için gönderin."
+      },
+      "export": {
+        "title": "Her yerden dışa aktarın",
+        "body": "Markdown, HTML veya düz metin olarak kopyalayın. Premium, PDF ve DOCX dışa aktarımı ekler."
+      },
+      "legal": {
+        "title": "Gerçek hukuki metin, Lorem Ipsum değil",
+        "body": "GDPR, CCPA ve COPPA'nın gerçekten uyguladıkları bölümlere atıfta bulunan el yazısı maddeler."
+      },
+      "privacy": {
+        "title": "Sıfır veri, sıfır izleme",
+        "body": "Cevaplarınız doğrudan URL'ye kodlanır. Arka uç çalıştırmıyoruz ve politika içeriğinizi görmüyoruz."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "Nasıl çalışır",
+    "heading": "Beş adım. Yaklaşık bir dakika.",
+    "steps": {
+      "business": {
+        "title": "İşiniz hakkında bize bilgi verin",
+        "body": "Ad, URL, iş türü ve nerede faaliyet gösterdiğiniz. Yaygın durumlar için varsayılanları kullanıyoruz."
+      },
+      "data": {
+        "title": "Ne topladığınızı seçin",
+        "body": "Topladığınız veri türlerini işaretleyin. İsimler, e-postalar, ödemeler, analitik vb."
+      },
+      "services": {
+        "title": "Hizmetlerinizi listeleyin",
+        "body": "Stripe, Google Analytics, Mailchimp vb. Doğru üçüncü taraf açıklamalarını ekliyoruz."
+      },
+      "laws": {
+        "title": "Uygulanabilir yasaları seçin",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. Varsayılan olarak en katı durumu seçiyoruz."
+      },
+      "policy": {
+        "title": "Politikanızı alın",
+        "body": "Markdown, HTML veya düz metin olarak kopyalayın. Herkese açık URL ile paylaşın. İstediğiniz zaman güncelleyin."
+      }
+    }
+  },
+  "comparison": {
+    "label": "Karşılaştırma",
+    "heading": "PrivacyPolGen vs. alternatifler.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "Avukat",
+    "colPaidTemplate": "Ücretli şablon",
+    "rows": {
+      "price": "Fiyat",
+      "time": "Tamamlama süresi",
+      "gdprCovers": "GDPR / CCPA kapsamı",
+      "tailored": "Stack'a özel",
+      "updatable": "Kendini güncelleyebilir",
+      "url": "Paylaşılabilir URL",
+      "review": "Avukat incelemesi"
+    },
+    "values": {
+      "free": "$0",
+      "seconds": "~60 saniye",
+      "days": "Günlerce haftalarca",
+      "daysShort": "Günler",
+      "yes": "Evet",
+      "yesCustom": "Evet (özel)",
+      "yesTemplate": "Evet (şablon)",
+      "yesServices": "Evet (25+ hizmet)",
+      "yesAttorney": "Evet (avukat)",
+      "partially": "Kısmen",
+      "no": "Hayır",
+      "pdfOnly": "Yalnızca PDF",
+      "recommended": "Önerilen",
+      "included": "Dahil",
+      "lawyerPrice": "$500+ per draft",
+      "paidPrice": "$50–$200 / month"
+    }
+  },
+  "pricing": {
+    "label": "Fiyatlandırma",
+    "heading": "Herkes için ücretsiz. Premium, cilalı özellikler için.",
+    "subtext": "Çekirdek oluşturucu ücretsizdir ve ücretsiz kalacaktır. Premium, dışa aktarım ve özelleştirme ihtiyaci olan ekipler içindir.",
+    "plans": {
+      "free": {
+        "name": "Ücretsiz",
+        "price": "$0",
+        "period": "sonsuza kadar",
+        "description": "Kişisel projeler, bloglar ve küçük siteler için.",
+        "cta": "Politikanızı oluşturun",
+        "features": [
+          "Markdown, HTML ve düz metin olarak eksiksiz gizlilik politikası",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "Tüm 25+ üçüncü taraf hizmet açıklaması",
+          "Paylaşılabilir herkese açık URL",
+          "Sınırsız yeniden oluşturma",
+          "Hesap gerekmez"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "$19",
+        "period": "tek seferlik",
+        "description": "Dışa aktarım ve entegrasyonlara ihtiyacı olan işletmeler için.",
+        "cta": "Premium'a yükselt",
+        "ctaComingSoon": "Yakında geliyor",
+        "badge": "En kullanışlı",
+        "features": [
+          "Ücretsiz'deki her şey",
+          "PDF ve DOCX dışa aktarımı",
+          "Cookie bannerı kod oluşturucu",
+          "Özel markalaşma (logonuz + renkleriniz)",
+          "Özel etki alanıyla barındırılmış politika sayfası",
+          "Sürüm geçmişi ve karşılaştırmaları",
+          "Öncelikli destek"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "SSS",
+    "heading": "Sorular, yanıtlandı.",
+    "items": [
+      {
+        "q": "Bu gizlilik politikası oluşturucusu gerçekten ücretsiz mi?",
+        "a": "Evet. Oluşturulan gizlilik politikasını tamamen ücretsiz olarak oluşturabilir, kopyalayabilir ve barındırabilirsiniz. PDF/DOCX dışa aktarımlı bir Premium katman planlıyoruz, ancak çekirdek oluşturucu her zaman ücretsiz olacak."
+      },
+      {
+        "q": "Bir gizlilik politikası oluşturmak için hesap gerekiyor mu?",
+        "a": "Hesap gerekmez. Sihirbazımızdaki soruları cevaplamanız yeterli, politikanızı oluşturacağız. Cevaplarınız doğrudan paylaşılabilir URL'ye kodlanır — sunucularımıza hiçbir şey gönderilmez."
+      },
+      {
+        "q": "Oluşturulan politika yasal olarak bağlayıcı mı?",
+        "a": "Oluşturulan politika, en yaygın yasal gereksinimleri (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG) kapsayan bir başlangıç şablonudur. Ancak her işletme farklıdır. Nihai politikaya güvenmeden önce bir avukatın incelemesini şiddetle tavsiye ediyoruz, özellikle düzenlenmiş sektörlerde."
+      },
+      {
+        "q": "Verilerim nerede saklanıyor?",
+        "a": "Hiçbir yerde. Cevaplarınızı URL hashine paketlemek için istemci tarafı sıkıştırma (DEFLATE + Base64 URL-güvenli kodlama) kullanıyoruz. URL'yi paylaştığınızda, alıcının tarayıcısı politikayı yerel olarak çözer. Arka uç çalıştırmıyoruz, sihirbaz cevaplarını kaydetmiyoruz ve politika içeriğinize erişimimiz yok."
+      },
+      {
+        "q": "Oluşturduktan sonra politikayı düzenleyebilir miyim?",
+        "a": "Evet. Herhangi bir metin düzenleyicide markdown veya HTML'yi düzenlemeniz ve dosyayı kendi web sitenizde barındırmanız yeterli. Premium, sürüm geçmişiyle birlikte uygulama içi düzenlemeyi sunacak."
+      },
+      {
+        "q": "Bu, GDPR, CCPA ve diğer yasaları kapsıyor mu?",
+        "a": "Evet. Sihirbazınızın 4. adımında işletmeniz için geçerli yasaları seçin, uygun maddeleri ekleyelim (GDPR yasal temeli, CCPA çıkış seçeneği, COPPA ebeveyn rızası, PIPEDA erişim hakları, LGPD yasal temeli, PDPA-SG rıza mekanizmaları)."
+      },
+      {
+        "q": "Ücretsiz ve Premium katmanlar arasındaki fark nedir?",
+        "a": "Ücretsiz, markdown, HTML ve düz metin olarak eksiksiz bir gizlilik politikası sunar — sitenize kopyala/yapıştır. Premium, PDF ve DOCX dışa aktarımı, cookie bannerı kod oluşturma, özel markalaşma ve sürüm geçmişiyle barındırılmış politika sayfaları ekler."
+      },
+      {
+        "q": "Politikayı web siteme nasıl eklerim?",
+        "a": "Sitenizde bir sayfa oluşturun (örn., /privacy), HTML çıktısını yapıştırın ve footer'dan bağlayın. Barındırılmış bir istiyorsanız, oluşturulan /p?h=... URL'sini paylaşın — bağımsız bir herkese açık sayfa olarak çalışır."
+      },
+      {
+        "q": "Yasalar değişirse politikam güncellenir mi?",
+        "a": "Oluşturduğunuz politika belirli bir zamanda statik bir belgedir. Gizlilik yasaları değişirse, yeniden oluşturmanız ve sitenizdeki sürümü güncellemeniz gerekir. Madde kütüphanemizi sürekli olarak güncelliyoruz ve sihirbaz her zaman güncel en iyi uygulamalarla senkronize."
+      },
+      {
+        "q": "Bunu müşteri projesi için kullanabilir miyim?",
+        "a": "Kesinlikle. Ücretsiz katmanda sınırsız müşteri projesi için politika oluşturabilirsiniz. Yalnızca oluşturucuyu yeniden dağıtmamanızı veya çıktıyı değişmeden rekabetçi bir hizmet olarak yeniden satmamanızı rica ediyoruz."
+      },
+      {
+        "q": "Politika bir cookie bölümü içeriyor mu?",
+        "a": "Evet — sihirbazınızın 2. adımında 'Cookies' seçerseniz, temel, analitik, tercih ve pazarlama cookie'lerini tanımlayan eksiksiz bir cookie bölümü ekliyoruz. Ayrıca entegre ettiğiniz her hizmetin ayarlayabileceği üçüncü taraf cookie'leri de listeliyoruz."
+      },
+      {
+        "q": "Hangi yasaların bana uygulandığını bilmiyorsam ne olur?",
+        "a": "Herkes için varsayılan olarak GDPR, CCPA/CPRA ve CalOPPA'yı seçiyoruz (en katı ortak durumu kapsar). Emin değilseniz, varsayılanları bırakmak genellikle en güvenli seçenektir — daha fazla yasa kapsamak asla zarar vermez ve politika yasanın uygulanmadığı yargı bölgelerinde geçerli olmaya devam eder."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "Oluşturucu",
+    "heading": "Gizlilik politikanızı oluşturun",
+    "subtext": "Beş adım. Yaklaşık bir dakika. Cevaplarınız tarayıcınızda kalır — sunucuya hiçbir şey gönderilmez."
+  },
+  "examplesPage": {
+    "breadcrumb": "Örnekler",
+    "heading": "PrivacyPolGen tarafından oluşturulan gerçek politikaları görüntüleyin.",
+    "subtext": "Tam politikayı açmak için herhangi bir örneğe tıklayın. Her biri, URL'de kodlanan cevaplardan tamamen istemci tarafında oluşturulur.",
+    "openPolicy": "Politikayı aç",
+    "ctaLabel": "Özel bir tane mi istiyorsunuz?",
+    "cta": "Kendi politikanızı oluşturun",
+    "samples": {
+      "blog": {
+        "description": "Minimal data collection: email via newsletter, basic analytics, cookies. Covers GDPR, CCPA, CalOPPA.",
+        "title": "Personal blog with newsletter"
+      },
+      "ecommerce": {
+        "description": "Online store: addresses, payments, advertising pixels. Covers GDPR, CCPA, CalOPPA, COPPA.",
+        "title": "E-commerce store with ads"
+      },
+      "mobile": {
+        "description": "iOS/Android app: accounts, usage data, push notifications. Covers GDPR, CCPA, CalOPPA, LGPD.",
+        "title": "Mobile app with analytics"
+      },
+      "saas": {
+        "description": "Full SaaS: user accounts, payments via Stripe, email via SendGrid, analytics. Covers GDPR, CCPA, CalOPPA, PIPEDA.",
+        "title": "SaaS application with payments"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "Fiyatlandırma",
+    "heading": "Basit, adil fiyatlandırma.",
+    "subtext": "Çekirdek oluşturucu herkes için ücretsizdir. Premium, dışa aktarım ve entegrasyonlara ihtiyacı olan ekipler içindir."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "Sayfa bulunamadı",
+    "message": "Aradığınız sayfa mevcut değil. Bunun yerine bir gizlilik politikası oluşturmak ister misiniz?",
+    "backHome": "← Ana sayfaya dön",
+    "generate": "Bir politika oluşturun",
+    "messageLead": "The page you're looking for doesn't exist. Want to",
+    "messageLink": "generate a privacy policy",
+    "messageTrail": "instead?"
+  },
+  "homeCta": {
+    "heading": "Gizlilik politikanızı yayınlamaya hazır mısınız?",
+    "subtext": "Bir dakikadan kısa sürede kendi politikanızı oluşturun. Ücretsiz, sonsuza kadar.",
+    "cta": "Politikanızı oluşturun"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — 60 saniyede bir gizlilik politikası oluşturun.",
+    "jsonLdDescription": "Web siteleri, SaaS, e-ticaret ve mobil uygulamalar için ücretsiz gizlilik politikası oluşturucusu.",
+    "index": {
+      "title": "PrivacyPolGen — Ücretsiz gizlilik politikası oluşturucusu (GDPR, CCPA, COPPA)",
+      "description": "Web siteniz, SaaS, e-ticaret veya mobil uygulamanız için 60 saniyeden kısa sürede eksiksiz, avukat düzeyinde bir gizlilik politikası oluşturun. Ücretsiz, kayıt gerekmez, sunucuya veri gönderilmez."
+    },
+    "generate": {
+      "title": "Gizlilik politikanızı oluşturun — PrivacyPolGen",
+      "description": "5 hızlı soruyu cevaplayın ve işinize özel, eksiksiz, avukat düzeyinde bir gizlilik politikası alın. Ücretsiz, kayıt gerekmez."
+    },
+    "pricing": {
+      "title": "Fiyatlandırma — PrivacyPolGen",
+      "description": "PrivacyPolGen sonsuza kadar ücretsizdir. Premium, PDF/DOCX dışa aktarımı, özel markalaşma ve barındırılmış politika sayfaları ekler."
+    },
+    "examples": {
+      "title": "Örnek gizlilik politikaları — PrivacyPolGen",
+      "description": "PrivacyPolGen'in farklı iş türleri için oluşturduğu gerçek gizlilik politikalarını görüntüleyin: bloglar, SaaS, e-ticaret ve mobil uygulamalar."
+    },
+    "terms": {
+      "title": "Hizmet Şartları — PrivacyPolGen",
+      "description": "PrivacyPolGen Hizmet Şartları — ücretsiz gizlilik politikası oluşturucumuzun kullanımını düzenleyen şartlar."
+    },
+    "privacy": {
+      "title": "Gizlilik Politikası — PrivacyPolGen",
+      "description": "PrivacyPolGen'in kendi gizlilik politikası — hiçbir kişisel veri toplamıyoruz. Tarayıcınızda her şey istemci tarafında çalışır."
+    },
+    "contact": {
+      "title": "İletişim — PrivacyPolGen",
+      "description": "PrivacyPolGen ile iletişime geçin. Bize support@privacypolgen.com adresinden ulaşın."
+    },
+    "policy": {
+      "title": "Gizlilik Politikası — PrivacyPolGen",
+      "description": "PrivacyPolGen tarafından oluşturulan bir gizlilik politikasını görüntüleyin."
+    },
+    "notFound": {
+      "title": "Sayfa bulunamadı — PrivacyPolGen",
+      "description": "Aradığınız sayfa mevcut değil."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "Hizmet Şartları",
+    "heading": "Hizmet Şartları",
+    "lastUpdated": "Son güncelleme: 8 Haziran 2026",
+    "sections": {
+      "intro": {
+        "title": "1. Şartların Kabulü",
+        "body": "PrivacyPolGen (\"biz\", \"bize\" veya \"bizim\") tarafından işletilen PrivacyPolGen'e (\"Hizmet\") erişerek veya onu kullanarak, bu Hizmet Koşullarına bağlı kalmayı kabul edersiniz. Bu şartların tamamını kabul etmiyorsanız Hizmeti kullanmayın."
+      },
+      "description": {
+        "title": "2. Hizmet Tanımı",
+        "body": "PrivacyPolGen ücretsiz, istemci tarafı bir gizlilik politikası oluşturucusudur. Web siteniz, uygulamanız veya işletmeniz için başlangıç ​​noktası bir gizlilik politikası oluşturmanıza yardımcı olmak amacıyla girdilerinize dayalı olarak şablonlu bir yasal dil sağlıyoruz. Hizmet tamamen tarayıcınızda çalışır; girdiğiniz hiçbir veri sunucularımıza iletilmez, saklanmaz veya sunucularımız tarafından işlenmez."
+      },
+      "notLegalAdvice": {
+        "title": "3. Yasal Tavsiye Değildir",
+        "body": "PrivacyPolGen tarafından oluşturulan içerik yalnızca bilgilendirme amaçlıdır ve hukuki tavsiye niteliğinde değildir. Biz bir hukuk firması değiliz, avukatınız değiliz ve bu Hizmetin kullanımı bir avukat-müvekkil ilişkisi yaratmaz. Önce kendi yargı alanınızda lisansa sahip kalifiye bir avukata danışmadan, Hizmet tarafından oluşturulan herhangi bir içeriğe dayanarak hareket etmemeli veya hareket etmekten kaçınmamalısınız. Oluşturulan politika bir başlangıç ​​şablonudur ve sizin özel durumunuz, iş modeliniz veya sektörünüz için geçerli olan tüm yasal gereksinimleri karşılamayabilir."
+      },
+      "noWarranties": {
+        "title": "4. Garantilerin Reddi",
+        "body": "HİZMET, AÇIK VEYA ZIMNİ HERHANGİ BİR GARANTİ OLMAKSIZIN \"OLDUĞU GİBİ\" VE \"MEVCUT OLDUĞU GİBİ\" SAĞLANIR. GEÇERLİ YASALARIN İZİN VERDİĞİ EN GENİŞ ÖLÇÜDE, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK, BAŞLIK, İHLAL ETMEME VE İHLAL ETMEME GARANTİLERİ DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE AÇIK, ZIMNİ, YASAL VEYA BAŞKA TÜM GARANTİLERİ REDDEDİYORUZ. DOĞRULUK. HİZMETİN KESİNTİSİZ, HATASIZ, GÜVENLİ OLACAĞINI VEYA OLUŞTURULAN HERHANGİ BİR İÇERİĞİN İHTİYAÇLARINIZ İÇİN TAM, DOĞRU VEYA YASAL OLARAK YETERLİ OLACAĞINI GARANTİ ETMİYORUZ."
+      },
+      "limitationLiability": {
+        "title": "5. Sorumluluğun Sınırlandırılması",
+        "body": "GEÇERLİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, HİÇBİR DURUMDA, KÂR, VERİ, KULLANIM, İYİ NİYET VEYA DİĞER MADDİ KAYIPLAR DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE, HERHANGİ BİR DOLAYLI, ARIZİ, ÖZEL, SONUÇTA ORTAYA ÇIKAN VEYA CEZAİ ZARARLARDAN SORUMLU OLMAYACAĞIZ. HİZMETİ KULLANMANIZ VEYA KULLANAMAMANIZLA İLGİLİ OLARAK - OLUŞTURULAN BİR POLİTİKANIN KULLANILMASI SONUCU ORTAYA ÇIKAN HERHANGİ BİR PARA CEZALARI, CEZALAR VEYA YASAL YÜKÜMLÜLÜKLER DAHİL ANCAK BUNLARLA SINIRLI OLMAMAK ÜZERE. BU ŞARTLARDAN VEYA HİZMETTEN KAYNAKLANAN VEYA HİZMETLE İLİŞKİLİ TÜM İDDİALAR İÇİN SİZE KARŞI TOPLAM YÜKÜMLÜLÜĞÜMÜZ, 1,00 ABD Dolarından VEYA ÖNCEKİ ON İKİ AY İÇİNDE BİZE ÖDEDİĞİNİZ TUTARDAN DAHA FAZLA OLMAYACAKTIR."
+      },
+      "indemnification": {
+        "title": "6. Tazminat",
+        "body": "Hizmeti kullanımınızdan, oluşturduğunuz gizlilik politikasından veya bu Koşulları ihlal etmenizden kaynaklanan veya bunlarla ilgili olarak ortaya çıkan her türlü iddia, yükümlülük, zarar, hüküm, ödül, kayıp, maliyet, harcama veya ücrete (makul avukat ücretleri dahil) karşı bizi savunmayı, tazmin etmeyi ve masun tutmayı kabul edersiniz."
+      },
+      "intellectualProperty": {
+        "title": "7. Fikri Mülkiyet",
+        "body": "Metni, şablonları, maddeleri ve yapısı dahil olmak üzere Hizmet bize aittir ve telif hakkı ve diğer fikri mülkiyet kanunları tarafından korunmaktadır. Oluşturduğunuz gizlilik politikası, herhangi bir yasal amaç doğrultusunda kullanmak, değiştirmek ve dağıtmak üzere size aittir. Ancak, oluşturucunun kendisini veya temel madde şablonlarını rakip bir hizmet olarak kopyalayamaz, yeniden dağıtamaz veya yeniden satamazsınız."
+      },
+      "thirdParty": {
+        "title": "8. Üçüncü Taraf Hizmetleri",
+        "body": "Hizmet, üçüncü taraf hizmetlerine (ör. analizler, ödeme işlemcileri) referanslar görüntüleyebilir. Bu referanslar yalnızca bilgilendirme amaçlıdır. Oluşturulan politikalarda atıfta bulunulan üçüncü taraf hizmetlerinin içeriğinden, gizlilik uygulamalarından veya koşullarından sorumlu değiliz."
+      },
+      "changes": {
+        "title": "9. Şartlarda Değişiklikler",
+        "body": "Bu Şartları herhangi bir zamanda değiştirme hakkını saklı tutuyoruz. Değişiklikler güncellenmiş \"Son güncelleme\" tarihiyle bu sayfada yayınlanacaktır. Herhangi bir değişiklikten sonra Hizmeti kullanmaya devam etmeniz, yeni Şartları kabul ettiğiniz anlamına gelir. Bu Koşulları düzenli aralıklarla incelemenizi öneririz."
+      },
+      "governingLaw": {
+        "title": "10. Geçerli Kanun",
+        "body": "Bu Şartlar, kanunlar ihtilafı ilkelerine bakılmaksızın, Amerika Birleşik Devletleri'nin Delaware Eyaleti kanunlarına göre yönetilecek ve yorumlanacaktır. Bu Koşullar kapsamında ortaya çıkan tüm anlaşmazlıklar yalnızca Delaware Eyaleti mahkemelerinde çözülecektir. Bu bölümdeki hiçbir şey ülkenizde veya ikamet ettiğiniz eyalette geçerli tüketici koruma yasaları kapsamındaki haklarınızı sınırlamaz. Zorunlu tüketici korumalarının (Avrupa Birliği ve Birleşik Krallık dahil ancak bunlarla sınırlı olmamak üzere) geçerli olduğu bir yargı bölgesinde ikamet ediyorsanız, bu korumalar bundan etkilenmez."
+      },
+      "contact": {
+        "title": "11. İletişim",
+        "body": "Bu Şartlar hakkında herhangi bir sorunuz varsa lütfen support@privacypolgen.com adresinden bizimle iletişime geçin."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "Gizlilik Politikası",
+    "heading": "Gizlilik Politikamız",
+    "lastUpdated": "Son güncelleme: 8 Haziran 2026",
+    "sections": {
+      "intro": {
+        "title": "giriiş",
+        "body": "PrivacyPolGen (\"biz\", \"bize\" veya \"bizim\"), gizlilikpolgen.com adresindeki web sitesini (\"Hizmet\") işletir. Bu sayfada gizlilik konusundaki yaklaşımımız açıklanmaktadır; kısacası neredeyse hiçbir şey toplamıyoruz.",
+        "body2": "Çoğu çevrimiçi hizmetin aksine, PrivacyPolGen'in bir arka uç sunucusu yoktur. Bizim tarafımızda veritabanı, kullanıcı hesabı, analitik izleme ve veri depolama yoktur. Gizlilik politikası oluşturucu tamamen tarayıcınızda çalışır."
+      },
+      "noCollection": {
+        "title": "TOPLAMADIĞIMIZ BİLGİLER",
+        "body": "Hakkınızdaki hiçbir kişisel bilgiyi toplamıyor, saklamıyor veya işlemiyoruz. Özellikle:",
+        "list": [
+          "Hesap verisi yok: Kullanıcı hesaplarına gerek duymuyoruz veya desteklemiyoruz.",
+          "Kişisel bilgi yok: Adınızı, e-posta adresinizi veya başka herhangi bir kişisel tanımlayıcıyı istemiyor veya toplamıyoruz.",
+          "Ödeme bilgisi yok: Hizmet ücretsizdir. Ödemeleri işleme koymuyoruz.",
+          "Analitik yok: Sitemizde herhangi bir analiz, izleme pikseli veya telemetri çalıştırmıyoruz.",
+          "İzleme için çerez yok: Çerezleri analiz, reklam veya herhangi bir izleme amacıyla kullanmıyoruz.",
+          "Politika verisi yok: Oluşturucu sihirbazında sağladığınız yanıtlar doğrudan URL'ye kodlanır. Hiçbir zaman herhangi bir sunucuya gönderilmez, saklanmaz veya herhangi bir sunucu tarafından işlenmez."
+        ]
+      },
+      "technical": {
+        "title": "Teknik Veriler",
+        "body": "Barındırma sağlayıcımız, IP adresiniz, tarayıcı türünüz ve istenen sayfalar gibi standart sunucu günlüğü verilerini otomatik olarak toplayabilir. Bu veriler yalnızca web sitesine hizmet vermek ve kötüye kullanımı önlemek için operasyonel amaçlarla kullanılır. Bu verilere erişmiyoruz, bunları analiz etmiyoruz veya paylaşmıyoruz."
+      },
+      "localStorage": {
+        "title": "Yerel Depolama",
+        "body": "İki tercihi hatırlamak için tarayıcınızın localStorage özelliğini kullanırız: seçtiğiniz tema (açık/koyu) ve dil seçiminiz. Bu veriler cihazınızda kalır. Ona erişemiyoruz ve hiçbir zaman hiçbir yere aktarılmıyor. Bunları istediğiniz zaman tarayıcınızın ayarlarından temizleyebilirsiniz."
+      },
+      "thirdParty": {
+        "title": "Üçüncü Taraf Hizmetleri",
+        "body": "Kendi gizlilik uygulamaları olan aşağıdaki üçüncü taraf hizmetlerini kullanıyoruz:",
+        "list": [
+          "Yazı Tipleri (Google Fonts): Yazı tipi dosyaları Google'ın sunucularından yüklenir. Google, gizlilik politikası uyarınca yazı tipi istekleri hakkında bilgi toplayabilir. Bunu en aza indirmek için mümkün olan yerlerde kendi ev sahipliğimizi yapıyoruz.",
+          "Barındırma: Statik sitemiz, barındırma sağlayıcımız aracılığıyla sunulmaktadır. Standart sunucu günlükleri, güvenlik ve operasyonel amaçlarla geçici olarak tutulabilir."
+        ]
+      },
+      "dataRetention": {
+        "title": "Veri Saklama",
+        "body": "Hiçbir kişisel veri toplamadığımız için saklanacak hiçbir şey yoktur. Barındırma sağlayıcımız tarafından tutulan tüm sunucu günlükleri, onların saklama politikalarına tabidir ve tarafımızdan erişilmez."
+      },
+      "yourRights": {
+        "title": "Haklarınız",
+        "body": "Hiçbir kişisel veri toplamadığımız için sağlamamız, düzeltmemiz veya silmemiz gereken hiçbir kişisel veri yoktur. Barındırma sağlayıcımız tarafından yanlışlıkla sunucu günlüklerine kaydedilen verilerle ilgili endişeleriniz varsa, lütfen bizimle iletişime geçin; iyi niyetle araştıracağız."
+      },
+      "changes": {
+        "title": "Bu Politikadaki Değişiklikler",
+        "body": "Bu gizlilik politikasını değiştirirsek üst kısımdaki \"Son güncelleme\" tarihini güncelleyeceğiz. Hiçbir veri toplamadığımız için değişikliklerin nadir ve küçük olması muhtemeldir."
+      },
+      "contact": {
+        "title": "Temas etmek",
+        "body": "Bu gizlilik politikasıyla ilgili sorularınız varsa lütfen support@privacypolgen.com adresinden bizimle iletişime geçin."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Temas etmek",
+    "heading": "İletişime geçin",
+    "subtext": "Sorularınız mı, geri bildirimleriniz mi yoksa sadece merhaba mı demek istiyorsunuz? Sizden haber almayı çok isteriz.",
+    "email": {
+      "title": "E-posta",
+      "body": "Genellikle 24 saat içinde yanıt veririz."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "Sorunları bildirin veya katkıda bulunun."
+    },
+    "feature": {
+      "title": "Özellik İsteği",
+      "body": "Bir fikrin var mı? Bunu duymayı çok isteriz."
+    },
+    "legal": {
+      "title": "Yasal Soruşturma",
+      "body": "Yasal sorularınız veya talepleriniz için."
+    }
+  },
+  "footer": {
+    "tagline": "Web siteleri, SaaS uygulamaları, e-ticaret mağazaları ve mobil uygulamalar için ücretsiz gizlilik politikası oluşturucusu. GDPR, CCPA, COPPA uyumlu. Hesap gerekmez.",
+    "productHeading": "Ürün",
+    "productGenerator": "Oluşturucu",
+    "productExamples": "Örnekler",
+    "productPricing": "Fiyatlandırma",
+    "legalHeading": "Yasal",
+    "legalPrivacy": "Gizlilik Politikası",
+    "legalTerms": "Şartlar",
+    "legalContact": "İletişim",
+    "copyright": "Hukuki tavsiye değildir. Durumunuz için bir avukata danışın.",
+    "credit": "Astro ile oluşturuldu · Bağımsız geliştiriciler için tasarlandı"
+  },
+  "wizard": {
+    "stepTitles": [
+      "İş",
+      "Veri",
+      "Hizmetler",
+      "Yasalar",
+      "İletişim"
+    ],
+    "step1": {
+      "heading": "İşiniz hakkında bize bilgi verin",
+      "subtitle": "Bunları politikanız genelinde varsayılan olarak kullanacağız.",
+      "labelBusinessName": "İş adı *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "Web sitesi URL'si *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "İş türü",
+      "labelJurisdiction": "Birincil yargı alanı"
+    },
+    "step2": {
+      "heading": "Ne tür veriler topluyorsunuz?",
+      "subtitle": "Geçerli olan her şeyi işaretleyin. İş türünüz için yaygın öğeleri önceden seçtik."
+    },
+    "step3": {
+      "heading": "Hangi üçüncü taraf hizmetleri kullanıyorsunuz?",
+      "subtitle": "Her biri için doğru açıklamaları ekleyeceğiz."
+    },
+    "step4": {
+      "heading": "Hangi yasalar size uygulanıyor?",
+      "subtitle": "Varsayılan olarak en katı ortak durumu seçiyoruz. Varsayılanları bırakmak genellikle en güvenli yoldur."
+    },
+    "step5": {
+      "heading": "Kullanıcılar sizinle nasıl iletişim kurabilir?",
+      "subtitle": "Bu e-posta adresi politikanızda görünür ve GDPR & CCPA tarafından gereklidir.",
+      "labelEmail": "İletişim e-postası *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "Bir Veri Koruma Yetkilim var (DPO)",
+      "descDpo": "GDPR kapsamında bazı işletmeler için gereklidir. Atadıysanız seçin.",
+      "labelDpoEmail": "DPO e-postası",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "Geri",
+      "continue": "Devam",
+      "generate": "Politika oluştur"
+    },
+    "validation": {
+      "required": "Lütfen zorunlu alanları doldurun"
+    },
+    "result": {
+      "heading": "Gizlilik politikanız hazır.",
+      "subtitle": "Markdown, HTML veya düz metin olarak kopyalayın. Veya aşağıdaki herkese açık bağlantıyı paylaşın.",
+      "publicLink": "Herkese açık bağlantı",
+      "copyLink": "Bağlantıyı kopyala",
+      "openTab": "Yeni sekmede aç",
+      "editAnswers": "← Cevaplarınızı düzenleyin",
+      "toastSuccess": "Bağlantı kopyalandı — her yere yapıştırın",
+      "toastError": "Kopyalama başarısız — elle seçin ve kopyalayın"
+    },
+    "preview": {
+      "livePreview": "Canlı önizleme",
+      "business": "İş",
+      "typeToSee": "Politikayı önizlemek için işletme bilgilerinizi girin",
+      "website": "Web sitesi",
+      "businessType": "Tür",
+      "jurisdiction": "Yargı",
+      "collectSentence": "Hizmetlerimizi sağlamak için {types} topluyoruz.",
+      "placeholders": {
+        "business": "[İşletme Adınız]",
+        "website": "[websiteniz.com]",
+        "type": "[Bir işletme türü seçin]",
+        "jurisdiction": "[Bir yetki alanı seçin]"
+      },
+      "sections": {
+        "intro": "giriiş",
+        "dataCollection": "Topladığımız Bilgiler",
+        "personalInfo": "Sağladığınız Kişisel Bilgiler",
+        "dataUsage": "Bilgilerinizi Nasıl Kullanıyoruz",
+        "cookies": "Çerezler ve İzleme",
+        "thirdParty": "Üçüncü Taraf Hizmetleri",
+        "yourRights": "Gizlilik Haklarınız",
+        "children": "Çocukların Gizliliği",
+        "dataSecurity": "Veri Güvenliği ve Saklanması",
+        "contact": "İletişim Bilgileri"
+      },
+      "sectionsGenerated": "Oluşturulan Bölümler"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Marketing, design, or development agency with client work and contact forms.",
+        "name": "Agency / Studio"
+      },
+      "ecommerce": {
+        "description": "Online store selling physical or digital products with shopping cart and checkout.",
+        "name": "E-commerce Store"
+      },
+      "mobile-app": {
+        "description": "iOS or Android app with in-app accounts, analytics, and possibly push notifications.",
+        "name": "Mobile App"
+      },
+      "personal-blog": {
+        "description": "A personal blog or content site. Typically collects emails via newsletter and uses basic analytics.",
+        "name": "Personal Blog"
+      },
+      "portfolio": {
+        "description": "Personal portfolio or agency site showcasing work. Minimal data collection.",
+        "name": "Portfolio Website"
+      },
+      "saas": {
+        "description": "Software-as-a-service web application with user accounts, payments, and integrations.",
+        "name": "SaaS Application"
+      }
+    },
+    "dataGroups": {
+      "account": "Account",
+      "identity": "Identity",
+      "marketing": "Marketing",
+      "technical": "Technical",
+      "transaction": "Transaction"
+    },
+    "dataTypes": {
+      "addresses": "Mailing or billing addresses",
+      "ads": "Advertising identifiers and conversion data",
+      "analytics": "Analytics and behavioral data",
+      "companies": "Company or organization name",
+      "cookies": "Cookies and similar tracking technologies",
+      "device-info": "Device and browser information",
+      "emails": "Email addresses",
+      "ip-addresses": "IP addresses",
+      "location-data": "Approximate geographic location",
+      "names": "First and last name",
+      "payments": "Payment information (processed by our payment provider, not stored on our servers)",
+      "phones": "Phone numbers",
+      "usage-data": "Usage data and activity logs",
+      "user-accounts": "Account credentials (usernames, hashed passwords)"
+    },
+    "jurisdictions": {
+      "au": "Australia",
+      "br": "Brazil",
+      "ca": "Canada",
+      "de": "Germany",
+      "dk": "Denmark",
+      "es": "Spain",
+      "fr": "France",
+      "gb": "United Kingdom",
+      "global": "Global",
+      "ie": "Ireland",
+      "in": "India",
+      "it": "Italy",
+      "jp": "Japan",
+      "mx": "Mexico",
+      "nl": "Netherlands",
+      "no": "Norway",
+      "nz": "New Zealand",
+      "se": "Sweden",
+      "sg": "Singapore",
+      "us": "United States"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Requires commercial websites that collect personal information from California users to post a conspicuous privacy policy.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "California, USA"
+      },
+      "ccpa": {
+        "description": "California state privacy law. Grants California residents rights over their personal information, including the right to know, delete, and opt out of sale.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "California, USA"
+      },
+      "coppa": {
+        "description": "Federal law governing the online collection of personal information from children under 13.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "United States (under 13)"
+      },
+      "gdpr": {
+        "description": "EU/EEA/UK comprehensive data protection law. Requires explicit consent, data subject rights, and lawful basis for processing.",
+        "fullName": "General Data Protection Regulation",
+        "name": "GDPR",
+        "region": "European Union + EEA + UK"
+      },
+      "lgpd": {
+        "description": "Brazil's comprehensive data protection law, modeled after the GDPR.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brazil"
+      },
+      "pipeda": {
+        "description": "Canadian federal privacy law governing the collection, use, and disclosure of personal information in commercial activities.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Canada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Advertising",
+      "analytics": "Analytics",
+      "authentication": "Authentication",
+      "emailMarketing": "Email Marketing",
+      "infrastructure": "Infrastructure",
+      "media": "Media",
+      "payments": "Payments"
+    },
+    "services": {
+      "aws": {
+        "description": "Cloud hosting and storage.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, DDoS protection, and DNS services.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "Email marketing platform for creators and small businesses.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "OAuth login using a Facebook account.",
+        "name": "Facebook Login"
+      },
+      "facebook-pixel": {
+        "description": "Conversion tracking and audience-building for Facebook and Instagram ads.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Contextual advertising network by Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Web traffic and user behavior analytics provided by Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "OAuth login using a Google account.",
+        "name": "Google Sign-In"
+      },
+      "lemonsqueezy": {
+        "description": "Merchant of record for digital product sales and subscriptions.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "Email newsletter delivery and audience management.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Product analytics for tracking user actions within web and mobile apps.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Online payment processor supporting PayPal balance and linked accounts.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Privacy-friendly analytics that don't use cookies or collect personal data.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Transactional email delivery service.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Payment processing for credit card transactions.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Embedded Vimeo videos on our pages.",
+        "name": "Vimeo Embeds"
+      },
+      "youtube-embeds": {
+        "description": "Embedded YouTube videos on our pages.",
+        "name": "YouTube Embeds"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Düz metin"
+    },
+    "copy": "{{format}} kopyala",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "Politika önizlemesi",
+    "copied": "Kopyalandı",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "URL'de politika hash'i bulunamadı. Lütfen önce bir politika oluşturun.",
+    "errorInvalid": "Bu politika bağlantısı geçersiz veya bozuk. Lütfen yeni bir tane oluşturun.",
+    "generateNew": "Yeni bir politika oluşturun",
+    "loading": "Politika yükleniyor…",
+    "title": "{{businessName}} — Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "generateOwn": "Kendi politikanızı oluşturun →"
+  },
+  "copied": "Copied",
+  "copy": "Copy",
+  "empty": "Nothing here yet — start by entering your business details.",
+  "langSwitcher": {
+    "listboxLabel": "Select language",
+    "toggleLabel": "Switch language"
+  },
+  "next": "Next",
+  "prev": "Previous",
+  "preview": "Preview",
+  "selectall": "Select all",
+  "validation": {
+    "contactEmail": "Please enter a valid email address",
+    "required": "Please fill in the required fields"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "includeWhen": "always",
+      "body": "This Privacy Policy describes how {{businessName}} (\"we\", \"us\", or \"our\") collects, uses, and discloses your personal information when you visit, register with, or otherwise interact with {{websiteUrl}} (the \"Service\").\n\nBy accessing or using the Service, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree with the terms of this policy, please do not access the Service.\n\nWe may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date at the top."
+    },
+    {
+      "id": "data-collected",
+      "title": "Information We Collect",
+      "includeWhen": "always",
+      "body": "We collect several types of information for various purposes to provide and improve our Service to you."
+    },
+    {
+      "id": "personal-info",
+      "title": "Personal Information You Provide",
+      "includeWhen": "data-collected",
+      "body": "While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (\"Personal Information\"). This may include, but is not limited to:\n\n{{personalInfoList}}\n\nWe collect this information only when you voluntarily provide it to us, such as when you fill out a form, create an account, subscribe to a newsletter, or contact us."
+    },
+    {
+      "id": "usage-data",
+      "title": "Usage Data and Analytics",
+      "includeWhen": "data-collected",
+      "body": "We may also collect information about how the Service is accessed and used (\"Usage Data\"). This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers, and other diagnostic data.\n\nWe use this data to analyze trends, administer the Service, track users' movement around the Service, and gather demographic information about our user base as a whole."
+    },
+    {
+      "id": "analytics-details",
+      "title": "Analytics Providers",
+      "includeWhen": {
+        "any": [
+          { "service": "google-analytics" },
+          { "service": "plausible" },
+          { "service": "mixpanel" }
+        ]
+      },
+      "body": "We use third-party analytics services to help us understand how users interact with our Service.\n\n{{analyticsText}}\n\nThese analytics providers may use cookies, web beacons, and other tracking technologies to collect information about your use of the Service. The information collected may include your IP address, browser type, pages visited, time spent on pages, and referring URLs. This information is used to analyze trends, administer the Service, and track user movement.\n\nYou can opt out of some analytics collection by adjusting your browser settings or using the opt-out mechanisms provided by the individual analytics providers."
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies and Tracking",
+      "includeWhen": "data-collected",
+      "body": "We use cookies and similar tracking technologies to track activity on our Service and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.\n\nYou can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.\n\nTypes of cookies we use:\n\n- **Essential cookies**: Required for the Service to function properly.\n- **Analytics cookies**: Help us understand how visitors interact with the Service.\n- **Preference cookies**: Remember your settings and preferences.\n- **Marketing cookies**: Used to deliver advertisements relevant to you."
+    },
+    {
+      "id": "cookie-consent",
+      "title": "Cookie Consent",
+      "includeWhen": { "law": ["gdpr", "lgpd"] },
+      "body": "We are committed to ensuring that you have control over the use of cookies on our Service. Where required by applicable law, we obtain your prior consent before placing non-essential cookies on your device.\n\nWhen you first visit our Service, we present you with a cookie consent banner that allows you to:\n\n- Accept all cookies\n- Reject all non-essential cookies\n- Customize your cookie preferences\n\nYou may change your cookie preferences at any time through the cookie settings available on our Service. If you withdraw your consent, we will stop using the relevant cookies unless there is a legitimate interest to continue using them. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal."
+    },
+    {
+      "id": "use-of-data",
+      "title": "How We Use Your Information",
+      "includeWhen": "always",
+      "body": "We use the collected information for various purposes:\n\n- To provide and maintain our Service\n- To notify you about changes to our Service\n- To allow you to participate in interactive features of our Service when you choose to do so\n- To provide customer support\n- To gather analysis or valuable information so that we can improve our Service\n- To monitor the usage of our Service\n- To detect, prevent, and address technical issues\n- To deliver targeted advertising (where consent has been given)\n- To send you newsletters, marketing or promotional materials (where consent has been given)"
+    },
+    {
+      "id": "advertising",
+      "title": "Advertising and Ad Targeting",
+      "includeWhen": {
+        "any": [
+          { "service": "google-adsense" },
+          { "service": "facebook-pixel" },
+          { "dataType": "ads" }
+        ]
+      },
+      "body": "We may use third-party advertising services to serve ads when you visit our Service. These services may use cookies and similar technologies to serve ads based on your prior visits to our website or other websites (\"interest-based advertising\").\n\n**Google AdSense**: We use Google AdSense to display advertisements. Google AdSense uses cookies to serve ads based on your visits to our Service and other websites. You can opt out of Google's use of cookies for personalized advertising by visiting Google's Ads Settings (https://adssettings.google.com/).\n\n**Facebook Pixel**: We may use Facebook Pixel to measure the effectiveness of our advertising campaigns and deliver targeted advertisements to you on Facebook and its affiliates. You can control your ad preferences through your Facebook settings.\n\nPlease note that the sharing of data with these advertising partners for cross-context behavioral advertising may be considered a \"sale\" or \"share\" under applicable privacy laws such as the CCPA. You have the right to opt out of such sharing.\n\nYou may opt out of personalized advertising from multiple ad networks by visiting the Network Advertising Initiative opt-out page (https://optout.networkadvertising.org/) or the Digital Advertising Alliance opt-out page (https://optout.aboutads.info/)."
+    },
+    {
+      "id": "email-marketing",
+      "title": "Email Marketing",
+      "includeWhen": {
+        "any": [
+          { "service": "mailchimp" },
+          { "service": "convertkit" },
+          { "service": "sendgrid" }
+        ]
+      },
+      "body": "We may use third-party email marketing services to send you newsletters, marketing materials, and other communications. These services process your email address and related preferences on our behalf.\n\nWe will only send you marketing emails where we have your consent or another lawful basis to do so. You can unsubscribe from marketing communications at any time by clicking the \"unsubscribe\" link in any email we send you or by contacting us directly at {{contactEmail}}.\n\nWe require our email marketing providers to implement appropriate technical and organizational measures to protect your personal data and to use it only for the purposes of providing their services to us."
+    },
+    {
+      "id": "payment-processing",
+      "title": "Payment Processing",
+      "includeWhen": {
+        "any": [
+          { "service": "stripe" },
+          { "service": "paypal" },
+          { "service": "lemonsqueezy" }
+        ]
+      },
+      "body": "We use third-party payment processors to handle payments for our paid services. These payment processors handle your payment information directly and are PCI-DSS compliant.\n\nWe do not collect, store, or process your full payment card details on our servers. Your payment information (such as credit card numbers, expiration dates, and CVV codes) is transmitted directly to the payment processor and is subject to their privacy policy and security practices.\n\nWe may receive limited information from the payment processor, such as the last four digits of your card, the expiration date, and billing address, for the purposes of order confirmation, customer support, and fraud prevention."
+    },
+    {
+      "id": "third-party",
+      "title": "Third-Party Services",
+      "includeWhen": "always",
+      "body": "We may employ third-party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Service-related services, or to assist us in analyzing how our Service is used.\n\nThese third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.\n\n{{thirdPartyServices}}\n\nWe encourage you to review the privacy policies of these third-party services to understand their practices."
+    },
+    {
+      "id": "legal-basis",
+      "title": "Legal Basis for Processing",
+      "includeWhen": {
+        "any": [
+          { "law": "gdpr" },
+          { "law": "lgpd" },
+          { "law": "dpdp" }
+        ]
+      },
+      "body": "{{legalBasisText}}"
+    },
+    {
+      "id": "your-rights",
+      "title": "Your Privacy Rights",
+      "includeWhen": "always",
+      "body": "Depending on your location, you may have certain rights regarding your personal information:\n\n{{rightsList}}\n\nTo exercise any of these rights, please contact us at {{contactEmail}}. We will respond to your request within 30 days."
+    },
+    {
+      "id": "retention",
+      "title": "Data Retention",
+      "includeWhen": "always",
+      "body": "We will retain your Personal Information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.\n\nUsage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Service, or when we are legally obligated to retain this data for longer periods."
+    },
+    {
+      "id": "transfers",
+      "title": "International Data Transfers",
+      "includeWhen": "always",
+      "body": "Your information, including Personal Information, may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction.\n\nIf you are located outside {{jurisdiction}} and choose to provide information to us, please note that we transfer the data, including Personal Information, to {{jurisdiction}} and process it there.\n\nYour consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer."
+    },
+    {
+      "id": "international-transfers-gdpr",
+      "title": "International Data Transfers — GDPR Safeguards",
+      "includeWhen": {
+        "all": [
+          { "law": "gdpr" },
+          {
+            "not": {
+              "jurisdiction": ["gb", "de", "fr", "es", "it", "nl", "se", "no", "dk", "ie", "at", "be", "bg", "hr", "cy", "cz", "ee", "fi", "gr", "hu", "lv", "lt", "lu", "mt", "pl", "pt", "ro", "sk", "si", "is", "li"]
+            }
+          }
+        ]
+      },
+      "body": "As a business established outside the European Economic Area (EEA) or the United Kingdom that processes the personal data of individuals located in the EEA or UK, we rely on the following safeguards for international data transfers under the GDPR:\n\n- **Standard Contractual Clauses (SCCs)**: We have entered into the European Commission's Standard Contractual Clauses with our data processors and may do so with relevant third-party service providers.\n- **Adequacy Decisions**: Where personal data is transferred to a country that the European Commission has determined provides an adequate level of data protection, we rely on that adequacy decision.\n- **Derogations**: Where no other transfer mechanism is available, we may rely on a derogation under Article 49 of the GDPR, such as your explicit consent to the transfer or the necessity of the transfer for the performance of a contract with you.\n\nIf you have any questions about the safeguards we use for international data transfers, please contact us at {{contactEmail}}."
+    },
+    {
+      "id": "security",
+      "title": "Security of Your Information",
+      "includeWhen": "always",
+      "body": "The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.\n\nWe use industry-standard encryption (TLS/SSL) for data in transit, restrict access to personal data to authorized personnel only, and regularly review our security practices."
+    },
+    {
+      "id": "children",
+      "title": "Children's Privacy",
+      "includeWhen": { "law": "coppa" },
+      "body": "{{coppaText}}"
+    },
+    {
+      "id": "do-not-sell",
+      "title": "Do Not Sell or Share My Personal Information",
+      "includeWhen": { "law": "ccpa" },
+      "body": "{{ccpaText}}\n\nWe do not sell or rent your Personal Information to third parties for monetary consideration. However, some forms of sharing (such as for cross-context behavioral advertising) may be considered a \"sale\" or \"share\" under California law. California residents may opt out of such sharing by contacting us at {{contactEmail}}."
+    },
+    {
+      "id": "changes",
+      "title": "Changes to This Privacy Policy",
+      "includeWhen": "always",
+      "body": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date at the top of this Privacy Policy.\n\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "includeWhen": "always",
+      "body": "If you have any questions about this Privacy Policy, please contact us:\n\n- By email: {{contactEmail}}\n- By visiting this page on our website: {{websiteUrl}}\n\n{{dpoText}}"
+    },
+    {
+      "id": "disclaimer",
+      "title": "Disclaimer",
+      "includeWhen": "always",
+      "body": "This Privacy Policy is provided as a general template and should not be construed as legal advice. {{businessName}} recommends that you consult with a qualified attorney to review and customize this policy for your specific circumstances, business model, and applicable jurisdictions. By using this template, you acknowledge that we are not your attorney and that this policy is provided \"as is\" without warranty of any kind."
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+{
+  "meta": {
+    "code": "de",
+    "name": "German",
+    "nativeName": "Deutsch",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "Start",
+    "generator": "Generator",
+    "examples": "Beispiele",
+    "pricing": "Preise",
+    "brand": "PrivacyPolGen",
+    "generate": "Erstellen",
+    "ariaToggleTheme": "Design umschalten",
+    "ariaThemeDark": "Zum hellen Design wechseln",
+    "ariaThemeLight": "Zum dunklen Design wechseln"
+  },
+  "hero": {
+    "badge": "Kostenlos · Keine Anmeldung · GDPR · CCPA · COPPA",
+    "heading": "Erstellen Sie eine Datenschutzerklärung",
+    "headingAccent": "in unter 60 Sekunden.",
+    "subheading": "Beantworten Sie 5 kurze Fragen. Erhalten Sie eine vollständige, anwaltsgerechte Datenschutzerklärung, die auf Ihr Unternehmen zugeschnitten ist. Kopieren, teilen oder hosten Sie sie als öffentliche Seite.",
+    "cta": "Datenschutzerklärung erstellen",
+    "ctaExamples": "Beispiele ansehen",
+    "footnote": "Kein Konto · Keine Daten an den Server · Erzeugte Richtlinie ist in der URL codiert"
+  },
+  "trustBar": {
+    "label": "Funktioniert mit den Tools, die Sie bereits nutzen",
+    "more": "+ und viele weitere"
+  },
+  "features": {
+    "label": "Funktionen",
+    "heading": "Alles was Sie brauchen. Nichts was Sie nicht brauchen.",
+    "subtext": "Ein Datenschutz-Generator für unabhängige Entwickler, kleine Teams und alle, die eine echte Richtlinie benötigen, ohne einem Anwalt 500 $ zu zahlen.",
+    "cards": {
+      "laws": {
+        "title": "Gesetze direkt abgedeckt",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD und PDPA-SG. Wählen Sie die für Ihr Unternehmen relevanten aus."
+      },
+      "stack": {
+        "title": "Auf Ihren Technologie-Stack zugeschnitten",
+        "body": "Wählen Sie aus über 25 beliebten Drittanbieterdiensten (Stripe, Google Analytics, Plausible, Mailchimp…) und wir fügen automatisch die richtigen Offenlegungen hinzu."
+      },
+      "url": {
+        "title": "Teilbare öffentliche URL",
+        "body": "Jede Richtlinie erhält eine eindeutige, teilbare URL. Hosten Sie sie auf Ihrer Domain oder senden Sie sie zur Überprüfung an Ihren Anwalt."
+      },
+      "export": {
+        "title": "Überall exportieren",
+        "body": "Kopieren Sie sie als Markdown, HTML oder Klartext. Premium fügt PDF- und DOCX-Export hinzu."
+      },
+      "legal": {
+        "title": "Echter Rechtstext, kein Lorem Ipsum",
+        "body": "Handgeschriebene Klauseln, die auf die tatsächlichen Abschnitte von GDPR, CCPA und COPPA verweisen."
+      },
+      "privacy": {
+        "title": "Null Daten, Null Tracking",
+        "body": "Ihre Antworten werden direkt in der URL codiert. Wir betreiben kein Backend und sehen Ihre Richtlinieninhalte nicht."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "So funktioniert's",
+    "heading": "Fünf Schritte. Etwa eine Minute.",
+    "steps": {
+      "business": {
+        "title": "Erzählen Sie uns von Ihrem Unternehmen",
+        "body": "Name, URL, Geschäftstyp und Standort. Für häufige Fälle verwenden wir Standardwerte."
+      },
+      "data": {
+        "title": "Wählen Sie, was Sie sammeln",
+        "body": "Markieren Sie die Arten von Daten, die Sie sammeln. Namen, E-Mails, Zahlungen, Analysen usw."
+      },
+      "services": {
+        "title": "Listen Sie Ihre Dienste auf",
+        "body": "Stripe, Google Analytics, Mailchimp usw. Wir fügen die richtigen Drittanbieter-Offenlegungen hinzu."
+      },
+      "laws": {
+        "title": "Wählen Sie anwendbare Gesetze",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. Wir verwenden standardmäßig den strengsten Fall."
+      },
+      "policy": {
+        "title": "Erhalten Sie Ihre Richtlinie",
+        "body": "Kopieren Sie sie als Markdown, HTML oder Klartext. Teilen Sie sie über eine öffentliche URL. Jederzeit aktualisierbar."
+      }
+    }
+  },
+  "comparison": {
+    "label": "Vergleich",
+    "heading": "PrivacyPolGen vs. die Alternativen.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "Anwalt",
+    "colPaidTemplate": "Kostenpflichtige Vorlage",
+    "rows": {
+      "price": "Preis",
+      "time": "Zeitaufwand",
+      "gdprCovers": "GDPR / CCPA Abdeckung",
+      "tailored": "Auf Stack zugeschnitten",
+      "updatable": "Selbst aktualisierbar",
+      "url": "Teilbare URL",
+      "review": "Anwaltsprüfung"
+    },
+    "values": {
+      "free": "0 $",
+      "seconds": "~60 Sekunden",
+      "days": "Tage bis Wochen",
+      "daysShort": "Tage",
+      "yes": "Ja",
+      "yesCustom": "Ja (individuell)",
+      "yesTemplate": "Ja (Vorlage)",
+      "yesServices": "Ja (25+ Dienste)",
+      "yesAttorney": "Ja (Anwalt)",
+      "partially": "Teilweise",
+      "no": "Nein",
+      "pdfOnly": "Nur PDF",
+      "recommended": "Empfohlen",
+      "included": "Inbegriffen",
+      "lawyerPrice": "500+ € pro Entwurf",
+      "paidPrice": "50–200 € / Monat"
+    }
+  },
+  "pricing": {
+    "label": "Preise",
+    "heading": "Kostenlos für alle. Premium für das Besondere.",
+    "subtext": "Der Kern-Generator ist kostenlos und bleibt kostenlos. Premium ist für Teams, die polierte Exporte und Anpassungen benötigen.",
+    "plans": {
+      "free": {
+        "name": "Kostenlos",
+        "price": "0 $",
+        "period": "für immer",
+        "description": "Für persönliche Projekte, Blogs und kleine Websites.",
+        "cta": "Datenschutzerklärung erstellen",
+        "features": [
+          "Vollständige Datenschutzerklärung in Markdown, HTML und Klartext",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "Alle 25+ Drittanbieter-Offenlegungen",
+          "Teilbare öffentliche URL",
+          "Unbegrenzte Neuerstellungen",
+          "Kein Konto erforderlich"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "19 $",
+        "period": "einmalig",
+        "description": "Für Unternehmen, die polierte Exporte und Integrationen benötigen.",
+        "cta": "Auf Premium upgraden",
+        "ctaComingSoon": "Demnächst verfügbar",
+        "badge": "Am nützlichsten",
+        "features": [
+          "Alles im Kostenlos-Tarif",
+          "PDF- und DOCX-Export",
+          "Cookie-Banner-Code-Generator",
+          "Individuelles Branding (Ihr Logo + Farben)",
+          "Gehostete Richtlinienseite mit eigener Domain",
+          "Versionsgeschichte und Änderungen",
+          "Prioritäts-Support"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Fragen, beantwortet.",
+    "items": [
+      {
+        "q": "Ist dieser Datenschutz-Generator wirklich kostenlos?",
+        "a": "Ja. Sie können die erstellte Datenschutzerklärung völlig kostenlos generieren, kopieren und hosten. Wir planen eine Premium-Stufe mit PDF/DOCX-Exporten, aber der Kern-Generator wird immer kostenlos bleiben."
+      },
+      {
+        "q": "Brauche ich ein Konto, um eine Datenschutzerklärung zu erstellen?",
+        "a": "Kein Konto erforderlich. Beantworten Sie einfach die Fragen in unserem Assistenten und wir erstellen Ihre Richtlinie. Ihre Antworten werden direkt in der teilbaren URL codiert — nichts wird an unsere Server gesendet."
+      },
+      {
+        "q": "Ist die erstellte Richtlinie rechtlich bindend?",
+        "a": "Die erstellte Richtlinie ist eine Ausgangsvorlage, die die häufigsten rechtlichen Anforderungen abdeckt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Jedes Unternehmen ist jedoch anders. Wir empfehlen dringend, die endgültige Richtlinie vor der Verwendung von einem Anwalt prüfen zu lassen, insbesondere in regulierten Branchen."
+      },
+      {
+        "q": "Wo werden meine Daten gespeichert?",
+        "a": "Nirgendwo. Wir verwenden clientseitige Komprimierung (DEFLATE + Base64 URL-sichere Kodierung), um Ihre Antworten im URL-Hash zu verpacken. Wenn Sie die URL teilen, decodiert der Browser des Empfängers die Richtlinie lokal. Wir betreiben kein Backend, protokollieren keine Assistentenantworten und haben keinen Zugriff auf Ihre Richtlinieninhalte."
+      },
+      {
+        "q": "Kann ich die Richtlinie nach der Erstellung bearbeiten?",
+        "a": "Ja. Bearbeiten Sie einfach das Markdown oder HTML in einem beliebigen Texteditor und hosten Sie die Datei auf Ihrer eigenen Website. Die Ausgabe gehört Ihnen und kann frei geändert werden. Die Premium-Stufe wird bearbeitbare In-App-Bearbeitung mit Versionsgeschichte bieten."
+      },
+      {
+        "q": "Deckt dies GDPR, CCPA und andere Gesetze ab?",
+        "a": "Ja. Wählen Sie in Schritt 4 des Assistenten die für Ihr Unternehmen geltenden Gesetze aus, und wir fügen die entsprechenden Klauseln hinzu (GDPR-Rechtsgrundlage, CCPA-Opt-out, COPPA-Elterneinwilligung, PIPEDA-Zugriffsrechte, LGPD-Rechtsgrundlage, PDPA-SG-Einwilligungsmechanismen)."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen der kostenlosen und der Premium-Stufe?",
+        "a": "Die kostenlose Version bietet eine vollständige Datenschutzerklärung in Markdown, HTML und Klartext. Premium fügt PDF- und DOCX-Export, Cookie-Banner-Code-Generierung, individuelles Branding und gehostete Richtlinienseiten mit Versionsgeschichte hinzu."
+      },
+      {
+        "q": "Wie füge ich die Richtlinie zu meiner Website hinzu?",
+        "a": "Erstellen Sie eine Seite auf Ihrer Website (z. B. /datenschutz), fügen Sie die HTML-Ausgabe ein und verlinken Sie sie aus Ihrer Fußzeile. Wenn Sie eine gehostete Version möchten, teilen Sie die generierte /p?h=... URL — sie funktioniert als eigenständige öffentliche Seite."
+      },
+      {
+        "q": "Wird meine Richtlinie aktualisiert, wenn sich Gesetze ändern?",
+        "a": "Die von Ihnen erstellte Richtlinie ist ein statisches Dokument zu einem bestimmten Zeitpunkt. Wenn sich Datenschutzgesetze ändern, müssen Sie sie neu erstellen und die Version auf Ihrer Website aktualisieren. Wir aktualisieren unsere Klauselbibliothek kontinuierlich und der Assistent ist stets auf dem neuesten Stand."
+      },
+      {
+        "q": "Kann ich dies für ein Kundenprojekt verwenden?",
+        "a": "Absolut. Sie können in der kostenlosen Stufe Richtlinien für unbegrenzte Kundenprojekte erstellen. Wir bitten lediglich darum, dass Sie den Generator selbst nicht weiterverteilen oder die Ausgabe unverändert als konkurrierenden Dienst weiterverkaufen."
+      },
+      {
+        "q": "Enthält die Richtlinie einen Cookie-Abschnitt?",
+        "a": "Ja — wenn Sie in Schritt 2 des Assistenten 'Cookies' auswählen, fügen wir einen vollständigen Cookie-Abschnitt mit Beschreibungen von essentiellen, Analyse-, Präferenz- und Marketing-Cookies hinzu. Wir listen auch auf, welche Drittanbieter-Cookies jeder von Ihnen integrierte Dienst setzen kann."
+      },
+      {
+        "q": "Was, wenn ich nicht weiß, welche Gesetze für mich gelten?",
+        "a": "Wir wählen standardmäßig GDPR, CCPA/CPRA und CalOPPA für alle aus (was den strengsten Fall abdeckt). Wenn Sie unsicher sind, ist es in der Regel am sichersten, die Standardeinstellungen zu belassen — die meisten Gesetze abzudecken schadet nie, und die Richtlinie bleibt in Jurisdiktionen, in denen das Gesetz nicht gilt, gültig."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "Generator",
+    "heading": "Datenschutzerklärung erstellen",
+    "subtext": "Fünf Schritte. Etwa eine Minute. Ihre Antworten bleiben in Ihrem Browser — nichts wird an einen Server gesendet."
+  },
+  "examplesPage": {
+    "breadcrumb": "Beispiele",
+    "heading": "Echte Richtlinien von PrivacyPolGen ansehen.",
+    "subtext": "Klicken Sie auf ein Beispiel, um die vollständige Richtlinie zu öffnen. Jede wird vollständig clientseitig aus den in der URL codierten Antworten generiert.",
+    "openPolicy": "Richtlinie öffnen",
+    "ctaLabel": "Möchten Sie eine eigene?",
+    "cta": "Eigene erstellen",
+    "samples": {
+      "blog": {
+        "description": "Minimale Datenerfassung: E-Mail über Newsletter, grundlegende Analytik, Cookies. Deckt DSGVO, CCPA, CalOPPA ab.",
+        "title": "Persönlicher Blog mit Newsletter"
+      },
+      "ecommerce": {
+        "description": "Online-Shop: Adressen, Zahlungen, Werbepixel. Deckt DSGVO, CCPA, CalOPPA, COPPA ab.",
+        "title": "E-Commerce-Shop mit Werbung"
+      },
+      "mobile": {
+        "description": "iOS/Android-App: Konten, Nutzungsdaten, Push-Benachrichtigungen. Deckt DSGVO, CCPA, CalOPPA, LGPD ab.",
+        "title": "Mobile App mit Analytik"
+      },
+      "saas": {
+        "description": "Vollständiges SaaS: Benutzerkonten, Zahlungen über Stripe, E-Mail über SendGrid, Analytik. Deckt DSGVO, CCPA, CalOPPA, PIPEDA ab.",
+        "title": "SaaS-Anwendung mit Zahlungen"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "Preise",
+    "heading": "Einfache, faire Preise.",
+    "subtext": "Der Kern-Generator ist für alle kostenlos. Premium ist für Teams, die polierte Exporte und Integrationen benötigen."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "Seite nicht gefunden",
+    "message": "Die gesuchte Seite existiert nicht. Möchten Sie stattdessen eine Datenschutzerklärung erstellen?",
+    "backHome": "← Zurück zur Startseite",
+    "generate": "Datenschutzerklärung erstellen",
+    "messageLead": "Die Seite, die Sie suchen, existiert nicht. Möchten Sie",
+    "messageLink": "eine Datenschutzerklärung erstellen",
+    "messageTrail": "stattdessen?"
+  },
+  "homeCta": {
+    "heading": "Bereit für Ihre Datenschutzerklärung?",
+    "subtext": "Erstellen Sie Ihre in unter einer Minute. Kostenlos, für immer.",
+    "cta": "Datenschutzerklärung erstellen"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — Erstellen Sie eine Datenschutzerklärung in 60 Sekunden.",
+    "jsonLdDescription": "Kostenloser Datenschutz-Generator für Websites, SaaS, E-Commerce und mobile Apps.",
+    "index": {
+      "title": "PrivacyPolGen — Kostenloser Datenschutz-Generator (GDPR, CCPA, COPPA)",
+      "description": "Erstellen Sie eine vollständige, anwaltsgerechte Datenschutzerklärung für Ihre Website, SaaS, E-Commerce oder mobile App in unter 60 Sekunden. Kostenlos, keine Anmeldung, keine Daten an den Server."
+    },
+    "generate": {
+      "title": "Datenschutzerklärung erstellen — PrivacyPolGen",
+      "description": "Beantworten Sie 5 kurze Fragen und erhalten Sie eine vollständige, anwaltsgerechte Datenschutzerklärung für Ihr Unternehmen. Kostenlos, keine Anmeldung."
+    },
+    "pricing": {
+      "title": "Preise — PrivacyPolGen",
+      "description": "PrivacyPolGen ist für immer kostenlos. Premium fügt PDF/DOCX-Export, individuelles Branding und gehostete Richtlinienseiten hinzu."
+    },
+    "examples": {
+      "title": "Beispiel-Datenschutzerklärungen — PrivacyPolGen",
+      "description": "Sehen Sie echte Datenschutzerklärungen von PrivacyPolGen für verschiedene Geschäftstypen: Blogs, SaaS, E-Commerce und mobile Apps."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen – PrivacyPolGen",
+      "description": "PrivacyPolGen-Nutzungsbedingungen – Bedingungen, die die Nutzung unseres kostenlosen Generators für Datenschutzrichtlinien regeln."
+    },
+    "privacy": {
+      "title": "Datenschutzrichtlinie – PrivacyPolGen",
+      "description": "DatenschutzPolGens eigene Datenschutzrichtlinie – wir sammeln keine personenbezogenen Daten. Alles läuft clientseitig in Ihrem Browser."
+    },
+    "contact": {
+      "title": "Kontakt – PrivacyPolGen",
+      "description": "Nehmen Sie Kontakt mit PrivacyPolGen auf. Erreichen Sie uns unter support@privacypolgen.com."
+    },
+    "policy": {
+      "title": "Datenschutzerklärung — PrivacyPolGen",
+      "description": "Eine von PrivacyPolGen erstellte Datenschutzerklärung anzeigen."
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden — PrivacyPolGen",
+      "description": "Die gesuchte Seite existiert nicht."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "Nutzungsbedingungen",
+    "heading": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: 8. Juni 2026",
+    "sections": {
+      "intro": {
+        "title": "1. Annahme der Bedingungen",
+        "body": "Durch den Zugriff auf oder die Nutzung von PrivacyPolGen (der „Dienst“), der von PrivacyPolGen („wir“, „uns“ oder „unser“) betrieben wird, erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie nicht allen diesen Bedingungen zustimmen, nutzen Sie den Dienst nicht."
+      },
+      "description": {
+        "title": "2. Beschreibung des Dienstes",
+        "body": "PrivacyPolGen ist ein kostenloser, clientseitiger Generator für Datenschutzrichtlinien. Wir stellen auf der Grundlage Ihrer Eingaben Vorlagen für die Rechtssprache bereit, um Sie bei der Erstellung einer Ausgangsdatenschutzrichtlinie für Ihre Website, Anwendung oder Ihr Unternehmen zu unterstützen. Der Dienst läuft vollständig in Ihrem Browser – es werden keine von Ihnen eingegebenen Daten an unsere Server übertragen, dort gespeichert oder verarbeitet."
+      },
+      "notLegalAdvice": {
+        "title": "3. Keine Rechtsberatung",
+        "body": "Die von PrivacyPolGen generierten Inhalte dienen ausschließlich Informationszwecken und stellen keine Rechtsberatung dar. Wir sind keine Anwaltskanzlei, wir sind nicht Ihre Anwälte und durch die Nutzung dieses Dienstes entsteht kein Anwalt-Mandanten-Verhältnis. Sie sollten nicht auf der Grundlage der vom Dienst generierten Inhalte handeln oder unterlassen, ohne zuvor einen qualifizierten, in Ihrem Land zugelassenen Anwalt zu konsultieren. Die generierte Richtlinie ist eine Ausgangsvorlage und deckt möglicherweise nicht alle rechtlichen Anforderungen ab, die für Ihre spezifische Situation, Ihr Geschäftsmodell oder Ihre Branche gelten."
+      },
+      "noWarranties": {
+        "title": "4. Gewährleistungsausschluss",
+        "body": "DER DIENST WIRD „WIE BESEHEN“ UND „WIE VERFÜGBAR“ BEREITGESTELLT, OHNE JEGLICHE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG. SOWEIT NACH ANWENDBAREM RECHT ZULÄSSIG, SCHLIESSEN WIR ALLE GEWÄHRLEISTUNGEN AUS, OB AUSDRÜCKLICH, STILLSCHWEIGEND, GESETZLICH ODER ANDERWEITIG, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF JEGLICHE GEWÄHRLEISTUNGEN DER MARKTGÄNGIGKEIT, EIGNUNG FÜR EINEN BESTIMMTEN ZWECK, TITEL, NICHTVERLETZUNG UND GENAUIGKEIT. WIR GEWÄHRLEISTEN NICHT, DASS DER DIENST UNUNTERBROCHEN, FEHLERFREI, SICHER IST ODER DASS DIE GENERIERTEN INHALTE VOLLSTÄNDIG, RICHTIG ODER RECHTLICH AUSREICHEND FÜR IHRE BEDÜRFNISSE SIND."
+      },
+      "limitationLiability": {
+        "title": "5. Haftungsbeschränkung",
+        "body": "SOWEIT NACH GELTENDEM RECHT ZULÄSSIG, SIND WIR IN KEINEM FALL HAFTBAR FÜR INDIREKTE, ZUFÄLLIGE, BESONDERE, FOLGE- ODER STRAFSCHÄDEN, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF GEWINN-, DATEN-, NUTZUNGS-, FIRMENWERT- ODER ANDERE IMMATERIELLE VERLUSTE, DIE AUS IHRER NUTZUNG ODER UNFÄHIGKEIT ENTSTEHEN UM DEN DIENST ZU NUTZEN – EINSCHLIESSLICH, JEDOCH NICHT BESCHRÄNKT AUF Bußgelder, Strafen oder rechtliche Haftungsansprüche, die sich aus der Nutzung einer generierten Richtlinie ergeben. UNSERE GESAMTHAFTUNG IHNEN GEGENÜBER FÜR ALLE ANSPRÜCHE, DIE SICH AUS DIESEN BEDINGUNGEN ODER DEM DIENST ERGEBEN ODER IM ZUSAMMENHANG MIT IHNEN ENTSTEHEN, ÜBERSTEIGT NICHT DEN HÖHEREN BETRAG VON 1,00 USD ODER DEN BETRAG, DEN SIE UNS IN DEN VORHERIGEN ZWÖLF MONATEN GEZAHLT HABEN."
+      },
+      "indemnification": {
+        "title": "6. Schadensersatz",
+        "body": "Sie erklären sich damit einverstanden, uns gegen alle Ansprüche, Verbindlichkeiten, Schäden, Urteile, Auszeichnungen, Verluste, Kosten, Ausgaben oder Gebühren (einschließlich angemessener Anwaltskosten) zu verteidigen, zu entschädigen und schadlos zu halten, die sich aus oder im Zusammenhang mit Ihrer Nutzung des Dienstes, der von Ihnen erstellten Datenschutzrichtlinie oder Ihrem Verstoß gegen diese Bedingungen ergeben."
+      },
+      "intellectualProperty": {
+        "title": "7. Geistiges Eigentum",
+        "body": "Der Dienst, einschließlich seines Textes, seiner Vorlagen, Klauseln und seiner Struktur, ist unser Eigentum und durch das Urheberrecht und andere Gesetze zum Schutz des geistigen Eigentums geschützt. Die von Ihnen erstellten Datenschutzrichtlinien dürfen Sie für jeden rechtmäßigen Zweck verwenden, ändern und verbreiten. Es ist Ihnen jedoch nicht gestattet, den Generator selbst oder die zugrunde liegenden Klauselvorlagen als Konkurrenzdienst zu kopieren, weiterzuverbreiten oder weiterzuverkaufen."
+      },
+      "thirdParty": {
+        "title": "8. Dienste Dritter",
+        "body": "Der Dienst kann Hinweise auf Dienste Dritter (z. B. Analysen, Zahlungsabwickler) anzeigen. Diese Referenzen dienen nur zu Informationszwecken. Wir sind nicht verantwortlich für den Inhalt, die Datenschutzpraktiken oder die Bedingungen von Diensten Dritter, auf die in den generierten Richtlinien verwiesen wird."
+      },
+      "changes": {
+        "title": "9. Änderungen der Bedingungen",
+        "body": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen werden auf dieser Seite mit einem aktualisierten Datum „Letzte Aktualisierung“ veröffentlicht. Durch Ihre fortgesetzte Nutzung des Dienstes nach etwaigen Änderungen erklären Sie sich mit den neuen Bedingungen einverstanden. Wir empfehlen Ihnen, diese Bedingungen regelmäßig zu überprüfen."
+      },
+      "governingLaw": {
+        "title": "10. Anwendbares Recht",
+        "body": "Diese Bedingungen unterliegen den Gesetzen des US-Bundesstaates Delaware und werden in Übereinstimmung mit diesen ausgelegt, ohne Rücksicht auf die Grundsätze des Kollisionsrechts. Alle Streitigkeiten, die sich aus diesen Bedingungen ergeben, werden ausschließlich vor den Gerichten des Staates Delaware gelöst. Nichts in diesem Abschnitt schränkt Ihre Rechte gemäß den geltenden Verbraucherschutzgesetzen in Ihrem Land oder Wohnsitzstaat ein. Wenn Sie in einem Land ansässig sind, in dem verbindliche Verbraucherschutzbestimmungen gelten (einschließlich, aber nicht beschränkt auf die Europäische Union und das Vereinigte Königreich), bleiben diese Schutzbestimmungen davon unberührt."
+      },
+      "contact": {
+        "title": "11. Kontakt",
+        "body": "Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter support@privacypolgen.com."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "Datenschutzrichtlinie",
+    "heading": "Unsere Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung: 8. Juni 2026",
+    "sections": {
+      "intro": {
+        "title": "Einführung",
+        "body": "PrivacyPolGen („wir“, „uns“ oder „unser“) betreibt die Website unter Privacypolgen.com (der „Dienst“). Auf dieser Seite wird unser Ansatz zum Datenschutz erläutert, der kurz gesagt darin besteht, dass wir fast nichts sammeln.",
+        "body2": "Im Gegensatz zu den meisten Online-Diensten verfügt PrivacyPolGen nicht über einen Backend-Server. Auf unserer Seite gibt es keine Datenbank, keine Benutzerkonten, kein Analyse-Tracking und keine Datenspeicherung. Der Datenschutzrichtlinien-Generator läuft vollständig in Ihrem Browser."
+      },
+      "noCollection": {
+        "title": "Informationen, die wir NICHT sammeln",
+        "body": "Wir erheben, speichern oder verarbeiten keine personenbezogenen Daten über Sie. Speziell:",
+        "list": [
+          "Keine Kontodaten: Wir benötigen oder unterstützen keine Benutzerkonten.",
+          "Keine personenbezogenen Daten: Wir fragen nicht nach Ihrem Namen, Ihrer E-Mail-Adresse oder anderen persönlichen Identifikatoren und erheben diese auch nicht.",
+          "Keine Zahlungsinformationen: Der Service ist kostenlos. Wir verarbeiten keine Zahlungen.",
+          "Keine Analysen: Wir führen auf unserer Website keine Analysen, Zählpixel oder Telemetrie durch.",
+          "Keine Cookies zur Nachverfolgung: Wir verwenden keine Cookies für Analyse-, Werbe- oder Nachverfolgungszwecke.",
+          "Keine Richtliniendaten: Die Antworten, die Sie im Generator-Assistenten bereitstellen, werden direkt in der URL codiert. Sie werden niemals an einen Server gesendet, dort gespeichert oder verarbeitet."
+        ]
+      },
+      "technical": {
+        "title": "Technische Daten",
+        "body": "Unser Hosting-Anbieter erfasst möglicherweise automatisch Standardserverprotokolldaten wie Ihre IP-Adresse, Ihren Browsertyp und die angeforderten Seiten. Diese Daten werden ausschließlich zu Zwecken der betrieblichen Bereitstellung der Website und zur Missbrauchsprävention verwendet. Wir greifen nicht auf diese Daten zu, analysieren sie nicht und geben sie auch nicht weiter."
+      },
+      "localStorage": {
+        "title": "Lokaler Speicher",
+        "body": "Wir verwenden den localStorage Ihres Browsers, um zwei Präferenzen zu speichern: Ihr ausgewähltes Design (hell/dunkel) und Ihre Sprachauswahl. Diese Daten verbleiben auf Ihrem Gerät. Wir haben keinen Zugriff darauf und es wird niemals irgendwohin übertragen. Sie können diese jederzeit über Ihre Browsereinstellungen löschen."
+      },
+      "thirdParty": {
+        "title": "Dienste Dritter",
+        "body": "Wir nutzen die folgenden Drittanbieterdienste, die ihre eigenen Datenschutzpraktiken haben:",
+        "list": [
+          "Schriftarten (Google Fonts): Schriftartdateien werden von den Servern von Google geladen. Google kann gemäß seiner Datenschutzrichtlinie Informationen über Schriftartenanfragen sammeln. Wir hosten nach Möglichkeit selbst, um dies zu minimieren.",
+          "Hosting: Unsere statische Website wird über unseren Hosting-Anbieter bereitgestellt. Standardserverprotokolle können aus Sicherheits- und Betriebsgründen vorübergehend gespeichert werden."
+        ]
+      },
+      "dataRetention": {
+        "title": "Datenaufbewahrung",
+        "body": "Da wir keine personenbezogenen Daten erfassen, gibt es auch keine Daten, die gespeichert werden müssen. Alle von unserem Hosting-Anbieter gespeicherten Serverprotokolle unterliegen deren Aufbewahrungsrichtlinien und wir haben keinen Zugriff darauf."
+      },
+      "yourRights": {
+        "title": "Ihre Rechte",
+        "body": "Da wir keine personenbezogenen Daten erfassen, ist es für uns nicht erforderlich, personenbezogene Daten bereitzustellen, zu korrigieren oder zu löschen. Wenn Sie Bedenken hinsichtlich Daten haben, die möglicherweise versehentlich von unserem Hosting-Anbieter in Serverprotokollen erfasst werden, kontaktieren Sie uns bitte und wir werden die Sache in gutem Glauben untersuchen."
+      },
+      "changes": {
+        "title": "Änderungen an dieser Richtlinie",
+        "body": "Wenn wir diese Datenschutzrichtlinie ändern, aktualisieren wir das Datum „Letzte Aktualisierung“ oben. Da wir keine Daten erheben, dürften Änderungen selten und geringfügig sein."
+      },
+      "contact": {
+        "title": "Kontakt",
+        "body": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter support@privacypolgen.com."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Kontakt",
+    "heading": "Nehmen Sie Kontakt auf",
+    "subtext": "Fragen, Feedback oder einfach nur Hallo sagen? Wir würden uns freuen, von Ihnen zu hören.",
+    "email": {
+      "title": "E-Mail",
+      "body": "Wir antworten in der Regel innerhalb von 24 Stunden."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "Melden Sie Probleme oder leisten Sie einen Beitrag."
+    },
+    "feature": {
+      "title": "Funktionsanfrage",
+      "body": "Haben Sie eine Idee? Wir würden es gerne hören."
+    },
+    "legal": {
+      "title": "Rechtliche Anfrage",
+      "body": "Für rechtliche Fragen oder Wünsche."
+    }
+  },
+  "footer": {
+    "tagline": "Kostenloser Datenschutz-Generator für Websites, SaaS-Apps, E-Commerce-Shops und mobile Apps. GDPR, CCPA, COPPA-konform. Kein Konto erforderlich.",
+    "productHeading": "Produkt",
+    "productGenerator": "Generator",
+    "productExamples": "Beispiele",
+    "productPricing": "Preise",
+    "legalHeading": "Rechtliches",
+    "legalPrivacy": "Datenschutzerklärung",
+    "legalTerms": "AGB",
+    "legalContact": "Kontakt",
+    "copyright": "Keine Rechtsberatung. Konsultieren Sie einen Anwalt für Ihre spezifische Situation.",
+    "credit": "Erstellt mit Astro · Für unabhängige Entwickler"
+  },
+  "wizard": {
+    "stepTitles": [
+      "Geschäft",
+      "Daten",
+      "Dienste",
+      "Gesetze",
+      "Kontakt"
+    ],
+    "step1": {
+      "heading": "Erzählen Sie uns von Ihrem Unternehmen",
+      "subtitle": "Wir verwenden diese als Standardeinstellungen in Ihrer gesamten Richtlinie.",
+      "labelBusinessName": "Firmenname *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "Website-URL *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "Art des Unternehmens",
+      "labelJurisdiction": "Hauptzuständigkeitsbereich"
+    },
+    "step2": {
+      "heading": "Welche Daten erfassen Sie?",
+      "subtitle": "Markieren Sie alles Zutreffende. Wir haben gängige Elemente für Ihren Unternehmenstyp vorausgewählt."
+    },
+    "step3": {
+      "heading": "Welche Drittanbieter-Dienste nutzen Sie?",
+      "subtitle": "Wir fügen die entsprechenden Offenlegungen für jeden hinzu."
+    },
+    "step4": {
+      "heading": "Welche Gesetze gelten für Sie?",
+      "subtitle": "Wir verwenden standardmäßig den strengsten häufigen Fall. Die Standardeinstellungen beizubehalten ist normalerweise am sichersten."
+    },
+    "step5": {
+      "heading": "Wie können Benutzer Sie kontaktieren?",
+      "subtitle": "Diese E-Mail erscheint in Ihrer Richtlinie und ist gemäß GDPR & CCPA erforderlich.",
+      "labelEmail": "Kontakt-E-Mail *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "Ich habe einen Datenschutzbeauftragten (DPO)",
+      "descDpo": "Erforderlich für einige Unternehmen gemäß GDPR. Auswählen, wenn Sie einen ernannt haben.",
+      "labelDpoEmail": "DPO-E-Mail",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "Zurück",
+      "continue": "Weiter",
+      "generate": "Richtlinie erstellen"
+    },
+    "validation": {
+      "required": "Bitte füllen Sie die erforderlichen Felder aus"
+    },
+    "result": {
+      "heading": "Ihre Datenschutzerklärung ist fertig.",
+      "subtitle": "Kopieren Sie sie als Markdown, HTML oder Klartext. Oder teilen Sie den öffentlichen Link unten.",
+      "publicLink": "Öffentlicher Link",
+      "copyLink": "Link kopieren",
+      "openTab": "In neuem Tab öffnen",
+      "editAnswers": "← Antworten bearbeiten",
+      "toastSuccess": "Link kopiert — fügen Sie ihn überall ein",
+      "toastError": "Kopieren fehlgeschlagen — manuell auswählen und kopieren"
+    },
+    "preview": {
+      "livePreview": "Live-Vorschau",
+      "business": "Geschäft",
+      "typeToSee": "Geben Sie Ihre Unternehmensdaten ein, um die Richtlinie zu überprüfen",
+      "website": "Website",
+      "businessType": "Typ",
+      "jurisdiction": "Rechtsgebiet",
+      "collectSentence": "Wir sammeln {Typen}, um unsere Dienste bereitzustellen.",
+      "placeholders": {
+        "business": "[Ihr Firmenname]",
+        "website": "[Ihre-Website.com]",
+        "type": "[Wählen Sie einen Geschäftstyp aus]",
+        "jurisdiction": "[Wählen Sie eine Gerichtsbarkeit aus]"
+      },
+      "sections": {
+        "intro": "Einführung",
+        "dataCollection": "Informationen, die wir sammeln",
+        "personalInfo": "Persönliche Informationen, die Sie bereitstellen",
+        "dataUsage": "Wie wir Ihre Informationen verwenden",
+        "cookies": "Cookies und Tracking",
+        "thirdParty": "Dienste Dritter",
+        "yourRights": "Ihre Datenschutzrechte",
+        "children": "Privatsphäre von Kindern",
+        "dataSecurity": "Datensicherheit und -speicherung",
+        "contact": "Kontaktinformationen"
+      },
+      "sectionsGenerated": "Abschnitte generiert"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Marketing-, Design- oder Entwicklungsagentur mit Kundenarbeit und Kontaktformularen.",
+        "name": "Agentur / Studio"
+      },
+      "ecommerce": {
+        "description": "Online-Shop für physische oder digitale Produkte mit Warenkorb und Checkout.",
+        "name": "E-Commerce-Shop"
+      },
+      "mobile-app": {
+        "description": "iOS- oder Android-App mit In-App-Konten, Analytik und möglicherweise Push-Benachrichtigungen.",
+        "name": "Mobile App"
+      },
+      "personal-blog": {
+        "description": "Ein persönlicher Blog oder Content-Site. Sammelt in der Regel E-Mails über Newsletter und nutzt grundlegende Analytik.",
+        "name": "Persönlicher Blog"
+      },
+      "portfolio": {
+        "description": "Persönliches Portfolio oder Agentur-Site zur Präsentation von Arbeiten. Minimale Datenerfassung.",
+        "name": "Portfolio-Website"
+      },
+      "saas": {
+        "description": "Software-as-a-Service-Webanwendung mit Benutzerkonten, Zahlungen und Integrationen.",
+        "name": "SaaS-Anwendung"
+      }
+    },
+    "dataGroups": {
+      "account": "Konto",
+      "identity": "Identität",
+      "marketing": "Marketing",
+      "technical": "Technisch",
+      "transaction": "Transaktion"
+    },
+    "dataTypes": {
+      "addresses": "Post- oder Rechnungsadresse",
+      "ads": "Werbe-IDs und Konversionsdaten",
+      "analytics": "Analyse- und Verhaltensdaten",
+      "companies": "Firmen- oder Organisationname",
+      "cookies": "Cookies und ähnliche Tracking-Technologien",
+      "device-info": "Geräte- und Browserinformationen",
+      "emails": "E-Mail-Adressen",
+      "ip-addresses": "IP-Adressen",
+      "location-data": "Ungefähre geografische Position",
+      "names": "Vor- und Nachname",
+      "payments": "Zahlungsinformationen (verarbeitet von unserem Zahlungsanbieter, nicht auf unseren Servern gespeichert)",
+      "phones": "Telefonnummern",
+      "usage-data": "Nutzungsdaten und Aktivitätsprotokolle",
+      "user-accounts": "Kontodaten (Benutzernamen, gehashte Passwörter)"
+    },
+    "jurisdictions": {
+      "au": "Australien",
+      "br": "Brasilien",
+      "ca": "Kanada",
+      "de": "Deutschland",
+      "dk": "Dänemark",
+      "es": "Spanien",
+      "fr": "Frankreich",
+      "gb": "Vereinigtes Königreich",
+      "global": "Global",
+      "ie": "Irland",
+      "in": "Indien",
+      "it": "Italien",
+      "jp": "Japan",
+      "mx": "Mexiko",
+      "nl": "Niederlande",
+      "no": "Norwegen",
+      "nz": "Neuseeland",
+      "se": "Schweden",
+      "sg": "Singapur",
+      "us": "Vereinigte Staaten"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Verlangt von kommerziellen Websites, die personenbezogene Daten kalifornischer Nutzer erheben, eine gut sichtbare Datenschutzerklärung.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "Kalifornien, USA"
+      },
+      "ccpa": {
+        "description": "Staatliches Datenschutzgesetz Kaliforniens. Gewährt kalifornischen Einwohnern Rechte über ihre personenbezogenen Daten, einschließlich des Rechts auf Auskunft, Löschung und Widerspruch gegen den Verkauf.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "Kalifornien, USA"
+      },
+      "coppa": {
+        "description": "Bundesgesetz, das die Online-Erhebung personenbezogener Daten von Kindern unter 13 Jahren regelt.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "Vereinigte Staaten (unter 13)"
+      },
+      "gdpr": {
+        "description": "Umfassendes Datenschutzgesetz der EU/EWR/UK. Erfordert ausdrückliche Einwilligung, Rechte der Betroffenen und rechtmäßige Grundlage für die Verarbeitung.",
+        "fullName": "Datenschutz-Grundverordnung",
+        "name": "DSGVO",
+        "region": "Europäische Union + EWR + UK"
+      },
+      "lgpd": {
+        "description": "Brasiliens umfassendes Datenschutzgesetz, nach der DSGVO modelliert.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brasilien"
+      },
+      "pipeda": {
+        "description": "Kanadisches Bundesdatenschutzgesetz für die Erhebung, Nutzung und Offenlegung personenbezogener Daten in kommerziellen Aktivitäten.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Kanada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Werbung",
+      "analytics": "Analytik",
+      "authentication": "Authentifizierung",
+      "emailMarketing": "E-Mail-Marketing",
+      "infrastructure": "Infrastruktur",
+      "media": "Medien",
+      "payments": "Zahlungen"
+    },
+    "services": {
+      "aws": {
+        "description": "Cloud-Hosting und Speicher.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, DDoS-Schutz und DNS-Dienste.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "E-Mail-Marketing-Plattform für Kreative und kleine Unternehmen.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "OAuth-Anmeldung mit einem Facebook-Konto.",
+        "name": "Facebook-Anmeldung"
+      },
+      "facebook-pixel": {
+        "description": "Conversions-Tracking und Zielgruppenerstellung für Facebook- und Instagram-Werbung.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Kontextuelles Werbenetzwerk von Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Web-Traffic- und Nutzerverhaltensanalysen von Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "OAuth-Anmeldung mit einem Google-Konto.",
+        "name": "Google Anmeldung"
+      },
+      "lemonsqueezy": {
+        "description": "Händler für digitale Produktverkäufe und Abonnements.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "E-Mail-Newsletter-Zustellung und Zielgruppenverwaltung.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Produktanalytik zur Verfolgung von Benutzeraktionen in Web- und mobilen Apps.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Online-Zahlungsprocessor mit PayPal-Guthaben und verknüpften Konten.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Datenschutzfreundliche Analytik ohne Cookies oder personenbezogene Daten.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Transaktions-E-Mail-Zustellungsdienst.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Zahlungsabwicklung für Kreditkartentransaktionen.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Eingebettete Vimeo-Videos auf unseren Seiten.",
+        "name": "Vimeo-Einbettungen"
+      },
+      "youtube-embeds": {
+        "description": "Eingebettete YouTube-Videos auf unseren Seiten.",
+        "name": "YouTube-Einbettungen"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Klartext"
+    },
+    "copy": "{{format}} kopieren",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "Richtlinienvorschau",
+    "copied": "Kopiert",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "Kein Richtlinien-Hash in der URL gefunden. Erstellen Sie zuerst eine Richtlinie.",
+    "errorInvalid": "Dieser Richtlinien-Link ist ungültig oder beschädigt. Bitte erstellen Sie einen neuen.",
+    "generateNew": "Neue Richtlinie erstellen",
+    "loading": "Richtlinie wird geladen…",
+    "title": "{{businessName}} — Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: {{date}}",
+    "generateOwn": "Erstellen Sie Ihre eigene →"
+  },
+  "copied": "Kopiert",
+  "copy": "Kopieren",
+  "empty": "Noch nichts hier — beginnen Sie mit Ihren Geschäftsdaten.",
+  "langSwitcher": {
+    "listboxLabel": "Sprache auswählen",
+    "toggleLabel": "Sprache umschalten"
+  },
+  "next": "Weiter",
+  "prev": "Zurück",
+  "preview": "Vorschau",
+  "selectall": "Alle auswählen",
+  "validation": {
+    "contactEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "required": "Bitte füllen Sie die Pflichtfelder aus"
+  }
+}

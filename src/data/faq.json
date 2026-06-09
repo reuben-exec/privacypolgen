@@ -1,0 +1,50 @@
+[
+  {
+    "q": "Is this privacy policy generator really free?",
+    "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. We have a Premium tier planned with PDF/DOCX exports and multi-page policies, but the core generator will always be free."
+  },
+  {
+    "q": "Do I need an account to generate a privacy policy?",
+    "a": "No account required. Just answer the questions in our wizard and we'll generate your policy. Your answers are encoded into the shareable URL itself — nothing is sent to our servers."
+  },
+  {
+    "q": "Is the generated policy legally binding?",
+    "a": "The generated policy is a starting template that covers the most common legal requirements (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). However, every business is different. We strongly recommend having a lawyer review the final policy before relying on it, especially if you operate in regulated industries (health, finance, children's services)."
+  },
+  {
+    "q": "Where is my data stored?",
+    "a": "Nowhere. We use client-side compression (DEFLATE + Base64 URL-safe encoding) to pack your answers into the URL hash. When you share the URL, the recipient's browser decodes the policy locally. We do not run a backend, we do not log wizard answers, and we do not have access to your policy content."
+  },
+  {
+    "q": "Can I edit the policy after generating it?",
+    "a": "Yes. Just edit the markdown or HTML in any text editor and host the file on your own website. The output is yours to modify freely. The Premium tier will offer editable in-app editing with version history."
+  },
+  {
+    "q": "Does this cover GDPR, CCPA, and other laws?",
+    "a": "Yes. Select the laws that apply to your business in Step 4 of the wizard, and we'll include the appropriate clauses (GDPR legal basis, CCPA opt-out, COPPA parental consent, PIPEDA access rights, LGPD legal basis, PDPA-SG consent mechanisms)."
+  },
+  {
+    "q": "What's the difference between the free and Premium tiers?",
+    "a": "Free gives you a complete privacy policy in markdown, HTML, and plain text — copy/paste into your site. Premium adds PDF and DOCX export, cookie banner code generation, custom branding, and hosted policy pages with version history."
+  },
+  {
+    "q": "How do I add the policy to my website?",
+    "a": "Create a page on your site (e.g., `/privacy`), paste the HTML output, and link to it from your footer. If you want a hosted version, share the generated `/p?h=...` URL — it works as a standalone public page."
+  },
+  {
+    "q": "Will my policy update if laws change?",
+    "a": "The policy you generate is a static document at a specific point in time. If privacy laws change, you'll need to regenerate it and update the version on your site. We update our clause library continuously, and the wizard is always in sync with current best practices."
+  },
+  {
+    "q": "Can I use this for a client project?",
+    "a": "Absolutely. You can generate policies for unlimited client projects on the free tier. We just ask that you don't redistribute the generator itself or resell the output unmodified as a competing service."
+  },
+  {
+    "q": "Does the policy include a cookie section?",
+    "a": "Yes — if you select 'Cookies' in Step 2 of the wizard, we include a full cookies section describing essential, analytics, preference, and marketing cookies. We also list which third-party cookies each service you integrate may set."
+  },
+  {
+    "q": "What if I don't know what laws apply to me?",
+    "a": "We default to selecting GDPR, CCPA/CPRA, and CalOPPA for everyone (which covers the strictest common case). If you're unsure, leaving the defaults selected is usually the safest choice — covering the most laws never hurts, and the policy will still be valid in jurisdictions where the law doesn't apply."
+  }
+]

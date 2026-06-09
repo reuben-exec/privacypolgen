@@ -1,0 +1,26 @@
+---
+// src/pages/404.astro
+import Layout from '@/layouts/Layout.astro';
+---
+<Layout
+  title="Page not found — PrivacyPolGen"
+  description="The page you're looking for doesn't exist."
+  noindex={true}
+>
+  <section class="mx-auto max-w-3xl px-6 py-32 text-center">
+    <p class="font-mono text-sm text-fg-faint" data-i18n="notFound.label">404</p>
+    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight" data-i18n="notFound.heading">Page not found</h1>
+    <p class="mt-4 text-fg-muted">
+      <span data-i18n="notFound.messageLead">The page you're looking for doesn't exist. Want to</span>
+      <a href="/generate" class="underline underline-offset-2 text-fg" data-i18n="notFound.messageLink">generate a privacy policy</a><span data-i18n="notFound.messageTrail"> instead?</span>
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-3">
+      <a href="/" class="inline-flex h-10 items-center rounded-button border border-border bg-bg-elevated px-4 text-sm font-medium hover:bg-bg-card" data-i18n="notFound.backHome">
+        ← Back home
+      </a>
+      <a href="/generate" class="inline-flex h-10 items-center rounded-button bg-fg text-bg px-4 text-sm font-medium hover:opacity-90" data-i18n="notFound.generate">
+        Generate a policy
+      </a>
+    </div>
+  </section>
+</Layout>

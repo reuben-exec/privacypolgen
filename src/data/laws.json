@@ -1,0 +1,125 @@
+[
+  {
+    "id": "gdpr",
+    "name": "GDPR",
+    "fullName": "General Data Protection Regulation",
+    "region": "European Union + EEA + UK",
+    "appliesToCountries": ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","UK"],
+    "description": "EU/EEA/UK comprehensive data protection law. Requires explicit consent, data subject rights, and lawful basis for processing.",
+    "rights": [
+      "Right to access your personal data",
+      "Right to rectification of inaccurate data",
+      "Right to erasure (\"right to be forgotten\")",
+      "Right to restrict processing",
+      "Right to data portability",
+      "Right to object to processing",
+      "Right to withdraw consent at any time",
+      "Right to lodge a complaint with a supervisory authority"
+    ],
+    "legalBasisText": "We process your personal data on the following legal bases under the GDPR: (a) your consent, which you may withdraw at any time; (b) the performance of a contract with you; (c) compliance with our legal obligations; and (d) our legitimate interests, provided these are not overridden by your fundamental rights.",
+    "dpoText": "If you are located in the European Economic Area, you may contact our Data Protection Officer at {{contactEmail}} regarding any privacy-related concerns."
+  },
+  {
+    "id": "ccpa",
+    "name": "CCPA/CPRA",
+    "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+    "region": "California, USA",
+    "appliesToCountries": ["US"],
+    "appliesToStates": ["CA"],
+    "description": "California state privacy law. Grants California residents rights over their personal information, including the right to know, delete, and opt out of sale.",
+    "rights": [
+      "Right to know what personal information is collected",
+      "Right to know whether personal information is sold or shared",
+      "Right to delete personal information",
+      "Right to correct inaccurate personal information",
+      "Right to opt out of the sale or sharing of personal information",
+      "Right to limit use of sensitive personal information",
+      "Right to non-discrimination for exercising privacy rights"
+    ],
+    "legalBasisText": "Under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), California residents have specific rights regarding their personal information. We do not sell personal information for monetary consideration. We may share personal information for cross-context behavioral advertising, which California residents may opt out of at any time.",
+    "dpoText": "California residents may exercise their privacy rights by contacting us at {{contactEmail}} or by using the \"Do Not Sell or Share My Personal Information\" link on our website."
+  },
+  {
+    "id": "caloppa",
+    "name": "CalOPPA",
+    "fullName": "California Online Privacy Protection Act",
+    "region": "California, USA",
+    "appliesToCountries": ["US"],
+    "appliesToStates": ["CA"],
+    "description": "Requires commercial websites that collect personal information from California users to post a conspicuous privacy policy.",
+    "rights": [
+      "Right to know what personal information is collected and how it is used",
+      "Right to know with whom personal information is shared",
+      "Right to review and request changes to your personal information"
+    ],
+    "legalBasisText": "In compliance with the California Online Privacy Protection Act (CalOPPA), we agree that users of our website who are California residents have the right to review, change, or delete any personal information we have collected from them.",
+    "dpoText": "California residents may contact us at {{contactEmail}} to review, change, or delete their personal information."
+  },
+  {
+    "id": "coppa",
+    "name": "COPPA",
+    "fullName": "Children's Online Privacy Protection Act",
+    "region": "United States (under 13)",
+    "appliesToCountries": ["US"],
+    "appliesToAge": 13,
+    "description": "Federal law governing the online collection of personal information from children under 13.",
+    "rights": [
+      "Parental right to review personal information collected from their child",
+      "Parental right to request deletion of their child's personal information",
+      "Parental right to prevent further collection of their child's information"
+    ],
+    "legalBasisText": "Our website and services are not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If we learn that we have inadvertently collected personal information from a child under 13, we will take steps to delete such information as soon as possible. Parents may contact us at {{contactEmail}} to review or request deletion of their child's information.",
+    "dpoText": "Parents or guardians who believe their child under 13 has provided us with personal information may contact us at {{contactEmail}} to request review or deletion."
+  },
+  {
+    "id": "pipeda",
+    "name": "PIPEDA",
+    "fullName": "Personal Information Protection and Electronic Documents Act",
+    "region": "Canada",
+    "appliesToCountries": ["CA"],
+    "description": "Canadian federal privacy law governing the collection, use, and disclosure of personal information in commercial activities.",
+    "rights": [
+      "Right to access your personal information",
+      "Right to challenge the accuracy of your personal information",
+      "Right to withdraw consent",
+      "Right to file a complaint with the Privacy Commissioner of Canada"
+    ],
+    "legalBasisText": "In compliance with Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), we obtain your consent before collecting, using, or disclosing your personal information, except where otherwise permitted or required by law.",
+    "dpoText": "Canadian residents may contact our Privacy Officer at {{contactEmail}} regarding any privacy-related concerns or to exercise their rights under PIPEDA."
+  },
+  {
+    "id": "lgpd",
+    "name": "LGPD",
+    "fullName": "Lei Geral de Proteção de Dados",
+    "region": "Brazil",
+    "appliesToCountries": ["BR"],
+    "description": "Brazil's comprehensive data protection law, modeled after the GDPR.",
+    "rights": [
+      "Right to confirmation of the existence of data processing",
+      "Right to access your personal data",
+      "Right to correction of incomplete or outdated data",
+      "Right to anonymization, blocking, or deletion of unnecessary data",
+      "Right to data portability",
+      "Right to deletion of personal data processed with consent",
+      "Right to information about public and private entities with which data is shared"
+    ],
+    "legalBasisText": "In compliance with Brazil's Lei Geral de Proteção de Dados (LGPD), we process your personal data only for legitimate, specific, and explicit purposes, and we keep you informed about the entities with which your data is shared.",
+    "dpoText": "Brazilian residents may contact our Encarregado de Dados (Data Protection Officer) at {{contactEmail}} to exercise their rights under the LGPD."
+  },
+  {
+    "id": "dpdp",
+    "name": "DPDP Act",
+    "fullName": "Digital Personal Data Protection Act",
+    "region": "India",
+    "appliesToCountries": ["IN"],
+    "description": "India's comprehensive data protection law governing the processing of digital personal data.",
+    "rights": [
+      "Right to access your personal data",
+      "Right to correction and erasure of your personal data",
+      "Right to grievance redressal",
+      "Right to nominate a representative"
+    ],
+    "legalBasisText": "In compliance with India's Digital Personal Data Protection Act (DPDP Act), we process your personal data only for lawful purposes and with your consent or other legitimate grounds as specified under the Act. You have the right to withdraw your consent at any time. We have appointed a Grievance Officer to address any concerns you may have regarding the processing of your personal data.",
+    "dpoText": "Indian residents may contact our Grievance Officer at {{contactEmail}} regarding any privacy-related concerns under the DPDP Act."
+  }
+]

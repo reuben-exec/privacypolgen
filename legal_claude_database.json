@@ -1,0 +1,725 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_updated": "2026-06-06",
+    "languages": [
+      "en-US",
+      "en-UK",
+      "es",
+      "fr",
+      "de",
+      "pt",
+      "it",
+      "nl",
+      "ja",
+      "zh"
+    ],
+    "laws_covered": [
+      "GDPR",
+      "CCPA/CPRA",
+      "CalOPPA",
+      "COPPA",
+      "PIPEDA",
+      "LGPD",
+      "UK-GDPR",
+      "ePrivacy",
+      "PECR",
+      "VCDPA",
+      "CPA",
+      "CTDPA",
+      "UCPA"
+    ],
+    "total_clauses": 0,
+    "total_services": 0
+  },
+  "law_clauses": {
+    "introduction": {
+      "title": "Introduction",
+      "description": "Opening statement about the privacy policy",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "{company_name} (\"we\", \"us\", or \"our\") operates {website_url} (the \"Site\"). This page informs you of our policies regarding the collection, use, and disclosure of Personal Information we receive from users of the Site.\n\nWe use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.",
+        "gdpr": "{company_name} (\"we\", \"us\", or \"our\") operates {website_url} (the \"Site\"). We are committed to protecting and respecting your privacy.\n\nThis policy (together with our Terms of Service and any other documents referred to in it) sets out the basis on which any personal data we collect from you, or that you provide to us, will be processed by us. Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it.\n\nFor the purpose of the General Data Protection Regulation (\"GDPR\"), the data controller is {company_name}, {company_address}.",
+        "lgpd": "{company_name} (\"we\", \"us\", or \"our\") operates {website_url} (the \"Site\"). We are committed to protecting your privacy and complying with the Lei Geral de Proteção de Dados (LGPD - Law No. 13.709/2018).\n\nThis policy explains how we collect, use, disclose, and protect your personal data in accordance with Brazilian law."
+      }
+    },
+    "information_we_collect": {
+      "title": "Information We Collect",
+      "description": "Types of data collected from users",
+      "required": true,
+      "applies_to_all": true,
+      "conditional_sections": {
+        "personal_info": {
+          "trigger": "collects_personal_info",
+          "text": "While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (\"Personal Information\"). Personal Information may include, but is not limited to:\n\n- Name\n- Email address\n- Phone number\n- Postal address\n- Date of birth"
+        },
+        "account_info": {
+          "trigger": "has_user_accounts",
+          "text": "When you create an account with us, we collect:\n\n- Username and password\n- Profile information\n- Account preferences\n- Login history and security logs"
+        },
+        "payment_info": {
+          "trigger": "collects_payments",
+          "text": "If you make a purchase, we collect payment information:\n\n- Credit/debit card details (processed securely by our payment processor)\n- Billing address\n- Transaction history\n- Subscription details\n\n**Note:** We do not store full credit card numbers. Payment processing is handled by {payment_processor}."
+        },
+        "usage_data": {
+          "trigger": "collects_usage_data",
+          "text": "We may also collect information that your browser sends whenever you visit our Site (\"Usage Data\"). This Usage Data may include information such as:\n\n- Your computer's Internet Protocol address (IP address)\n- Browser type and version\n- The pages of our Site that you visit\n- The time and date of your visit\n- The time spent on those pages\n- Unique device identifiers\n- Other diagnostic data"
+        },
+        "cookies": {
+          "trigger": "uses_cookies",
+          "text": "We use cookies and similar tracking technologies to track activity on our Site and hold certain information.\n\nCookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies such as beacons, tags, and scripts are also used to collect and track information and to improve and analyze our Site.\n\nYou can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Site."
+        },
+        "location_data": {
+          "trigger": "collects_location",
+          "text": "We may collect and process information about your location. We use various technologies to determine location, including IP address, GPS, and other sensors."
+        },
+        "user_generated_content": {
+          "trigger": "has_user_content",
+          "text": "If you post, upload, or otherwise submit content to our Site (such as comments, reviews, or forum posts), we collect and store that content along with associated metadata."
+        }
+      }
+    },
+    "how_we_use_info": {
+      "title": "How We Use Your Information",
+      "description": "Purposes for which data is used",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "{company_name} uses the collected data for various purposes:\n\n- To provide and maintain our Site\n- To notify you about changes to our Site\n- To allow you to participate in interactive features of our Site when you choose to do so\n- To provide customer support\n- To gather analysis or valuable information so that we can improve our Site\n- To monitor the usage of our Site\n- To detect, prevent and address technical issues",
+        "gdpr": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:\n\n- **Performance of a contract:** Where we need to perform the contract we are about to enter into or have entered into with you.\n- **Legitimate interests:** Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.\n- **Legal obligation:** Where we need to comply with a legal or regulatory obligation.\n- **Consent:** Where you have given consent to the processing of your personal data for one or more specific purposes.\n\nWe have set out below, in a table format, a description of all the ways we plan to use your personal data, and which of the legal bases we rely on to do so. We have also identified what our legitimate interests are where appropriate.\n\n| Purpose/Activity | Type of Data | Lawful Basis for Processing |\n|------------------|-------------|----------------------------|\n| To register you as a new customer | Identity, Contact | Performance of a contract |\n| To process and deliver your order | Identity, Contact, Financial, Transaction | Performance of a contract |\n| To manage our relationship with you | Identity, Contact, Profile, Marketing | Performance of a contract, Legitimate interest |\n| To administer and protect our business | Identity, Contact, Technical | Legitimate interest |\n| To deliver relevant content and advertisements | Identity, Contact, Profile, Usage, Marketing | Consent |\n| To use data analytics | Technical, Usage | Legitimate interest |"
+      },
+      "conditional_sections": {
+        "marketing": {
+          "trigger": "uses_marketing",
+          "text": "\n- To provide you with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless you have opted not to receive such information"
+        },
+        "personalization": {
+          "trigger": "personalizes_content",
+          "text": "\n- To personalize your experience and to deliver content and product offerings relevant to your interests"
+        },
+        "analytics": {
+          "trigger": "uses_analytics",
+          "text": "\n- To analyze user behavior and trends to improve our services\n- To measure the effectiveness of our marketing campaigns"
+        }
+      }
+    },
+    "legal_basis": {
+      "title": "Legal Basis for Processing (GDPR)",
+      "description": "GDPR Article 6 lawful bases",
+      "required": false,
+      "trigger_law": "GDPR",
+      "templates": {
+        "gdpr": "If you are from the European Economic Area (EEA), {company_name}'s legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect it.\n\n{company_name} may process your Personal Information because:\n\n- We need to perform a contract with you\n- You have given us permission to do so\n- The processing is in our legitimate interests and it's not overridden by your rights\n- For payment processing purposes\n- To comply with the law"
+      }
+    },
+    "data_retention": {
+      "title": "Data Retention",
+      "description": "How long data is kept",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "{company_name} will retain your Personal Information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.\n\n{company_name} will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of our Site, or we are legally obligated to retain this data for longer time periods.",
+        "gdpr": "We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.\n\nTo determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorised use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements.\n\nIn some circumstances we may anonymise your personal data (so that it can no longer be associated with you) for research or statistical purposes in which case we may use this information indefinitely without further notice to you."
+      }
+    },
+    "data_transfer": {
+      "title": "Transfer of Data",
+      "description": "Cross-border data transfers",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "Your information, including Personal Information, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.\n\nIf you are located outside {company_country} and choose to provide information to us, please note that we transfer the data, including Personal Information, to {company_country} and process it there.\n\nYour consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.\n\n{company_name} will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Information will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.",
+        "gdpr": "We may transfer your personal data to countries outside the European Economic Area (EEA). Whenever we transfer your personal data out of the EEA, we ensure a similar degree of protection is afforded to it by ensuring at least one of the following safeguards is implemented:\n\n- We will only transfer your personal data to countries that have been deemed to provide an adequate level of protection for personal data by the European Commission.\n- Where we use certain service providers, we may use specific contracts approved by the European Commission which give personal data the same protection it has in Europe.\n- Where we use providers based in the US, we may transfer data to them if they are part of the EU-US Data Privacy Framework which requires them to provide similar protection to personal data shared between Europe and the US.\n\nPlease contact us if you want further information on the specific mechanism used by us when transferring your personal data out of the EEA."
+      }
+    },
+    "data_security": {
+      "title": "Data Security",
+      "description": "Security measures taken",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.",
+        "gdpr": "We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.\n\nWe have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so."
+      }
+    },
+    "your_rights": {
+      "title": "Your Data Protection Rights",
+      "description": "User rights under applicable laws",
+      "required": true,
+      "applies_to_all": true,
+      "conditional_sections": {
+        "gdpr_rights": {
+          "trigger_law": "GDPR",
+          "text": "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. {company_name} aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Information.\n\nIf you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.\n\nIn certain circumstances, you have the following data protection rights:\n\n- **The right to access** — You have the right to request copies of your personal data. We may charge you a small fee for this service.\n- **The right to rectification** — You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.\n- **The right to erasure** — You have the right to request that we erase your personal data, under certain conditions.\n- **The right to restrict processing** — You have the right to request that we restrict the processing of your personal data, under certain conditions.\n- **The right to object to processing** — You have the right to object to our processing of your personal data, under certain conditions.\n- **The right to data portability** — You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.\n\nYou have the right to make a complaint at any time to the supervisory authority for data protection issues in your country of residence. We would, however, appreciate the chance to deal with your concerns before you approach the authority so please contact us in the first instance."
+        },
+        "ccpa_rights": {
+          "trigger_law": "CCPA/CPRA",
+          "text": "If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA):\n\n- **Right to Know** — You have the right to request that we disclose what personal information we collect, use, disclose, and sell.\n- **Right to Delete** — You have the right to request the deletion of your personal information.\n- **Right to Opt-Out** — You have the right to opt-out of the sale or sharing of your personal information.\n- **Right to Non-Discrimination** — You have the right not to receive discriminatory treatment for exercising your privacy rights.\n- **Right to Correct** — You have the right to request correction of inaccurate personal information.\n- **Right to Limit Use** — You have the right to limit the use and disclosure of sensitive personal information.\n\nTo exercise any of these rights, please contact us using the information provided below. We will respond to verifiable consumer requests within 45 days."
+        },
+        "lgpd_rights": {
+          "trigger_law": "LGPD",
+          "text": "Under the Lei Geral de Proteção de Dados (LGPD), you have the following rights regarding your personal data:\n\n- **Confirmation of existence** — Right to confirm the existence of processing of your personal data\n- **Access** — Right to access your personal data\n- **Correction** — Right to correct incomplete, inaccurate, or outdated data\n- **Anonymization, blocking, or deletion** — Right to request anonymization, blocking, or deletion of unnecessary or excessive data\n- **Portability** — Right to data portability to another service or product provider\n- **Deletion** — Right to deletion of personal data processed with your consent\n- **Information** — Right to information about public and private entities with which we have shared your data\n- **Consent revocation** — Right to revoke consent at any time\n- **Review of automated decisions** — Right to review decisions made solely by automated means\n\nYou can exercise these rights by contacting our Data Protection Officer at {dpo_email}."
+        },
+        "pipeda_rights": {
+          "trigger_law": "PIPEDA",
+          "text": "Under Canada's Personal Information Protection and Electronic Documents Act (PIPEDA), you have the right to:\n\n- Access your personal information held by us\n- Challenge the accuracy and completeness of your personal information\n- Request correction of your personal information\n- File a complaint with the Office of the Privacy Commissioner of Canada if you believe your privacy rights have been violated"
+        },
+        "coppa_rights": {
+          "trigger_law": "COPPA",
+          "text": "Our Site is not intended for children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from children under 13 without verification of parental consent, we take steps to remove that information from our servers."
+        }
+      }
+    },
+    "third_party_services": {
+      "title": "Third-Party Service Providers",
+      "description": "Services used that process user data",
+      "required": false,
+      "trigger": "has_third_party_services",
+      "templates": {
+        "default": "We may employ third-party companies and individuals to facilitate our Site (\"Service Providers\"), to provide the Site on our behalf, to perform Site-related services or to assist us in analyzing how our Site is used.\n\nThese third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
+      },
+      "service_specific": {
+        "google_analytics": {
+          "name": "Google Analytics",
+          "text": "We use Google Analytics to monitor and analyze the use of our Site. Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Site. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.\n\nYou can opt-out of having made your activity on the Site available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript from sharing information with Google Analytics about visits activity.\n\nFor more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: https://policies.google.com/privacy"
+        },
+        "stripe": {
+          "name": "Stripe",
+          "text": "We use Stripe for payment processing. Your payment information is processed directly by Stripe and is not stored on our servers. Stripe's privacy policy can be found at: https://stripe.com/privacy"
+        },
+        "paypal": {
+          "name": "PayPal",
+          "text": "We use PayPal for payment processing. When you make a payment through PayPal, you are subject to PayPal's privacy policy: https://www.paypal.com/webapps/mpp/ua/privacy-full"
+        },
+        "mailchimp": {
+          "name": "Mailchimp",
+          "text": "We use Mailchimp for email marketing services. Your email address and related data may be transferred to Mailchimp for processing. Mailchimp's privacy policy is available at: https://mailchimp.com/legal/privacy/"
+        },
+        "facebook_pixel": {
+          "name": "Facebook Pixel / Meta",
+          "text": "We use Facebook Pixel to measure, optimize and build audiences for our advertising campaigns served on Facebook. Facebook Pixel enables us to see how users move between devices when accessing our Site and Facebook, to ensure that our Facebook advertising is seen by users most likely to be interested in such advertising.\n\nFor more information on the privacy practices of Facebook, please visit Facebook's Data Policy: https://www.facebook.com/privacy/explanation"
+        },
+        "google_adsense": {
+          "name": "Google AdSense",
+          "text": "We use Google AdSense to display advertisements on our Site. Google, as a third-party vendor, uses cookies to serve ads on our Site. Google's use of the DART cookie enables it to serve ads to our users based on previous visits to our Site and other sites on the Internet. Users may opt-out of the use of the DART cookie by visiting the Google Ad and Content Network privacy policy: https://policies.google.com/technologies/ads"
+        },
+        "cloudflare": {
+          "name": "Cloudflare",
+          "text": "We use Cloudflare for CDN and security services. Cloudflare may process your IP address and other technical data to provide these services. Cloudflare's privacy policy is available at: https://www.cloudflare.com/privacypolicy/"
+        },
+        "aws": {
+          "name": "Amazon Web Services (AWS)",
+          "text": "We use AWS for cloud hosting and data storage. Your data may be stored on AWS servers. AWS's privacy policy is available at: https://aws.amazon.com/privacy/"
+        },
+        "vercel": {
+          "name": "Vercel",
+          "text": "We use Vercel for hosting and deployment services. Vercel may process your IP address and other technical data. Vercel's privacy policy is available at: https://vercel.com/legal/privacy-policy"
+        },
+        "supabase": {
+          "name": "Supabase",
+          "text": "We use Supabase for database and authentication services. Your account data may be stored on Supabase servers. Supabase's privacy policy is available at: https://supabase.com/privacy"
+        },
+        "firebase": {
+          "name": "Firebase (Google)",
+          "text": "We use Firebase for authentication, analytics, and hosting. Your data may be processed by Google Firebase. Firebase's privacy and security documentation is available at: https://firebase.google.com/support/privacy"
+        },
+        "sendgrid": {
+          "name": "SendGrid (Twilio)",
+          "text": "We use SendGrid for transactional email delivery. Your email address may be processed by SendGrid. SendGrid's privacy policy is available at: https://www.twilio.com/legal/privacy"
+        },
+        "intercom": {
+          "name": "Intercom",
+          "text": "We use Intercom for customer support and messaging. Intercom may process your contact information and conversation history. Intercom's privacy policy is available at: https://www.intercom.com/legal/privacy"
+        },
+        "zendesk": {
+          "name": "Zendesk",
+          "text": "We use Zendesk for customer support ticketing. Zendesk may process your support requests and contact information. Zendesk's privacy policy is available at: https://www.zendesk.com/company/agreements-and-terms/privacy-notice/"
+        },
+        "hotjar": {
+          "name": "Hotjar",
+          "text": "We use Hotjar to understand user behavior through heatmaps, session recordings, and surveys. Hotjar may collect your IP address, device information, and browsing behavior. You can opt-out at: https://www.hotjar.com/legal/compliance/opt-out"
+        },
+        "mixpanel": {
+          "name": "Mixpanel",
+          "text": "We use Mixpanel for product analytics. Mixpanel may collect your usage data and device information. Mixpanel's privacy policy is available at: https://mixpanel.com/legal/privacy-policy/"
+        },
+        "amplitude": {
+          "name": "Amplitude",
+          "text": "We use Amplitude for product analytics and user behavior tracking. Amplitude's privacy policy is available at: https://amplitude.com/privacy"
+        },
+        "sentry": {
+          "name": "Sentry",
+          "text": "We use Sentry for error tracking and performance monitoring. Sentry may collect technical data about errors and crashes. Sentry's privacy policy is available at: https://sentry.io/privacy/"
+        },
+        "posthog": {
+          "name": "PostHog",
+          "text": "We use PostHog for product analytics. PostHog may collect your usage data and session recordings. PostHog's privacy policy is available at: https://posthog.com/privacy"
+        },
+        "plausible": {
+          "name": "Plausible Analytics",
+          "text": "We use Plausible Analytics for privacy-friendly website analytics. Plausible does not use cookies and does not collect any personal data. Learn more at: https://plausible.io/data-policy"
+        },
+        "fathom": {
+          "name": "Fathom Analytics",
+          "text": "We use Fathom Analytics for privacy-focused website analytics. Fathom does not use cookies and complies with GDPR, CCPA, and PECR without requiring consent banners. Learn more at: https://usefathom.com/privacy"
+        },
+        "youtube_embeds": {
+          "name": "YouTube (Google)",
+          "text": "Our Site may embed YouTube videos. When you interact with these embeds, YouTube may collect data about your interaction. YouTube's privacy policy is available at: https://policies.google.com/privacy"
+        },
+        "twitter_embeds": {
+          "name": "Twitter / X",
+          "text": "Our Site may embed Twitter/X content. When you interact with these embeds, Twitter may collect data. Twitter's privacy policy is available at: https://twitter.com/en/privacy"
+        },
+        "tiktok_embeds": {
+          "name": "TikTok",
+          "text": "Our Site may embed TikTok videos. TikTok may collect data about your interaction. TikTok's privacy policy is available at: https://www.tiktok.com/legal/privacy-policy"
+        },
+        "shopify": {
+          "name": "Shopify",
+          "text": "We use Shopify for e-commerce functionality. Shopify processes your order and payment information. Shopify's privacy policy is available at: https://www.shopify.com/legal/privacy"
+        },
+        "woocommerce": {
+          "name": "WooCommerce",
+          "text": "We use WooCommerce for e-commerce functionality on our WordPress site. WooCommerce may process your order information. Learn more at: https://woocommerce.com/document/privacy/"
+        },
+        "hubspot": {
+          "name": "HubSpot",
+          "text": "We use HubSpot for CRM, marketing, and sales automation. HubSpot may process your contact information and interaction history. HubSpot's privacy policy is available at: https://legal.hubspot.com/privacy-policy"
+        },
+        "salesforce": {
+          "name": "Salesforce",
+          "text": "We use Salesforce for customer relationship management. Salesforce may process your contact and account data. Salesforce's privacy policy is available at: https://www.salesforce.com/company/privacy/"
+        },
+        "segment": {
+          "name": "Segment (Twilio)",
+          "text": "We use Segment for customer data platform services. Segment may collect and route your data to various destinations. Segment's privacy policy is available at: https://segment.com/legal/privacy/"
+        },
+        "algolia": {
+          "name": "Algolia",
+          "text": "We use Algolia for search functionality. Algolia may process your search queries. Algolia's privacy policy is available at: https://www.algolia.com/policies/privacy/"
+        },
+        "mapbox": {
+          "name": "Mapbox",
+          "text": "We use Mapbox for maps and location services. Mapbox may process your location data. Mapbox's privacy policy is available at: https://www.mapbox.com/legal/privacy"
+        },
+        "google_maps": {
+          "name": "Google Maps",
+          "text": "We use Google Maps for location services. Google may process your location data. Google's privacy policy is available at: https://policies.google.com/privacy"
+        },
+        "recaptcha": {
+          "name": "reCAPTCHA (Google)",
+          "text": "We use Google reCAPTCHA to protect our Site from spam and abuse. reCAPTCHA collects hardware and software information, such as device and application data, and sends it to Google for analysis. Google's privacy policy is available at: https://policies.google.com/privacy"
+        },
+        "hcaptcha": {
+          "name": "hCaptcha",
+          "text": "We use hCaptcha for bot protection. hCaptcha may collect technical data about your device and browser. hCaptcha's privacy policy is available at: https://www.hcaptcha.com/privacy"
+        },
+        "auth0": {
+          "name": "Auth0",
+          "text": "We use Auth0 for authentication services. Auth0 may process your login credentials and profile data. Auth0's privacy policy is available at: https://auth0.com/privacy"
+        },
+        "clerk": {
+          "name": "Clerk",
+          "text": "We use Clerk for user authentication and management. Clerk may process your account credentials and profile data. Clerk's privacy policy is available at: https://clerk.com/privacy"
+        },
+        "oauth_providers": {
+          "name": "OAuth Providers (Google, GitHub, etc.)",
+          "text": "We allow you to sign in using third-party OAuth providers such as Google, GitHub, or Apple. When you choose to sign in via OAuth, we receive limited profile information from that provider. The data we receive is governed by your privacy settings with that provider. Please refer to their respective privacy policies for more information."
+        }
+      }
+    },
+    "children_privacy": {
+      "title": "Children's Privacy",
+      "description": "COPPA and child data protection",
+      "required": false,
+      "trigger": "has_children_users",
+      "templates": {
+        "coppa": "Our Service does not address anyone under the age of 13 (\"Children\").\n\nWe do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from children under 13 without verification of parental consent, we take steps to remove that information from our servers.",
+        "gdpr_children": "Where we intend to rely on consent as the lawful basis for processing and the data subject is a child, we will seek consent from the holder of parental responsibility over the child, in accordance with Article 8 of the GDPR."
+      }
+    },
+    "do_not_track": {
+      "title": "Do Not Track Signals",
+      "description": "DNT browser signals",
+      "required": false,
+      "trigger": "respects_dnt",
+      "templates": {
+        "default": "We honor Do Not Track signals and do not track, plant cookies, or use advertising when a Do Not Track browser mechanism is in place."
+      }
+    },
+    "california_privacy": {
+      "title": "California Privacy Rights",
+      "description": "CalOPPA specific disclosures",
+      "required": false,
+      "trigger_law": "CalOPPA",
+      "templates": {
+        "caloppa": "According to CalOPPA, we agree to the following:\n\n- Users can visit our site anonymously.\n- Once this privacy policy is created, we will add a link to it on our home page or as a minimum, on the first significant page after entering our website.\n- Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above.\n- You will be notified of any Privacy Policy changes on our Privacy Policy Page.\n- You can change your personal information by emailing us at {contact_email}."
+      }
+    },
+    "changes_to_policy": {
+      "title": "Changes to This Privacy Policy",
+      "description": "How policy updates are communicated",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.\n\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.",
+        "gdpr": "We may update this privacy policy from time to time to reflect changes in law or our privacy practices. We will take appropriate measures to inform you, consistent with the significance of the changes we make."
+      }
+    },
+    "contact_us": {
+      "title": "Contact Us",
+      "description": "How to reach the company for privacy concerns",
+      "required": true,
+      "applies_to_all": true,
+      "templates": {
+        "default": "If you have any questions about this Privacy Policy, please contact us:\n\n- By email: {contact_email}\n- By visiting this page on our website: {website_url}/contact",
+        "gdpr_dpo": "If you have any questions about this Privacy Policy, please contact us:\n\n- By email: {contact_email}\n- By visiting this page on our website: {website_url}/contact\n\n**Data Protection Officer (DPO)**\nIf you are located in the EEA and have concerns about our data handling practices, you may contact our Data Protection Officer at {dpo_email}.",
+        "lgpd_dpo": "If you have any questions about this Privacy Policy, please contact us:\n\n- By email: {contact_email}\n- By visiting this page on our website: {website_url}/contact\n\n**Encarregado de Dados (Data Protection Officer)**\nUnder LGPD, our Data Protection Officer can be reached at {dpo_email}."
+      }
+    }
+  },
+  "smart_templates": {
+    "personal_blog": {
+      "name": "Personal Blog",
+      "description": "Simple blog with newsletter signup",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": false,
+        "collects_payments": false,
+        "collects_usage_data": true,
+        "uses_cookies": true,
+        "collects_location": false,
+        "has_user_content": true,
+        "uses_marketing": true,
+        "personalizes_content": false,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "google_analytics",
+        "mailchimp",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA"
+      ]
+    },
+    "saas_startup": {
+      "name": "SaaS Startup",
+      "description": "Software-as-a-Service with user accounts and payments",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": true,
+        "collects_payments": true,
+        "collects_usage_data": true,
+        "uses_cookies": true,
+        "collects_location": true,
+        "has_user_content": false,
+        "uses_marketing": true,
+        "personalizes_content": true,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "stripe",
+        "google_analytics",
+        "segment",
+        "intercom",
+        "sentry",
+        "auth0",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA",
+        "PIPEDA",
+        "LGPD"
+      ]
+    },
+    "ecommerce_store": {
+      "name": "E-commerce Store",
+      "description": "Online shop with payments and shipping",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": true,
+        "collects_payments": true,
+        "collects_usage_data": true,
+        "uses_cookies": true,
+        "collects_location": true,
+        "has_user_content": true,
+        "uses_marketing": true,
+        "personalizes_content": true,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "stripe",
+        "paypal",
+        "google_analytics",
+        "mailchimp",
+        "shopify",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA",
+        "PIPEDA",
+        "LGPD"
+      ]
+    },
+    "mobile_app": {
+      "name": "Mobile App",
+      "description": "iOS/Android app with push notifications",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": true,
+        "collects_payments": true,
+        "collects_usage_data": true,
+        "uses_cookies": false,
+        "collects_location": true,
+        "has_user_content": true,
+        "uses_marketing": true,
+        "personalizes_content": true,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "stripe",
+        "firebase",
+        "mixpanel",
+        "segment",
+        "sendgrid",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA",
+        "LGPD",
+        "PIPEDA"
+      ]
+    },
+    "portfolio_website": {
+      "name": "Portfolio Website",
+      "description": "Personal or agency portfolio with contact form",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": false,
+        "collects_payments": false,
+        "collects_usage_data": true,
+        "uses_cookies": false,
+        "collects_location": false,
+        "has_user_content": false,
+        "uses_marketing": false,
+        "personalizes_content": false,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "google_analytics",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA"
+      ]
+    },
+    "community_forum": {
+      "name": "Community Forum",
+      "description": "Discussion board with user-generated content",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": true,
+        "collects_payments": false,
+        "collects_usage_data": true,
+        "uses_cookies": true,
+        "collects_location": false,
+        "has_user_content": true,
+        "uses_marketing": true,
+        "personalizes_content": true,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": true,
+        "respects_dnt": true
+      },
+      "services": [
+        "google_analytics",
+        "cloudflare",
+        "recaptcha"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA",
+        "COPPA"
+      ]
+    },
+    "newsletter_platform": {
+      "name": "Newsletter Platform",
+      "description": "Email newsletter with subscriber management",
+      "auto_select": {
+        "collects_personal_info": true,
+        "has_user_accounts": true,
+        "collects_payments": true,
+        "collects_usage_data": true,
+        "uses_cookies": true,
+        "collects_location": false,
+        "has_user_content": false,
+        "uses_marketing": true,
+        "personalizes_content": true,
+        "uses_analytics": true,
+        "has_third_party_services": true,
+        "has_children_users": false,
+        "respects_dnt": true
+      },
+      "services": [
+        "stripe",
+        "mailchimp",
+        "google_analytics",
+        "cloudflare"
+      ],
+      "laws": [
+        "GDPR",
+        "CCPA/CPRA",
+        "CalOPPA",
+        "CAN-SPAM"
+      ]
+    }
+  },
+  "translations": {
+    "privacy_policy": {
+      "en": "Privacy Policy",
+      "es": "Política de Privacidad",
+      "fr": "Politique de Confidentialité",
+      "de": "Datenschutzerklärung",
+      "pt": "Política de Privacidade",
+      "it": "Informativa sulla Privacy",
+      "nl": "Privacybeleid",
+      "ja": "プライバシーポリシー",
+      "zh": "隐私政策"
+    },
+    "introduction": {
+      "en": "Introduction",
+      "es": "Introducción",
+      "fr": "Introduction",
+      "de": "Einleitung",
+      "pt": "Introdução",
+      "it": "Introduzione",
+      "nl": "Inleiding",
+      "ja": "はじめに",
+      "zh": "简介"
+    },
+    "information_we_collect": {
+      "en": "Information We Collect",
+      "es": "Información que Recopilamos",
+      "fr": "Informations que Nous Collectons",
+      "de": "Von uns gesammelte Informationen",
+      "pt": "Informações que Coletamos",
+      "it": "Informazioni che Raccogliamo",
+      "nl": "Informatie die Wij Verzamelen",
+      "ja": "収集する情報",
+      "zh": "我们收集的信息"
+    },
+    "how_we_use_info": {
+      "en": "How We Use Your Information",
+      "es": "Cómo Usamos su Información",
+      "fr": "Comment Nous Utilisons Vos Informations",
+      "de": "Wie wir Ihre Informationen verwenden",
+      "pt": "Como Usamos suas Informações",
+      "it": "Come Utilizziamo le Vostre Informazioni",
+      "nl": "Hoe Wij Uw Informatie Gebruiken",
+      "ja": "情報の使用方法",
+      "zh": "我们如何使用您的信息"
+    },
+    "data_retention": {
+      "en": "Data Retention",
+      "es": "Conservación de Datos",
+      "fr": "Conservation des Données",
+      "de": "Datenspeicherung",
+      "pt": "Retenção de Dados",
+      "it": "Conservazione dei Dati",
+      "nl": "Gegevensbewaring",
+      "ja": "データの保持",
+      "zh": "数据保留"
+    },
+    "your_rights": {
+      "en": "Your Data Protection Rights",
+      "es": "Sus Derechos de Protección de Datos",
+      "fr": "Vos Droits de Protection des Données",
+      "de": "Ihre Datenschutzrechte",
+      "pt": "Seus Direitos de Proteção de Dados",
+      "it": "I Vostri Diritti di Protezione dei Dati",
+      "nl": "Uw Rechten op Gegevensbescherming",
+      "ja": "データ保護に関するあなたの権利",
+      "zh": "您的数据保护权利"
+    },
+    "contact_us": {
+      "en": "Contact Us",
+      "es": "Contáctenos",
+      "fr": "Contactez-Nous",
+      "de": "Kontaktieren Sie uns",
+      "pt": "Fale Conosco",
+      "it": "Contattaci",
+      "nl": "Neem Contact met Ons Op",
+      "ja": "お問い合わせ",
+      "zh": "联系我们"
+    }
+  },
+  "generation_logic": {
+    "description": "Instructions for the generator to assemble policies",
+    "steps": [
+      "1. Collect user inputs (business info, data collection, services, laws, contact)",
+      "2. Determine which clauses are required based on triggers and selected laws",
+      "3. For each required clause, select the appropriate template variant",
+      "4. Replace all {placeholders} with user-provided values",
+      "5. Assemble clauses in order defined by 'order' field",
+      "6. Add service-specific clauses for selected third-party services",
+      "7. Add law-specific rights sections for selected laws",
+      "8. Format output as HTML, Markdown, or Plain Text",
+      "9. Generate unique hash URL for the policy",
+      "10. Store edit key in localStorage for later modifications"
+    ],
+    "clause_order": [
+      "introduction",
+      "information_we_collect",
+      "how_we_use_info",
+      "legal_basis",
+      "data_retention",
+      "data_transfer",
+      "data_security",
+      "your_rights",
+      "third_party_services",
+      "children_privacy",
+      "do_not_track",
+      "california_privacy",
+      "changes_to_policy",
+      "contact_us"
+    ],
+    "placeholders": {
+      "company_name": "User's business/website name",
+      "website_url": "User's website URL",
+      "company_address": "Physical address of the business",
+      "company_country": "Country where business is based",
+      "contact_email": "Contact email for privacy inquiries",
+      "dpo_email": "Data Protection Officer email (if applicable)",
+      "payment_processor": "Name of payment processor used (Stripe, PayPal, etc.)"
+    }
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "meta": {
+    "code": "fr",
+    "name": "French",
+    "nativeName": "Français",
+    "dir": "ltr"
+  },
+  "header": {
+    "home": "Accueil",
+    "generator": "Générateur",
+    "examples": "Exemples",
+    "pricing": "Tarifs",
+    "brand": "PrivacyPolGen",
+    "generate": "Générer",
+    "ariaToggleTheme": "Changer de thème",
+    "ariaThemeDark": "Passer au thème clair",
+    "ariaThemeLight": "Passer au thème sombre"
+  },
+  "hero": {
+    "badge": "Gratuit pour toujours · Pas d'inscription · GDPR · CCPA · COPPA",
+    "heading": "Générez une politique de confidentialité",
+    "headingAccent": "en moins de 60 secondes.",
+    "subheading": "Répondez à 5 questions rapides. Obtenez une politique de confidentialité complète, de qualité juridique, adaptée à votre entreprise. Copiez, partagez ou hébergez-la en tant que page publique.",
+    "cta": "Générez votre politique",
+    "ctaExamples": "Voir les exemples",
+    "footnote": "Pas de compte · Aucune donnée envoyée à un serveur · La politique générée est encodée dans l'URL"
+  },
+  "trustBar": {
+    "label": "Fonctionne avec les outils que vous utilisez déjà",
+    "more": "+ bien d'autres"
+  },
+  "features": {
+    "label": "Fonctionnalités",
+    "heading": "Tout ce dont vous avez besoin. Rien de plus.",
+    "subtext": "Un générateur de politique de conceptions conçu pour les développeurs indépendants, les petites équipes et tous ceux qui ont besoin d'une vraie politique sans payer 500 $ à un avocat.",
+    "cards": {
+      "laws": {
+        "title": "Lois couvertes de base",
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD et PDPA-SG. Sélectionnez celles qui s'appliquent à votre entreprise."
+      },
+      "stack": {
+        "title": "Adapté à votre stack technique",
+        "body": "Choisissez parmi plus de 25 services tiers populaires (Stripe, Google Analytics, Plausible, Mailchimp…) et nous ajoutons automatiquement les bonnes divulgations."
+      },
+      "url": {
+        "title": "URL publique partageable",
+        "body": "Chaque politique obtient une URL unique partageable. Hébergez-la sur votre domaine ou envoyez-la à votre avocat pour révision."
+      },
+      "export": {
+        "title": "Exportez partout",
+        "body": "Copiez en Markdown, HTML ou texte brut. Premium ajoute l'export PDF et DOCX."
+      },
+      "legal": {
+        "title": "Vrai texte juridique, pas du Lorem Ipsum",
+        "body": "Clauses rédigées à la main qui référencent les sections réelles du GDPR, CCPA et COPPA qu'elles couvrent."
+      },
+      "privacy": {
+        "title": "Zéro donnée, zéro tracking",
+        "body": "Vos réponses sont encodées dans l'URL elle-même. Nous n'hébergeons pas de backend et ne voyons pas le contenu de votre politique."
+      }
+    }
+  },
+  "howItWorks": {
+    "label": "Comment ça marche",
+    "heading": "Cinq étapes. Environ une minute.",
+    "steps": {
+      "business": {
+        "title": "Parlez-nous de votre entreprise",
+        "body": "Nom, URL, type d'entreprise et zone d'activité. Nous utilisons des valeurs par défaut pour les cas courants."
+      },
+      "data": {
+        "title": "Sélectionnez ce que vous collectez",
+        "body": "Cochez les types de données que vous collectez. Noms, e-mails, paiements, analyses, etc."
+      },
+      "services": {
+        "title": "Listez vos services",
+        "body": "Stripe, Google Analytics, Mailchimp, etc. Nous ajoutons les divulgations tiers appropriées."
+      },
+      "laws": {
+        "title": "Choisissez les lois applicables",
+        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. Nous sélectionnons par défaut le cas le plus strict."
+      },
+      "policy": {
+        "title": "Obtenez votre politique",
+        "body": "Copiez en Markdown, HTML ou texte brut. Partagez via une URL publique. Mettez à jour à tout moment."
+      }
+    }
+  },
+  "comparison": {
+    "label": "Comparaison",
+    "heading": "PrivacyPolGen vs. les alternatives.",
+    "colPrivacyPolGen": "PrivacyPolGen",
+    "colLawyer": "Avocat",
+    "colPaidTemplate": "Modèle payant",
+    "rows": {
+      "price": "Prix",
+      "time": "Temps nécessaire",
+      "gdprCovers": "Couverture GDPR / CCPA",
+      "tailored": "Adapté à votre stack",
+      "updatable": "Auto-misable à jour",
+      "url": "URL partageable",
+      "review": "Révision par avocat"
+    },
+    "values": {
+      "free": "0 €",
+      "seconds": "~60 secondes",
+      "days": "Jours à semaines",
+      "daysShort": "Jours",
+      "yes": "Oui",
+      "yesCustom": "Oui (personnalisé)",
+      "yesTemplate": "Oui (modèle)",
+      "yesServices": "Oui (25+ services)",
+      "yesAttorney": "Oui (avocat)",
+      "partially": "Partiellement",
+      "no": "Non",
+      "pdfOnly": "PDF uniquement",
+      "recommended": "Recommandé",
+      "included": "Inclus",
+      "lawyerPrice": "500+ € par projet",
+      "paidPrice": "50–200 € / mois"
+    }
+  },
+  "pricing": {
+    "label": "Tarifs",
+    "heading": "Gratuit pour tous. Premium pour les fonctionnalités avancées.",
+    "subtext": "Le générateur de base est gratuit et le restera. Premium est pour les équipes qui ont besoin d'exports et de personnalisation.",
+    "plans": {
+      "free": {
+        "name": "Gratuit",
+        "price": "0 €",
+        "period": "pour toujours",
+        "description": "Pour les projets personnels, blogs et petits sites.",
+        "cta": "Générez votre politique",
+        "features": [
+          "Politique de confidentialité complète en Markdown, HTML et texte brut",
+          "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG",
+          "Toutes les divulgations des 25+ services tiers",
+          "URL publique partageable",
+          "Régénérations illimitées",
+          "Aucun compte requis"
+        ]
+      },
+      "premium": {
+        "name": "Premium",
+        "price": "19 €",
+        "period": "paiement unique",
+        "description": "Pour les entreprises qui ont besoin d'exports et d'intégrations soignés.",
+        "cta": "Passer à Premium",
+        "ctaComingSoon": "Bientôt disponible",
+        "badge": "Le plus utile",
+        "features": [
+          "Tout du forfait Gratuit",
+          "Export PDF et DOCX",
+          "Générateur de code de bannière cookies",
+          "Image de marque personnalisée (votre logo + couleurs)",
+          "Page de politique hébergée avec domaine personnalisé",
+          "Historique des versions et différences",
+          "Support prioritaire"
+        ]
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "heading": "Questions, réponses.",
+    "items": [
+      {
+        "q": "Ce générateur de politique de confidentialité est-il vraiment gratuit ?",
+        "a": "Oui. Vous pouvez générer, copier et héberger la politique de confidentialité résultante entièrement gratuitement. Nous prévoyons un niveau Premium avec des exports PDF/DOCX, mais le générateur de base sera toujours gratuit."
+      },
+      {
+        "q": "Ai-je besoin d'un compte pour générer une politique de confidentialité ?",
+        "a": "Aucun compte requis. Répondez simplement aux questions de notre assistant et nous générerons votre politique. Vos réponses sont encodées dans l'URL partageable elle-même — rien n'est envoyé à nos serveurs."
+      },
+      {
+        "q": "La politique générée est-elle juridiquement contraignante ?",
+        "a": "La politique générée est un modèle de départ qui couvre les exigences juridiques les plus courantes (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Cependant, chaque entreprise est différente. Nous recommandons vivement de faire réviser la politique finale par un avocat avant de l'utiliser, en particulier dans les secteurs réglementés."
+      },
+      {
+        "q": "Où sont stockées mes données ?",
+        "a": "Nulle part. Nous utilisons la compression côté client (DEFLATE + encodage URL-safe Base64) pour intégrer vos réponses dans le hash de l'URL. Lorsque vous partagez l'URL, le navigateur du destinataire décode la politique localement. Nous n'hébergeons pas de backend, n'enregistrons pas les réponses de l'assistant et n'avons pas accès au contenu de votre politique."
+      },
+      {
+        "q": "Puis-je modifier la politique après l'avoir générée ?",
+        "a": "Oui. Modifiez simplement le Markdown ou le HTML dans n'importe quel éditeur de texte et hébergez le fichier sur votre propre site. La sortie vous appartient et peut être librement modifiée. Le niveau Premium proposera une édition dans l'application avec historique des versions."
+      },
+      {
+        "q": "Cela couvre-t-il le GDPR, le CCPA et d'autres lois ?",
+        "a": "Oui. Sélectionnez les lois qui s'appliquent à votre entreprise à l'étape 4 de l'assistant, et nous inclurons les clauses appropriées (base juridique GDPR, opt-out CCPA, consentement parental COPPA, droits d'accès PIPEDA, base juridique LGPD, mécanismes de consentement PDPA-SG)."
+      },
+      {
+        "q": "Quelle est la différence entre les niveaux gratuit et Premium ?",
+        "a": "Le forfait gratuit vous offre une politique de confidentialité complète en Markdown, HTML et texte brut — copiez-collez dans votre site. Premium ajoute l'export PDF et DOCX, la génération de code de bannière cookies, l'image de marque personnalisée et les pages de politique hébergées avec historique des versions."
+      },
+      {
+        "q": "Comment ajouter la politique à mon site ?",
+        "a": "Créez une page sur votre site (par exemple, /politique-de-confidentialité), collez la sortie HTML et créez un lien depuis votre pied de page. Si vous souhaitez une version hébergée, partagez l'URL /p?h=... générée — elle fonctionne comme une page publique autonome."
+      },
+      {
+        "q": "Ma politique sera-t-elle mise à jour si les lois changent ?",
+        "a": "La politique que vous générez est un document statique à un moment donné. Si les lois sur la confidentialité changent, vous devrez la régénérer et mettre à jour la version sur votre site. Nous mettons à jour notre bibliothèque de clauses en continu et l'assistant est toujours synchronisé avec les meilleures pratiques actuelles."
+      },
+      {
+        "q": "Puis-je l'utiliser pour un projet client ?",
+        "a": "Absolument. Vous pouvez générer des politiques pour des projets clients illimités sur le forfait gratuit. Nous vous demandons simplement de ne pas redistribuer le générateur lui-même ni de revendre la sortie non modifiée en tant que service concurrent."
+      },
+      {
+        "q": "La politique inclut-elle une section sur les cookies ?",
+        "a": "Oui — si vous sélectionnez « Cookies » à l'étape 2 de l'assistant, nous incluons une section complète sur les cookies décrivant les cookies essentiels, analytiques, de préférence et marketing. Nous listons également les cookies tiers que chaque service que vous intégrez peut définir."
+      },
+      {
+        "q": "Et si je ne sais pas quelles lois s'appliquent à moi ?",
+        "a": "Nous sélectionnons par défaut GDPR, CCPA/CPRA et CalOPPA pour tout le monde (ce qui couvre le cas le plus strict). Si vous n'êtes pas sûr, laisser les paramètres par défaut est généralement le choix le plus sûr — couvrir le maximum de lois ne nuit jamais, et la politique restera valide dans les juridictions où la loi ne s'applique pas."
+      }
+    ]
+  },
+  "generatorPage": {
+    "breadcrumb": "Générateur",
+    "heading": "Créez votre politique de confidentialité",
+    "subtext": "Cinq étapes. Environ une minute. Vos réponses restent dans votre navigateur — rien n'est envoyé à un serveur."
+  },
+  "examplesPage": {
+    "breadcrumb": "Exemples",
+    "heading": "Voir de vraies politiques générées par PrivacyPolGen.",
+    "subtext": "Cliquez sur un exemple pour ouvrir la politique complète. Chacune est générée entièrement côté client à partir des réponses encodées dans l'URL.",
+    "openPolicy": "Ouvrir la politique",
+    "ctaLabel": "Vous en voulez une personnalisée ?",
+    "cta": "Générez la vôtre",
+    "samples": {
+      "blog": {
+        "description": "Collecte minimale de données : e-mail via newsletter, analytique de base, cookies. Couvre RGPD, CCPA, CalOPPA.",
+        "title": "Blog personnel avec newsletter"
+      },
+      "ecommerce": {
+        "description": "Boutique en ligne : adresses, paiements, pixels publicitaires. Couvre RGPD, CCPA, CalOPPA, COPPA.",
+        "title": "Boutique e-commerce avec publicité"
+      },
+      "mobile": {
+        "description": "App iOS/Android : comptes, données d'utilisation, notifications push. Couvre RGPD, CCPA, CalOPPA, LGPD.",
+        "title": "App mobile avec analytique"
+      },
+      "saas": {
+        "description": "SaaS complet : comptes utilisateur, paiements via Stripe, e-mails via SendGrid, analytique. Couvre RGPD, CCPA, CalOPPA, PIPEDA.",
+        "title": "Application SaaS avec paiements"
+      }
+    }
+  },
+  "pricingPage": {
+    "breadcrumb": "Tarifs",
+    "heading": "Des tarifs simples et équitables.",
+    "subtext": "Le générateur de base est gratuit pour tous. Premium est pour les équipes qui ont besoin d'exports et d'intégrations soignés."
+  },
+  "notFound": {
+    "label": "404",
+    "heading": "Page non trouvée",
+    "message": "La page que vous recherchez n'existe pas. Vous voulez plutôt générer une politique de confidentialité ?",
+    "backHome": "← Retour à l'accueil",
+    "generate": "Générer une politique",
+    "messageLead": "La page que vous cherchez n'existe pas. Voulez-vous",
+    "messageLink": "générer une politique de confidentialité",
+    "messageTrail": "à la place ?"
+  },
+  "homeCta": {
+    "heading": "Prêt à publier votre politique de confidentialité ?",
+    "subtext": "Générez la vôtre en moins d'une minute. Gratuit, pour toujours.",
+    "cta": "Générez votre politique"
+  },
+  "seo": {
+    "siteName": "PrivacyPolGen",
+    "ogImageAlt": "PrivacyPolGen — Générez une politique de confidentialité en 60 secondes.",
+    "jsonLdDescription": "Générateur gratuit de politique de confidentialité pour sites web, SaaS, e-commerce et applications mobiles.",
+    "index": {
+      "title": "PrivacyPolGen — Générateur gratuit de politique de confidentialité (GDPR, CCPA, COPPA)",
+      "description": "Générez une politique de confidentialité complète, de qualité juridique pour votre site web, SaaS, e-commerce ou application mobile en moins de 60 secondes. Gratuit, sans inscription, aucune donnée envoyée à un serveur."
+    },
+    "generate": {
+      "title": "Générez votre politique de confidentialité — PrivacyPolGen",
+      "description": "Répondez à 5 questions rapides et obtenez une politique de confidentialité complète, de qualité juridique, adaptée à votre entreprise. Gratuit, sans inscription."
+    },
+    "pricing": {
+      "title": "Tarifs — PrivacyPolGen",
+      "description": "PrivacyPolGen est gratuit pour toujours. Premium ajoute l'export PDF/DOCX, l'image de marque personnalisée et les pages de politique hébergées."
+    },
+    "examples": {
+      "title": "Exemples de politiques de confidentialité — PrivacyPolGen",
+      "description": "Voir de vraies politiques de confidentialité générées par PrivacyPolGen pour différents types d'entreprises : blogs, SaaS, e-commerce et applications mobiles."
+    },
+    "terms": {
+      "title": "Terms of Service — PrivacyPolGen",
+      "description": "PrivacyPolGen Terms of Service — terms governing the use of our free privacy policy generator."
+    },
+    "privacy": {
+      "title": "Privacy Policy — PrivacyPolGen",
+      "description": "PrivacyPolGen's own privacy policy — we collect no personal data. Everything runs client-side in your browser."
+    },
+    "contact": {
+      "title": "Contact — PrivacyPolGen",
+      "description": "Get in touch with PrivacyPolGen. Reach us at support@privacypolgen.com."
+    },
+    "policy": {
+      "title": "Politique de confidentialité — PrivacyPolGen",
+      "description": "Afficher une politique de confidentialité générée par PrivacyPolGen."
+    },
+    "notFound": {
+      "title": "Page non trouvée — PrivacyPolGen",
+      "description": "La page que vous recherchez n'existe pas."
+    }
+  },
+  "termsPage": {
+    "breadcrumb": "Terms of Service",
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "1. Acceptance of Terms",
+        "body": "By accessing or using PrivacyPolGen (the \"Service\"), operated by PrivacyPolGen (\"we,\" \"us,\" or \"our\"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, do not use the Service."
+      },
+      "description": {
+        "title": "2. Description of Service",
+        "body": "PrivacyPolGen is a free, client-side privacy policy generator. We provide templated legal language based on your inputs to help you create a starting-point privacy policy for your website, application, or business. The Service runs entirely in your browser — no data you enter is transmitted to, stored on, or processed by our servers."
+      },
+      "notLegalAdvice": {
+        "title": "3. Not Legal Advice",
+        "body": "The content generated by PrivacyPolGen is for informational purposes only and does not constitute legal advice. We are not a law firm, we are not your attorneys, and the use of this Service does not create an attorney-client relationship. You should not act or refrain from acting based on any content generated by the Service without first consulting a qualified attorney licensed in your jurisdiction. The generated policy is a starting template and may not address all legal requirements applicable to your specific situation, business model, or industry."
+      },
+      "noWarranties": {
+        "title": "4. Disclaimer of Warranties",
+        "body": "THE SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, AND ACCURACY. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR THAT ANY GENERATED CONTENT WILL BE COMPLETE, ACCURATE, OR LEGALLY SUFFICIENT FOR YOUR NEEDS."
+      },
+      "limitationLiability": {
+        "title": "5. Limitation of Liability",
+        "body": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE SERVICE — INCLUDING BUT NOT LIMITED TO ANY FINES, PENALTIES, OR LEGAL LIABILITIES INCURRED AS A RESULT OF USING A GENERATED POLICY. OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF $1.00 OR THE AMOUNT YOU HAVE PAID US IN THE PRECEDING TWELVE MONTHS."
+      },
+      "indemnification": {
+        "title": "6. Indemnification",
+        "body": "You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service, the privacy policy you generate, or your violation of these Terms."
+      },
+      "intellectualProperty": {
+        "title": "7. Intellectual Property",
+        "body": "The Service, including its text, templates, clauses, and structure, is owned by us and protected by copyright and other intellectual property laws. The privacy policy you generate is yours to use, modify, and distribute for any lawful purpose. However, you may not copy, redistribute, or resell the generator itself or the underlying clause templates as a competing service."
+      },
+      "thirdParty": {
+        "title": "8. Third-Party Services",
+        "body": "The Service may display references to third-party services (e.g., analytics, payment processors). These references are provided for informational purposes only. We are not responsible for the content, privacy practices, or terms of any third-party services referenced in generated policies."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "body": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \"Last updated\" date. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. We encourage you to review these Terms periodically."
+      },
+      "governingLaw": {
+        "title": "10. Governing Law",
+        "body": "These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of laws principles. Any disputes arising under these Terms shall be resolved exclusively in the courts of [Your Jurisdiction]."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "body": "If you have any questions about these Terms, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "privacyPage": {
+    "breadcrumb": "Privacy Policy",
+    "heading": "Our Privacy Policy",
+    "lastUpdated": "Last updated: June 8, 2026",
+    "sections": {
+      "intro": {
+        "title": "Introduction",
+        "body": "PrivacyPolGen (\"we,\" \"us,\" or \"our\") operates the website at privacypolgen.com (the \"Service\"). This page explains our approach to privacy — which, in short, is that we collect almost nothing.",
+        "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on our side. The privacy policy generator runs entirely in your browser."
+      },
+      "noCollection": {
+        "title": "Information We Do NOT Collect",
+        "body": "We do not collect, store, or process any personal information about you. Specifically:",
+        "list": [
+          "No account data: We do not require or support user accounts.",
+          "No personal information: We do not ask for or collect your name, email address, or any other personal identifier.",
+          "No payment information: The Service is free. We do not process payments.",
+          "No analytics: We do not run any analytics, tracking pixels, or telemetry on our site.",
+          "No cookies for tracking: We do not use cookies for analytics, advertising, or any tracking purposes.",
+          "No policy data: The answers you provide in the generator wizard are encoded directly into the URL. They are never sent to, stored on, or processed by any server."
+        ]
+      },
+      "technical": {
+        "title": "Technical Data",
+        "body": "Our hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. We do not access, analyze, or share this data."
+      },
+      "localStorage": {
+        "title": "Local Storage",
+        "body": "We use your browser's localStorage to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. We cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "body": "We use the following third-party services, which have their own privacy practices:",
+        "list": [
+          "Fonts (Google Fonts): Font files are loaded from Google's servers. Google may collect information about font requests per its privacy policy. We self-host where possible to minimize this.",
+          "Hosting: Our static site is served via our hosting provider. Standard server logs may be retained temporarily for security and operational purposes."
+        ]
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "body": "Since we collect no personal data, there is nothing to retain. Any server logs kept by our hosting provider are subject to their retention policies and are not accessed by us."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "body": "Because we collect no personal data, there is no personal data for us to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by our hosting provider, please contact us and we will investigate in good faith."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "body": "If we change this privacy policy, we will update the \"Last updated\" date at the top. Since we collect no data, changes are likely to be rare and minor."
+      },
+      "contact": {
+        "title": "Contact",
+        "body": "If you have questions about this privacy policy, please contact us at support@privacypolgen.com."
+      }
+    }
+  },
+  "contactPage": {
+    "breadcrumb": "Contact",
+    "heading": "Get in touch",
+    "subtext": "Questions, feedback, or just saying hi? We'd love to hear from you.",
+    "email": {
+      "title": "Email",
+      "body": "We typically respond within 24 hours."
+    },
+    "github": {
+      "title": "GitHub",
+      "body": "Report issues or contribute."
+    },
+    "feature": {
+      "title": "Feature Request",
+      "body": "Have an idea? We'd love to hear it."
+    },
+    "legal": {
+      "title": "Legal Inquiry",
+      "body": "For legal questions or requests."
+    }
+  },
+  "footer": {
+    "tagline": "Générateur gratuit de politique de confidentialité pour sites web, applications SaaS, boutiques e-commerce et applications mobiles. Conforme au GDPR, CCPA et COPPA. Aucun compte requis.",
+    "productHeading": "Produit",
+    "productGenerator": "Générateur",
+    "productExamples": "Exemples",
+    "productPricing": "Tarifs",
+    "legalHeading": "Mentions légales",
+    "legalPrivacy": "Politique de confidentialité",
+    "legalTerms": "Conditions",
+    "legalContact": "Contact",
+    "copyright": "Conseil juridique non inclus. Consultez un avocat pour votre situation spécifique.",
+    "credit": "Créé avec Astro · Fait pour les développeurs indépendants"
+  },
+  "wizard": {
+    "stepTitles": [
+      "Entreprise",
+      "Données",
+      "Services",
+      "Lois",
+      "Contact"
+    ],
+    "step1": {
+      "heading": "Parlez-nous de votre entreprise",
+      "subtitle": "Nous utiliserons ces informations par défaut dans toute votre politique.",
+      "labelBusinessName": "Nom de l'entreprise *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "URL du site web *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelBusinessType": "Type d'entreprise",
+      "labelJurisdiction": "Juridiction principale"
+    },
+    "step2": {
+      "heading": "Quelles données collectez-vous ?",
+      "subtitle": "Cochez tout ce qui s'applique. Nous avons présélectionné les éléments courants pour votre type d'entreprise."
+    },
+    "step3": {
+      "heading": "Quels services tiers utilisez-vous ?",
+      "subtitle": "Nous ajouterons les divulgations appropriées pour chacun."
+    },
+    "step4": {
+      "heading": "Quelles lois s'appliquent à vous ?",
+      "subtitle": "Nous sélectionnons par défaut le cas le plus strict. Conserver les valeurs par défaut est généralement le plus sûr."
+    },
+    "step5": {
+      "heading": "Comment les utilisateurs peuvent-ils vous contacter ?",
+      "subtitle": "Cet e-mail apparaît dans votre politique et est requis par le GDPR et le CCPA.",
+      "labelEmail": "E-mail de contact *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelDpo": "J'ai un Délégué à la Protection des Données (DPO)",
+      "descDpo": "Requis pour certaines entreprises sous le GDPR. Sélectionnez si vous en avez nommé un.",
+      "labelDpoEmail": "E-mail du DPO",
+      "placeholderDpoEmail": "dpo@acme.example"
+    },
+    "nav": {
+      "back": "Retour",
+      "continue": "Continuer",
+      "generate": "Générer la politique"
+    },
+    "validation": {
+      "required": "Veuillez remplir les champs obligatoires"
+    },
+    "result": {
+      "heading": "Votre politique de confidentialité est prête.",
+      "subtitle": "Copiez-la en Markdown, HTML ou texte brut. Ou partagez le lien public ci-dessous.",
+      "publicLink": "Lien public",
+      "copyLink": "Copier le lien",
+      "openTab": "Ouvrir dans un nouvel onglet",
+      "editAnswers": "← Modifier vos réponses",
+      "toastSuccess": "Lien copié — collez-le où vous voulez",
+      "toastError": "Échec de la copie — sélectionnez et copiez manuellement"
+    },
+    "preview": {
+      "livePreview": "Aperçu en direct",
+      "business": "Entreprise",
+      "dataCollected": "Données collectées",
+      "services": "Services",
+      "laws": "Lois",
+      "item_one": "élément",
+      "item_other": "éléments",
+      "service_one": "service",
+      "service_other": "services",
+      "more": "de plus"
+    },
+    "businessTypes": {
+      "agency": {
+        "description": "Agence de marketing, design ou développement avec travail client et formulaires de contact.",
+        "name": "Agence / Studio"
+      },
+      "ecommerce": {
+        "description": "Boutique en ligne vendant des produits physiques ou numériques avec panier et paiement.",
+        "name": "Boutique e-commerce"
+      },
+      "mobile-app": {
+        "description": "App iOS ou Android avec comptes in-app, analytique et possiblement des notifications push.",
+        "name": "App mobile"
+      },
+      "personal-blog": {
+        "description": "Un blog personnel ou site de contenu. Collecte généralement des e-mails via newsletter et utilise l'analytique de base.",
+        "name": "Blog personnel"
+      },
+      "portfolio": {
+        "description": "Portfolio personnel ou site d'agence pour présenter des travaux. Collecte minimale de données.",
+        "name": "Site portfolio"
+      },
+      "saas": {
+        "description": "Application web Software-as-a-Service avec comptes utilisateurs, paiements et intégrations.",
+        "name": "Application SaaS"
+      }
+    },
+    "dataGroups": {
+      "account": "Compte",
+      "identity": "Identité",
+      "marketing": "Marketing",
+      "technical": "Technique",
+      "transaction": "Transaction"
+    },
+    "dataTypes": {
+      "addresses": "Adresse postale ou de facturation",
+      "ads": "Identifiants publicitaires et données de conversion",
+      "analytics": "Données analytiques et comportementales",
+      "companies": "Nom de l'entreprise ou de l'organisation",
+      "cookies": "Cookies et technologies de suivi similaires",
+      "device-info": "Informations sur l'appareil et le navigateur",
+      "emails": "Adresses e-mail",
+      "ip-addresses": "Adresses IP",
+      "location-data": "Position géographique approximative",
+      "names": "Prénom et nom",
+      "payments": "Informations de paiement (traitées par notre prestataire, non stockées sur nos serveurs)",
+      "phones": "Numéros de téléphone",
+      "usage-data": "Données d'utilisation et journaux d'activité",
+      "user-accounts": "Identifiants de compte (noms d'utilisateur, mots de passe hachés)"
+    },
+    "jurisdictions": {
+      "au": "Australie",
+      "br": "Brésil",
+      "ca": "Canada",
+      "de": "Allemagne",
+      "dk": "Danemark",
+      "es": "Espagne",
+      "fr": "France",
+      "gb": "Royaume-Uni",
+      "global": "Mondial",
+      "ie": "Irlande",
+      "in": "Inde",
+      "it": "Italie",
+      "jp": "Japon",
+      "mx": "Mexique",
+      "nl": "Pays-Bas",
+      "no": "Norvège",
+      "nz": "Nouvelle-Zélande",
+      "se": "Suède",
+      "sg": "Singapour",
+      "us": "États-Unis"
+    },
+    "laws": {
+      "caloppa": {
+        "description": "Exige que les sites commerciaux collectant des informations personnelles d'utilisateurs californiens publient une politique de vie privée visible.",
+        "fullName": "California Online Privacy Protection Act",
+        "name": "CalOPPA",
+        "region": "Californie, États-Unis"
+      },
+      "ccpa": {
+        "description": "Loi californienne sur la vie privée. Accorde aux résidents californiens des droits sur leurs informations personnelles, y compris le droit de savoir, de supprimer et de s'opposer à la vente.",
+        "fullName": "California Consumer Privacy Act / California Privacy Rights Act",
+        "name": "CCPA/CPRA",
+        "region": "Californie, États-Unis"
+      },
+      "coppa": {
+        "description": "Loi fédérale régissant la collecte en ligne d'informations personnelles d'enfants de moins de 13 ans.",
+        "fullName": "Children's Online Privacy Protection Act",
+        "name": "COPPA",
+        "region": "États-Unis (moins de 13 ans)"
+      },
+      "gdpr": {
+        "description": "Loi globale de protection des données de l'UE/EEE/RU. Exige le consentement explicite, les droits des personnes concernées et une base légale pour le traitement.",
+        "fullName": "Règlement général sur la protection des données",
+        "name": "RGPD",
+        "region": "Union européenne + EEE + RU"
+      },
+      "lgpd": {
+        "description": "Loi globale de protection des données du Brésil, modélisée sur le RGPD.",
+        "fullName": "Lei Geral de Proteção de Dados",
+        "name": "LGPD",
+        "region": "Brésil"
+      },
+      "pipeda": {
+        "description": "Loi fédérale canadienne sur la vie privée régissant la collecte, l'utilisation et la divulgation d'informations personnelles dans les activités commerciales.",
+        "fullName": "Personal Information Protection and Electronic Documents Act",
+        "name": "PIPEDA",
+        "region": "Canada"
+      }
+    },
+    "serviceCategories": {
+      "advertising": "Publicité",
+      "analytics": "Analytique",
+      "authentication": "Authentification",
+      "emailMarketing": "Marketing par e-mail",
+      "infrastructure": "Infrastructure",
+      "media": "Médias",
+      "payments": "Paiements"
+    },
+    "services": {
+      "aws": {
+        "description": "Hébergement et stockage cloud.",
+        "name": "Amazon Web Services"
+      },
+      "cloudflare": {
+        "description": "CDN, protection DDoS et services DNS.",
+        "name": "Cloudflare"
+      },
+      "convertkit": {
+        "description": "Plateforme de marketing par e-mail pour créateurs et petites entreprises.",
+        "name": "ConvertKit"
+      },
+      "facebook-login": {
+        "description": "Connexion OAuth avec un compte Facebook.",
+        "name": "Connexion Facebook"
+      },
+      "facebook-pixel": {
+        "description": "Suivi des conversions et création d'audiences pour les publicités Facebook et Instagram.",
+        "name": "Facebook Pixel"
+      },
+      "google-adsense": {
+        "description": "Réseau publicitaire contextuel de Google.",
+        "name": "Google AdSense"
+      },
+      "google-analytics": {
+        "description": "Analyses de trafic web et de comportement utilisateur fournies par Google.",
+        "name": "Google Analytics"
+      },
+      "google-oauth": {
+        "description": "Connexion OAuth avec un compte Google.",
+        "name": "Connexion Google"
+      },
+      "lemonsqueezy": {
+        "description": "Marchand enregistré pour la vente de produits numériques et abonnements.",
+        "name": "LemonSqueezy"
+      },
+      "mailchimp": {
+        "description": "Livraison de newsletters et gestion d'audience.",
+        "name": "Mailchimp"
+      },
+      "mixpanel": {
+        "description": "Analytique produit pour suivre les actions utilisateur dans les applications web et mobiles.",
+        "name": "Mixpanel"
+      },
+      "paypal": {
+        "description": "Processeur de paiement en ligne avec solde PayPal et comptes liés.",
+        "name": "PayPal"
+      },
+      "plausible": {
+        "description": "Analytique respectueuse de la vie privée sans cookies ni collecte de données personnelles.",
+        "name": "Plausible Analytics"
+      },
+      "sendgrid": {
+        "description": "Service de livraison d'e-mails transactionnels.",
+        "name": "SendGrid"
+      },
+      "stripe": {
+        "description": "Traitement des paiements pour les transactions par carte de crédit.",
+        "name": "Stripe"
+      },
+      "vimeo-embeds": {
+        "description": "Vidéos Vimeo intégrées sur nos pages.",
+        "name": "Intégrations Vimeo"
+      },
+      "youtube-embeds": {
+        "description": "Vidéos YouTube intégrées sur nos pages.",
+        "name": "Intégrations YouTube"
+      }
+    }
+  },
+  "policyView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Texte brut"
+    },
+    "copy": "Copier {{format}}",
+    "pdf": "PDF",
+    "pro": "Pro",
+    "title": "Aperçu de la politique",
+    "copied": "Copié",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "policyReader": {
+    "errorNoHash": "Aucun hash de politique trouvé dans l'URL. Générez d'abord une politique.",
+    "errorInvalid": "Ce lien de politique est invalide ou corrompu. Veuillez en générer un nouveau.",
+    "generateNew": "Générer une nouvelle politique",
+    "loading": "Chargement de la politique…",
+    "title": "{{businessName}} — Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : {{date}}",
+    "generateOwn": "Générez la vôtre →"
+  },
+  "copied": "Copié",
+  "copy": "Copier",
+  "empty": "Rien ici pour l'instant — commencez par entrer les informations de votre entreprise.",
+  "langSwitcher": {
+    "listboxLabel": "Sélectionner la langue",
+    "toggleLabel": "Changer de langue"
+  },
+  "next": "Suivant",
+  "prev": "Précédent",
+  "preview": "Aperçu",
+  "selectall": "Tout sélectionner",
+  "validation": {
+    "contactEmail": "Veuillez entrer une adresse e-mail valide",
+    "required": "Veuillez remplir les champs obligatoires"
+  }
+}
