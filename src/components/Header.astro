@@ -8,10 +8,11 @@ const nav = [
   { href: '/generate', label: 'Generator', i18nKey: 'header.generator' },
   { href: '/examples', label: 'Examples', i18nKey: 'header.examples' },
   { href: '/pricing', label: 'Pricing', i18nKey: 'header.pricing' },
+  { href: '/about', label: 'About', i18nKey: 'header.about' },
 ];
 const pathname = Astro.url.pathname;
 ---
-<header class="sticky top-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur-md">
+<header class="sticky top-0 z-sticky border-b border-border/60 bg-bg/95 backdrop-blur-lg">
   <div class="mx-auto max-w-6xl px-6 h-14 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2 group">
       <img
@@ -23,6 +24,8 @@ const pathname = Astro.url.pathname;
       />
       <span class="font-semibold tracking-tight" data-i18n="header.brand">PrivacyPolGen</span>
     </a>
+
+    {/* Desktop nav — hidden below md */}
     <nav class="hidden md:flex items-center gap-1 text-sm">
       {nav.map((item) => (
         <a
@@ -37,6 +40,7 @@ const pathname = Astro.url.pathname;
         >{item.label}</a>
       ))}
     </nav>
+
     <div class="flex items-center gap-2">
       <ThemeToggle />
       <a
@@ -45,6 +49,190 @@ const pathname = Astro.url.pathname;
         data-i18n="header.generate"
       >Generate</a>
       <LangSwitcher />
+
+      {/* Hamburger button — visible below md */}
+      <button
+        type="button"
+        class="hamburger-btn md:hidden inline-flex h-8 w-8 items-center justify-center rounded-button border border-border text-fg-muted transition-colors hover:bg-bg-hover hover:text-fg"
+        aria-label="Menu"
+        aria-expanded="false"
+        data-hamburger-toggle
+      >
+        <svg class="hamburger-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg class="hamburger-close-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile drawer — overlay backdrop */}
+  <div
+    class="hamburger-overlay fixed inset-0 z-overlay bg-black/40 backdrop-blur-sm invisible opacity-0 transition-all duration-200"
+    data-hamburger-overlay
+    aria-hidden="true"
+  ></div>
+
+  {/* Mobile drawer — panel */}
+  <div
+    class="hamburger-panel fixed top-0 right-0 z-toast h-full w-64 max-w-[80vw] bg-bg border-l border-border translate-x-full transition-transform duration-200 ease-out flex flex-col"
+    data-hamburger-panel
+    role="dialog"
+    aria-modal="true"
+    aria-label="Navigation"
+    hidden
+  >
+    <div class="flex items-center justify-end p-4">
+      <button
+        type="button"
+        class="hamburger-close inline-flex h-8 w-8 items-center justify-center rounded-button text-fg-muted transition-colors hover:bg-bg-hover hover:text-fg"
+        aria-label="Close menu"
+        data-hamburger-close
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="flex flex-col gap-0.5 px-3 pt-4">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          data-i18n={item.i18nKey}
+          class:list={[
+            'flex items-center h-10 px-3 rounded-md text-sm font-medium transition-colors',
+            pathname === item.href
+              ? 'text-fg bg-bg-elevated'
+              : 'text-fg-muted hover:text-fg hover:bg-bg-hover',
+          ]}
+        >{item.label}</a>
+      ))}
+    </div>
+
+    <div class="mt-auto p-4 border-t border-border">
+      <a
+        href="/generate"
+        class="flex w-full items-center justify-center h-10 rounded-button bg-fg text-bg text-sm font-medium transition-opacity hover:opacity-90"
+        data-i18n="header.generate"
+      >Generate your policy</a>
     </div>
   </div>
 </header>
+
+<style>
+  .hamburger-overlay.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hamburger-panel.open {
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+  (function () {
+    const toggle = document.querySelector('[data-hamburger-toggle]');
+    const overlay = document.querySelector('[data-hamburger-overlay]');
+    const panel = document.querySelector('[data-hamburger-panel]');
+    const closeBtn = document.querySelector('[data-hamburger-close]');
+    const openIcon = toggle?.querySelector('.hamburger-open-icon');
+    const closeIcon = toggle?.querySelector('.hamburger-close-icon');
+
+    if (!toggle || !overlay || !panel) return;
+
+    let isOpen = false;
+
+    function open() {
+      if (isOpen) return;
+      isOpen = true;
+
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close menu');
+      openIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+
+      panel.hidden = false;
+      // Force reflow before adding .open for transition to play
+      void panel.offsetWidth;
+      overlay.classList.add('open');
+      panel.classList.add('open');
+
+      // Focus first nav link
+      const firstLink = panel.querySelector('nav a');
+      firstLink?.focus();
+
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      if (!isOpen) return;
+      isOpen = false;
+
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Menu');
+      openIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+
+      overlay.classList.remove('open');
+      panel.classList.remove('open');
+
+      // Restore body scroll after transition
+      setTimeout(() => {
+        panel.hidden = true;
+        document.body.style.overflow = '';
+      }, 200);
+
+      toggle.focus();
+    }
+
+    // ── Event wiring ──
+
+    toggle.addEventListener('click', () => {
+      isOpen ? close() : open();
+    });
+
+    closeBtn?.addEventListener('click', close);
+
+    overlay.addEventListener('click', close);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        close();
+      }
+    });
+
+    // Focus trap: keep focus inside drawer when open
+    document.addEventListener('keydown', (e) => {
+      if (!isOpen || e.key !== 'Tab') return;
+
+      const focusable = panel.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+
+      const first = /** @type {HTMLElement} */ (focusable[0]);
+      const last = /** @type {HTMLElement} */ (focusable[focusable.length - 1]);
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  })();
+</script>

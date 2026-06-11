@@ -74,15 +74,13 @@ export function setLocale(locale: string): void {
 
 /**
  * Pre-built map of locale → async loader.
- * import.meta.glob is resolved by Vite at build time, so the @/ alias
- * works correctly — unlike a plain dynamic import() which the browser
- * would try to resolve literally.
+ * import.meta.glob is resolved by Vite at build time.
  */
-const translationModules = import.meta.glob<{ default: Record<string, unknown> }>('@/i18n/*.json');
+const translationModules = import.meta.glob<{ default: Record<string, unknown> }>('../i18n/*.json');
 
 /** Dynamically load translation JSON for a locale. Falls back to empty. */
 export async function loadTranslations(locale: string): Promise<Record<string, unknown>> {
-  const path = `/src/i18n/${locale}.json`;
+  const path = `../i18n/${locale}.json`;
   const loader = translationModules[path];
   if (!loader) return {};
   try {

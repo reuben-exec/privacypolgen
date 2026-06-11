@@ -165,52 +165,80 @@
     "heading": "Câu hỏi, đã trả lời.",
     "items": [
       {
+        "q": "Chính sách bảo mật là gì?",
+        "a": "Chính sách quyền riêng tư là tài liệu pháp lý giải thích cách trang web, ứng dụng SaaS, cửa hàng thương mại điện tử hoặc ứng dụng di động thu thập, sử dụng, lưu trữ và chia sẻ thông tin cá nhân từ người dùng. Nó bao gồm những dữ liệu nào được thu thập (tên, email, thông tin thanh toán, cookie, v.v.), lý do dữ liệu được thu thập, dữ liệu được chia sẻ với ai và người dùng có những quyền gì đối với dữ liệu của họ. Các chính sách về quyền riêng tư được yêu cầu bởi các luật như GDPR (EU), CCPA (California), CalOPPA và nhiều luật khác trên toàn thế giới. Mọi trang web hoặc ứng dụng thu thập dữ liệu cá nhân đều phải có chính sách quyền riêng tư."
+      },
+      {
+        "q": "Tại sao chính sách quyền riêng tư lại quan trọng?",
+        "a": "Chính sách quyền riêng tư rất quan trọng vì ba lý do: (1) Tuân thủ pháp luật — các luật như GDPR, CCPA và CalOPPA yêu cầu phải có chính sách này; việc không tuân thủ có thể bị phạt lên tới 4% doanh thu hàng năm toàn cầu (GDPR) hoặc 2.500 USD cho mỗi lần vi phạm (CCPA). (2) Niềm tin của người dùng - 84% người tiêu dùng cho biết tính minh bạch về thực tiễn xử lý dữ liệu ảnh hưởng đến quyết định gắn kết với doanh nghiệp của họ. (3) Yêu cầu của bên thứ ba — các dịch vụ như Google Analytics, Stripe và Apple App Store yêu cầu bạn phải có chính sách bảo mật. Nếu không có, bạn có nguy cơ bị phạt pháp lý, mất niềm tin của khách hàng và bị chặn khỏi các nền tảng thiết yếu."
+      },
+      {
+        "q": "Tôi có cần chính sách bảo mật trên trang web của mình không?",
+        "a": "Có, nếu trang web của bạn thu thập bất kỳ dạng dữ liệu cá nhân nào — mục nhập biểu mẫu liên hệ, đăng ký bản tin email, cookie phân tích, tài khoản người dùng hoặc thông tin thanh toán — bạn cần có chính sách bảo mật. Nó được yêu cầu bởi luật pháp theo GDPR (EU/EEA/UK), CCPA/CPRA (California), CalOPPA (California), PIPEDA (Canada), LGPD (Brazil) và nhiều quốc gia khác. Ngay cả khi bạn không hoạt động ở những khu vực pháp lý đó, nếu người dùng ở đó có thể truy cập trang web của bạn (hầu hết các trang web đều như vậy) thì luật vẫn áp dụng. Các trang web duy nhất không cần chính sách bảo mật là những trang web hoàn toàn không thu thập dữ liệu cá nhân — không biểu mẫu liên hệ, không phân tích, không cookie, không bản tin."
+      },
+      {
+        "q": "Những luật nào yêu cầu chính sách bảo mật?",
+        "a": "Các luật đáng chú ý nhất yêu cầu chính sách quyền riêng tư bao gồm: GDPR (EU/EEA/UK) — yêu cầu thông báo quyền riêng tư rõ ràng, dễ tiếp cận đối với mọi hoạt động xử lý dữ liệu cá nhân; CCPA/CPRA (California) — yêu cầu tiết lộ việc thu thập, chia sẻ dữ liệu và quyền của người tiêu dùng; CalOPPA (California) — yêu cầu các trang web thương mại đăng chính sách bảo mật rõ ràng; COPPA (US) — nếu bạn thu thập dữ liệu từ trẻ em dưới 13 tuổi; PIPEDA (Canada); LGPD (Brazil); và Đạo luật DPDP (Ấn Độ). Vì các luật này có các yêu cầu chồng chéo nhau nên chính sách quyền riêng tư được viết rõ ràng bao gồm trường hợp phổ biến nghiêm ngặt nhất (ví dụ: tiết lộ ở cấp độ GDPR) là cách tiếp cận an toàn nhất."
+      },
+      {
+        "q": "Làm thế nào để viết một chính sách bảo mật?",
+        "a": "Viết chính sách bảo mật bao gồm ba bước. Trước tiên, hãy kiểm tra dữ liệu cá nhân nào doanh nghiệp của bạn thu thập (tên, email, thông tin thanh toán, cookie, phân tích, v.v.) và người bạn chia sẻ dữ liệu đó (bộ xử lý thanh toán, công cụ phân tích, dịch vụ email). Thứ hai, xác định các luật về quyền riêng tư áp dụng cho bạn dựa trên vị trí của người dùng (GDPR đối với EU, CCPA đối với California, v.v.). Thứ ba, các điều khoản dự thảo bao gồm: dữ liệu nào bạn thu thập, cách bạn sử dụng dữ liệu đó, cookie và theo dõi, tiết lộ của bên thứ ba, lưu giữ dữ liệu, thực tiễn bảo mật, quyền người dùng và thông tin liên hệ. Cách dễ nhất là sử dụng PrivacyPolGen — trình hướng dẫn miễn phí của chúng tôi hỏi 5 câu hỏi về doanh nghiệp của bạn và tạo chính sách bảo mật hoàn chỉnh, cấp luật sư trong vòng chưa đầy 60 giây."
+      },
+      {
+        "q": "Làm cách nào để viết chính sách bảo mật cho một ứng dụng?",
+        "a": "Việc viết chính sách quyền riêng tư cho ứng dụng dành cho thiết bị di động tuân theo các nguyên tắc giống như trang web, với yêu cầu tiết lộ bổ sung: số nhận dạng thiết bị (IDFA, AAID), quyền (máy ảnh, micrô, vị trí, danh bạ), dữ liệu SDK (từ SDK quảng cáo hoặc phân tích) và thông báo đẩy. Cả Apple App Store và Google Play Store đều yêu cầu chính sách quyền riêng tư đối với mọi ứng dụng thu thập dữ liệu. Bao gồm các phần về loại dữ liệu dành riêng cho thiết bị di động và SDK của bên thứ ba mà ứng dụng của bạn sử dụng. Bạn có thể sử dụng PrivacyPolGen để tạo chính sách dành riêng cho ứng dụng bằng cách chọn \"Ứng dụng dành cho thiết bị di động\" làm loại hình kinh doanh của bạn trong trình hướng dẫn."
+      },
+      {
+        "q": "Làm cách nào để tạo chính sách bảo mật miễn phí?",
+        "a": "Bạn có thể tạo miễn phí chính sách quyền riêng tư hoàn chỉnh, tuân thủ pháp luật bằng cách sử dụng PrivacyPolGen. Trả lời 5 câu hỏi nhanh về doanh nghiệp của bạn, dữ liệu bạn thu thập, dịch vụ của bên thứ ba mà bạn sử dụng và luật áp dụng cho bạn. Trình hướng dẫn của chúng tôi tạo chính sách được tùy chỉnh hoàn toàn trong vòng chưa đầy 60 giây — không cần tài khoản, không thẻ tín dụng, không gửi dữ liệu đến máy chủ. Bạn có thể sao chép nó dưới dạng Markdown, HTML hoặc văn bản thuần túy hoặc chia sẻ nó qua URL công khai. Trình tạo lõi đang và sẽ luôn miễn phí."
+      },
+      {
         "q": "Trình tạo chính sách bảo mật này có thực sự miễn phí không?",
         "a": "Có. Bạn có thể tạo, sao chép và托管 chính sách bảo mật hoàn toàn miễn phí. Chúng tôi có kế hoạch Premium với xuất PDF/DOCX, nhưng trình tạo cốt lõi sẽ luôn miễn phí."
-      },
-      {
-        "q": "Tôi có cần tài khoản để tạo chính sách bảo mật không?",
-        "a": "Không cần tài khoản. Chỉ cần trả lời các câu hỏi trong wizard của chúng tôi và chúng tôi sẽ tạo chính sách cho bạn. Câu trả lời được mã hóa ngay trong URL chia sẻ — không có gì gửi đến máy chủ của chúng tôi."
-      },
-      {
-        "q": "Chính sách được tạo có ràng buộc pháp lý không?",
-        "a": "Chính sách được tạo là mẫu khởi đầu bao gồm các yêu cầu pháp lý phổ biến nhất (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Tuy nhiên, mỗi doanh nghiệp đều khác nhau. Chúng tôi rất khuyến nghị luật sư xem xét chính sách trước khi sử dụng, đặc biệt trong các ngành được quản lý."
-      },
-      {
-        "q": "Dữ liệu của tôi được lưu ở đâu?",
-        "a": "Không ở đâu. Chúng tôi sử dụng nén phía client (DEFLATE + Base64 mã hóa an toàn URL) để đóng gói câu trả lời vào hash URL. Khi bạn chia sẻ URL, trình duyệt của người nhận giải mã chính sách cục bộ. Chúng tôi không chạy backend, không ghi log câu trả lời wizard và không có quyền truy cập nội dung chính sách của bạn."
-      },
-      {
-        "q": "Tôi có thể chỉnh sửa chính sách sau khi tạo không?",
-        "a": "Có. Chỉ cần chỉnh sửa markdown hoặc HTML trong bất kỳ trình soạn thảo văn bản nào và托管 tệp trên trang web của riêng bạn. Premium sẽ cung cấp chỉnh sửa trong ứng dụng với lịch sử phiên bản."
       },
       {
         "q": "Công cụ này có bao phủ GDPR, CCPA và các luật khác không?",
         "a": "Có. Chọn các luật áp dụng cho doanh nghiệp của bạn ở Bước 4 của wizard, và chúng tôi sẽ bao gồm các điều khoản phù hợp (cơ sở pháp lý GDPR, opt-out CCPA, đồng ý cha mẹ COPPA, quyền truy cập PIPEDA, cơ sở pháp lý LGPD, cơ chế đồng ý PDPA-SG)."
       },
       {
-        "q": "Sự khác biệt giữa các tầng miễn phí và Premium là gì?",
-        "a": "Miễn phí cung cấp chính sách bảo mật hoàn chỉnh bằng markdown, HTML và văn bản thuần — sao chép/dán vào trang của bạn. Premium thêm xuất PDF và DOCX, tạo mã banner Cookie, thương hiệu tùy chỉnh và trang chính sách托管 với lịch sử phiên bản."
+        "q": "Tôi có cần tài khoản để tạo chính sách bảo mật không?",
+        "a": "Không cần tài khoản. Chỉ cần trả lời các câu hỏi trong wizard của chúng tôi và chúng tôi sẽ tạo chính sách cho bạn. Câu trả lời được mã hóa ngay trong URL chia sẻ — không có gì gửi đến máy chủ của chúng tôi."
       },
       {
         "q": "Làm thế nào để thêm chính sách vào trang web của tôi?",
         "a": "Tạo một trang trên trang web của bạn (ví dụ: /privacy), dán nội dung HTML và liên kết từ footer. Nếu bạn muốn phiên bản托管, chia sẻ URL /p?h=... đã tạo — nó hoạt động như trang công khai độc lập."
       },
       {
-        "q": "Chính sách có tự cập nhật khi luật thay đổi không?",
-        "a": "Chính sách bạn tạo là tài liệu tĩnh tại thời điểm cụ thể. Nếu luật bảo mật thay đổi, bạn cần tạo lại và cập nhật phiên bản trên trang web. Chúng tôi cập nhật thư viện điều khoản liên tục và wizard luôn đồng bộ với thực hành tốt nhất hiện tại."
-      },
-      {
-        "q": "Tôi có thể sử dụng điều này cho dự án khách hàng không?",
-        "a": "Tất nhiên. Bạn có thể tạo chính sách cho dự án khách hàng không giới hạn trên tầng miễn phí. Chúng tôi chỉ yêu cầu bạn không phân phối lại chính trình tạo hoặc bán lại đầu ra dưới dạng dịch vụ cạnh tranh."
+        "q": "Tôi có thể chỉnh sửa chính sách sau khi tạo không?",
+        "a": "Có. Chỉ cần chỉnh sửa markdown hoặc HTML trong bất kỳ trình soạn thảo văn bản nào và托管 tệp trên trang web của riêng bạn. Premium sẽ cung cấp chỉnh sửa trong ứng dụng với lịch sử phiên bản."
       },
       {
         "q": "Chính sách có bao gồm phần cookie không?",
         "a": "Có — nếu bạn chọn 'Cookies' ở Bước 2 của wizard, chúng tôi bao gồm phần cookie đầy đủ mô tả cookie thiết yếu, phân tích, ưu tiên và tiếp thị. Chúng tôi cũng liệt kê cookie bên thứ ba mà mỗi dịch vụ bạn tích hợp có thể đặt."
       },
       {
+        "q": "Dữ liệu của tôi được lưu ở đâu?",
+        "a": "Không ở đâu. Chúng tôi sử dụng nén phía client (DEFLATE + Base64 mã hóa an toàn URL) để đóng gói câu trả lời vào hash URL. Khi bạn chia sẻ URL, trình duyệt của người nhận giải mã chính sách cục bộ. Chúng tôi không chạy backend, không ghi log câu trả lời wizard và không có quyền truy cập nội dung chính sách của bạn."
+      },
+      {
+        "q": "Chính sách được tạo có ràng buộc pháp lý không?",
+        "a": "Chính sách được tạo là mẫu khởi đầu bao gồm các yêu cầu pháp lý phổ biến nhất (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Tuy nhiên, mỗi doanh nghiệp đều khác nhau. Chúng tôi rất khuyến nghị luật sư xem xét chính sách trước khi sử dụng, đặc biệt trong các ngành được quản lý."
+      },
+      {
+        "q": "Chính sách có tự cập nhật khi luật thay đổi không?",
+        "a": "Chính sách bạn tạo là tài liệu tĩnh tại thời điểm cụ thể. Nếu luật bảo mật thay đổi, bạn cần tạo lại và cập nhật phiên bản trên trang web. Chúng tôi cập nhật thư viện điều khoản liên tục và wizard luôn đồng bộ với thực hành tốt nhất hiện tại."
+      },
+      {
         "q": "Nếu tôi không biết luật nào áp dụng cho mình thì sao?",
         "a": "Chúng tôi mặc định chọn GDPR, CCPA/CPRA và CalOPPA cho tất cả (bao phủ trường hợp nghiêm ngặt nhất). Nếu bạn không chắc, giữ mặc định thường là lựa chọn an toàn nhất — bao phủ nhiều luật hơn không bao giờ gây hại và chính sách vẫn hợp lệ ở các khu vực pháp lý mà luật không áp dụng."
+      },
+      {
+        "q": "Sự khác biệt giữa các tầng miễn phí và Premium là gì?",
+        "a": "Miễn phí cung cấp chính sách bảo mật hoàn chỉnh bằng markdown, HTML và văn bản thuần — sao chép/dán vào trang của bạn. Premium thêm xuất PDF và DOCX, tạo mã banner Cookie, thương hiệu tùy chỉnh và trang chính sách托管 với lịch sử phiên bản."
+      },
+      {
+        "q": "Tôi có thể sử dụng điều này cho dự án khách hàng không?",
+        "a": "Tất nhiên. Bạn có thể tạo chính sách cho dự án khách hàng không giới hạn trên tầng miễn phí. Chúng tôi chỉ yêu cầu bạn không phân phối lại chính trình tạo hoặc bán lại đầu ra dưới dạng dịch vụ cạnh tranh."
       }
     ]
   },

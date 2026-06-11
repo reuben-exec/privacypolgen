@@ -1,0 +1,19 @@
+---
+// src/pages/500.astro
+import Layout from '@/layouts/Layout.astro';
+---
+<Layout
+  title="Internal error — PrivacyPolGen"
+  description="Something went wrong on our end. Please try again."
+  noindex={true}
+>
+  <section class="mx-auto max-w-3xl px-6 py-32 text-center">
+    <p class="font-mono text-sm text-fg-faint" data-i18n="serverError.label">500</p>
+    <h1 class="mt-4 text-4xl md:text-5xl font-semibold tracking-tight" data-i18n="serverError.heading">Something went wrong</h1>
+    <p class="mt-4 text-fg-muted" data-i18n="serverError.message">An internal server error occurred. Try refreshing the page or come back later.</p>
+    <div class="mt-8 flex items-center justify-center gap-3">
+      <a href="/" class="inline-flex h-10 items-center rounded-button border border-border bg-bg-elevated px-4 text-sm font-medium hover:bg-bg-card" data-i18n="serverError.backHome">← Back home</a>
+      <a href="/generate" class="inline-flex h-10 items-center rounded-button bg-fg text-bg px-4 text-sm font-medium hover:opacity-90" data-i18n="serverError.generate">Generate a policy</a>
+    </div>
+  </section>
+</Layout>

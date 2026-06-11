@@ -165,52 +165,80 @@
     "heading": "Vragen, beantwoord.",
     "items": [
       {
+        "q": "Wat is een privacybeleid?",
+        "a": "Een privacybeleid is een juridisch document waarin wordt uitgelegd hoe een website, SaaS-app, e-commerce winkel of mobiele applicatie persoonlijke informatie van zijn gebruikers verzamelt, gebruikt, opslaat en deelt. Het behandelt welke gegevens worden verzameld (namen, e-mails, betalingsgegevens, cookies, enz.), waarom deze worden verzameld, met wie deze worden gedeeld en welke rechten gebruikers hebben over hun gegevens. Privacybeleid is vereist door wetten zoals GDPR (EU), CCPA (Californië), CalOPPA en vele andere wereldwijd. Elke website of app die persoonlijke gegevens verzamelt, moet een privacybeleid hebben."
+      },
+      {
+        "q": "Waarom is een privacybeleid belangrijk?",
+        "a": "Een privacybeleid is om drie redenen belangrijk: (1) Naleving van de wetgeving – wetten zoals GDPR, CCPA en CalOPPA vereisen er één; Niet-naleving kan resulteren in boetes tot 4% van de wereldwijde jaaromzet (AVG) of $2.500 per overtreding (CCPA). (2) Gebruikersvertrouwen – 84% van de consumenten zegt dat transparantie over datapraktijken van invloed is op hun beslissing om met een bedrijf in zee te gaan. (3) Vereisten van derden: voor diensten als Google Analytics, Stripe en de Apple App Store is een privacybeleid vereist. Als u dit niet doet, riskeert u juridische boetes, verliest u het vertrouwen van klanten en wordt u geblokkeerd op essentiële platforms."
+      },
+      {
+        "q": "Heb ik een privacybeleid nodig op mijn website?",
+        "a": "Ja, als uw website enige vorm van persoonlijke gegevens verzamelt (inzendingen op contactformulieren, aanmeldingen voor e-mailnieuwsbrieven, analytische cookies, gebruikersaccounts of betalingsinformatie) heeft u een privacybeleid nodig. Het is wettelijk verplicht onder AVG (EU/EER/VK), CCPA/CPRA (Californië), CalOPPA (Californië), PIPEDA (Canada), LGPD (Brazilië) en vele andere. Zelfs als u niet in die rechtsgebieden actief bent, zijn de wetten van toepassing als uw website daar toegankelijk is voor gebruikers (wat de meeste websites wel zijn). De enige websites die geen privacybeleid nodig hebben, zijn websites die absoluut geen persoonlijke gegevens verzamelen: geen contactformulieren, geen analyses, geen cookies, geen nieuwsbrief."
+      },
+      {
+        "q": "Welke wetten vereisen een privacybeleid?",
+        "a": "De meest opvallende wetten die een privacybeleid vereisen, zijn onder meer: ​​AVG (EU/EER/VK) — vereist een duidelijke, toegankelijke privacyverklaring voor elke verwerking van persoonsgegevens; CCPA/CPRA (Californië) – verplicht openbaarmaking van het verzamelen, delen en consumentenrechten van gegevens; CalOPPA (Californië) — vereist dat commerciële websites een opvallend privacybeleid plaatsen; COPPA (VS) — als u gegevens verzamelt van kinderen jonger dan 13 jaar; PIPEDA (Canada); LGPD (Brazilië); en DPDP-wet (India). Omdat deze wetten overlappende vereisten hebben, is een goed geschreven privacybeleid dat de meest voorkomende gevallen bestrijkt (bijvoorbeeld openbaarmaking op AVG-niveau) de veiligste aanpak."
+      },
+      {
+        "q": "Hoe schrijf je een privacybeleid?",
+        "a": "Het schrijven van een privacybeleid bestaat uit drie stappen. Controleer eerst welke persoonlijke gegevens uw bedrijf verzamelt (namen, e-mails, betalingsinformatie, cookies, analyses, enz.) en met wie u deze deelt (betalingsverwerkers, analysetools, e-maildiensten). Ten tweede: identificeer de privacywetten die op u van toepassing zijn op basis van waar uw gebruikers zich bevinden (AVG voor de EU, CCPA voor Californië, enz.). Ten derde, ontwerpclausules die betrekking hebben op: welke gegevens u verzamelt, hoe u deze gebruikt, cookies en tracking, bekendmakingen door derden, gegevensbewaring, beveiligingspraktijken, gebruikersrechten en contactgegevens. De eenvoudigste manier is om PrivacyPolGen te gebruiken. Onze gratis wizard stelt vijf vragen over uw bedrijf en genereert in minder dan 60 seconden een compleet privacybeleid van advocatenkwaliteit."
+      },
+      {
+        "q": "Hoe schrijf je een privacybeleid voor een app?",
+        "a": "Het schrijven van een privacybeleid voor een mobiele app volgt dezelfde principes als voor een website, waarbij aanvullende openbaarmakingen vereist zijn: apparaat-ID's (IDFA, AAID), machtigingen (camera, microfoon, locatie, contacten), SDK-gegevens (van advertentie- of analyse-SDK's) en pushmeldingen. Zowel de Apple App Store als de Google Play Store stellen een privacybeleid op voor elke app die gegevens verzamelt. Neem secties op over mobielspecifieke gegevenstypen en de SDK's van derden die uw app gebruikt. U kunt PrivacyPolGen gebruiken om een ​​app-specifiek beleid te genereren door in de wizard als uw bedrijfstype 'Mobiele app' te selecteren."
+      },
+      {
+        "q": "Hoe maak je gratis een privacybeleid aan?",
+        "a": "Met PrivacyPolGen kunt u gratis een compleet, juridisch conform privacybeleid opstellen. Beantwoord vijf korte vragen over uw bedrijf, de gegevens die u verzamelt, de diensten van derden die u gebruikt en de wetten die op u van toepassing zijn. Onze wizard genereert in minder dan 60 seconden een volledig op maat gemaakt beleid: geen account, geen creditcard, geen gegevens die naar een server worden verzonden. Je kunt het kopiëren als Markdown, HTML of platte tekst, of delen via een openbare URL. De kerngenerator is en zal altijd gratis zijn."
+      },
+      {
         "q": "Is deze privacybeleid-generator echt gratis?",
         "a": "Ja. U kunt het resulterende privacybeleid volledig gratis genereren, kopiëren en hosten. We hebben een Premium-tier gepland met PDF/DOCX-exports, maar de kerngenerator zal altijd gratis zijn."
-      },
-      {
-        "q": "Heb ik een account nodig om een privacybeleid te genereren?",
-        "a": "Geen account vereist. Beantwoord gewoon de vragen in onze wizard en we genereren uw beleid. Uw antwoorden worden gecodeerd in de deelbare URL zelf — niets wordt naar onze servers gestuurd."
-      },
-      {
-        "q": "Is het gegenereerde beleid juridisch bindend?",
-        "a": "Het gegenereerde beleid is een startsjabloon dat de meest voorkomende juridische vereisten dekt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Elk bedrijf is echter anders. We raden ten zeerste aan om het definitieve beleid door een advocaat te laten beoordelen voordat u erop vertrouwt, vooral in gereguleerde sectoren."
-      },
-      {
-        "q": "Waar worden mijn gegevens opgeslagen?",
-        "a": "Nergens. We gebruiken client-side compressie (DEFLATE + Base64 URL-veilige codering) om uw antwoorden in de URL-hash te verpakken. Wanneer u de URL deelt, decodeert de browser van de ontvanger het beleid lokaal. We draaien geen backend, loggen geen wizard-antwoorden en hebben geen toegang tot uw beleidsinhoud."
-      },
-      {
-        "q": "Kan ik het beleid bewerken na het genereren?",
-        "a": "Ja. Bewerk gewoon de markdown of HTML in een willekeurige teksteditor en host het bestand op uw eigen website. Premium zal bewerkbare in-app bewerking met versiegeschiedenis aanbieden."
       },
       {
         "q": "Dekt dit GDPR, CCPA en andere wetten?",
         "a": "Ja. Selecteer de wetten die op uw bedrijf van toepassing zijn in Stap 4 van de wizard, en we voegen de juiste clausules toe (GDPR-grondslag, CCPA-afmelding, COPPA-ouderlijke toestemming, PIPEDA-toegangsrechten, LGPD-grondslag, PDPA-SG-toestemmingsmechanismen)."
       },
       {
-        "q": "Wat is het verschil tussen de gratis en Premium tiers?",
-        "a": "Gratis geeft u een compleet privacybeleid in markdown, HTML en platte tekst — kopieer/plak in uw site. Premium voegt PDF- en DOCX-export, cookie-banner codegeneratie, aangepaste branding en gehoste beleidspagina's met versiegeschiedenis toe."
+        "q": "Heb ik een account nodig om een privacybeleid te genereren?",
+        "a": "Geen account vereist. Beantwoord gewoon de vragen in onze wizard en we genereren uw beleid. Uw antwoorden worden gecodeerd in de deelbare URL zelf — niets wordt naar onze servers gestuurd."
       },
       {
         "q": "Hoe voeg ik het beleid toe aan mijn website?",
         "a": "Maak een pagina op uw site (bijv. /privacy), plak de HTML-output en link het vanuit uw footer. Als u een gehoste versie wilt, deel de gegenereerde /p?h=... URL — het werkt als een zelfstandige openbare pagina."
       },
       {
-        "q": "Wordt mijn beleid bijgewerkt als wetten veranderen?",
-        "a": "Het beleid dat u genereert is een statisch document op een bepaald moment. Als privacywetten veranderen, moet u het opnieuw genereren en de versie op uw site bijwerken. We werken onze clausulebibliotheek continu bij en de wizard is altijd in sync met huidige best practices."
-      },
-      {
-        "q": "Kan ik dit gebruiken voor een klantproject?",
-        "a": "Absoluut. U kunt onbeperkt beleid genereren voor klantprojecten op de gratis tier. We vragen alleen om de generator niet door te distribueren of de output ongewijzigd te verkopen als concurrerende dienst."
+        "q": "Kan ik het beleid bewerken na het genereren?",
+        "a": "Ja. Bewerk gewoon de markdown of HTML in een willekeurige teksteditor en host het bestand op uw eigen website. Premium zal bewerkbare in-app bewerking met versiegeschiedenis aanbieden."
       },
       {
         "q": "Bevat het beleid een cookie-sectie?",
         "a": "Ja — als u 'Cookies' selecteert in Stap 2 van de wizard, voegen we een volledige cookie-sectie toe die essentiële, analytische, voorkeurs- en marketingcookies beschrijft. We lijsten ook welke externe cookies elke geïntegreerde dienst kan plaatsen."
       },
       {
+        "q": "Waar worden mijn gegevens opgeslagen?",
+        "a": "Nergens. We gebruiken client-side compressie (DEFLATE + Base64 URL-veilige codering) om uw antwoorden in de URL-hash te verpakken. Wanneer u de URL deelt, decodeert de browser van de ontvanger het beleid lokaal. We draaien geen backend, loggen geen wizard-antwoorden en hebben geen toegang tot uw beleidsinhoud."
+      },
+      {
+        "q": "Is het gegenereerde beleid juridisch bindend?",
+        "a": "Het gegenereerde beleid is een startsjabloon dat de meest voorkomende juridische vereisten dekt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Elk bedrijf is echter anders. We raden ten zeerste aan om het definitieve beleid door een advocaat te laten beoordelen voordat u erop vertrouwt, vooral in gereguleerde sectoren."
+      },
+      {
+        "q": "Wordt mijn beleid bijgewerkt als wetten veranderen?",
+        "a": "Het beleid dat u genereert is een statisch document op een bepaald moment. Als privacywetten veranderen, moet u het opnieuw genereren en de versie op uw site bijwerken. We werken onze clausulebibliotheek continu bij en de wizard is altijd in sync met huidige best practices."
+      },
+      {
         "q": "Wat als ik niet weet welke wetten op mij van toepassing zijn?",
         "a": "We selecteren standaard GDPR, CCPA/CPRA en CalOPPA voor iedereen (wat het strengste geval dekt). Als u niet zeker bent, is het standaard laten staan meestal de veiligste keuze — meer wetten dekken doet nooit kwaad en het beleid blijft geldig in rechtsgebieden waar de wet niet van toepassing is."
+      },
+      {
+        "q": "Wat is het verschil tussen de gratis en Premium tiers?",
+        "a": "Gratis geeft u een compleet privacybeleid in markdown, HTML en platte tekst — kopieer/plak in uw site. Premium voegt PDF- en DOCX-export, cookie-banner codegeneratie, aangepaste branding en gehoste beleidspagina's met versiegeschiedenis toe."
+      },
+      {
+        "q": "Kan ik dit gebruiken voor een klantproject?",
+        "a": "Absoluut. U kunt onbeperkt beleid genereren voor klantprojecten op de gratis tier. We vragen alleen om de generator niet door te distribueren of de output ongewijzigd te verkopen als concurrerende dienst."
       }
     ]
   },

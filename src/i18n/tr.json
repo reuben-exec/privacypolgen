@@ -165,52 +165,80 @@
     "heading": "Sorular, yanıtlandı.",
     "items": [
       {
+        "q": "Gizlilik politikası nedir?",
+        "a": "Gizlilik politikası, bir web sitesinin, SaaS uygulamasının, e-ticaret mağazasının veya mobil uygulamanın kullanıcıların kişisel bilgilerini nasıl topladığını, kullandığını, sakladığını ve paylaştığını açıklayan yasal bir belgedir. Hangi verilerin toplandığını (isimler, e-postalar, ödeme bilgileri, çerezler vb.), neden toplandığını, kimlerle paylaşıldığını ve kullanıcıların verileri üzerinde hangi haklara sahip olduğunu kapsar. Gizlilik politikaları, GDPR (AB), CCPA (Kaliforniya), CalOPPA ve dünya çapındaki diğer birçok yasa tarafından zorunludur. Kişisel verileri toplayan her web sitesi veya uygulamanın bir gizlilik politikası olması gerekir."
+      },
+      {
+        "q": "Gizlilik politikası neden önemlidir?",
+        "a": "Bir gizlilik politikası üç nedenden dolayı önemlidir: (1) Yasal uyumluluk — GDPR, CCPA ve CalOPPA gibi yasalar bunu gerektirir; uyumsuzluk, küresel yıllık gelirin (GDPR) %4'üne kadar veya ihlal başına 2.500 ABD dolarına (CCPA) kadar para cezalarıyla sonuçlanabilir. (2) Kullanıcı güveni — Tüketicilerin %84'ü veri uygulamaları hakkındaki şeffaflığın, bir işletmeyle etkileşim kurma kararlarını etkilediğini söylüyor. (3) Üçüncü taraf gereklilikleri — Google Analytics, Stripe ve Apple App Store gibi hizmetler bir gizlilik politikasına sahip olmanızı gerektirir. Biri olmadan, yasal cezalar, müşteri güvenini kaybetme ve önemli platformlara erişiminizin engellenmesi riskiyle karşı karşıya kalırsınız."
+      },
+      {
+        "q": "Web sitemde bir gizlilik politikasına ihtiyacım var mı?",
+        "a": "Evet, web siteniz iletişim formu girişleri, e-posta bülteni kayıtları, analiz çerezleri, kullanıcı hesapları veya ödeme bilgileri gibi herhangi bir türde kişisel veri topluyorsa bir gizlilik politikasına ihtiyacınız vardır. GDPR (AB/AEA/Birleşik Krallık), CCPA/CPRA (Kaliforniya), CalOPPA (Kaliforniya), PIPEDA (Kanada), LGPD (Brezilya) ve diğer pek çok yasa kapsamında yasalarca zorunludur. Bu yargı bölgelerinde faaliyet göstermeseniz bile, web sitenize buradaki kullanıcılar tarafından erişilebiliyorsa (çoğu web sitesi de öyledir), yasalar geçerlidir. Gizlilik politikasına ihtiyaç duymayan web siteleri, kesinlikle hiçbir kişisel veri toplamayan web siteleridir; iletişim formları, analizler, çerezler, haber bültenleri yok."
+      },
+      {
+        "q": "Hangi yasalar gizlilik politikası gerektirir?",
+        "a": "Bir gizlilik politikası gerektiren en dikkate değer yasalar şunları içerir: GDPR (AB/AEA/Birleşik Krallık) — her türlü kişisel veri işleme için açık, erişilebilir bir gizlilik bildirimi gerektirir; CCPA/CPRA (California) — veri toplama, paylaşma ve tüketici haklarının açıklanmasını zorunlu kılar; CalOPPA (California) — ticari web sitelerinin dikkat çekici bir gizlilik politikası yayınlamasını gerektirir; COPPA (ABD) — 13 yaşın altındaki çocuklardan veri topluyorsanız; PIPEDA (Kanada); LGPD (Brezilya); ve DPDP Yasası (Hindistan). Bu yasaların birbiriyle örtüşen gereksinimleri olduğundan, en katı genel durumu kapsayan iyi yazılmış bir gizlilik politikası (ör. GDPR düzeyinde açıklama) en güvenli yaklaşımdır."
+      },
+      {
+        "q": "Gizlilik politikası nasıl yazılır?",
+        "a": "Bir gizlilik politikası yazmak üç adımdan oluşur. Öncelikle işletmenizin hangi kişisel verileri topladığını (isimler, e-postalar, ödeme bilgileri, çerezler, analizler vb.) ve bunları kimlerle paylaştığınızı (ödeme işlemcileri, analiz araçları, e-posta hizmetleri) denetleyin. İkinci olarak, kullanıcılarınızın bulunduğu yere göre sizin için geçerli olan gizlilik yasalarını belirleyin (AB için GDPR, Kaliforniya için CCPA vb.). Üçüncüsü, aşağıdakileri kapsayan taslak maddeler: hangi verileri topladığınız, bu verileri nasıl kullandığınız, çerezler ve izleme, üçüncü taraf açıklamaları, veri saklama, güvenlik uygulamaları, kullanıcı hakları ve iletişim bilgileri. En kolay yol, PrivacyPolGen'i kullanmaktır; ücretsiz sihirbazımız işletmeniz hakkında 5 soru sorar ve 60 saniyeden kısa bir sürede eksiksiz, avukat düzeyinde bir gizlilik politikası oluşturur."
+      },
+      {
+        "q": "Bir uygulama için gizlilik politikası nasıl yazılır?",
+        "a": "Bir mobil uygulama için gizlilik politikası yazmak, bir web sitesiyle aynı ilkeleri izler ve ek açıklamalar gerekir: cihaz tanımlayıcıları (IDFA, AAID), izinler (kamera, mikrofon, konum, kişiler), SDK verileri (reklam veya analiz SDK'larından) ve anında bildirimler. Hem Apple App Store hem de Google Play Store, veri toplayan tüm uygulamalar için bir gizlilik politikası zorunlu kılar. Mobil cihazlara özel veri türleri ve uygulamanızın kullandığı üçüncü taraf SDK'larla ilgili bölümler ekleyin. Sihirbazda iş türünüz olarak \"Mobil Uygulama\"yı seçerek uygulamaya özel bir politika oluşturmak için PrivacyPolGen'i kullanabilirsiniz."
+      },
+      {
+        "q": "Ücretsiz olarak gizlilik politikası nasıl oluşturulur?",
+        "a": "PrivacyPolGen'i kullanarak eksiksiz, yasal olarak uyumlu bir gizlilik politikasını ücretsiz olarak oluşturabilirsiniz. İşletmeniz, topladığınız veriler, kullandığınız üçüncü taraf hizmetleri ve sizin için geçerli olan yasalar hakkındaki 5 kısa soruyu yanıtlayın. Sihirbazımız 60 saniyeden kısa bir sürede tamamen özelleştirilmiş bir politika oluşturur; hesap yok, kredi kartı yok, sunucuya veri gönderilmiyor. Bunu Markdown, HTML veya düz metin olarak kopyalayabilir veya genel bir URL aracılığıyla paylaşabilirsiniz. Çekirdek jeneratörü ücretsizdir ve her zaman ücretsiz olacaktır."
+      },
+      {
         "q": "Bu gizlilik politikası oluşturucusu gerçekten ücretsiz mi?",
         "a": "Evet. Oluşturulan gizlilik politikasını tamamen ücretsiz olarak oluşturabilir, kopyalayabilir ve barındırabilirsiniz. PDF/DOCX dışa aktarımlı bir Premium katman planlıyoruz, ancak çekirdek oluşturucu her zaman ücretsiz olacak."
-      },
-      {
-        "q": "Bir gizlilik politikası oluşturmak için hesap gerekiyor mu?",
-        "a": "Hesap gerekmez. Sihirbazımızdaki soruları cevaplamanız yeterli, politikanızı oluşturacağız. Cevaplarınız doğrudan paylaşılabilir URL'ye kodlanır — sunucularımıza hiçbir şey gönderilmez."
-      },
-      {
-        "q": "Oluşturulan politika yasal olarak bağlayıcı mı?",
-        "a": "Oluşturulan politika, en yaygın yasal gereksinimleri (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG) kapsayan bir başlangıç şablonudur. Ancak her işletme farklıdır. Nihai politikaya güvenmeden önce bir avukatın incelemesini şiddetle tavsiye ediyoruz, özellikle düzenlenmiş sektörlerde."
-      },
-      {
-        "q": "Verilerim nerede saklanıyor?",
-        "a": "Hiçbir yerde. Cevaplarınızı URL hashine paketlemek için istemci tarafı sıkıştırma (DEFLATE + Base64 URL-güvenli kodlama) kullanıyoruz. URL'yi paylaştığınızda, alıcının tarayıcısı politikayı yerel olarak çözer. Arka uç çalıştırmıyoruz, sihirbaz cevaplarını kaydetmiyoruz ve politika içeriğinize erişimimiz yok."
-      },
-      {
-        "q": "Oluşturduktan sonra politikayı düzenleyebilir miyim?",
-        "a": "Evet. Herhangi bir metin düzenleyicide markdown veya HTML'yi düzenlemeniz ve dosyayı kendi web sitenizde barındırmanız yeterli. Premium, sürüm geçmişiyle birlikte uygulama içi düzenlemeyi sunacak."
       },
       {
         "q": "Bu, GDPR, CCPA ve diğer yasaları kapsıyor mu?",
         "a": "Evet. Sihirbazınızın 4. adımında işletmeniz için geçerli yasaları seçin, uygun maddeleri ekleyelim (GDPR yasal temeli, CCPA çıkış seçeneği, COPPA ebeveyn rızası, PIPEDA erişim hakları, LGPD yasal temeli, PDPA-SG rıza mekanizmaları)."
       },
       {
-        "q": "Ücretsiz ve Premium katmanlar arasındaki fark nedir?",
-        "a": "Ücretsiz, markdown, HTML ve düz metin olarak eksiksiz bir gizlilik politikası sunar — sitenize kopyala/yapıştır. Premium, PDF ve DOCX dışa aktarımı, cookie bannerı kod oluşturma, özel markalaşma ve sürüm geçmişiyle barındırılmış politika sayfaları ekler."
+        "q": "Bir gizlilik politikası oluşturmak için hesap gerekiyor mu?",
+        "a": "Hesap gerekmez. Sihirbazımızdaki soruları cevaplamanız yeterli, politikanızı oluşturacağız. Cevaplarınız doğrudan paylaşılabilir URL'ye kodlanır — sunucularımıza hiçbir şey gönderilmez."
       },
       {
         "q": "Politikayı web siteme nasıl eklerim?",
         "a": "Sitenizde bir sayfa oluşturun (örn., /privacy), HTML çıktısını yapıştırın ve footer'dan bağlayın. Barındırılmış bir istiyorsanız, oluşturulan /p?h=... URL'sini paylaşın — bağımsız bir herkese açık sayfa olarak çalışır."
       },
       {
-        "q": "Yasalar değişirse politikam güncellenir mi?",
-        "a": "Oluşturduğunuz politika belirli bir zamanda statik bir belgedir. Gizlilik yasaları değişirse, yeniden oluşturmanız ve sitenizdeki sürümü güncellemeniz gerekir. Madde kütüphanemizi sürekli olarak güncelliyoruz ve sihirbaz her zaman güncel en iyi uygulamalarla senkronize."
-      },
-      {
-        "q": "Bunu müşteri projesi için kullanabilir miyim?",
-        "a": "Kesinlikle. Ücretsiz katmanda sınırsız müşteri projesi için politika oluşturabilirsiniz. Yalnızca oluşturucuyu yeniden dağıtmamanızı veya çıktıyı değişmeden rekabetçi bir hizmet olarak yeniden satmamanızı rica ediyoruz."
+        "q": "Oluşturduktan sonra politikayı düzenleyebilir miyim?",
+        "a": "Evet. Herhangi bir metin düzenleyicide markdown veya HTML'yi düzenlemeniz ve dosyayı kendi web sitenizde barındırmanız yeterli. Premium, sürüm geçmişiyle birlikte uygulama içi düzenlemeyi sunacak."
       },
       {
         "q": "Politika bir cookie bölümü içeriyor mu?",
         "a": "Evet — sihirbazınızın 2. adımında 'Cookies' seçerseniz, temel, analitik, tercih ve pazarlama cookie'lerini tanımlayan eksiksiz bir cookie bölümü ekliyoruz. Ayrıca entegre ettiğiniz her hizmetin ayarlayabileceği üçüncü taraf cookie'leri de listeliyoruz."
       },
       {
+        "q": "Verilerim nerede saklanıyor?",
+        "a": "Hiçbir yerde. Cevaplarınızı URL hashine paketlemek için istemci tarafı sıkıştırma (DEFLATE + Base64 URL-güvenli kodlama) kullanıyoruz. URL'yi paylaştığınızda, alıcının tarayıcısı politikayı yerel olarak çözer. Arka uç çalıştırmıyoruz, sihirbaz cevaplarını kaydetmiyoruz ve politika içeriğinize erişimimiz yok."
+      },
+      {
+        "q": "Oluşturulan politika yasal olarak bağlayıcı mı?",
+        "a": "Oluşturulan politika, en yaygın yasal gereksinimleri (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG) kapsayan bir başlangıç şablonudur. Ancak her işletme farklıdır. Nihai politikaya güvenmeden önce bir avukatın incelemesini şiddetle tavsiye ediyoruz, özellikle düzenlenmiş sektörlerde."
+      },
+      {
+        "q": "Yasalar değişirse politikam güncellenir mi?",
+        "a": "Oluşturduğunuz politika belirli bir zamanda statik bir belgedir. Gizlilik yasaları değişirse, yeniden oluşturmanız ve sitenizdeki sürümü güncellemeniz gerekir. Madde kütüphanemizi sürekli olarak güncelliyoruz ve sihirbaz her zaman güncel en iyi uygulamalarla senkronize."
+      },
+      {
         "q": "Hangi yasaların bana uygulandığını bilmiyorsam ne olur?",
         "a": "Herkes için varsayılan olarak GDPR, CCPA/CPRA ve CalOPPA'yı seçiyoruz (en katı ortak durumu kapsar). Emin değilseniz, varsayılanları bırakmak genellikle en güvenli seçenektir — daha fazla yasa kapsamak asla zarar vermez ve politika yasanın uygulanmadığı yargı bölgelerinde geçerli olmaya devam eder."
+      },
+      {
+        "q": "Ücretsiz ve Premium katmanlar arasındaki fark nedir?",
+        "a": "Ücretsiz, markdown, HTML ve düz metin olarak eksiksiz bir gizlilik politikası sunar — sitenize kopyala/yapıştır. Premium, PDF ve DOCX dışa aktarımı, cookie bannerı kod oluşturma, özel markalaşma ve sürüm geçmişiyle barındırılmış politika sayfaları ekler."
+      },
+      {
+        "q": "Bunu müşteri projesi için kullanabilir miyim?",
+        "a": "Kesinlikle. Ücretsiz katmanda sınırsız müşteri projesi için politika oluşturabilirsiniz. Yalnızca oluşturucuyu yeniden dağıtmamanızı veya çıktıyı değişmeden rekabetçi bir hizmet olarak yeniden satmamanızı rica ediyoruz."
       }
     ]
   },

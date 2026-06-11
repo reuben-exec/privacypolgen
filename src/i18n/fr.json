@@ -165,52 +165,80 @@
     "heading": "Questions, réponses.",
     "items": [
       {
+        "q": "Qu'est-ce qu'une politique de confidentialité ?",
+        "a": "Une politique de confidentialité est un document juridique qui explique comment un site Web, une application SaaS, une boutique de commerce électronique ou une application mobile collecte, utilise, stocke et partage les informations personnelles de ses utilisateurs. Il couvre les données collectées (noms, e-mails, informations de paiement, cookies, etc.), pourquoi elles sont collectées, avec qui elles sont partagées et quels droits les utilisateurs ont sur leurs données. Les politiques de confidentialité sont requises par des lois telles que le RGPD (UE), le CCPA (Californie), CalOPPA et bien d'autres dans le monde. Chaque site Web ou application qui collecte des données personnelles doit avoir une politique de confidentialité."
+      },
+      {
+        "q": "Pourquoi une politique de confidentialité est-elle importante ?",
+        "a": "Une politique de confidentialité est importante pour trois raisons : (1) Conformité légale – les lois comme le RGPD, le CCPA et le CalOPPA en exigent une ; la non-conformité peut entraîner des amendes allant jusqu'à 4 % du chiffre d'affaires annuel mondial (RGPD) ou 2 500 $ par violation (CCPA). (2) Confiance des utilisateurs — 84 % des consommateurs déclarent que la transparence des pratiques en matière de données influence leur décision de s'engager avec une entreprise. (3) Exigences tierces : des services tels que Google Analytics, Stripe et Apple App Store exigent que vous ayez une politique de confidentialité. Sans cela, vous risquez des sanctions juridiques, une perte de confiance des clients et un blocage des plateformes essentielles."
+      },
+      {
+        "q": "Ai-je besoin d’une politique de confidentialité sur mon site Web ?",
+        "a": "Oui, si votre site Web collecte toute forme de données personnelles (entrées dans le formulaire de contact, inscriptions à la newsletter par courrier électronique, cookies d'analyse, comptes d'utilisateurs ou informations de paiement), vous avez besoin d'une politique de confidentialité. Cela est requis par la loi en vertu du RGPD (UE/EEE/Royaume-Uni), CCPA/CPRA (Californie), CalOPPA (Californie), PIPEDA (Canada), LGPD (Brésil) et bien d'autres. Même si vous n'opérez pas dans ces juridictions, si votre site Web y est accessible aux utilisateurs (ce qui est le cas de la plupart des sites Web), les lois s'appliquent. Les seuls sites Web qui n'ont pas besoin d'une politique de confidentialité sont ceux qui ne collectent absolument aucune donnée personnelle : pas de formulaires de contact, pas d'analyses, pas de cookies, pas de newsletter."
+      },
+      {
+        "q": "Quelles lois exigent une politique de confidentialité ?",
+        "a": "Les lois les plus notables qui exigent une politique de confidentialité sont les suivantes : RGPD (UE/EEE/Royaume-Uni) — exige une déclaration de confidentialité claire et accessible pour tout traitement de données personnelles ; CCPA/CPRA (Californie) — impose la divulgation de la collecte, du partage et des droits des consommateurs de données ; CalOPPA (Californie) — exige que les sites Web commerciaux publient une politique de confidentialité bien visible ; COPPA (États-Unis) — si vous collectez des données auprès d'enfants de moins de 13 ans ; LPRPDE (Canada); LGPD (Brésil) ; et Loi DPDP (Inde). Étant donné que ces lois ont des exigences qui se chevauchent, une politique de confidentialité bien rédigée qui couvre le cas courant le plus strict (par exemple, la divulgation au niveau du RGPD) constitue l'approche la plus sûre."
+      },
+      {
+        "q": "Comment rédiger une politique de confidentialité ?",
+        "a": "La rédaction d'une politique de confidentialité comporte trois étapes. Tout d’abord, vérifiez quelles données personnelles votre entreprise collecte (noms, e-mails, informations de paiement, cookies, analyses, etc.) et avec qui vous les partagez (processeurs de paiement, outils d’analyse, services de messagerie). Deuxièmement, identifiez les lois sur la confidentialité qui s'appliquent à vous en fonction de l'endroit où se trouvent vos utilisateurs (RGPD pour l'UE, CCPA pour la Californie, etc.). Troisièmement, des projets de clauses couvrant : les données que vous collectez, la manière dont vous les utilisez, les cookies et le suivi, les divulgations par des tiers, la conservation des données, les pratiques de sécurité, les droits des utilisateurs et les informations de contact. Le moyen le plus simple est d'utiliser PrivacyPolGen : notre assistant gratuit pose 5 questions sur votre entreprise et génère une politique de confidentialité complète de qualité avocat en moins de 60 secondes."
+      },
+      {
+        "q": "Comment rédiger une politique de confidentialité pour une application ?",
+        "a": "La rédaction d'une politique de confidentialité pour une application mobile suit les mêmes principes qu'un site Web, avec des informations supplémentaires requises : identifiants de l'appareil (IDFA, AAID), autorisations (caméra, microphone, emplacement, contacts), données du SDK (provenant des SDK publicitaires ou d'analyse) et notifications push. L'Apple App Store et le Google Play Store imposent une politique de confidentialité pour toute application qui collecte des données. Incluez des sections sur les types de données spécifiques aux mobiles et les SDK tiers utilisés par votre application. Vous pouvez utiliser PrivacyPolGen pour générer une politique spécifique à l'application en sélectionnant « Application mobile » comme type d'entreprise dans l'assistant."
+      },
+      {
+        "q": "Comment créer une politique de confidentialité gratuitement ?",
+        "a": "Vous pouvez créer gratuitement une politique de confidentialité complète et conforme à la loi en utilisant PrivacyPolGen. Répondez à 5 questions rapides sur votre entreprise, les données que vous collectez, les services tiers que vous utilisez et les lois qui s'appliquent à vous. Notre assistant génère une politique entièrement personnalisée en moins de 60 secondes : pas de compte, pas de carte de crédit, pas de données envoyées à un serveur. Vous pouvez le copier au format Markdown, HTML ou texte brut, ou le partager via une URL publique. Le générateur de base est et sera toujours gratuit."
+      },
+      {
         "q": "Ce générateur de politique de confidentialité est-il vraiment gratuit ?",
         "a": "Oui. Vous pouvez générer, copier et héberger la politique de confidentialité résultante entièrement gratuitement. Nous prévoyons un niveau Premium avec des exports PDF/DOCX, mais le générateur de base sera toujours gratuit."
-      },
-      {
-        "q": "Ai-je besoin d'un compte pour générer une politique de confidentialité ?",
-        "a": "Aucun compte requis. Répondez simplement aux questions de notre assistant et nous générerons votre politique. Vos réponses sont encodées dans l'URL partageable elle-même — rien n'est envoyé à nos serveurs."
-      },
-      {
-        "q": "La politique générée est-elle juridiquement contraignante ?",
-        "a": "La politique générée est un modèle de départ qui couvre les exigences juridiques les plus courantes (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Cependant, chaque entreprise est différente. Nous recommandons vivement de faire réviser la politique finale par un avocat avant de l'utiliser, en particulier dans les secteurs réglementés."
-      },
-      {
-        "q": "Où sont stockées mes données ?",
-        "a": "Nulle part. Nous utilisons la compression côté client (DEFLATE + encodage URL-safe Base64) pour intégrer vos réponses dans le hash de l'URL. Lorsque vous partagez l'URL, le navigateur du destinataire décode la politique localement. Nous n'hébergeons pas de backend, n'enregistrons pas les réponses de l'assistant et n'avons pas accès au contenu de votre politique."
-      },
-      {
-        "q": "Puis-je modifier la politique après l'avoir générée ?",
-        "a": "Oui. Modifiez simplement le Markdown ou le HTML dans n'importe quel éditeur de texte et hébergez le fichier sur votre propre site. La sortie vous appartient et peut être librement modifiée. Le niveau Premium proposera une édition dans l'application avec historique des versions."
       },
       {
         "q": "Cela couvre-t-il le GDPR, le CCPA et d'autres lois ?",
         "a": "Oui. Sélectionnez les lois qui s'appliquent à votre entreprise à l'étape 4 de l'assistant, et nous inclurons les clauses appropriées (base juridique GDPR, opt-out CCPA, consentement parental COPPA, droits d'accès PIPEDA, base juridique LGPD, mécanismes de consentement PDPA-SG)."
       },
       {
-        "q": "Quelle est la différence entre les niveaux gratuit et Premium ?",
-        "a": "Le forfait gratuit vous offre une politique de confidentialité complète en Markdown, HTML et texte brut — copiez-collez dans votre site. Premium ajoute l'export PDF et DOCX, la génération de code de bannière cookies, l'image de marque personnalisée et les pages de politique hébergées avec historique des versions."
+        "q": "Ai-je besoin d'un compte pour générer une politique de confidentialité ?",
+        "a": "Aucun compte requis. Répondez simplement aux questions de notre assistant et nous générerons votre politique. Vos réponses sont encodées dans l'URL partageable elle-même — rien n'est envoyé à nos serveurs."
       },
       {
         "q": "Comment ajouter la politique à mon site ?",
         "a": "Créez une page sur votre site (par exemple, /politique-de-confidentialité), collez la sortie HTML et créez un lien depuis votre pied de page. Si vous souhaitez une version hébergée, partagez l'URL /p?h=... générée — elle fonctionne comme une page publique autonome."
       },
       {
-        "q": "Ma politique sera-t-elle mise à jour si les lois changent ?",
-        "a": "La politique que vous générez est un document statique à un moment donné. Si les lois sur la confidentialité changent, vous devrez la régénérer et mettre à jour la version sur votre site. Nous mettons à jour notre bibliothèque de clauses en continu et l'assistant est toujours synchronisé avec les meilleures pratiques actuelles."
-      },
-      {
-        "q": "Puis-je l'utiliser pour un projet client ?",
-        "a": "Absolument. Vous pouvez générer des politiques pour des projets clients illimités sur le forfait gratuit. Nous vous demandons simplement de ne pas redistribuer le générateur lui-même ni de revendre la sortie non modifiée en tant que service concurrent."
+        "q": "Puis-je modifier la politique après l'avoir générée ?",
+        "a": "Oui. Modifiez simplement le Markdown ou le HTML dans n'importe quel éditeur de texte et hébergez le fichier sur votre propre site. La sortie vous appartient et peut être librement modifiée. Le niveau Premium proposera une édition dans l'application avec historique des versions."
       },
       {
         "q": "La politique inclut-elle une section sur les cookies ?",
         "a": "Oui — si vous sélectionnez « Cookies » à l'étape 2 de l'assistant, nous incluons une section complète sur les cookies décrivant les cookies essentiels, analytiques, de préférence et marketing. Nous listons également les cookies tiers que chaque service que vous intégrez peut définir."
       },
       {
+        "q": "Où sont stockées mes données ?",
+        "a": "Nulle part. Nous utilisons la compression côté client (DEFLATE + encodage URL-safe Base64) pour intégrer vos réponses dans le hash de l'URL. Lorsque vous partagez l'URL, le navigateur du destinataire décode la politique localement. Nous n'hébergeons pas de backend, n'enregistrons pas les réponses de l'assistant et n'avons pas accès au contenu de votre politique."
+      },
+      {
+        "q": "La politique générée est-elle juridiquement contraignante ?",
+        "a": "La politique générée est un modèle de départ qui couvre les exigences juridiques les plus courantes (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Cependant, chaque entreprise est différente. Nous recommandons vivement de faire réviser la politique finale par un avocat avant de l'utiliser, en particulier dans les secteurs réglementés."
+      },
+      {
+        "q": "Ma politique sera-t-elle mise à jour si les lois changent ?",
+        "a": "La politique que vous générez est un document statique à un moment donné. Si les lois sur la confidentialité changent, vous devrez la régénérer et mettre à jour la version sur votre site. Nous mettons à jour notre bibliothèque de clauses en continu et l'assistant est toujours synchronisé avec les meilleures pratiques actuelles."
+      },
+      {
         "q": "Et si je ne sais pas quelles lois s'appliquent à moi ?",
         "a": "Nous sélectionnons par défaut GDPR, CCPA/CPRA et CalOPPA pour tout le monde (ce qui couvre le cas le plus strict). Si vous n'êtes pas sûr, laisser les paramètres par défaut est généralement le choix le plus sûr — couvrir le maximum de lois ne nuit jamais, et la politique restera valide dans les juridictions où la loi ne s'applique pas."
+      },
+      {
+        "q": "Quelle est la différence entre les niveaux gratuit et Premium ?",
+        "a": "Le forfait gratuit vous offre une politique de confidentialité complète en Markdown, HTML et texte brut — copiez-collez dans votre site. Premium ajoute l'export PDF et DOCX, la génération de code de bannière cookies, l'image de marque personnalisée et les pages de politique hébergées avec historique des versions."
+      },
+      {
+        "q": "Puis-je l'utiliser pour un projet client ?",
+        "a": "Absolument. Vous pouvez générer des politiques pour des projets clients illimités sur le forfait gratuit. Nous vous demandons simplement de ne pas redistribuer le générateur lui-même ni de revendre la sortie non modifiée en tant que service concurrent."
       }
     ]
   },

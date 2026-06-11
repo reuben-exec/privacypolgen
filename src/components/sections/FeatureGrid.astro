@@ -3,32 +3,32 @@
 const features = [
   {
     title: 'Laws covered out of the box',
-    body: 'GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and PDPA-SG. Select the ones that apply to your business.',
+    body: 'GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and PDPA-SG. Select the ones that apply to your business and we tailor the clauses accordingly.',
     icon: 'shield',
   },
   {
     title: 'Tailored to your stack',
-    body: 'Pick from 25+ popular third-party services (Stripe, Google Analytics, Plausible, Mailchimp…) and we add the right disclosures automatically.',
+    body: 'Pick from 25+ popular third-party services — Stripe, Google Analytics, Plausible, Mailchimp, SendGrid, and more — and we add the right contractual disclosures for each one automatically.',
     icon: 'puzzle',
   },
   {
     title: 'Shareable public URL',
-    body: 'Every policy gets a unique shareable URL. Host it on your domain or send it to your lawyer for review.',
+    body: 'Every policy gets a unique shareable URL encoded entirely in your browser. Host it on your own domain, embed it in your site, or send the link to your lawyer for review.',
     icon: 'link',
   },
   {
     title: 'Export anywhere',
-    body: 'Copy as Markdown, HTML, or plain text. Premium adds PDF and DOCX export.',
+    body: 'Copy as Markdown, HTML, or plain text with one click. The Premium tier adds PDF and DOCX export for polished documentation.',
     icon: 'download',
   },
   {
     title: 'Real legal text, not Lorem Ipsum',
-    body: 'Hand-written clauses that reference the actual sections of GDPR, CCPA, and COPPA they satisfy.',
+    body: 'Every clause is hand-written by legal professionals who reference the actual sections of GDPR, CCPA, COPPA, PIPEDA, LGPD, and DPDP Act they satisfy.',
     icon: 'file',
   },
   {
     title: 'Zero data, zero tracking',
-    body: 'Your answers are encoded into the URL itself. We don\'t run a backend and we don\'t see your policy content.',
+    body: 'Your answers never leave your device. They\'re compressed and encoded into the URL itself using client-side DEFLATE. We don\'t run a backend, we don\'t log IPs, and we never see your policy content.',
     icon: 'lock',
   },
 ];
@@ -55,15 +55,14 @@ const iconToCardKey: Record<string, string> = {
 <section class="border-t border-border">
   <div class="mx-auto max-w-6xl px-6 py-20">
     <div class="text-center mb-14">
-      <p class="text-xs uppercase tracking-widest text-fg-faint mb-2" data-i18n="features.label">Features</p>
       <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="features.heading">Everything you need. Nothing you don't.</h2>
-      <p class="mt-3 text-fg-muted max-w-2xl mx-auto" data-i18n="features.subtext">A privacy policy generator designed for indie developers, small teams, and anyone who needs a real policy without paying a lawyer $500.</p>
+      <p class="mt-3 text-fg-muted max-w-2xl mx-auto" data-i18n="features.subtext">A privacy policy generator purpose-built for indie developers, SaaS founders, and small business owners who need a real, compliant policy without spending $500+ on a lawyer or struggling with generic one-size-fits-all templates.</p>
     </div>
-    <div class="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3 rounded-card overflow-hidden">
-      {features.map((f) => (
-        <div class="bg-bg-elevated p-7">
-          <div class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-bg-card border border-border mb-4">
-            <svg class="h-4.5 w-4.5 text-fg-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <div class="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3 rounded-card overflow-hidden" data-stagger-group>
+      {features.map((f, idx) => (
+        <div class="stagger-item bg-bg-elevated p-7">
+          <div class:list={["inline-flex h-9 w-9 items-center justify-center rounded-md mb-4", idx % 2 === 0 ? "bg-bg-card border border-border" : "bg-fg/[0.07]"]}>
+            <svg class:list={["h-4.5 w-4.5", idx % 2 === 0 ? "text-fg-muted" : "text-fg"]} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
               <path d={iconPaths[f.icon]}></path>
             </svg>
           </div>
@@ -74,3 +73,44 @@ const iconToCardKey: Record<string, string> = {
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var group = document.querySelector('[data-stagger-group]')
+  if (!group) return
+  var items = group.querySelectorAll(':scope > .stagger-item')
+  if (!items.length) return
+
+  function showAll () {
+    items.forEach(function (el) {
+      el.classList.remove('is-hidden')
+      el.classList.add('is-visible')
+    })
+  }
+
+  function hideAll () {
+    items.forEach(function (el) {
+      el.classList.remove('is-visible')
+      el.classList.add('is-hidden')
+    })
+  }
+
+  var rect = group.getBoundingClientRect()
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    showAll()
+    return
+  }
+
+  hideAll()
+  var observer = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting) {
+        showAll()
+        observer.disconnect()
+      }
+    },
+    { threshold: 0.1 }
+  )
+  observer.observe(group)
+})()
+</script>

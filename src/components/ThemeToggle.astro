@@ -78,6 +78,7 @@
       document.documentElement.setAttribute('data-theme', next);
       try { localStorage.setItem('ppg-theme', next); } catch (_) {}
       syncLabel(next);
+      // Favicon is static — no theme-switching needed
     });
   })();
 </script>

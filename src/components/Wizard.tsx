@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { I18nProvider, useI18n } from '@/lib/I18nProvider'
-import { generatePolicy, encodePolicyToHash, decodeHashToPolicy, dataTypeLabel } from '@/lib/generator'
+import { generatePolicy, encodePolicyToHash, decodeHashToPolicy } from '@/lib/generator'
+import PolicyPreviewContent from '@/components/PolicyPreviewContent'
 type LawId = string
 
 /* ── Data types: each option knows which business types it's relevant to ── */
@@ -19,7 +20,7 @@ const DATA_TYPES = [
   { id: 'analytics', relevantFor: ['personal-blog', 'saas', 'ecommerce', 'mobile-app', 'portfolio', 'agency'] },
   { id: 'cookies', relevantFor: ['personal-blog', 'saas', 'ecommerce', 'portfolio', 'agency'] },
   { id: 'ads', relevantFor: ['ecommerce', 'agency'] },
-] as const
+]
 
 type DataTypeId = typeof DATA_TYPES[number]['id']
 type BusinessType = 'personal-blog' | 'saas' | 'ecommerce' | 'mobile-app' | 'portfolio' | 'agency'
@@ -851,86 +852,14 @@ function WizardContent() {
                 <span className="ml-2 truncate font-mono text-[10px] text-fg-muted/60">{answers.websiteUrl || 'acme.example'}/privacy</span>
               </div>
               <div className="max-h-[60vh] overflow-y-auto p-4">
-                {/* Business summary — always shows all 4 fields with placeholders */}
-                <dl className="space-y-3 text-sm">
-                  <div className="flex items-start justify-between gap-3">
-                    <dt className="shrink-0 text-fg-muted">{t('wizard.preview.business')}</dt>
-                    <dd className="text-right font-medium text-fg">
-                      {answers.businessName || <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.business')}</span>}
-                    </dd>
-                  </div>
-                  <div className="flex items-start justify-between gap-3">
-                    <dt className="shrink-0 text-fg-muted">{t('wizard.preview.website')}</dt>
-                    <dd className="min-w-0 text-right font-mono text-xs text-fg truncate">
-                      {answers.websiteUrl || <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.website')}</span>}
-                    </dd>
-                  </div>
-                  <div className="flex items-start justify-between gap-3">
-                    <dt className="shrink-0 text-fg-muted">{t('wizard.preview.businessType')}</dt>
-                    <dd className="text-right text-fg">
-                      {answers.businessType ? t('wizard.businessTypes.' + answers.businessType + '.name') : <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.type')}</span>}
-                    </dd>
-                  </div>
-                  <div className="flex items-start justify-between gap-3">
-                    <dt className="shrink-0 text-fg-muted">{t('wizard.preview.jurisdiction')}</dt>
-                    <dd className="text-right text-fg">
-                      {answers.jurisdiction ? t('wizard.jurisdictions.' + answers.jurisdiction) : <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.jurisdiction')}</span>}
-                    </dd>
-                  </div>
-                  {/* Data types row — shown when dataPreviewSentence is non-empty */}
-                  {answers.dataTypes.length > 0 && (
-                    <>
-                      <hr className="border-border" />
-                      <div className="pt-1.5 text-xs leading-relaxed text-fg">
-                        We collect{' '}
-                        {(() => {
-                          const labels = answers.dataTypes.map(id => dataTypeLabel(id))
-                          const parts = listFormatter.formatToParts(labels)
-                          let idx = 0
-                          return parts.map((part, i) => {
-                            if (part.type === 'element') {
-                              const id = answers.dataTypes[idx]
-                              const isHL = highlightedTypes.has(id)
-                              idx++
-                              return <span key={id} className={isHL ? 'animate-pulse font-medium text-accent' : ''}>{part.value}</span>
-                            }
-                            return <span key={`sep-${i}`}>{part.value}</span>
-                          })
-                        })()}{' '}
-                        to provide our services.
-                      </div>
-                    </>
-                  )}
-                </dl>
-
-                {/* Sections progress */}
-                {step >= 2 && (
-                  <div className="mt-4 border-t border-border pt-3">
-                    <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-fg-muted/60">{t('wizard.preview.sectionsGenerated')}</p>
-                    <ul className="space-y-1">
-                      {sectionProgress.map(s => (
-                        <li key={s.id} className={`flex items-center gap-2 text-xs ${s.state === 'locked' ? 'opacity-40' : ''}`}>
-                          <span className="w-4 shrink-0 text-center">
-                            {s.state === 'complete' ? (
-                              <span className="text-green-500">{'\u2705'}</span>
-                            ) : s.state === 'pending' ? (
-                              <span className="text-fg-muted/40">{'\u23F3'}</span>
-                            ) : (
-                              <span className="text-fg-muted">{'\uD83D\uDD12'}</span>
-                            )}
-                          </span>
-                          <span className={
-                            s.state === 'complete' ? 'text-fg'
-                            : s.state === 'pending' ? 'text-fg-muted'
-                            : 'text-fg-muted'
-                          }>
-                            {s.label}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                <PolicyPreviewContent
+                  answers={answers}
+                  step={step}
+                  highlightedTypes={highlightedTypes}
+                  listFormatter={listFormatter}
+                  sectionProgress={sectionProgress}
+                  dataTypesInline
+                />
               </div>
             </div>
             <button type="button" onClick={() => setShowMobilePreview(v => !v)}
@@ -946,7 +875,7 @@ function WizardContent() {
 
       {/* Mobile preview toggle */}
       {showMobilePreview && (
-        <div className="fixed inset-0 z-50 flex items-end bg-black/40 p-4 backdrop-blur-sm lg:hidden" onClick={() => setShowMobilePreview(false)}>
+        <div className="fixed inset-0 z-overlay flex items-end bg-black/40 p-4 backdrop-blur-sm lg:hidden" onClick={() => setShowMobilePreview(false)}>
           <div className="w-full max-h-[85vh] overflow-y-auto rounded-2xl border border-border bg-bg p-4 shadow-2xl" onClick={e => e.stopPropagation()}>
             <div className="mb-3 flex items-center justify-between">
               <span className="text-sm font-semibold text-fg">{t('wizard.preview.livePreview')}</span>
@@ -956,72 +885,13 @@ function WizardContent() {
               </button>
             </div>
             <div className="rounded-xl border border-border bg-surface p-4">
-              {/* Business summary — always shows all 4 fields with placeholders */}
-              <dl className="space-y-3 text-sm">
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="shrink-0 text-fg-muted">{t('wizard.preview.business')}</dt>
-                  <dd className="text-right font-medium text-fg">
-                    {answers.businessName || <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.business')}</span>}
-                  </dd>
-                </div>
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="shrink-0 text-fg-muted">{t('wizard.preview.website')}</dt>
-                  <dd className="min-w-0 text-right font-mono text-xs text-fg truncate">
-                    {answers.websiteUrl || <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.website')}</span>}
-                  </dd>
-                </div>
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="shrink-0 text-fg-muted">{t('wizard.preview.businessType')}</dt>
-                  <dd className="text-right text-fg">
-                    {answers.businessType ? t('wizard.businessTypes.' + answers.businessType + '.name') : <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.type')}</span>}
-                  </dd>
-                </div>
-                <div className="flex items-start justify-between gap-3">
-                  <dt className="shrink-0 text-fg-muted">{t('wizard.preview.jurisdiction')}</dt>
-                  <dd className="text-right text-fg">
-                    {answers.jurisdiction ? t('wizard.jurisdictions.' + answers.jurisdiction) : <span className="italic text-fg-muted/50">{t('wizard.preview.placeholders.jurisdiction')}</span>}
-                  </dd>
-                </div>
-                {/* Data types row — shown when dataPreviewSentence is non-empty */}
-                {dataPreviewSentence && (
-                  <>
-                    <hr className="border-border" />
-                    <div className="flex items-start justify-between gap-3 pt-1">
-                      <dt className="shrink-0 text-fg-muted">{t('wizard.preview.dataCollected')}</dt>
-                      <dd className="text-right text-fg">{t('wizard.preview.collectSentence').replace('{types}', dataPreviewSentence)}</dd>
-                    </div>
-                  </>
-                )}
-              </dl>
-
-              {/* Sections progress */}
-              {step >= 2 && (
-                <div className="mt-4 border-t border-border pt-3">
-                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-fg-muted/60">{t('wizard.preview.sectionsGenerated')}</p>
-                  <ul className="space-y-1">
-                    {sectionProgress.map(s => (
-                      <li key={s.id} className={`flex items-center gap-2 text-xs ${s.state === 'locked' ? 'opacity-40' : ''}`}>
-                        <span className="w-4 shrink-0 text-center">
-                          {s.state === 'complete' ? (
-                            <span className="text-green-500">{'\u2705'}</span>
-                          ) : s.state === 'pending' ? (
-                            <span className="text-fg-muted/40">{'\u23F3'}</span>
-                          ) : (
-                            <span className="text-fg-muted">{'\uD83D\uDD12'}</span>
-                          )}
-                        </span>
-                        <span className={
-                          s.state === 'complete' ? 'text-fg'
-                          : s.state === 'pending' ? 'text-fg-muted'
-                          : 'text-fg-muted'
-                        }>
-                          {s.label}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              <PolicyPreviewContent
+                answers={answers}
+                step={step}
+                highlightedTypes={highlightedTypes}
+                listFormatter={listFormatter}
+                sectionProgress={sectionProgress}
+              />
             </div>
           </div>
         </div>

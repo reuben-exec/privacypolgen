@@ -26,7 +26,7 @@
 
   <!-- Dropdown listbox -->
   <div
-    class="lang-dropdown invisible absolute right-0 top-full mt-1.5 w-44 max-h-80 overflow-y-auto rounded-card border border-border bg-bg-elevated z-50 opacity-0 transition-all duration-150"
+    class="lang-dropdown invisible absolute right-0 top-full mt-1.5 w-44 max-h-80 overflow-y-auto rounded-card border border-border bg-bg-elevated z-dropdown opacity-0 transition-all duration-150"
     data-lang-dropdown
     role="listbox"
     aria-label="Select language"
@@ -162,7 +162,7 @@
   // ─── UI Updates ───────────────────────────────────────────────
 
   /** Set aria-selected and check visibility for each option. */
-  function updateDropdown(lang) {
+  function updateDropdown(lang: string) {
     options.forEach((opt) => {
       const isSelected = opt.getAttribute('data-lang') === lang;
       opt.setAttribute('aria-selected', String(isSelected));
@@ -171,9 +171,23 @@
     });
   }
 
-  function updateUI(lang) {
+  function updateUI(lang: string) {
     currentLang = lang;
     updateDropdown(lang);
+  }
+
+  /** Scroll option into view within the dropdown (no page scrolling). */
+  function scrollIntoDropdown(opt: HTMLElement) {
+    if (!dropdown || !opt) return;
+    const optTop = opt.offsetTop;
+    const optBottom = optTop + opt.offsetHeight;
+    const scrollTop = dropdown.scrollTop;
+    const height = dropdown.clientHeight;
+    if (optTop < scrollTop) {
+      dropdown.scrollTop = optTop;
+    } else if (optBottom > scrollTop + height) {
+      dropdown.scrollTop = optBottom - height;
+    }
   }
 
   // ─── Open / Close ─────────────────────────────────────────────
@@ -207,7 +221,7 @@
 
   // ─── Select Language ──────────────────────────────────────────
 
-  function selectLang(lang) {
+  function selectLang(lang: string) {
     if (lang && lang !== currentLang) {
       setLocale(lang); // dispatches 'localechange' CustomEvent
     }
@@ -223,7 +237,7 @@
   });
 
   // Toggle keyboard — open on Enter/Space/ArrowDown
-  toggle.addEventListener('keydown', (e) => {
+  toggle.addEventListener('keydown', (e: Event) => {
     if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
       e.preventDefault();
       open();
@@ -231,7 +245,7 @@
   });
 
   // Dropdown keyboard navigation
-  dropdown.addEventListener('keydown', (e) => {
+  dropdown.addEventListener('keydown', (e: Event) => {
     switch (e.key) {
       case 'Escape':
       case 'Tab':
@@ -243,20 +257,18 @@
         if (options.length === 0) break;
         focusedIndex = (focusedIndex + 1) % options.length;
         options[focusedIndex]?.focus();
-        // Scroll into view if needed
-        options[focusedIndex]?.scrollIntoView({ block: 'nearest' });
+        scrollIntoDropdown(/** @type {HTMLElement} */ (options[focusedIndex]));
         break;
       case 'ArrowUp':
         e.preventDefault();
         if (options.length === 0) break;
         focusedIndex = (focusedIndex - 1 + options.length) % options.length;
         options[focusedIndex]?.focus();
-        options[focusedIndex]?.scrollIntoView({ block: 'nearest' });
-        break;
+        scrollIntoDropdown(/** @type {HTMLElement} */ (options[focusedIndex]));
       case 'Enter':
       case ' ':
         e.preventDefault();
-        selectLang(options[focusedIndex]?.getAttribute('data-lang'));
+        selectLang(options[focusedIndex]?.getAttribute('data-lang') ?? '');
         break;
     }
   });
@@ -264,20 +276,20 @@
   // Option click
   options.forEach((opt) => {
     opt.addEventListener('click', () => {
-      selectLang(opt.getAttribute('data-lang'));
+      selectLang(opt.getAttribute('data-lang') ?? '');
     });
   });
 
   // Click outside — close dropdown
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', (e: Event) => {
     if (isOpen && container && !container.contains(/** @type {Node} */ (e.target))) {
       close();
     }
   });
 
   // React to external locale changes (e.g. from React I18nProvider)
-  window.addEventListener('localechange', (e) => {
-    const lang = /** @type {CustomEvent} */ (e).detail?.locale;
+  window.addEventListener('localechange', (e: Event) => {
+    const lang = (/** @type {CustomEvent} */ (e)).detail?.locale;
     if (lang && lang !== currentLang) {
       updateUI(lang);
     }

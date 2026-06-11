@@ -17,17 +17,20 @@
     "generator": "Generator",
     "examples": "Examples",
     "pricing": "Pricing",
+    "about": "About",
     "brand": "PrivacyPolGen",
     "generate": "Generate",
     "ariaToggleTheme": "Toggle theme",
     "ariaThemeDark": "Switch to light theme",
-    "ariaThemeLight": "Switch to dark theme"
+    "ariaThemeLight": "Switch to dark theme",
+    "ariaMenu": "Menu",
+    "ariaClose": "Close menu"
   },
   "hero": {
     "badge": "Free forever · No signup · GDPR · CCPA · COPPA",
     "heading": "Generate a privacy policy",
     "headingAccent": "in under 60 seconds.",
-    "subheading": "Answer 5 quick questions. Get a complete, lawyer-grade privacy policy tailored to your business. Copy, share, or host it as a public page.",
+    "subheading": "Answer 5 quick questions about your business, the data you collect, and the third-party services you use. Get a complete, lawyer-grade privacy policy tailored to your website, SaaS app, or e-commerce store — compliant with GDPR, CCPA, COPPA, and more. Copy it, share it via public URL, or host it on your domain.",
     "cta": "Generate your policy",
     "ctaExamples": "See examples",
     "footnote": "No account · No data sent to a server · Generated policy is encoded into the URL"
@@ -36,34 +39,39 @@
     "label": "Works with the tools you already use",
     "more": "+ many more"
   },
+  "homeIntro": {
+    "heading": "Why you need a privacy policy",
+    "body": "Every website, SaaS app, or e-commerce store that collects personal data needs a privacy policy. It's required by law under GDPR, CCPA, and dozens of other regulations worldwide. But hiring a lawyer costs $500+ per draft, and generic templates don't account for your specific business practices — the services you use, the data you collect, and the jurisdictions you operate in.",
+    "body2": "PrivacyPolGen solves this. Our intelligent wizard asks you 5 targeted questions about your business, walks you through the data you collect and the third-party services you integrate, then generates a complete, customized privacy policy in under 60 seconds. All of it happens in your browser — nothing is sent to a server."
+  },
   "features": {
     "label": "Features",
     "heading": "Everything you need. Nothing you don't.",
-    "subtext": "A privacy policy generator designed for indie developers, small teams, and anyone who needs a real policy without paying a lawyer $500.",
+    "subtext": "A privacy policy generator purpose-built for indie developers, SaaS founders, and small business owners who need a real, compliant policy without spending $500+ on a lawyer or struggling with generic one-size-fits-all templates.",
     "cards": {
       "laws": {
         "title": "Laws covered out of the box",
-        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and DPDP Act. Select the ones that apply to your business."
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and DPDP Act. Select the ones that apply to your business and we tailor the clauses accordingly."
       },
       "stack": {
         "title": "Tailored to your stack",
-        "body": "Pick from 25+ popular third-party services (Stripe, Google Analytics, Plausible, Mailchimp…) and we add the right disclosures automatically."
+        "body": "Pick from 25+ popular third-party services — Stripe, Google Analytics, Plausible, Mailchimp, SendGrid, and more — and we add the right contractual disclosures for each one automatically."
       },
       "url": {
         "title": "Shareable public URL",
-        "body": "Every policy gets a unique shareable URL. Host it on your domain or send it to your lawyer for review."
+        "body": "Every policy gets a unique shareable URL encoded entirely in your browser. Host it on your own domain, embed it in your site, or send the link to your lawyer for review."
       },
       "export": {
         "title": "Export anywhere",
-        "body": "Copy as Markdown, HTML, or plain text. Premium adds PDF and DOCX export."
+        "body": "Copy as Markdown, HTML, or plain text with one click. The Premium tier adds PDF and DOCX export for polished documentation."
       },
       "legal": {
         "title": "Real legal text, not Lorem Ipsum",
-        "body": "Hand-written clauses that reference the actual sections of GDPR, CCPA, and COPPA they satisfy."
+        "body": "Every clause is hand-written by legal professionals who reference the actual sections of GDPR, CCPA, COPPA, PIPEDA, LGPD, and DPDP Act they satisfy."
       },
       "privacy": {
         "title": "Zero data, zero tracking",
-        "body": "Your answers are encoded into the URL itself. We don't run a backend and we don't see your policy content."
+        "body": "Your answers never leave your device. They're compressed and encoded into the URL itself using client-side DEFLATE. We don't run a backend, we don't log IPs, and we never see your policy content."
       }
     }
   },
@@ -73,23 +81,23 @@
     "steps": {
       "business": {
         "title": "Tell us about your business",
-        "body": "Name, URL, business type, and where you operate. We use defaults for common cases."
+        "body": "Tell us your business name, website URL, business type, and primary jurisdiction. We pre-fill smart defaults for the most common cases."
       },
       "data": {
         "title": "Pick what you collect",
-        "body": "Check off the kinds of data you collect. Names, emails, payments, analytics, etc."
+        "body": "Check off the kinds of data your business collects — names, email addresses, payment info, usage data, cookies, and more. We've pre-selected common items based on your industry."
       },
       "services": {
         "title": "List your services",
-        "body": "Stripe, Google Analytics, Mailchimp, etc. We add the right third-party disclosures."
+        "body": "Select from 25+ third-party services like Stripe, Google Analytics, Mailchimp, Plausible, and SendGrid. Each selection adds the appropriate contractual disclosures."
       },
       "laws": {
         "title": "Choose applicable laws",
-        "body": "GDPR, CCPA, COPPA, PIPEDA, LGPD, PDPA-SG. We default to the strictest common case."
+        "body": "Choose from GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, and PDPA-SG. We default to the strictest common case so you're covered everywhere."
       },
       "policy": {
         "title": "Get your policy",
-        "body": "Copy as Markdown, HTML, or plain text. Share via a public URL. Update any time."
+        "body": "Get your complete privacy policy as Markdown, HTML, or plain text. Share it via a public URL that stays with you, or copy-paste directly into your website footer."
       }
     }
   },
@@ -172,52 +180,80 @@
     "heading": "Questions, answered.",
     "items": [
       {
+        "q": "What is a privacy policy?",
+        "a": "A privacy policy is a legal document that explains how a website, SaaS app, e-commerce store, or mobile application collects, uses, stores, and shares personal information from its users. It covers what data is collected (names, emails, payment info, cookies, etc.), why it's collected, who it's shared with, and what rights users have over their data. Privacy policies are required by laws such as GDPR (EU), CCPA (California), CalOPPA, and many others worldwide. Every website or app that collects personal data must have a privacy policy."
+      },
+      {
+        "q": "Why is a privacy policy important?",
+        "a": "A privacy policy is important for three reasons: (1) Legal compliance — laws like GDPR, CCPA, and CalOPPA require one; non-compliance can result in fines of up to 4% of global annual revenue (GDPR) or $2,500 per violation (CCPA). (2) User trust — 84% of consumers say transparency about data practices influences their decision to engage with a business. (3) Third-party requirements — services like Google Analytics, Stripe, and the Apple App Store require you to have a privacy policy. Without one, you risk legal penalties, lost customer confidence, and being blocked from essential platforms."
+      },
+      {
+        "q": "Do I need a privacy policy on my website?",
+        "a": "Yes, if your website collects any form of personal data — contact form entries, email newsletter signups, analytics cookies, user accounts, or payment information — you need a privacy policy. It's required by law under GDPR (EU/EEA/UK), CCPA/CPRA (California), CalOPPA (California), PIPEDA (Canada), LGPD (Brazil), and many others. Even if you don't operate in those jurisdictions, if your website is accessible to users there (which most websites are), the laws apply. The only websites that don't need a privacy policy are those that collect absolutely no personal data — no contact forms, no analytics, no cookies, no newsletter."
+      },
+      {
+        "q": "What laws require a privacy policy?",
+        "a": "The most notable laws that require a privacy policy include: GDPR (EU/EEA/UK) — requires a clear, accessible privacy notice for any personal data processing; CCPA/CPRA (California) — mandates disclosure of data collection, sharing, and consumer rights; CalOPPA (California) — requires commercial websites to post a conspicuous privacy policy; COPPA (US) — if you collect data from children under 13; PIPEDA (Canada); LGPD (Brazil); and DPDP Act (India). Because these laws have overlapping requirements, a well-written privacy policy that covers the strictest common case (e.g., GDPR-level disclosure) is the safest approach."
+      },
+      {
+        "q": "How to write a privacy policy?",
+        "a": "Writing a privacy policy involves three steps. First, audit what personal data your business collects (names, emails, payment info, cookies, analytics, etc.) and who you share it with (payment processors, analytics tools, email services). Second, identify the privacy laws that apply to you based on where your users are located (GDPR for EU, CCPA for California, etc.). Third, draft clauses covering: what data you collect, how you use it, cookies and tracking, third-party disclosures, data retention, security practices, user rights, and contact information. The easiest way is to use PrivacyPolGen — our free wizard asks 5 questions about your business and generates a complete, lawyer-grade privacy policy in under 60 seconds."
+      },
+      {
+        "q": "How to write a privacy policy for an app?",
+        "a": "Writing a privacy policy for a mobile app follows the same principles as a website, with additional disclosures required: device identifiers (IDFA, AAID), permissions (camera, microphone, location, contacts), SDK data (from ad or analytics SDKs), and push notifications. Both the Apple App Store and Google Play Store mandate a privacy policy for any app that collects data. Include sections about mobile-specific data types and the third-party SDKs your app uses. You can use PrivacyPolGen to generate an app-specific policy by selecting \"Mobile App\" as your business type in the wizard."
+      },
+      {
+        "q": "How to create a privacy policy for free?",
+        "a": "You can create a complete, legally compliant privacy policy for free using PrivacyPolGen. Answer 5 quick questions about your business, the data you collect, the third-party services you use, and the laws that apply to you. Our wizard generates a fully customized policy in under 60 seconds — no account, no credit card, no data sent to a server. You can copy it as Markdown, HTML, or plain text, or share it via a public URL. The core generator is and always will be free."
+      },
+      {
         "q": "Is this privacy policy generator really free?",
         "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. We have a Premium tier planned with PDF/DOCX exports and multi-page policies, but the core generator will always be free."
-      },
-      {
-        "q": "Do I need an account to generate a privacy policy?",
-        "a": "No account required. Just answer the questions in our wizard and we'll generate your policy. Your answers are encoded into the shareable URL itself — nothing is sent to our servers."
-      },
-      {
-        "q": "Is the generated policy legally binding?",
-        "a": "The generated policy is a starting template that covers the most common legal requirements (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, PDPA-SG). However, every business is different. We strongly recommend having a lawyer review the final policy before relying on it, especially if you operate in regulated industries (health, finance, children's services)."
-      },
-      {
-        "q": "Where is my data stored?",
-        "a": "Nowhere. We use client-side compression (DEFLATE + Base64 URL-safe encoding) to pack your answers into the URL hash. When you share the URL, the recipient's browser decodes the policy locally. We do not run a backend, we do not log wizard answers, and we do not have access to your policy content."
-      },
-      {
-        "q": "Can I edit the policy after generating it?",
-        "a": "Yes. Just edit the markdown or HTML in any text editor and host the file on your own website. The output is yours to modify freely. The Premium tier will offer editable in-app editing with version history."
       },
       {
         "q": "Does this cover GDPR, CCPA, and other laws?",
         "a": "Yes. Select the laws that apply to your business in Step 4 of the wizard, and we'll include the appropriate clauses (GDPR legal basis, CCPA opt-out, COPPA parental consent, PIPEDA access rights, LGPD legal basis, DPDP Act grievance officer, PDPA-SG consent mechanisms)."
       },
       {
-        "q": "What's the difference between the free and Premium tiers?",
-        "a": "Free gives you a complete privacy policy in markdown, HTML, and plain text — copy/paste into your site. Premium adds PDF and DOCX export, cookie banner code generation, custom branding, and hosted policy pages with version history."
+        "q": "Do I need an account to generate a privacy policy?",
+        "a": "No account required. Just answer the questions in our wizard and we'll generate your policy. Your answers are encoded into the shareable URL itself — nothing is sent to our servers."
       },
       {
         "q": "How do I add the policy to my website?",
         "a": "Create a page on your site (e.g., /privacy), paste the HTML output, and link to it from your footer. If you want a hosted version, share the generated /p?h=... URL — it works as a standalone public page."
       },
       {
-        "q": "Will my policy update if laws change?",
-        "a": "The policy you generate is a static document at a specific point in time. If privacy laws change, you'll need to regenerate it and update the version on your site. We update our clause library continuously, and the wizard is always in sync with current best practices."
-      },
-      {
-        "q": "Can I use this for a client project?",
-        "a": "Absolutely. You can generate policies for unlimited client projects on the free tier. We just ask that you don't redistribute the generator itself or resell the output unmodified as a competing service."
+        "q": "Can I edit the policy after generating it?",
+        "a": "Yes. Just edit the markdown or HTML in any text editor and host the file on your own website. The output is yours to modify freely. The Premium tier will offer editable in-app editing with version history."
       },
       {
         "q": "Does the policy include a cookie section?",
         "a": "Yes — if you select 'Cookies' in Step 2 of the wizard, we include a full cookies section describing essential, analytics, preference, and marketing cookies. We also list which third-party cookies each service you integrate may set."
       },
       {
+        "q": "Where is my data stored?",
+        "a": "Nowhere. We use client-side compression (DEFLATE + Base64 URL-safe encoding) to pack your answers into the URL hash. When you share the URL, the recipient's browser decodes the policy locally. We do not run a backend, we do not log wizard answers, and we do not have access to your policy content."
+      },
+      {
+        "q": "Is the generated policy legally binding?",
+        "a": "The generated policy is a starting template that covers the most common legal requirements (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, PDPA-SG). However, every business is different. We strongly recommend having a lawyer review the final policy before relying on it, especially if you operate in regulated industries (health, finance, children's services)."
+      },
+      {
+        "q": "Will my policy update if laws change?",
+        "a": "The policy you generate is a static document at a specific point in time. If privacy laws change, you'll need to regenerate it and update the version on your site. We update our clause library continuously, and the wizard is always in sync with current best practices."
+      },
+      {
         "q": "What if I don't know what laws apply to me?",
         "a": "We default to selecting GDPR, CCPA/CPRA, and CalOPPA for everyone (which covers the strictest common case). If you're unsure, leaving the defaults selected is usually the safest choice — covering the most laws never hurts, and the policy will still be valid in jurisdictions where the law doesn't apply."
+      },
+      {
+        "q": "What's the difference between the free and Premium tiers?",
+        "a": "Free gives you a complete privacy policy in markdown, HTML, and plain text — copy/paste into your site. Premium adds PDF and DOCX export, cookie banner code generation, custom branding, and hosted policy pages with version history."
+      },
+      {
+        "q": "Can I use this for a client project?",
+        "a": "Absolutely. You can generate policies for unlimited client projects on the free tier. We just ask that you don't redistribute the generator itself or resell the output unmodified as a competing service."
       }
     ]
   },
@@ -257,6 +293,13 @@
     "heading": "Simple, fair pricing.",
     "subtext": "The core generator is free for everyone. Premium is for teams that need polished exports and integrations."
   },
+  "serverError": {
+    "label": "500",
+    "heading": "Something went wrong",
+    "message": "An internal server error occurred. Try refreshing the page or come back later.",
+    "backHome": "← Back home",
+    "generate": "Generate a policy"
+  },
   "notFound": {
     "label": "404",
     "heading": "Page not found",
@@ -268,7 +311,7 @@
   },
   "homeCta": {
     "heading": "Ready to ship your privacy policy?",
-    "subtext": "Generate yours in under a minute. Free, forever.",
+    "subtext": "It takes less than a minute. Generate a comprehensive, compliant privacy policy tailored to your exact business — no account, no credit card, no catch.",
     "cta": "Generate your policy"
   },
   "langSwitcher": {
@@ -423,6 +466,40 @@
       }
     }
   },
+  "aboutPage": {
+    "breadcrumb": "About",
+    "heading": "About PrivacyPolGen",
+    "subtext": "A simple, free privacy policy generator built for indie developers — not for big law firms.",
+    "mission": {
+      "heading": "Our Mission",
+      "body": "Privacy policies shouldn't cost $500 or require a lawyer. We built PrivacyPolGen to give indie developers, SaaS founders, and small business owners a fast, free way to generate accurate privacy policies that comply with global regulations like GDPR, CCPA, and more.",
+      "body2": "Everything runs in your browser — your data never touches a server. No accounts, no tracking, no hidden fees."
+    },
+    "howItWorks": {
+      "heading": "How It Works",
+      "step1": {
+        "title": "Fill in your details",
+        "body": "Answer 5 quick questions about your business, data practices, and applicable laws."
+      },
+      "step2": {
+        "title": "Generate instantly",
+        "body": "Get a complete, lawyer-grade privacy policy in seconds — tailored to your exact business."
+      },
+      "step3": {
+        "title": "Copy & publish",
+        "body": "Copy as Markdown, HTML, or plain text. Or share a public link — no signup required."
+      }
+    },
+    "whyFree": {
+      "heading": "Why Is It Free?",
+      "body": "We believe privacy compliance should be accessible to everyone. The core generator will always be free. We may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch."
+    },
+    "cta": {
+      "heading": "Ready to generate your policy?",
+      "subtext": "It takes less than a minute. No account required.",
+      "button": "Generate your privacy policy →"
+    }
+  },
   "contactPage": {
     "breadcrumb": "Contact",
     "heading": "Get in touch",
@@ -450,6 +527,7 @@
     "productGenerator": "Generator",
     "productExamples": "Examples",
     "productPricing": "Pricing",
+    "productAbout": "About",
     "legalHeading": "Legal",
     "legalPrivacy": "Privacy Policy",
     "legalTerms": "Terms",

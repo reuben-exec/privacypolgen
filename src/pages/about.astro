@@ -1,0 +1,76 @@
+---
+// src/pages/about.astro
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout
+  title="About — PrivacyPolGen"
+  description="PrivacyPolGen is a free privacy policy generator for indie developers, SaaS founders, and small businesses. No signup, no server, no catch."
+>
+  <!-- Hero -->
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-3xl px-6 py-10">
+      <p class="text-sm text-fg-muted" data-i18n="aboutPage.breadcrumb">About</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="aboutPage.heading">About PrivacyPolGen</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl" data-i18n="aboutPage.subtext">A simple, free privacy policy generator built for indie developers — not for big law firms.</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="mx-auto max-w-3xl px-6 py-16">
+    <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.mission.heading">Our Mission</h2>
+    <p class="text-fg-muted leading-relaxed" data-i18n="aboutPage.mission.body">
+      Privacy policies shouldn't cost $500 or require a lawyer. We built PrivacyPolGen to give indie developers, SaaS founders, and small business owners a fast, free way to generate accurate privacy policies that comply with global regulations like GDPR, CCPA, and more.
+    </p>
+    <p class="text-fg-muted leading-relaxed mt-4" data-i18n="aboutPage.mission.body2">
+      Everything runs in your browser — your data never touches a server. No accounts, no tracking, no hidden fees.
+    </p>
+  </section>
+
+  <!-- How It Works -->
+  <section class="border-t border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-3xl px-6 py-16">
+      <h2 class="text-2xl font-semibold tracking-tight mb-8 text-center" data-i18n="aboutPage.howItWorks.heading">How It Works</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-card border border-border bg-bg p-6 text-center">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <span class="text-sm font-bold">1</span>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step1.title">Fill in your details</h3>
+          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step1.body">Answer 5 quick questions about your business, data practices, and applicable laws.</p>
+        </div>
+        <div class="rounded-card border border-border bg-bg p-6 text-center">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <span class="text-sm font-bold">2</span>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step2.title">Generate instantly</h3>
+          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step2.body">Get a complete, lawyer-grade privacy policy in seconds — tailored to your exact business.</p>
+        </div>
+        <div class="rounded-card border border-border bg-bg p-6 text-center">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <span class="text-sm font-bold">3</span>
+          </div>
+          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step3.title">Copy &amp; publish</h3>
+          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step3.body">Copy as Markdown, HTML, or plain text. Or share a public link — no signup required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It's Free -->
+  <section class="mx-auto max-w-3xl px-6 py-16">
+    <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.whyFree.heading">Why Is It Free?</h2>
+    <p class="text-fg-muted leading-relaxed" data-i18n="aboutPage.whyFree.body">
+      We believe privacy compliance should be accessible to everyone. The core generator will always be free. We may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="border-t border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-3xl px-6 py-16 text-center">
+      <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.cta.heading">Ready to generate your policy?</h2>
+      <p class="text-fg-muted mb-6" data-i18n="aboutPage.cta.subtext">It takes less than a minute. No account required.</p>
+      <a href="/generate" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90" data-i18n="aboutPage.cta.button">Generate your privacy policy →</a>
+    </div>
+  </section>
+</Layout>

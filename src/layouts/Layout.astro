@@ -24,9 +24,11 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <!-- Primary favicon: dark shield on light backgrounds. Multiple formats ensure cross-browser coverage. -->
+    <link rel="icon" type="image/x-icon" href="/favicon_black.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     {/* hreflang for 17 languages */}
     {[ 'ar', 'bn', 'de', 'en', 'es', 'fr', 'hi', 'ja', 'ka', 'ko', 'nl', 'pt', 'ru', 'ta', 'tr', 'vi', 'zh' ].map(lang => (
@@ -38,16 +40,22 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    </noscript>
     {/* FOUC prevention: set data-theme and data-lang on <html> synchronously before paint.
         Priority for theme: stored user choice > OS preference > dark fallback.
         Priority for lang: stored user choice > no attribute (defaults to English). */}
     <script is:inline>
       (function () {
+        var theme = 'dark';
         try {
           var stored = localStorage.getItem('ppg-theme');
           var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-          var theme = stored === 'light' || stored === 'dark' ? stored : (prefersLight ? 'light' : 'dark');
+          theme = stored === 'light' || stored === 'dark' ? stored : (prefersLight ? 'light' : 'dark');
           document.documentElement.setAttribute('data-theme', theme);
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'dark');
@@ -61,6 +69,7 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
         } catch (e) {
           // localStorage may be blocked
         }
+
       })();
     </script>
     <SeoHead title={title} description={description} canonical={canonical} ogType={ogType} noindex={noindex} />
@@ -92,8 +101,11 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     </script>
   </head>
   <body class="min-h-screen flex flex-col antialiased bg-bg text-fg">
+    <a href="#main-content" class="skip-link sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[9999] focus-visible:rounded-button focus-visible:bg-bg focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-fg focus-visible:shadow-dropdown focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2">
+      Skip to content
+    </a>
     {!bare && <Header />}
-    <main class="flex-1">
+    <main id="main-content" class="flex-1">
       <slot />
     </main>
     {!bare && <Footer />}

@@ -165,52 +165,80 @@
     "heading": "Preguntas, respondidas.",
     "items": [
       {
+        "q": "¿Qué es una política de privacidad?",
+        "a": "Una política de privacidad es un documento legal que explica cómo un sitio web, una aplicación SaaS, una tienda de comercio electrónico o una aplicación móvil recopila, utiliza, almacena y comparte información personal de sus usuarios. Cubre qué datos se recopilan (nombres, correos electrónicos, información de pago, cookies, etc.), por qué se recopilan, con quién se comparten y qué derechos tienen los usuarios sobre sus datos. Las políticas de privacidad son requeridas por leyes como GDPR (UE), CCPA (California), CalOPPA y muchas otras en todo el mundo. Todo sitio web o aplicación que recopile datos personales debe tener una política de privacidad."
+      },
+      {
+        "q": "¿Por qué es importante una política de privacidad?",
+        "a": "Una política de privacidad es importante por tres razones: (1) Cumplimiento legal: leyes como GDPR, CCPA y CalOPPA requieren una; El incumplimiento puede dar lugar a multas de hasta el 4% de los ingresos anuales globales (GDPR) o 2500 dólares por infracción (CCPA). (2) Confianza del usuario: el 84% de los consumidores dice que la transparencia sobre las prácticas de datos influye en su decisión de interactuar con una empresa. (3) Requisitos de terceros: servicios como Google Analytics, Stripe y Apple App Store requieren que usted tenga una política de privacidad. Sin uno, corre el riesgo de sufrir sanciones legales, perder la confianza del cliente y ser bloqueado en plataformas esenciales."
+      },
+      {
+        "q": "¿Necesito una política de privacidad en mi sitio web?",
+        "a": "Sí, si su sitio web recopila algún tipo de datos personales (entradas de formularios de contacto, suscripciones a boletines informativos por correo electrónico, cookies de análisis, cuentas de usuario o información de pago), necesita una política de privacidad. Es un requisito legal según GDPR (UE/EEE/Reino Unido), CCPA/CPRA (California), CalOPPA (California), PIPEDA (Canadá), LGPD (Brasil) y muchos otros. Incluso si no opera en esas jurisdicciones, si su sitio web es accesible para los usuarios allí (como lo son la mayoría de los sitios web), se aplican las leyes. Los únicos sitios web que no necesitan una política de privacidad son aquellos que no recopilan absolutamente ningún dato personal: ni formularios de contacto, ni análisis, ni cookies, ni boletines informativos."
+      },
+      {
+        "q": "¿Qué leyes requieren una política de privacidad?",
+        "a": "Las leyes más notables que requieren una política de privacidad incluyen: GDPR (UE/EEE/Reino Unido): requiere un aviso de privacidad claro y accesible para cualquier procesamiento de datos personales; CCPA/CPRA (California): exige la divulgación de la recopilación y el intercambio de datos y los derechos del consumidor; CalOPPA (California): exige que los sitios web comerciales publiquen una política de privacidad visible; COPPA (EE. UU.): si recopila datos de niños menores de 13 años; PIPEDA (Canadá); LGPD (Brasil); y Ley DPDP (India). Debido a que estas leyes tienen requisitos superpuestos, una política de privacidad bien redactada que cubra el caso común más estricto (por ejemplo, divulgación a nivel de GDPR) es el enfoque más seguro."
+      },
+      {
+        "q": "¿Cómo redactar una política de privacidad?",
+        "a": "Escribir una política de privacidad implica tres pasos. Primero, audite qué datos personales recopila su empresa (nombres, correos electrónicos, información de pago, cookies, análisis, etc.) y con quién los comparte (procesadores de pagos, herramientas de análisis, servicios de correo electrónico). En segundo lugar, identifique las leyes de privacidad que se aplican a usted según la ubicación de sus usuarios (GDPR para la UE, CCPA para California, etc.). En tercer lugar, redactar cláusulas que cubran: qué datos recopila, cómo los utiliza, cookies y seguimiento, divulgaciones de terceros, retención de datos, prácticas de seguridad, derechos de usuario e información de contacto. La forma más sencilla es utilizar PrivacyPolGen: nuestro asistente gratuito formula 5 preguntas sobre su negocio y genera una política de privacidad completa de calidad de abogado en menos de 60 segundos."
+      },
+      {
+        "q": "¿Cómo redactar una política de privacidad para una aplicación?",
+        "a": "Escribir una política de privacidad para una aplicación móvil sigue los mismos principios que un sitio web, con divulgaciones adicionales requeridas: identificadores de dispositivo (IDFA, AAID), permisos (cámara, micrófono, ubicación, contactos), datos del SDK (de SDK de publicidad o análisis) y notificaciones automáticas. Tanto Apple App Store como Google Play Store exigen una política de privacidad para cualquier aplicación que recopile datos. Incluya secciones sobre tipos de datos específicos para dispositivos móviles y los SDK de terceros que utiliza su aplicación. Puede utilizar PrivacyPolGen para generar una política específica de la aplicación seleccionando \"Aplicación móvil\" como tipo de negocio en el asistente."
+      },
+      {
+        "q": "¿Cómo crear una política de privacidad gratis?",
+        "a": "Puede crear una política de privacidad completa y que cumpla con la ley de forma gratuita utilizando PrivacyPolGen. Responda cinco preguntas rápidas sobre su negocio, los datos que recopila, los servicios de terceros que utiliza y las leyes que se aplican a usted. Nuestro asistente genera una póliza totalmente personalizada en menos de 60 segundos: sin cuenta, sin tarjeta de crédito, sin envío de datos a un servidor. Puedes copiarlo como Markdown, HTML o texto sin formato, o compartirlo a través de una URL pública. El generador central es y siempre será gratuito."
+      },
+      {
         "q": "¿Este generador de políticas de privacidad es realmente gratuito?",
         "a": "Sí. Puede generar, copiar y alojar la política de privacidad resultante completamente gratis. Tenemos un nivel Premium planificado con exportaciones PDF/DOCX, pero el generador principal siempre será gratuito."
-      },
-      {
-        "q": "¿Necesito una cuenta para generar una política de privacidad?",
-        "a": "No se requiere cuenta. Simplemente responda las preguntas en nuestro asistente y generaremos su política. Sus respuestas se codifican en la URL compartible — no se envía nada a nuestros servidores."
-      },
-      {
-        "q": "¿Es legalmente vinculante la política generada?",
-        "a": "La política generada es una plantilla inicial que cubre los requisitos legales más comunes (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Sin embargo, cada negocio es diferente. Recomendamos encarecidamente que un abogado revise la política final antes de usarla, especialmente en industrias reguladas."
-      },
-      {
-        "q": "¿Dónde se almacenan mis datos?",
-        "a": "En ninguna parte. Usamos compresión del lado del cliente (DEFLATE + codificación Base64 segura para URL) para empaquetar sus respuestas en el hash de la URL. Cuando comparte la URL, el navegador del destinatario decodifica la política localmente. No ejecutamos un backend, no registramos las respuestas del asistente y no tenemos acceso al contenido de su política."
-      },
-      {
-        "q": "¿Puedo editar la política después de generarla?",
-        "a": "Sí. Simplemente edite el markdown o HTML en cualquier editor de texto y aloje el archivo en su propio sitio web. El resultado es suyo para modificarlo libremente. El nivel Premium ofrecerá edición editable en la aplicación con historial de versiones."
       },
       {
         "q": "¿Esto cubre GDPR, CCPA y otras leyes?",
         "a": "Sí. Seleccione las leyes que aplican a su negocio en el Paso 4 del asistente, e incluiremos las cláusulas apropiadas (base legal GDPR, exclusión CCPA, consentimiento parental COPPA, derechos de acceso PIPEDA, base legal LGPD, mecanismos de consentimiento PDPA-SG)."
       },
       {
-        "q": "¿Cuál es la diferencia entre los niveles Gratis y Premium?",
-        "a": "Gratis le ofrece una política de privacidad completa en markdown, HTML y texto plano. Premium añade exportación PDF y DOCX, generación de código de banner de cookies, marca personalizada y páginas de política alojadas con historial de versiones."
+        "q": "¿Necesito una cuenta para generar una política de privacidad?",
+        "a": "No se requiere cuenta. Simplemente responda las preguntas en nuestro asistente y generaremos su política. Sus respuestas se codifican en la URL compartible — no se envía nada a nuestros servidores."
       },
       {
         "q": "¿Cómo añado la política a mi sitio web?",
         "a": "Cree una página en su sitio (ej. /privacidad), pegue el resultado HTML y enlácelo desde su pie de página. Si desea una versión alojada, comparta la URL /p?h=... generada — funciona como página pública independiente."
       },
       {
-        "q": "¿Se actualizará mi política si las leyes cambian?",
-        "a": "La política que genere es un documento estático en un momento específico. Si las leyes de privacidad cambian, necesitará regenerarla y actualizar la versión en su sitio. Actualizamos nuestra biblioteca de cláusulas continuamente y el asistente está siempre sincronizado con las mejores prácticas actuales."
-      },
-      {
-        "q": "¿Puedo usar esto para un proyecto de cliente?",
-        "a": "Absolutamente. Puede generar políticas para proyectos de clientes ilimitados en el nivel gratuito. Solo pedimos que no redistribuya el generador mismo ni revenda el resultado sin modificaciones como un servicio competidor."
+        "q": "¿Puedo editar la política después de generarla?",
+        "a": "Sí. Simplemente edite el markdown o HTML en cualquier editor de texto y aloje el archivo en su propio sitio web. El resultado es suyo para modificarlo libremente. El nivel Premium ofrecerá edición editable en la aplicación con historial de versiones."
       },
       {
         "q": "¿La política incluye una sección de cookies?",
         "a": "Sí — si selecciona 'Cookies' en el Paso 2 del asistente, incluimos una sección completa de cookies que describe cookies esenciales, de análisis, de preferencia y de marketing. También listamos qué cookies de terceros puede establecer cada servicio que integre."
       },
       {
+        "q": "¿Dónde se almacenan mis datos?",
+        "a": "En ninguna parte. Usamos compresión del lado del cliente (DEFLATE + codificación Base64 segura para URL) para empaquetar sus respuestas en el hash de la URL. Cuando comparte la URL, el navegador del destinatario decodifica la política localmente. No ejecutamos un backend, no registramos las respuestas del asistente y no tenemos acceso al contenido de su política."
+      },
+      {
+        "q": "¿Es legalmente vinculante la política generada?",
+        "a": "La política generada es una plantilla inicial que cubre los requisitos legales más comunes (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Sin embargo, cada negocio es diferente. Recomendamos encarecidamente que un abogado revise la política final antes de usarla, especialmente en industrias reguladas."
+      },
+      {
+        "q": "¿Se actualizará mi política si las leyes cambian?",
+        "a": "La política que genere es un documento estático en un momento específico. Si las leyes de privacidad cambian, necesitará regenerarla y actualizar la versión en su sitio. Actualizamos nuestra biblioteca de cláusulas continuamente y el asistente está siempre sincronizado con las mejores prácticas actuales."
+      },
+      {
         "q": "¿Qué pasa si no sé qué leyes me aplican?",
         "a": "Por defecto seleccionamos GDPR, CCPA/CPRA y CalOPPA para todos (lo que cubre el caso más estricto). Si no está seguro, dejar las opciones predeterminadas suele ser la opción más segura — cubrir la mayoría de las leyes nunca está de más, y la política seguirá siendo válida en jurisdicciones donde la ley no aplique."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre los niveles Gratis y Premium?",
+        "a": "Gratis le ofrece una política de privacidad completa en markdown, HTML y texto plano. Premium añade exportación PDF y DOCX, generación de código de banner de cookies, marca personalizada y páginas de política alojadas con historial de versiones."
+      },
+      {
+        "q": "¿Puedo usar esto para un proyecto de cliente?",
+        "a": "Absolutamente. Puede generar políticas para proyectos de clientes ilimitados en el nivel gratuito. Solo pedimos que no redistribuya el generador mismo ni revenda el resultado sin modificaciones como un servicio competidor."
       }
     ]
   },

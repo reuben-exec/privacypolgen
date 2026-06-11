@@ -27,3 +27,16 @@ pnpm-debug.log*
 .venv/
 __pycache__/
 *.pyc
+
+# Confidential: PowerShell scripts
+*.ps1
+
+# Confidential: Kimi config
+kimi_config.toml
+
+# Confidential: Internal notes & documentation
+*.md
+!README.md
+
+# Backup directories
+src/i18n.backup*/

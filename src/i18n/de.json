@@ -165,52 +165,80 @@
     "heading": "Fragen, beantwortet.",
     "items": [
       {
+        "q": "Was ist eine Datenschutzrichtlinie?",
+        "a": "Eine Datenschutzrichtlinie ist ein rechtliches Dokument, das erklärt, wie eine Website, eine SaaS-App, ein E-Commerce-Shop oder eine mobile Anwendung personenbezogene Daten ihrer Benutzer sammelt, verwendet, speichert und weitergibt. Es geht darum, welche Daten erfasst werden (Namen, E-Mail-Adressen, Zahlungsinformationen, Cookies usw.), warum sie erfasst werden, an wen sie weitergegeben werden und welche Rechte Benutzer an ihren Daten haben. Datenschutzrichtlinien sind durch Gesetze wie DSGVO (EU), CCPA (Kalifornien), CalOPPA und viele andere weltweit vorgeschrieben. Jede Website oder App, die personenbezogene Daten sammelt, muss über eine Datenschutzrichtlinie verfügen."
+      },
+      {
+        "q": "Warum ist eine Datenschutzerklärung wichtig?",
+        "a": "Eine Datenschutzrichtlinie ist aus drei Gründen wichtig: (1) Einhaltung gesetzlicher Vorschriften – Gesetze wie DSGVO, CCPA und CalOPPA erfordern eine; Die Nichteinhaltung kann zu Geldstrafen von bis zu 4 % des weltweiten Jahresumsatzes (DSGVO) oder 2.500 US-Dollar pro Verstoß (CCPA) führen. (2) Benutzervertrauen – 84 % der Verbraucher geben an, dass Transparenz über Datenpraktiken ihre Entscheidung, mit einem Unternehmen in Kontakt zu treten, beeinflusst. (3) Anforderungen Dritter – Dienste wie Google Analytics, Stripe und der Apple App Store erfordern eine Datenschutzrichtlinie. Ohne eine solche Lösung riskieren Sie rechtliche Sanktionen, einen Verlust des Kundenvertrauens und die Sperrung wichtiger Plattformen."
+      },
+      {
+        "q": "Benötige ich eine Datenschutzerklärung auf meiner Website?",
+        "a": "Ja, wenn Ihre Website personenbezogene Daten jeglicher Art erfasst – Kontaktformulareingaben, E-Mail-Newsletter-Anmeldungen, Analysecookies, Benutzerkonten oder Zahlungsinformationen – benötigen Sie eine Datenschutzrichtlinie. Es ist gesetzlich gemäß DSGVO (EU/EWR/Großbritannien), CCPA/CPRA (Kalifornien), CalOPPA (Kalifornien), PIPEDA (Kanada), LGPD (Brasilien) und vielen anderen vorgeschrieben. Auch wenn Sie nicht in diesen Gerichtsbarkeiten tätig sind, gelten die Gesetze, wenn Ihre Website für Benutzer dort zugänglich ist (was bei den meisten Websites der Fall ist). Die einzigen Websites, die keine Datenschutzrichtlinie benötigen, sind diejenigen, die keinerlei personenbezogene Daten erfassen – keine Kontaktformulare, keine Analysen, keine Cookies, keinen Newsletter."
+      },
+      {
+        "q": "Welche Gesetze erfordern eine Datenschutzerklärung?",
+        "a": "Zu den wichtigsten Gesetzen, die eine Datenschutzrichtlinie erfordern, gehören: DSGVO (EU/EWR/UK) – erfordert eine klare, zugängliche Datenschutzerklärung für jede Verarbeitung personenbezogener Daten; CCPA/CPRA (Kalifornien) – schreibt die Offenlegung der Datenerhebung, -weitergabe und der Verbraucherrechte vor; CalOPPA (Kalifornien) – verlangt von kommerziellen Websites die Veröffentlichung einer auffälligen Datenschutzrichtlinie; COPPA (USA) – wenn Sie Daten von Kindern unter 13 Jahren sammeln; PIPEDA (Kanada); LGPD (Brasilien); und DPDP Act (Indien). Da diese Gesetze überschneidende Anforderungen haben, ist eine gut formulierte Datenschutzrichtlinie, die den strengsten allgemeinen Fall abdeckt (z. B. Offenlegung auf DSGVO-Ebene), der sicherste Ansatz."
+      },
+      {
+        "q": "Wie schreibe ich eine Datenschutzrichtlinie?",
+        "a": "Das Verfassen einer Datenschutzrichtlinie umfasst drei Schritte. Überprüfen Sie zunächst, welche personenbezogenen Daten Ihr Unternehmen sammelt (Namen, E-Mails, Zahlungsinformationen, Cookies, Analysen usw.) und mit wem Sie diese teilen (Zahlungsabwickler, Analysetools, E-Mail-Dienste). Zweitens ermitteln Sie die Datenschutzgesetze, die für Sie gelten, basierend auf dem Standort Ihrer Benutzer (DSGVO für die EU, CCPA für Kalifornien usw.). Drittens: Klauselentwürfe zu folgenden Themen: Welche Daten Sie sammeln, wie Sie sie verwenden, Cookies und Tracking, Offenlegung durch Dritte, Datenaufbewahrung, Sicherheitspraktiken, Benutzerrechte und Kontaktinformationen. Der einfachste Weg ist die Verwendung von PrivacyPolGen – unser kostenloser Assistent stellt fünf Fragen zu Ihrem Unternehmen und erstellt in weniger als 60 Sekunden eine vollständige Datenschutzrichtlinie auf Anwaltsniveau."
+      },
+      {
+        "q": "Wie schreibe ich eine Datenschutzrichtlinie für eine App?",
+        "a": "Das Verfassen einer Datenschutzrichtlinie für eine mobile App folgt den gleichen Grundsätzen wie für eine Website, wobei zusätzliche Offenlegungen erforderlich sind: Gerätekennungen (IDFA, AAID), Berechtigungen (Kamera, Mikrofon, Standort, Kontakte), SDK-Daten (aus Anzeigen- oder Analyse-SDKs) und Push-Benachrichtigungen. Sowohl der Apple App Store als auch der Google Play Store schreiben eine Datenschutzrichtlinie für jede App vor, die Daten sammelt. Fügen Sie Abschnitte zu mobilspezifischen Datentypen und den von Ihrer App verwendeten SDKs von Drittanbietern hinzu. Mit PrivacyPolGen können Sie eine App-spezifische Richtlinie generieren, indem Sie im Assistenten „Mobile App“ als Unternehmenstyp auswählen."
+      },
+      {
+        "q": "Wie erstelle ich kostenlos eine Datenschutzrichtlinie?",
+        "a": "Mit PrivacyPolGen können Sie kostenlos eine vollständige, rechtskonforme Datenschutzerklärung erstellen. Beantworten Sie fünf kurze Fragen zu Ihrem Unternehmen, den von Ihnen erfassten Daten, den von Ihnen genutzten Drittanbieterdiensten und den für Sie geltenden Gesetzen. Unser Assistent generiert in weniger als 60 Sekunden eine vollständig angepasste Richtlinie – kein Konto, keine Kreditkarte, keine an einen Server gesendeten Daten. Sie können es als Markdown, HTML oder einfachen Text kopieren oder über eine öffentliche URL teilen. Der Kerngenerator ist und bleibt kostenlos."
+      },
+      {
         "q": "Ist dieser Datenschutz-Generator wirklich kostenlos?",
         "a": "Ja. Sie können die erstellte Datenschutzerklärung völlig kostenlos generieren, kopieren und hosten. Wir planen eine Premium-Stufe mit PDF/DOCX-Exporten, aber der Kern-Generator wird immer kostenlos bleiben."
-      },
-      {
-        "q": "Brauche ich ein Konto, um eine Datenschutzerklärung zu erstellen?",
-        "a": "Kein Konto erforderlich. Beantworten Sie einfach die Fragen in unserem Assistenten und wir erstellen Ihre Richtlinie. Ihre Antworten werden direkt in der teilbaren URL codiert — nichts wird an unsere Server gesendet."
-      },
-      {
-        "q": "Ist die erstellte Richtlinie rechtlich bindend?",
-        "a": "Die erstellte Richtlinie ist eine Ausgangsvorlage, die die häufigsten rechtlichen Anforderungen abdeckt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Jedes Unternehmen ist jedoch anders. Wir empfehlen dringend, die endgültige Richtlinie vor der Verwendung von einem Anwalt prüfen zu lassen, insbesondere in regulierten Branchen."
-      },
-      {
-        "q": "Wo werden meine Daten gespeichert?",
-        "a": "Nirgendwo. Wir verwenden clientseitige Komprimierung (DEFLATE + Base64 URL-sichere Kodierung), um Ihre Antworten im URL-Hash zu verpacken. Wenn Sie die URL teilen, decodiert der Browser des Empfängers die Richtlinie lokal. Wir betreiben kein Backend, protokollieren keine Assistentenantworten und haben keinen Zugriff auf Ihre Richtlinieninhalte."
-      },
-      {
-        "q": "Kann ich die Richtlinie nach der Erstellung bearbeiten?",
-        "a": "Ja. Bearbeiten Sie einfach das Markdown oder HTML in einem beliebigen Texteditor und hosten Sie die Datei auf Ihrer eigenen Website. Die Ausgabe gehört Ihnen und kann frei geändert werden. Die Premium-Stufe wird bearbeitbare In-App-Bearbeitung mit Versionsgeschichte bieten."
       },
       {
         "q": "Deckt dies GDPR, CCPA und andere Gesetze ab?",
         "a": "Ja. Wählen Sie in Schritt 4 des Assistenten die für Ihr Unternehmen geltenden Gesetze aus, und wir fügen die entsprechenden Klauseln hinzu (GDPR-Rechtsgrundlage, CCPA-Opt-out, COPPA-Elterneinwilligung, PIPEDA-Zugriffsrechte, LGPD-Rechtsgrundlage, PDPA-SG-Einwilligungsmechanismen)."
       },
       {
-        "q": "Was ist der Unterschied zwischen der kostenlosen und der Premium-Stufe?",
-        "a": "Die kostenlose Version bietet eine vollständige Datenschutzerklärung in Markdown, HTML und Klartext. Premium fügt PDF- und DOCX-Export, Cookie-Banner-Code-Generierung, individuelles Branding und gehostete Richtlinienseiten mit Versionsgeschichte hinzu."
+        "q": "Brauche ich ein Konto, um eine Datenschutzerklärung zu erstellen?",
+        "a": "Kein Konto erforderlich. Beantworten Sie einfach die Fragen in unserem Assistenten und wir erstellen Ihre Richtlinie. Ihre Antworten werden direkt in der teilbaren URL codiert — nichts wird an unsere Server gesendet."
       },
       {
         "q": "Wie füge ich die Richtlinie zu meiner Website hinzu?",
         "a": "Erstellen Sie eine Seite auf Ihrer Website (z. B. /datenschutz), fügen Sie die HTML-Ausgabe ein und verlinken Sie sie aus Ihrer Fußzeile. Wenn Sie eine gehostete Version möchten, teilen Sie die generierte /p?h=... URL — sie funktioniert als eigenständige öffentliche Seite."
       },
       {
-        "q": "Wird meine Richtlinie aktualisiert, wenn sich Gesetze ändern?",
-        "a": "Die von Ihnen erstellte Richtlinie ist ein statisches Dokument zu einem bestimmten Zeitpunkt. Wenn sich Datenschutzgesetze ändern, müssen Sie sie neu erstellen und die Version auf Ihrer Website aktualisieren. Wir aktualisieren unsere Klauselbibliothek kontinuierlich und der Assistent ist stets auf dem neuesten Stand."
-      },
-      {
-        "q": "Kann ich dies für ein Kundenprojekt verwenden?",
-        "a": "Absolut. Sie können in der kostenlosen Stufe Richtlinien für unbegrenzte Kundenprojekte erstellen. Wir bitten lediglich darum, dass Sie den Generator selbst nicht weiterverteilen oder die Ausgabe unverändert als konkurrierenden Dienst weiterverkaufen."
+        "q": "Kann ich die Richtlinie nach der Erstellung bearbeiten?",
+        "a": "Ja. Bearbeiten Sie einfach das Markdown oder HTML in einem beliebigen Texteditor und hosten Sie die Datei auf Ihrer eigenen Website. Die Ausgabe gehört Ihnen und kann frei geändert werden. Die Premium-Stufe wird bearbeitbare In-App-Bearbeitung mit Versionsgeschichte bieten."
       },
       {
         "q": "Enthält die Richtlinie einen Cookie-Abschnitt?",
         "a": "Ja — wenn Sie in Schritt 2 des Assistenten 'Cookies' auswählen, fügen wir einen vollständigen Cookie-Abschnitt mit Beschreibungen von essentiellen, Analyse-, Präferenz- und Marketing-Cookies hinzu. Wir listen auch auf, welche Drittanbieter-Cookies jeder von Ihnen integrierte Dienst setzen kann."
       },
       {
+        "q": "Wo werden meine Daten gespeichert?",
+        "a": "Nirgendwo. Wir verwenden clientseitige Komprimierung (DEFLATE + Base64 URL-sichere Kodierung), um Ihre Antworten im URL-Hash zu verpacken. Wenn Sie die URL teilen, decodiert der Browser des Empfängers die Richtlinie lokal. Wir betreiben kein Backend, protokollieren keine Assistentenantworten und haben keinen Zugriff auf Ihre Richtlinieninhalte."
+      },
+      {
+        "q": "Ist die erstellte Richtlinie rechtlich bindend?",
+        "a": "Die erstellte Richtlinie ist eine Ausgangsvorlage, die die häufigsten rechtlichen Anforderungen abdeckt (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, PDPA-SG). Jedes Unternehmen ist jedoch anders. Wir empfehlen dringend, die endgültige Richtlinie vor der Verwendung von einem Anwalt prüfen zu lassen, insbesondere in regulierten Branchen."
+      },
+      {
+        "q": "Wird meine Richtlinie aktualisiert, wenn sich Gesetze ändern?",
+        "a": "Die von Ihnen erstellte Richtlinie ist ein statisches Dokument zu einem bestimmten Zeitpunkt. Wenn sich Datenschutzgesetze ändern, müssen Sie sie neu erstellen und die Version auf Ihrer Website aktualisieren. Wir aktualisieren unsere Klauselbibliothek kontinuierlich und der Assistent ist stets auf dem neuesten Stand."
+      },
+      {
         "q": "Was, wenn ich nicht weiß, welche Gesetze für mich gelten?",
         "a": "Wir wählen standardmäßig GDPR, CCPA/CPRA und CalOPPA für alle aus (was den strengsten Fall abdeckt). Wenn Sie unsicher sind, ist es in der Regel am sichersten, die Standardeinstellungen zu belassen — die meisten Gesetze abzudecken schadet nie, und die Richtlinie bleibt in Jurisdiktionen, in denen das Gesetz nicht gilt, gültig."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen der kostenlosen und der Premium-Stufe?",
+        "a": "Die kostenlose Version bietet eine vollständige Datenschutzerklärung in Markdown, HTML und Klartext. Premium fügt PDF- und DOCX-Export, Cookie-Banner-Code-Generierung, individuelles Branding und gehostete Richtlinienseiten mit Versionsgeschichte hinzu."
+      },
+      {
+        "q": "Kann ich dies für ein Kundenprojekt verwenden?",
+        "a": "Absolut. Sie können in der kostenlosen Stufe Richtlinien für unbegrenzte Kundenprojekte erstellen. Wir bitten lediglich darum, dass Sie den Generator selbst nicht weiterverteilen oder die Ausgabe unverändert als konkurrierenden Dienst weiterverkaufen."
       }
     ]
   },

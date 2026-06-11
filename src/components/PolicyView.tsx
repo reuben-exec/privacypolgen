@@ -70,7 +70,7 @@ export function PolicyView({ policy }: { policy: GeneratedPolicy }) {
           <iframe
             title={t('policyView.title')}
             srcDoc={prettyHtml}
-            className="w-full h-[500px] bg-bg"
+            className="w-full max-h-[70vh] bg-bg"
           />
         ) : (
           <pre className="p-4 text-xs leading-relaxed font-mono text-fg-muted overflow-auto max-h-[500px] whitespace-pre-wrap break-words">
