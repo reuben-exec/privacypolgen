@@ -31,6 +31,7 @@
     "ariaClose": "Close menu",
     "ariaNav": "Navigation",
     "blog": "Blog",
+    "review": "Review",
     "documentsLabel": "Documents",
     "privacy": "Privacy Policy",
     "terms": "Terms",
@@ -588,6 +589,24 @@
       "subtext": "It takes less than a minute. No account required.",
       "button": "Generate your privacy policy →"
     }
+  },
+  "reviewPage": {
+    "breadcrumb": "Review",
+    "heading": "Leave a Review",
+    "subtext": "Your feedback helps me make PrivacyPolGen better for everyone. Tell me what you love, what could improve, or anything in between.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "countryLabel": "Country",
+    "countryPlaceholder": "Select your country",
+    "ratingLabel": "Rating",
+    "reviewLabel": "Your Review",
+    "reviewPlaceholder": "Share your experience with PrivacyPolGen — what did you like, what could be better, what features would you love to see?",
+    "submit": "Submit Review",
+    "timezoneNotice": "Your review is sent directly to my inbox. I'm in the Indian Standard Time (IST) zone, so it may take a day or two for me to get back to you. I read every single review personally.",
+    "successTitle": "Thank you for your review!",
+    "successBody": "Your feedback has been sent to my inbox. I appreciate you taking the time to share your thoughts.",
+    "successLink": "Write another review",
+    "errorMessage": "Something went wrong. Please try again or email me directly at benatwork4747@gmail.com."
   },
   "contactPage": {
     "breadcrumb": "Contact",
