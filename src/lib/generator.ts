@@ -7,6 +7,31 @@ import businessTypesData from '@/data/businessTypes.json';
 import clausesData from '@/data/clauses.json';
 import pako from 'pako';
 
+// ---------- Jurisdiction code → display name ----------
+
+const JURISDICTION_NAMES: Record<string, string> = {
+  us: 'the United States',
+  ca: 'Canada',
+  gb: 'the United Kingdom',
+  de: 'Germany',
+  fr: 'France',
+  es: 'Spain',
+  it: 'Italy',
+  nl: 'the Netherlands',
+  se: 'Sweden',
+  no: 'Norway',
+  dk: 'Denmark',
+  ie: 'Ireland',
+  au: 'Australia',
+  nz: 'New Zealand',
+  br: 'Brazil',
+  sg: 'Singapore',
+  jp: 'Japan',
+  in: 'India',
+  mx: 'Mexico',
+  global: 'your country',
+};
+
 // ---------- Types ----------
 
 export type BusinessTypeId = string;
@@ -32,6 +57,21 @@ export interface PolicyInput {
 
   // Cosmetic
   tone: 'plain' | 'professional';
+
+  // Optional — used by T&C and Cookie generators via evaluateCondition
+  features?: string[];
+  cookieTypes?: string[];
+}
+
+/** Localization overrides for generated documents. All fields optional — English defaults used when omitted. */
+export interface GeneratorOverrides {
+  locale?: string;
+  title?: string;
+  lastUpdatedLabel?: string;
+  disclaimer?: string;
+  preamble?: string;
+  clauseTitles?: Record<string, string>;
+  dataTypeLabels?: Record<string, string>;
 }
 
 export interface GeneratedPolicy {
@@ -112,7 +152,7 @@ const serviceById = (id: string) =>
 const businessTypeById = (id: string) =>
   (businessTypesData as BusinessType[]).find((b) => b.id === id);
 
-function fillTemplate(template: string, vars: Record<string, string>): string {
+export function fillTemplate(template: string, vars: Record<string, string>): string {
   return template.replace(/\{\{(\w+)\}\}/g, (_, k) => vars[k] ?? '');
 }
 
@@ -123,28 +163,28 @@ function listOr(items: string[]): string {
   return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
 }
 
-function formatDate(iso: string): string {
+function formatDate(iso: string, locale?: string): string {
   const d = new Date(iso);
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  return d.toLocaleDateString(locale || 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 // Known law IDs for backward-compat string matching
 const KNOWN_LAW_IDS = ['gdpr', 'ccpa', 'cpra', 'coppa', 'caloppa', 'pipeda', 'lgpd', 'dpdp'];
 
-function evaluateCondition(cond: string | { [key: string]: unknown }, input: PolicyInput): boolean {
+export function evaluateCondition(cond: string | { [key: string]: unknown }, input: PolicyInput): boolean {
   // String conditions
   if (typeof cond === 'string') {
     if (cond === 'always') return true;
     // Backward compat: check as law ID first
     if (KNOWN_LAW_IDS.includes(cond)) {
-      return input.lawIds.includes(cond);
+      return (input.lawIds ?? []).includes(cond);
     }
     // Fix 'data-collected' bug: true if any data types are collected
     if (cond === 'data-collected') {
-      return input.dataCollected.length > 0;
+      return (input.dataCollected ?? []).length > 0;
     }
     // Backward compat: treat as data type ID
-    return input.dataCollected.includes(cond);
+    return (input.dataCollected ?? []).includes(cond);
   }
 
   // Object condition — check which key is present
@@ -152,11 +192,13 @@ function evaluateCondition(cond: string | { [key: string]: unknown }, input: Pol
     const c = cond as { [key: string]: unknown };
 
     if ('any' in c) {
-      const conditions = c['any'] as (string | { [key: string]: unknown })[];
+      const raw = c['any'];
+      const conditions = Array.isArray(raw) ? raw as (string | { [key: string]: unknown })[] : [];
       return conditions.some((sub) => evaluateCondition(sub, input));
     }
     if ('all' in c) {
-      const conditions = c['all'] as (string | { [key: string]: unknown })[];
+      const raw = c['all'];
+      const conditions = Array.isArray(raw) ? raw as (string | { [key: string]: unknown })[] : [];
       return conditions.every((sub) => evaluateCondition(sub, input));
     }
     if ('not' in c) {
@@ -164,15 +206,15 @@ function evaluateCondition(cond: string | { [key: string]: unknown }, input: Pol
     }
     if ('law' in c) {
       const ids = Array.isArray(c['law']) ? c['law'] as string[] : [c['law'] as string];
-      return ids.some((id) => input.lawIds.includes(id));
+      return ids.some((id) => (input.lawIds ?? []).includes(id));
     }
     if ('dataType' in c) {
       const ids = Array.isArray(c['dataType']) ? c['dataType'] as string[] : [c['dataType'] as string];
-      return ids.some((id) => input.dataCollected.includes(id));
+      return ids.some((id) => (input.dataCollected ?? []).includes(id));
     }
     if ('service' in c) {
       const ids = Array.isArray(c['service']) ? c['service'] as string[] : [c['service'] as string];
-      return ids.some((id) => input.serviceIds.includes(id));
+      return ids.some((id) => (input.serviceIds ?? []).includes(id));
     }
     if ('businessType' in c) {
       const types = Array.isArray(c['businessType']) ? c['businessType'] as string[] : [c['businessType'] as string];
@@ -181,6 +223,14 @@ function evaluateCondition(cond: string | { [key: string]: unknown }, input: Pol
     if ('jurisdiction' in c) {
       const jurisdictions = Array.isArray(c['jurisdiction']) ? c['jurisdiction'] as string[] : [c['jurisdiction'] as string];
       return jurisdictions.some((j) => j.toLowerCase() === input.jurisdiction.toLowerCase());
+    }
+    if ('feature' in c) {
+      const ids = Array.isArray(c['feature']) ? c['feature'] as string[] : [c['feature'] as string];
+      return ids.some((id) => input.features?.includes(id) ?? false);
+    }
+    if ('cookieType' in c) {
+      const ids = Array.isArray(c['cookieType']) ? c['cookieType'] as string[] : [c['cookieType'] as string];
+      return ids.some((id) => input.cookieTypes?.includes(id) ?? false);
     }
   }
 
@@ -196,7 +246,7 @@ function shouldInclude(section: ClauseSection, input: PolicyInput): boolean {
 function buildLegalBasisText(input: PolicyInput): string {
   // Use the law-specific legal basis text if available.
   // Check selected laws in priority order (GDPR first, then LGPD, then DPDP, then others).
-  for (const lid of input.lawIds) {
+  for (const lid of input.lawIds ?? []) {
     const law = lawById(lid);
     if (law && law.legalBasisText) {
       return law.legalBasisText;
@@ -225,13 +275,13 @@ function buildCoppaText(input: PolicyInput): string {
       `- Obtain verifiable parental consent before collecting personal information from children under 13`,
       `- Allow parents to review, update, or delete their child's personal information`,
       ``,
-      `If you are a parent or guardian and you believe your child has provided us with Personal Information, please contact us at ${input.contactEmail}. If we become aware that we have collected Personal Information from children under 13 without verification of parental consent, we will take steps to remove that information from our servers.`,
+      `If you are a parent or guardian and you believe your child has provided us with Personal Information, please contact us at ${input.contactEmail || 'our contact email'}. If we become aware that we have collected Personal Information from children under 13 without verification of parental consent, we will take steps to remove that information from our servers.`,
     ].join('\n');
   }
   return [
     `Our Service is not intended for use by children under the age of 13. We do not knowingly collect personal information from anyone under 13 years of age, in accordance with the Children's Online Privacy Protection Act (COPPA).`,
     ``,
-    `If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us at ${input.contactEmail} so that we can take steps to remove that information.`,
+    `If you are a parent or guardian and you are aware that your child has provided us with Personal Information, please contact us at ${input.contactEmail || 'our contact email'} so that we can take steps to remove that information.`,
   ].join('\n');
 }
 
@@ -252,7 +302,7 @@ function buildDpoText(input: PolicyInput): string {
   // Use law-specific DPO text if available from a selected law.
   let lawSpecificText = '';
   if (input.hasDpo) {
-    for (const lid of input.lawIds) {
+    for (const lid of input.lawIds ?? []) {
       const law = lawById(lid);
       if (law && law.dpoText) {
         lawSpecificText = law.dpoText;
@@ -267,21 +317,22 @@ function buildDpoText(input: PolicyInput): string {
       : `For GDPR-related inquiries, you may also contact our Data Protection Officer at ${input.dpoEmail}.`;
     return emailReplaced;
   }
-  return `For any privacy-related questions, please contact us at ${input.contactEmail}.`;
+  return `For any privacy-related questions, please contact us at ${input.contactEmail || 'our contact email'}.`;
 }
 
-function buildPersonalInfoList(input: PolicyInput): string {
-  const items = input.dataCollected
-    .filter((d) => dataTypeLabels[d] && d !== 'analytics' && d !== 'cookies' && d !== 'usage-data' && d !== 'device-info' && d !== 'ip-addresses' && d !== 'ads')
-    .map((d) => `- ${dataTypeLabels[d]}`);
+function buildPersonalInfoList(input: PolicyInput, labels?: Record<string, string>): string {
+  const dtLabels = labels || dataTypeLabels;
+  const items = (input.dataCollected ?? [])
+    .filter((d) => dtLabels[d] && d !== 'analytics' && d !== 'cookies' && d !== 'usage-data' && d !== 'device-info' && d !== 'ip-addresses' && d !== 'ads')
+    .map((d) => `- ${dtLabels[d]}`);
   if (items.length === 0) {
     return '- We may collect information you voluntarily provide when contacting us or filling out a form on the Service.';
   }
   return items.join('\n');
 }
 
-function buildThirdPartyServicesBlock(input: PolicyInput): string {
-  const services = input.serviceIds
+function buildThirdPartyServicesBlock(input: PolicyInput, vars: Record<string, string>): string {
+  const services = (input.serviceIds ?? [])
     .map(serviceById)
     .filter((s): s is Service => Boolean(s));
   if (services.length === 0) {
@@ -302,7 +353,7 @@ function buildThirdPartyServicesBlock(input: PolicyInput): string {
     for (const s of list) {
       sections.push(`- **${s.name}** — ${s.description} See [${s.name}'s privacy policy](${s.privacyUrl}).`);
       if (s.policyText) {
-        sections.push(`\n  ${s.policyText}\n`);
+        sections.push(`\n  ${fillTemplate(s.policyText, vars)}\n`);
       }
     }
   }
@@ -311,7 +362,7 @@ function buildThirdPartyServicesBlock(input: PolicyInput): string {
 
 function buildRightsList(input: PolicyInput): string {
   const rights = new Set<string>();
-  for (const lid of input.lawIds) {
+  for (const lid of input.lawIds ?? []) {
     const law = lawById(lid);
     if (!law) continue;
     for (const r of law.rights) rights.add(r);
@@ -349,6 +400,7 @@ function inlineMarkdownToHtml(line: string): string {
 }
 
 export function markdownToHtml(md: string): string {
+  if (!md) return '';
   const lines = md.split('\n');
   const out: string[] = [];
   let inList = false;
@@ -406,7 +458,7 @@ export function markdownToHtml(md: string): string {
   return out.join('\n');
 }
 
-function markdownToPlainText(md: string): string {
+export function markdownToPlainText(md: string): string {
   return md
     .replace(/^#{1,6}\s+/gm, '')
     .replace(/\*\*([^*]+)\*\*/g, '$1')
@@ -419,43 +471,71 @@ function markdownToPlainText(md: string): string {
     .trim();
 }
 
+// ---------- Analytics text ----------
+
+function buildAnalyticsText(input: PolicyInput): string {
+  const analyticsServices = (servicesData as Service[])
+    .filter(s => s.category === 'Analytics' && (input.serviceIds ?? []).includes(s.id));
+
+  if (analyticsServices.length === 0) {
+    return 'We use analytics services to help us understand how users interact with our Service.';
+  }
+
+  if (analyticsServices.length === 1) {
+    return `Specifically, we use ${analyticsServices[0]!.name}.`;
+  }
+
+  const names = analyticsServices.map(s => s.name);
+  return `Specifically, we use ${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}.`;
+}
+
 // ---------- Generator ----------
 
-export function generatePolicy(input: PolicyInput): GeneratedPolicy {
+export function generatePolicy(input: PolicyInput, overrides?: GeneratorOverrides): GeneratedPolicy {
   const generatedAt = new Date().toISOString();
   const bt = businessTypeById(input.businessType);
+  const dtLabels = overrides?.dataTypeLabels || dataTypeLabels;
   const vars: Record<string, string> = {
     businessName: input.businessName || 'Our Company',
     websiteUrl: input.websiteUrl || 'our website',
     contactEmail: input.contactEmail || '[contact email]',
-    jurisdiction: input.jurisdiction || 'the United States',
-    personalInfoList: buildPersonalInfoList(input),
-    thirdPartyServices: buildThirdPartyServicesBlock(input),
+    jurisdiction: JURISDICTION_NAMES[input.jurisdiction?.toLowerCase()] || input.jurisdiction || 'the United States',
+    personalInfoList: buildPersonalInfoList(input, dtLabels),
     rightsList: buildRightsList(input),
     legalBasisText: buildLegalBasisText(input),
     coppaText: buildCoppaText(input),
     ccpaText: buildCcpaText(input),
     dpoText: buildDpoText(input),
+    analyticsText: buildAnalyticsText(input),
   };
+  vars.thirdPartyServices = buildThirdPartyServicesBlock(input, vars);
 
   const clauses = (clausesData as Clauses).sections;
   const included = clauses.filter((s) => shouldInclude(s, input));
 
+  const title = overrides?.title ?? 'Privacy Policy';
+  const lastUpdatedLabel = overrides?.lastUpdatedLabel ?? '**Last updated:**';
+  const disclaimer = overrides?.disclaimer ?? '> ⚠️ **NOT LEGAL ADVICE.** This policy is a template generated for informational purposes only and does not constitute legal advice. Consult a qualified attorney licensed in your jurisdiction to ensure compliance with all applicable laws and regulations.';
+
   const parts: string[] = [];
-  parts.push(`# Privacy Policy`);
+  parts.push(`# ${title}`);
   parts.push('');
-  parts.push(`**Last updated:** ${formatDate(generatedAt)}`);
+  parts.push(`${lastUpdatedLabel} ${formatDate(generatedAt, overrides?.locale)}`);
   parts.push('');
-  parts.push('> ⚠️ **NOT LEGAL ADVICE.** This policy is a template generated for informational purposes only and does not constitute legal advice. Consult a qualified attorney licensed in your jurisdiction to ensure compliance with all applicable laws and regulations.');
+  parts.push(disclaimer);
   parts.push('');
 
   if (bt) {
-    parts.push(`*This policy applies to ${bt.name.toLowerCase()} operated by ${vars.businessName}.*`);
+    const preambleTmpl = overrides?.preamble ?? '*This policy applies to ' + bt.name.toLowerCase() + ' operated by ' + vars.businessName + '.*';
+    const preamble = preambleTmpl
+      .replace('{{businessType}}', bt.name.toLowerCase())
+      .replace('{{businessName}}', vars.businessName);
+    parts.push(preamble);
     parts.push('');
   }
 
   for (const s of included) {
-    parts.push(`## ${s.title}`);
+    parts.push(`## ${overrides?.clauseTitles?.[s.id] ?? s.title}`);
     parts.push('');
     parts.push(fillTemplate(s.body, vars));
     parts.push('');

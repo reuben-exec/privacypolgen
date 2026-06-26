@@ -59,6 +59,13 @@ src/
 
 Translations are stored as JSON files in `src/i18n/`. Each locale file mirrors the structure of `en.json`. To add a new locale, create a new file and run the translation scripts.
 
+## Author
+
+**Reuben Richard Lancer**
+- GitHub: [github.com/reuben-exec](https://github.com/reuben-exec)
+- X/Twitter: [@classic_bruv04](https://x.com/classic_bruv04)
+- Contact: benatwork4747@gmail.com
+
 ## License
 
-Private — All rights reserved.
+MIT — see [LICENSE](LICENSE) for details.

@@ -1,0 +1,35 @@
+---
+// src/pages/generate/terms.astro
+import Layout from '@/layouts/Layout.astro';
+import TermsWizard from '@/components/TermsWizard';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: t(tx, 'home'), url: '/' },
+  { name: t(tx, 'generate'), url: '/generate' },
+  { name: t(tx, 'termsGeneratorPage.breadcrumb'), url: '/generate/terms' },
+];
+---
+<Layout
+  title={t(tx, 'termsGeneratorPage.title')}
+  description={t(tx, 'termsGeneratorPage.description')}
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
+>
+  <BreadcrumbList items={breadcrumbs} />
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <p class="text-sm text-fg-muted">{t(tx, 'termsGeneratorPage.breadcrumb')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'termsGeneratorPage.heading')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'termsGeneratorPage.subtext')}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <TermsWizard client:load />
+  </section>
+</Layout>

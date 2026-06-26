@@ -1,19 +1,20 @@
 // src/lib/I18nProvider.tsx
-// React context for client-side translations of interactive components
-// (Wizard, PolicyReader, PolicyView, CopyButton). Static HTML is translated
-// via the [data-i18n] attribute scan in Layout.astro; React components
-// hydrate after DOMContentLoaded, so they need their own provider.
-import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react';
-import { getCurrentLocale, loadTranslations, t as lookup } from '@/lib/i18n';
+// React context for client-side translations — English only.
+// Google Translate Website Widget handles client-side translation for non-English users.
+// All locale detection, dynamic loading, and event listeners removed.
+import { createContext, useContext, type ReactNode } from 'react';
+import { t as tFn, loadTranslations } from '@/lib/i18n';
 
 interface I18nValue {
   /** Translate a dot-notation key. Returns the key itself if not found. */
   t: (key: string, params?: Record<string, string>) => string;
   /** Look up an array value (e.g. step titles, pluralized labels). */
   ta: (key: string) => string[];
-  /** Current locale code (e.g. 'en', 'de', 'es'). */
+  /** Always 'en' — Google Translate handles client-side translation. */
   locale: string;
 }
+
+const enTranslations = loadTranslations();
 
 const fallback: I18nValue = {
   t: (key) => key,
@@ -28,75 +29,34 @@ export function useI18n(): I18nValue {
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<string>('en');
-  const [translations, setTranslations] = useState<Record<string, unknown> | null>(null);
-
-  useEffect(() => {
-    // Initial load
-    const detected = getCurrentLocale();
-    setLocale(detected);
-    loadTranslations(detected)
-      .then((data) => {
-        if (data && Object.keys(data).length > 0) {
-          setTranslations(data);
-        }
-      })
-      .catch(() => {});
-
-    // Listen for event-driven locale switches (no page reload)
-    function handleLocaleChange(e: CustomEvent) {
-      const newLocale: string = e.detail.locale;
-      setLocale(newLocale);
-      loadTranslations(newLocale)
-        .then((data) => {
-          if (data && Object.keys(data).length > 0) {
-            setTranslations(data);
-          } else {
-            setTranslations(null);
-          }
-        })
-        .catch(() => {});
+  // t function with parameter interpolation
+  const t = (key: string, params?: Record<string, string>): string => {
+    let str = tFn(enTranslations, key);
+    if (params) {
+      for (const [k, v] of Object.entries(params)) {
+        str = str.replaceAll(`{{${k}}}`, v);
+      }
     }
+    return str;
+  };
 
-    window.addEventListener('localechange', handleLocaleChange as EventListener);
-    return () => window.removeEventListener('localechange', handleLocaleChange as EventListener);
-  }, []);
-
-  const t = useCallback(
-    (key: string, params?: Record<string, string>): string => {
-      if (!translations) return key;
-      let str = lookup(translations, key);
-      if (params) {
-        for (const [k, v] of Object.entries(params)) {
-          str = str.replaceAll(`{{${k}}}`, v);
-        }
+  const ta = (key: string): string[] => {
+    const keys = key.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let val: any = enTranslations;
+    for (const k of keys) {
+      if (val && typeof val === 'object' && k in val) {
+        val = val[k];
+      } else {
+        return [];
       }
-      return str;
-    },
-    [translations],
-  );
-
-  const ta = useCallback(
-    (key: string): string[] => {
-      if (!translations) return [];
-      const keys = key.split('.');
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let val: any = translations;
-      for (const k of keys) {
-        if (val && typeof val === 'object' && k in val) {
-          val = val[k];
-        } else {
-          return [];
-        }
-      }
-      return Array.isArray(val) ? (val as string[]) : [];
-    },
-    [translations],
-  );
+    }
+    return Array.isArray(val) ? (val as string[]) : [];
+  };
 
   return (
-    <I18nContext value={{ t, ta, locale }}>
+    <I18nContext.Provider value={{ t, ta, locale: 'en' }}>
       {children}
-    </I18nContext>
+    </I18nContext.Provider>
   );
 }

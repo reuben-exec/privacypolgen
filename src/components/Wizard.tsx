@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { I18nProvider, useI18n } from '@/lib/I18nProvider'
 import { generatePolicy, encodePolicyToHash, decodeHashToPolicy } from '@/lib/generator'
+import { buildGeneratorOverrides } from '@/lib/buildOverrides'
 import PolicyPreviewContent from '@/components/PolicyPreviewContent'
+import ToggleSwitch from '@/components/ToggleSwitch'
 type LawId = string
 
 /* ── Data types: each option knows which business types it's relevant to ── */
@@ -21,6 +23,16 @@ const DATA_TYPES = [
   { id: 'cookies', relevantFor: ['personal-blog', 'saas', 'ecommerce', 'portfolio', 'agency'] },
   { id: 'ads', relevantFor: ['ecommerce', 'agency'] },
 ]
+
+/* ── Curated data-type defaults per business type (matches businessTypes.json) ── */
+const DEFAULT_DATA_TYPES: Record<BusinessType, string[]> = {
+  'personal-blog': ['emails', 'analytics', 'cookies'],
+  saas:            ['emails', 'names', 'user-accounts', 'payments', 'usage-data', 'analytics', 'cookies'],
+  ecommerce:       ['emails', 'names', 'addresses', 'payments', 'analytics', 'cookies', 'ads'],
+  'mobile-app':    ['emails', 'user-accounts', 'usage-data', 'analytics', 'device-info'],
+  portfolio:       ['emails', 'analytics', 'cookies'],
+  agency:          ['emails', 'names', 'companies', 'analytics', 'cookies', 'ads'],
+}
 
 type DataTypeId = typeof DATA_TYPES[number]['id']
 type BusinessType = 'personal-blog' | 'saas' | 'ecommerce' | 'mobile-app' | 'portfolio' | 'agency'
@@ -84,6 +96,15 @@ const SERVICE_DEFAULTS_SET: Record<BusinessType, Set<string>> = Object.fromEntri
   Object.entries(SERVICE_DEFAULTS).map(([k, v]) => [k, new Set(v)])
 ) as Record<BusinessType, Set<string>>
 
+/* ── Shallow array-equality check (read-only, no mutation) ── */
+function arraysEqual(a: readonly unknown[], b: readonly unknown[]): boolean {
+  if (a.length !== b.length) return false
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false
+  }
+  return true
+}
+
 export type WizardAnswers = {
   businessName: string
   websiteUrl: string
@@ -143,7 +164,7 @@ const BADGE_CONFIG: Record<string, { label: string; cls: string }> = {
 }
 
 function WizardContent() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const [step, setStep] = useState(1)
   const [answers, setAnswers] = useState<WizardAnswers>(emptyAnswers)
   const [generatedUrl, setGeneratedUrl] = useState('')
@@ -200,9 +221,18 @@ function WizardContent() {
     'UK': ['gdpr'],
   }
 
+  // Pre-compute the set of all laws that CAN be auto-suggested by any jurisdiction
+  const AUTO_SUGGESTABLE_LAWS = useMemo(() => {
+    const s = new Set<string>(['gdpr']);
+    for (const laws of Object.values(JURISDICTION_LAWS)) {
+      for (const law of laws) s.add(law);
+    }
+    return s;
+  }, []);
+
   useEffect(() => {
     if (!answers.jurisdiction) return
-    const j = answers.jurisdiction
+    const j = answers.jurisdiction.toUpperCase()
     const suggestedLaws: string[] = []
 
     if (EU_COUNTRIES.includes(j)) {
@@ -214,23 +244,32 @@ function WizardContent() {
       }
     }
 
-    if (suggestedLaws.length === 0) return
-
     setAnswers(prev => {
       const current = new Set(prev.laws)
       let changed = false
+
+      // Remove stale auto-suggested laws that no longer apply
+      for (const law of prev.laws) {
+        if (AUTO_SUGGESTABLE_LAWS.has(law) && !suggestedLaws.includes(law)) {
+          current.delete(law)
+          changed = true
+        }
+      }
+
+      // Add new suggested laws
       for (const law of suggestedLaws) {
         if (!current.has(law)) {
           current.add(law)
           changed = true
         }
       }
+
       if (changed) {
         return { ...prev, laws: [...current] }
       }
       return prev
     })
-  }, [answers.jurisdiction])
+  }, [answers.jurisdiction, AUTO_SUGGESTABLE_LAWS])
 
   const dataTypesById = useMemo(() => {
     const map = new Map<string, typeof DATA_TYPES[number]>()
@@ -251,16 +290,32 @@ function WizardContent() {
           next.services = [...SERVICE_DEFAULTS_SET[type]]
         }
         if (type) {
-          const relevant = DATA_TYPES
-            .filter(dt => dt.relevantFor.includes(type))
-            .map(dt => dt.id)
-          next.dataTypes = relevant
+          next.dataTypes = [...DEFAULT_DATA_TYPES[type]]
         }
       }
 
       return next
     })
   }, [])
+
+  /* ── Business type change with confirmation ── */
+  const handleBusinessTypeChange = useCallback((newType: BusinessType) => {
+    if (answers.businessType === '' || answers.businessType === newType) {
+      update('businessType', newType)
+      return
+    }
+    const oldType = answers.businessType as BusinessType
+    const hasCustomTypes = !arraysEqual(answers.dataTypes, DEFAULT_DATA_TYPES[oldType])
+    const hasCustomServices = !arraysEqual(answers.services, SERVICE_DEFAULTS[oldType] ?? [])
+    const hasCustomLaws = !arraysEqual(answers.laws, LAW_DEFAULTS[oldType] ?? [])
+
+    if (hasCustomTypes || hasCustomServices || hasCustomLaws) {
+      if (!window.confirm('Changing business type will reset your data type, service, and law selections to defaults for the new business type. Continue?')) {
+        return
+      }
+    }
+    update('businessType', newType)
+  }, [answers, update])
 
   const toggleInArray = useCallback((key: 'dataTypes' | 'services' | 'laws', value: string) => {
     setAnswers(prev => {
@@ -277,6 +332,7 @@ function WizardContent() {
   }, [answers.businessName, answers.websiteUrl, answers.contactEmail])
 
   const generate = useCallback(() => {
+    const overrides = buildGeneratorOverrides(t, locale);
     const policy = generatePolicy({
       businessName: answers.businessName.trim() || 'Our Company',
       websiteUrl: answers.websiteUrl.trim(),
@@ -289,7 +345,7 @@ function WizardContent() {
       dpoEmail: answers.hasDpo && answers.dpoEmail.trim() ? answers.dpoEmail.trim() : undefined,
       businessType: answers.businessType || '',
       tone: 'professional',
-    })
+    }, overrides)
 
     const hash = encodePolicyToHash({
       businessName: answers.businessName.trim() || 'Our Company',
@@ -307,7 +363,7 @@ function WizardContent() {
     const url = `/p?h=${hash}`
     setGeneratedUrl(url)
     setStep(6)
-  }, [answers])
+  }, [answers, t, locale])
 
   const showResult = step === 6 && generatedUrl
 
@@ -468,7 +524,7 @@ function WizardContent() {
   }, [activeBadges])
 
   /* ── Intl.ListFormat for natural-language data-type lists ── */
-  const listFormatter = useMemo(() => new Intl.ListFormat('en', { style: 'long', type: 'conjunction' }), [])
+  const listFormatter = useMemo(() => new Intl.ListFormat(locale, { style: 'long', type: 'conjunction' }), [locale])
 
   /* ── Section progress: 10 compliance sections ── */
   const sectionProgress = useMemo<{ id: string; label: string; state: 'complete' | 'pending' | 'locked' }[]>(() => {
@@ -520,7 +576,7 @@ function WizardContent() {
                 </div>
                 <div>
                   <label htmlFor="wizard-business-type" className="mb-1.5 block text-sm font-medium text-fg">{t('wizard.step1.labelBusinessType')}</label>
-                  <select id="wizard-business-type" value={answers.businessType} onChange={e => update('businessType', e.target.value as BusinessType)}
+                  <select id="wizard-business-type" value={answers.businessType} onChange={e => handleBusinessTypeChange(e.target.value as BusinessType)}
                     className="w-full rounded-lg border border-border bg-bg px-3.5 py-2.5 text-sm text-fg focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20">
                     <option value="">—</option>
                     {(['personal-blog', 'saas', 'ecommerce', 'mobile-app', 'portfolio', 'agency'] as BusinessType[]).map(type => (
@@ -716,11 +772,12 @@ function WizardContent() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <label className="relative inline-flex cursor-pointer items-center gap-3">
-                    <input type="checkbox" className="peer sr-only" checked={answers.hasDpo} onChange={e => update('hasDpo', e.target.checked)} />
-                    <div className="h-5 w-9 rounded-full bg-fg-muted/25 transition-colors after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-all peer-checked:bg-accent peer-checked:after:translate-x-full"></div>
-                    <span className="text-sm text-fg">{t('wizard.step5.labelDpo')}</span>
-                  </label>
+                  <ToggleSwitch
+                    checked={answers.hasDpo}
+                    onChange={v => update('hasDpo', v)}
+                    label={t('wizard.step5.labelDpo') as string}
+                    id="wizard-dpo"
+                  />
                 </div>
                 {answers.hasDpo && (
                   <div>

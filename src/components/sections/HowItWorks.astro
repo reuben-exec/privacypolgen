@@ -1,26 +1,23 @@
 ---
 // src/components/sections/HowItWorks.astro
-const steps = [
-  { n: '01', title: 'Tell us about your business', body: 'Tell us your business name, website URL, business type, and primary jurisdiction. We pre-fill smart defaults for the most common cases.' },
-  { n: '02', title: 'Pick what you collect', body: 'Check off the kinds of data your business collects — names, email addresses, payment info, usage data, cookies, and more. We\'ve pre-selected common items based on your industry.' },
-  { n: '03', title: 'List your services', body: 'Select from 25+ third-party services like Stripe, Google Analytics, Mailchimp, Plausible, and SendGrid. Each selection adds the appropriate contractual disclosures.' },
-  { n: '04', title: 'Choose applicable laws', body: 'Choose from GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, and PDPA-SG. We default to the strictest common case so you\'re covered everywhere.' },
-  { n: '05', title: 'Get your policy', body: 'Get your complete privacy policy as Markdown, HTML, or plain text. Share it via a public URL that stays with you, or copy-paste directly into your website footer.' },
-];
+import { getTranslations, t } from '@/lib/i18n-server';
+interface Props { locale?: string }
+const { locale = 'en' } = Astro.props;
+const tx = await getTranslations(locale);
 
 const stepKeys = ['business', 'data', 'services', 'laws', 'policy'];
 ---
 <section class="border-t border-border">
   <div class="mx-auto max-w-6xl px-6 py-20">
     <div class="text-center mb-14">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="howItWorks.heading">Five steps. About a minute.</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'howItWorks.heading')}</h2>
     </div>
     <ol class="grid gap-4 md:grid-cols-5" data-stagger-group>
-      {steps.map((s, i) => (
+      {stepKeys.map((key, i) => (
         <li class="stagger-item relative rounded-card border border-border bg-bg-elevated p-5">
-          <span class="block font-mono text-xs text-fg-faint mb-3">{s.n}</span>
-          <h3 class="text-sm font-medium mb-1.5" data-i18n={`howItWorks.steps.${stepKeys[i]}.title`}>{s.title}</h3>
-          <p class="text-xs text-fg-muted leading-relaxed" data-i18n={`howItWorks.steps.${stepKeys[i]}.body`}>{s.body}</p>
+          <span class="block font-mono text-xs text-fg-faint mb-3">0{i + 1}</span>
+          <h3 class="text-sm font-medium mb-1.5">{t(tx, `howItWorks.steps.${key}.title`)}</h3>
+          <p class="text-xs text-fg-muted leading-relaxed">{t(tx, `howItWorks.steps.${key}.body`)}</p>
         </li>
       ))}
     </ol>

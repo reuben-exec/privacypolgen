@@ -1,0 +1,13 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { CookieReader } from '@/components/CookieReader';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+---
+<Layout title={t(tx, 'cookieReader.title')} description={t(tx, 'cookieReader.description')} pageKey="c" noindex={true}>
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <CookieReader client:load />
+  </section>
+</Layout>

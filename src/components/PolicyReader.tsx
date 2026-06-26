@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { generatePolicy, decodeHashToPolicy } from '@/lib/generator';
 import { PolicyView } from '@/components/PolicyView';
 import { I18nProvider, useI18n } from '@/lib/I18nProvider';
+import { localizePath } from '@/lib/i18n';
+import { buildGeneratorOverrides } from '@/lib/buildOverrides';
 
 function PolicyReaderInner() {
   const { t, locale } = useI18n();
@@ -31,7 +33,7 @@ function PolicyReaderInner() {
     if (!h) return null;
     const decoded = decodeHashToPolicy(h);
     if (!decoded) return null;
-    return generatePolicy(decoded);
+    return generatePolicy(decoded, buildGeneratorOverrides(t, locale));
   }, [hash]);
 
   const formattedDate = useMemo(() => {
@@ -48,7 +50,7 @@ function PolicyReaderInner() {
       <div className="rounded-card border border-border bg-bg-elevated p-8 text-center">
         <p className="text-fg-muted text-sm mb-4">{error}</p>
         <a
-          href="/generate"
+          href={localizePath('/generate', locale)}
           className="inline-flex h-9 items-center rounded-button bg-fg text-bg px-4 text-sm font-medium hover:opacity-90"
         >
           {t('policyReader.generateNew')}
@@ -78,7 +80,7 @@ function PolicyReaderInner() {
           </p>
         </div>
         <a
-          href="/generate"
+          href={localizePath('/generate', locale)}
           className="inline-flex h-8 items-center rounded-button border border-border bg-bg px-3 text-xs font-medium text-fg hover:bg-bg-card"
         >
           {t('policyReader.generateOwn')}

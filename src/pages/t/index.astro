@@ -1,0 +1,13 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { TermsReader } from '@/components/TermsReader';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+---
+<Layout title={t(tx, 'termsReader.title')} description={t(tx, 'termsReader.description')} pageKey="t" noindex={true}>
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <TermsReader client:load />
+  </section>
+</Layout>

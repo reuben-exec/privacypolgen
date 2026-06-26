@@ -8,43 +8,102 @@ import HowItWorks from '@/components/sections/HowItWorks.astro';
 import Comparison from '@/components/sections/Comparison.astro';
 import Pricing from '@/components/sections/Pricing.astro';
 import FAQ from '@/components/sections/FAQ.astro';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+];
 ---
 <Layout
-  title="PrivacyPolGen — Free privacy policy generator (GDPR, CCPA, COPPA)"
-  description="Generate a complete, lawyer-grade privacy policy for your website, SaaS, e-commerce, or mobile app in under 60 seconds. Free, no signup, no data sent to a server."
+  title="Privacy Policy Generator — Free, GDPR & CCPA Compliant | PrivacyPolGen"
+  description="Free privacy policy generator for websites, apps, SaaS, and blogs. Generate a GDPR, CCPA, and COPPA compliant privacy policy in under 60 seconds. No signup needed."
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
 >
-  <Hero />
-  <TrustBar />
+  <BreadcrumbList items={breadcrumbs} />
+
+  <!-- SoftwareApplication JSON-LD → The primary structured data for the SaaS product itself.
+       BreadcrumbList is handled by SeoHead, FAQPage by the FAQ component. -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'PrivacyPolGen',
+    description: 'Free privacy policy generator for websites, SaaS, e-commerce, and mobile apps.',
+    url: 'https://privacypolgen.com',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Any',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  })} />
+  <Hero locale={locale} />
+  <TrustBar locale={locale} />
 
   <!-- Why You Need a Privacy Policy — SEO content -->
   <section class="border-t border-border">
     <div class="mx-auto max-w-3xl px-6 py-16">
-      <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="homeIntro.heading">Why you need a privacy policy</h2>
-      <p class="text-fg-muted leading-relaxed" data-i18n="homeIntro.body">
-        Every website, SaaS app, or e-commerce store that collects personal data needs a privacy policy. It's required by law under GDPR, CCPA, and dozens of other regulations worldwide. But hiring a lawyer costs $500+ per draft, and generic templates don't account for your specific business practices — the services you use, the data you collect, and the jurisdictions you operate in.
+      <h2 class="text-2xl font-semibold tracking-tight mb-4">{t(tx, 'homeIntro.heading')}</h2>
+      <p class="text-fg-muted leading-relaxed text-justify">
+        {t(tx, 'homeIntro.body')}
       </p>
-      <p class="text-fg-muted leading-relaxed mt-4" data-i18n="homeIntro.body2">
-        PrivacyPolGen solves this. Our intelligent wizard asks you 5 targeted questions about your business, walks you through the data you collect and the third-party services you integrate, then generates a complete, customized privacy policy in under 60 seconds. All of it happens in your browser — nothing is sent to a server.
+      <p class="text-fg-muted leading-relaxed mt-4 text-justify">
+        {t(tx, 'homeIntro.body2')}
       </p>
     </div>
   </section>
 
-  <FeatureGrid />
-  <HowItWorks />
-  <Comparison />
-  <Pricing />
-  <FAQ schemaType="FAQPage" />
+  <FeatureGrid locale={locale} />
+  <HowItWorks locale={locale} />
+  <Comparison locale={locale} />
+  <Pricing locale={locale} />
+  <FAQ locale={locale} schemaType="FAQPage" />
   <section class="border-t border-border">
     <div class="mx-auto max-w-3xl px-6 py-20 text-center">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="homeCta.heading">Ready to ship your privacy policy?</h2>
-      <p class="mt-3 text-fg-muted" data-i18n="homeCta.subtext">Generate yours in under a minute. Free, forever.</p>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'homeCta.heading')}</h2>
+      <p class="mt-3 text-fg-muted">{t(tx, 'homeCta.subtext')}</p>
       <a
         href="/generate"
         class="mt-8 inline-flex h-11 items-center rounded-button bg-fg text-bg font-medium px-6 hover:opacity-90"
-        data-i18n="homeCta.cta"
       >
-        Generate your policy →
+        {t(tx, 'homeCta.cta')}
       </a>
+    </div>
+  </section>
+
+  <!-- Feedback CTA -->
+  <section class="border-t border-border">
+    <div class="mx-auto max-w-4xl px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-10">Have feedback or an idea?</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-card border border-border bg-bg-elevated p-8 text-center">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <svg class="h-6 w-6 text-fg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight mb-2">Request a Feature</h3>
+          <p class="text-sm text-fg-muted mb-6">Got an idea that would make this tool better? Let me know.</p>
+          <a href="mailto:benatwork4747@gmail.com?subject=Feature%20Request" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90">Send Feature Request →</a>
+        </div>
+        <div class="rounded-card border border-border bg-bg-elevated p-8 text-center">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <svg class="h-6 w-6 text-fg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight mb-2">Report a Bug</h3>
+          <p class="text-sm text-fg-muted mb-6">Something not working right? Help me fix it.</p>
+          <a href="https://github.com/reuben-exec/privacypolgen/issues/new" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90">Open GitHub Issue →</a>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

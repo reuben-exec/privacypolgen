@@ -69,7 +69,7 @@ export default function PolicyPreviewContent({
             <hr className="border-border" />
             {dataTypesInline ? (
               <div className="pt-1.5 text-xs leading-relaxed text-fg">
-                We collect{' '}
+                {t('wizard.preview.collectPrefix')}
                 {(() => {
                   const labels = answers.dataTypes.map(id => dataTypeLabel(id))
                   const parts = listFormatter.formatToParts(labels)
@@ -84,7 +84,7 @@ export default function PolicyPreviewContent({
                     return <span key={`sep-${i}`}>{part.value}</span>
                   })
                 })()}{' '}
-                to provide our services.
+                {t('wizard.preview.collectSuffix')}
               </div>
             ) : (
               <div className="flex items-start justify-between gap-3 pt-1">

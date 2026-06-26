@@ -1,57 +1,70 @@
 ---
 // src/pages/about.astro
 import Layout from '@/layouts/Layout.astro';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+];
 ---
 
 <Layout
   title="About — PrivacyPolGen"
   description="PrivacyPolGen is a free privacy policy generator for indie developers, SaaS founders, and small businesses. No signup, no server, no catch."
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
 >
+  <BreadcrumbList items={breadcrumbs} />
   <!-- Hero -->
   <section class="border-b border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-3xl px-6 py-10">
-      <p class="text-sm text-fg-muted" data-i18n="aboutPage.breadcrumb">About</p>
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="aboutPage.heading">About PrivacyPolGen</h1>
-      <p class="mt-2 text-fg-muted max-w-2xl" data-i18n="aboutPage.subtext">A simple, free privacy policy generator built for indie developers — not for big law firms.</p>
+      <p class="text-sm text-fg-muted">{t(tx, 'aboutPage.breadcrumb')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'aboutPage.heading')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'aboutPage.subtext')}</p>
     </div>
   </section>
 
   <!-- Mission -->
   <section class="mx-auto max-w-3xl px-6 py-16">
-    <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.mission.heading">Our Mission</h2>
-    <p class="text-fg-muted leading-relaxed" data-i18n="aboutPage.mission.body">
-      Privacy policies shouldn't cost $500 or require a lawyer. We built PrivacyPolGen to give indie developers, SaaS founders, and small business owners a fast, free way to generate accurate privacy policies that comply with global regulations like GDPR, CCPA, and more.
+    <h2 class="text-2xl font-semibold tracking-tight mb-4">{t(tx, 'aboutPage.mission.heading')}</h2>
+    <p class="text-fg-muted leading-relaxed">
+      {t(tx, 'aboutPage.mission.body')}
     </p>
-    <p class="text-fg-muted leading-relaxed mt-4" data-i18n="aboutPage.mission.body2">
-      Everything runs in your browser — your data never touches a server. No accounts, no tracking, no hidden fees.
+    <p class="text-fg-muted leading-relaxed mt-4">
+      {t(tx, 'aboutPage.mission.body2')}
     </p>
   </section>
 
   <!-- How It Works -->
   <section class="border-t border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-3xl px-6 py-16">
-      <h2 class="text-2xl font-semibold tracking-tight mb-8 text-center" data-i18n="aboutPage.howItWorks.heading">How It Works</h2>
+      <h2 class="text-2xl font-semibold tracking-tight mb-8 text-center">{t(tx, 'aboutPage.howItWorks.heading')}</h2>
       <div class="grid gap-6 md:grid-cols-3">
         <div class="rounded-card border border-border bg-bg p-6 text-center">
           <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
             <span class="text-sm font-bold">1</span>
           </div>
-          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step1.title">Fill in your details</h3>
-          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step1.body">Answer 5 quick questions about your business, data practices, and applicable laws.</p>
+          <h3 class="font-semibold mb-2">{t(tx, 'aboutPage.howItWorks.step1.title')}</h3>
+          <p class="text-sm text-fg-muted">{t(tx, 'aboutPage.howItWorks.step1.body')}</p>
         </div>
         <div class="rounded-card border border-border bg-bg p-6 text-center">
           <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
             <span class="text-sm font-bold">2</span>
           </div>
-          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step2.title">Generate instantly</h3>
-          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step2.body">Get a complete, lawyer-grade privacy policy in seconds — tailored to your exact business.</p>
+          <h3 class="font-semibold mb-2">{t(tx, 'aboutPage.howItWorks.step2.title')}</h3>
+          <p class="text-sm text-fg-muted">{t(tx, 'aboutPage.howItWorks.step2.body')}</p>
         </div>
         <div class="rounded-card border border-border bg-bg p-6 text-center">
           <div class="flex h-10 w-10 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
             <span class="text-sm font-bold">3</span>
           </div>
-          <h3 class="font-semibold mb-2" data-i18n="aboutPage.howItWorks.step3.title">Copy &amp; publish</h3>
-          <p class="text-sm text-fg-muted" data-i18n="aboutPage.howItWorks.step3.body">Copy as Markdown, HTML, or plain text. Or share a public link — no signup required.</p>
+          <h3 class="font-semibold mb-2">{t(tx, 'aboutPage.howItWorks.step3.title')}</h3>
+          <p class="text-sm text-fg-muted">{t(tx, 'aboutPage.howItWorks.step3.body')}</p>
         </div>
       </div>
     </div>
@@ -59,18 +72,49 @@ import Layout from '@/layouts/Layout.astro';
 
   <!-- Why It's Free -->
   <section class="mx-auto max-w-3xl px-6 py-16">
-    <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.whyFree.heading">Why Is It Free?</h2>
-    <p class="text-fg-muted leading-relaxed" data-i18n="aboutPage.whyFree.body">
-      We believe privacy compliance should be accessible to everyone. The core generator will always be free. We may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch.
+    <h2 class="text-2xl font-semibold tracking-tight mb-4">{t(tx, 'aboutPage.whyFree.heading')}</h2>
+    <p class="text-fg-muted leading-relaxed">
+      {t(tx, 'aboutPage.whyFree.body')}
     </p>
   </section>
 
   <!-- CTA -->
   <section class="border-t border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-3xl px-6 py-16 text-center">
-      <h2 class="text-2xl font-semibold tracking-tight mb-4" data-i18n="aboutPage.cta.heading">Ready to generate your policy?</h2>
-      <p class="text-fg-muted mb-6" data-i18n="aboutPage.cta.subtext">It takes less than a minute. No account required.</p>
-      <a href="/generate" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90" data-i18n="aboutPage.cta.button">Generate your privacy policy →</a>
+      <h2 class="text-2xl font-semibold tracking-tight mb-4">{t(tx, 'aboutPage.cta.heading')}</h2>
+      <p class="text-fg-muted mb-6">{t(tx, 'aboutPage.cta.subtext')}</p>
+      <a href="/generate" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90">{t(tx, 'aboutPage.cta.button')}</a>
+    </div>
+  </section>
+
+  <!-- Feedback CTA -->
+  <section class="border-t border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-4xl px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-10">Help shape this project</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-card border border-border bg-bg p-8 text-center">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <svg class="h-6 w-6 text-fg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight mb-2">Request a Feature</h3>
+          <p class="text-sm text-fg-muted mb-6">Got an idea that would make this tool better? Let me know.</p>
+          <a href="mailto:benatwork4747@gmail.com?subject=Feature%20Request" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90">Send Feature Request →</a>
+        </div>
+        <div class="rounded-card border border-border bg-bg p-8 text-center">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-fg/10 mx-auto mb-4">
+            <svg class="h-6 w-6 text-fg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight mb-2">Report a Bug</h3>
+          <p class="text-sm text-fg-muted mb-6">Something not working right? Help me fix it.</p>
+          <a href="https://github.com/reuben-exec/privacypolgen/issues/new" target="_blank" rel="noopener noreferrer" class="inline-flex h-10 items-center rounded-button bg-fg text-bg text-sm font-medium px-5 transition-opacity hover:opacity-90">Open GitHub Issue →</a>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

@@ -4,6 +4,10 @@ import '../styles/global.css';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import SeoHead from '@/components/SeoHead.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+// Google AdSense — set PUBLIC_ADSENSE_CLIENT env var before deploying live
+const ADSENSE_CLIENT = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
 
 export interface Props {
   title: string;
@@ -13,10 +17,43 @@ export interface Props {
   noindex?: boolean;
   /** Hide the header/footer chrome (used on /p policy view) */
   bare?: boolean;
+  /** SEO schema type for JSON-LD */
+  schemaType?: 'WebApplication' | 'FAQPage' | 'WebPage' | 'Article' | 'BreadcrumbList';
+  /** Article-specific props for JSON-LD */
+  article?: {
+    publishedTime: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  };
+  /** Breadcrumb items for BreadcrumbList schema */
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  /**
+   * SEO page key for build-time i18n lookup.
+   * When set, Layout loads the English translation JSON and resolves
+   * seo.{pageKey}.title / seo.{pageKey}.description to render localized
+   * <title> and <meta name="description"> tags.
+   * Falls back to the explicit `title` / `description` props if the key
+   * is not found in translations.
+   */
+  pageKey?: string;
 }
 
-const { title, description, canonical, ogType, noindex, bare = false } = Astro.props;
+const { title, description, canonical, ogType, noindex, bare = false, schemaType = 'WebApplication', article, breadcrumbs, pageKey } = Astro.props;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+
+// Build-time i18n SEO lookup: resolve localized title/description from translation JSON
+let seoTitle = title;
+let seoDescription = description;
+if (pageKey) {
+  const tx = await getTranslations();
+  const localizedTitle = t(tx, `seo.${pageKey}.title`);
+  const localizedDesc = t(tx, `seo.${pageKey}.description`);
+  // t() returns the key itself if not found — only use if it resolved
+  if (localizedTitle !== `seo.${pageKey}.title`) seoTitle = localizedTitle;
+  if (localizedDesc !== `seo.${pageKey}.description`) seoDescription = localizedDesc;
+}
 ---
 <!doctype html>
 <html lang="en">
@@ -28,14 +65,12 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     <link rel="icon" type="image/x-icon" href="/favicon_black.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#09090B" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    {/* hreflang for 17 languages */}
-    {[ 'ar', 'bn', 'de', 'en', 'es', 'fr', 'hi', 'ja', 'ka', 'ko', 'nl', 'pt', 'ru', 'ta', 'tr', 'vi', 'zh' ].map(lang => (
-      <link rel="alternate" hreflang={lang} href={canonicalUrl} />
-    ))}
-    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    {ADSENSE_CLIENT && (
+      <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossorigin="anonymous" />
+    )}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
@@ -46,9 +81,8 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
     </noscript>
-    {/* FOUC prevention: set data-theme and data-lang on <html> synchronously before paint.
-        Priority for theme: stored user choice > OS preference > dark fallback.
-        Priority for lang: stored user choice > no attribute (defaults to English). */}
+    {/* FOUC prevention: set data-theme on <html> synchronously before paint.
+        Priority: stored user choice > OS preference > dark fallback. */}
     <script is:inline>
       (function () {
         var theme = 'dark';
@@ -60,45 +94,11 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toStri
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'dark');
         }
-        try {
-          var storedLang = localStorage.getItem('ppg-lang');
-          var validLangs = ['de','es','ko','ja','zh','ar','fr','ru','pt','hi','ta','ka','vi','nl','tr','bn'];
-          if (storedLang && validLangs.indexOf(storedLang) !== -1) {
-            document.documentElement.setAttribute('data-lang', storedLang);
-          }
-        } catch (e) {
-          // localStorage may be blocked
-        }
-
       })();
     </script>
-    <SeoHead title={title} description={description} canonical={canonical} ogType={ogType} noindex={noindex} />
+    <SeoHead title={seoTitle} description={seoDescription} canonical={canonical} ogType={ogType} noindex={noindex} schemaType={schemaType} article={article} breadcrumbs={breadcrumbs} />
 
-    {/* i18n: load translations if a non-English locale is preferred.
-        Module scripts are deferred by default, so the DOM is ready.
-        Also listen for localechange events from LangSwitcher (no page reload). */}
-    <script>
-      import { applyTranslations, getCurrentLocale, loadTranslations, resetTranslations } from '@/lib/i18n';
-
-      async function initI18n(locale?: string) {
-        const targetLocale = locale || getCurrentLocale();
-        const translations = await loadTranslations(targetLocale);
-        if (translations && Object.keys(translations).length > 0) {
-          applyTranslations(translations, targetLocale);
-        } else {
-          resetTranslations();
-        }
-      }
-
-      // Initial load — module scripts are deferred, DOM is parsed
-      initI18n();
-
-      // React to language switches from LangSwitcher without page reload
-      window.addEventListener('localechange', (e: Event) => {
-        const detail = (e as CustomEvent).detail;
-        if (detail?.locale) initI18n(detail.locale);
-      });
-    </script>
+    {/* React I18n — provides English translations for interactive components (Wizard, PolicyView, etc.). */}
   </head>
   <body class="min-h-screen flex flex-col antialiased bg-bg text-fg">
     <a href="#main-content" class="skip-link sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[9999] focus-visible:rounded-button focus-visible:bg-bg focus-visible:px-4 focus-visible:py-2 focus-visible:text-sm focus-visible:font-medium focus-visible:text-fg focus-visible:shadow-dropdown focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2">

@@ -1,38 +1,41 @@
 ---
 // src/components/sections/Hero.astro
+import { getTranslations, t } from '@/lib/i18n-server';
+import { localizePath } from '@/lib/i18n';
+interface Props { locale?: string }
+const { locale = 'en' } = Astro.props;
+const tx = await getTranslations(locale);
 ---
 <section class="relative overflow-hidden">
   <div class="hero-radial absolute inset-0 -z-10"></div>
   <div class="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28 text-center">
     <div class="inline-flex items-center gap-2 rounded-full border border-border bg-bg-elevated/60 px-3 py-1 text-xs text-fg-muted mb-6 backdrop-blur">
       <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-      <span data-i18n="hero.badge">Free forever · No signup · GDPR · CCPA · COPPA</span>
+      <span>{t(tx, 'hero.badge')}</span>
     </div>
     <h1 class="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
-      <span data-i18n="hero.heading">Generate a privacy policy</span>
+      <span>{t(tx, 'hero.heading')}</span>
       <br class="hidden md:block" />
-      <span class="text-fg" data-i18n="hero.headingAccent">in under 60 seconds.</span>
+      <span class="text-fg">{t(tx, 'hero.headingAccent')}</span>
     </h1>
-    <p class="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl mx-auto leading-relaxed" data-i18n="hero.subheading">
-      Answer 5 quick questions about your business, the data you collect, and the third-party services you use. Get a complete, lawyer-grade privacy policy tailored to your website, SaaS app, or e-commerce store — compliant with GDPR, CCPA, COPPA, and more. Copy it, share it via public URL, or host it on your domain.
+    <p class="mt-6 text-lg md:text-xl text-fg-muted max-w-2xl mx-auto leading-relaxed">
+      {t(tx, 'hero.subheading')}
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
       <a
-        href="/generate"
+        href={localizePath('/generate', locale)}
         class="inline-flex h-11 items-center rounded-button bg-fg text-bg font-medium px-6 transition-opacity hover:opacity-90"
-        data-i18n="hero.cta"
       >
-        Generate your policy
+        {t(tx, 'hero.cta')}
         <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
       <a
-        href="/examples"
+        href={localizePath('/examples', locale)}
         class="inline-flex h-11 items-center rounded-button border border-border bg-bg-elevated text-fg font-medium px-6 transition-colors hover:bg-bg-card"
-        data-i18n="hero.ctaExamples"
       >
-        See examples
+        {t(tx, 'hero.ctaExamples')}
       </a>
     </div>
-    <p class="mt-6 text-xs text-fg-faint" data-i18n="hero.footnote">No account · No data sent to a server · Generated policy is encoded into the URL</p>
+    <p class="mt-6 text-xs text-fg-faint">{t(tx, 'hero.footnote')}</p>
   </div>
 </section>

@@ -40,3 +40,9 @@ kimi_config.toml
 
 # Backup directories
 src/i18n.backup*/
+
+# Scratch / one-off migration scripts
+_fix_*.py
+screenshot-google.png
+screenshots.mjs
+screenshots/

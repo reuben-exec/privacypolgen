@@ -1,21 +1,77 @@
 ---
 // src/pages/generate.astro
+// Hub page — choose which legal document to generate.
 import Layout from '@/layouts/Layout.astro';
-import Wizard from '@/components/Wizard';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Generate', url: '/generate' },
+];
+
+const generatorKeys = ['pp', 'terms', 'cookie'] as const;
+const generatorIcons = ['shield', 'file-text', 'cookie'] as const;
+const generatorHrefs = ['/generate/privacy-policy', '/generate/terms', '/generate/cookie-policy'] as const;
 ---
 <Layout
-  title="Generate your privacy policy — PrivacyPolGen"
-  description="Answer 5 quick questions and get a complete, lawyer-grade privacy policy tailored to your business. Free, no signup."
+  title="Generate legal documents — PrivacyPolGen"
+  description="Create free privacy policies, terms & conditions, and cookie policies for your website. No signup required."
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
 >
+  <BreadcrumbList items={breadcrumbs} />
   <section class="border-b border-border bg-bg-elevated/30">
-    <div class="mx-auto max-w-6xl px-6 py-10">
-      <p class="text-sm text-fg-muted" data-i18n="generatorPage.breadcrumb">Generator</p>
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="generatorPage.heading">Build your privacy policy</h1>
-      <p class="mt-2 text-fg-muted max-w-2xl" data-i18n="generatorPage.subtext">Five steps. About a minute. Your answers stay in your browser — nothing is sent to a server.</p>
+    <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <p class="text-sm text-fg-muted">{t(tx, 'generateHub.breadcrumb')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight mt-1">{t(tx, 'generateHub.heading')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'generateHub.subtext')}</p>
     </div>
   </section>
 
   <section class="mx-auto max-w-6xl px-6 py-12">
-    <Wizard client:load />
+    <div class="grid gap-6 md:grid-cols-3">
+      {generatorKeys.map((key, idx) => (
+        <a
+          href={generatorHrefs[idx]}
+          class="group rounded-card border border-border bg-bg-elevated p-6 transition-all hover:border-fg-muted/30 hover:shadow-sm hover:-translate-y-0.5"
+        >
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-fg/5 text-fg group-hover:bg-fg/10 transition-colors">
+            {generatorIcons[idx] === 'shield' && (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            )}
+            {generatorIcons[idx] === 'file-text' && (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" />
+                <line x1="9" y1="9" x2="10" y2="9" />
+                <line x1="9" y1="13" x2="15" y2="13" />
+                <line x1="9" y1="17" x2="15" y2="17" />
+              </svg>
+            )}
+            {generatorIcons[idx] === 'cookie' && (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="12" cy="12" r="1.5" />
+              </svg>
+            )}
+          </div>
+          <h3 class="text-base font-semibold tracking-tight text-fg">{t(tx, `generateHub.card.${key}.title`)}</h3>
+          <p class="mt-1.5 text-sm text-fg-muted leading-relaxed">{t(tx, `generateHub.card.${key}.desc`)}</p>
+          <div class="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-fg opacity-0 group-hover:opacity-100 transition-opacity">
+            Generate
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3.5 w-3.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
   </section>
 </Layout>

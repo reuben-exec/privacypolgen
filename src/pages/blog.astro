@@ -1,0 +1,118 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getCollection } from 'astro:content';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Blog', url: '/blog' },
+];
+
+// Fetch the featured post dynamically to get the correct pubDate
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const featuredPost = posts.find(p => p.id === 'gdpr-privacy-policy-template');
+const featuredDate = featuredPost?.data.pubDate ?? new Date('2024-01-15T10:00:00.000Z');
+---
+
+<Layout
+  title="Privacy Policy Blog | PrivacyPolGen"
+  description="Expert insights, guides, and compliance strategies for privacy policies. Stay updated with the latest in data protection and legal requirements."
+  pageKey="blog"
+  schemaType="WebPage"
+  breadcrumbs={breadcrumbs}
+>
+  <BreadcrumbList items={breadcrumbs} />
+
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-3xl px-6 py-10">
+      <p class="text-sm text-fg-muted">{t(tx, 'blogPage.breadcrumb')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'blogPage.heading')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">
+        {t(tx, 'blogPage.subtext')}
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-6 py-12">
+    <article class="group rounded-card border-2 border-border bg-bg p-10 hover:shadow-lg transition-shadow">
+      <div class="mb-6">
+        <div class="flex items-center gap-4 mb-4">
+          <time class="text-sm text-fg-muted">
+            {featuredDate.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+          <span class="text-xs px-3 py-1 rounded-full bg-bg-elevated text-fg-muted border border-border">{t(tx, 'blogPage.featuredArticle.tag')}</span>
+        </div>
+        <h2 class="text-3xl font-semibold mb-6 group-hover:text-fg transition-colors">
+          <a href="/blog/gdpr-privacy-policy-template">{t(tx, 'blogPage.featuredArticle.title')}</a>
+        </h2>
+        <p class="text-fg-muted mb-8 text-lg">
+          {t(tx, 'blogPage.featuredArticle.description')}
+        </p>
+        <a
+          href="/blog/gdpr-privacy-policy-template"
+          class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-button bg-fg text-bg font-medium hover:opacity-90 transition-opacity group text-sm"
+        >
+          <span>{t(tx, 'blogPage.featuredArticle.readMore')}</span>
+          <svg
+            class="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          >
+            <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <section class="text-center mb-16 mx-auto max-w-3xl px-6">
+    <h2 class="text-2xl font-semibold mb-8">{t(tx, 'blogPage.comingSoon.heading')}</h2>
+    <p class="text-fg-muted mb-8 max-w-3xl mx-auto">
+      {t(tx, 'blogPage.comingSoon.text')}
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div class="rounded-card border border-border bg-bg p-6">
+        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.gdpr.title')}</h3>
+        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.gdpr.description')}</p>
+      </div>
+      <div class="rounded-card border border-border bg-bg p-6">
+        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.ccpa.title')}</h3>
+        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.ccpa.description')}</p>
+      </div>
+      <div class="rounded-card border border-border bg-bg p-6">
+        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.generatorVsTemplate.title')}</h3>
+        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.generatorVsTemplate.description')}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-6 mb-20">
+    <div class="rounded-card border border-border bg-bg-elevated p-16 text-center">
+      <h2 class="text-3xl font-semibold mb-4">{t(tx, 'blogPage.cta.heading')}</h2>
+      <p class="text-fg-muted mb-10 max-w-2xl mx-auto text-lg">
+        {t(tx, 'blogPage.cta.subtext')}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a
+          href="/generate"
+          class="px-10 py-4 rounded-button bg-fg text-bg font-medium text-lg hover:opacity-90"
+        >
+          <span>{t(tx, 'blogPage.cta.generate')}</span>
+        </a>
+        <a
+          href="/contact"
+          class="px-10 py-4 rounded-button border border-border hover:bg-bg-elevated text-lg"
+        >
+          <span>{t(tx, 'blogPage.cta.contact')}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

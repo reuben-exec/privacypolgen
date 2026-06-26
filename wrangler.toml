@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration
+# Docs: https://developers.cloudflare.com/pages/configuration/
+name = "privacypolgen"
+compatibility_date = "2026-06-14"
+
+# Required secret (set via Cloudflare Dashboard > Pages > privacypolgen > Settings > Environment variables):
+#   GOOGLE_TRANSLATE_API_KEY — Google Cloud API key with Cloud Translation API enabled.
+#
+
+[pages]
+output_dir = "dist"

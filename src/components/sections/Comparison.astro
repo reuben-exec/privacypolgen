@@ -1,6 +1,10 @@
 ---
 // src/components/sections/Comparison.astro
-// Cell values use data-i18n to reference comparison.values.* keys in en.json
+import { getTranslations, t } from '@/lib/i18n-server';
+interface Props { locale?: string }
+const { locale = 'en' } = Astro.props;
+const tx = await getTranslations(locale);
+
 const rowKeys = ['price', 'time', 'gdprCovers', 'tailored', 'updatable', 'url', 'review'];
 
 // Value keys per row: [privacyPolGen, lawyer, paidTemplate]
@@ -17,20 +21,20 @@ const valueKeys = [
 <section class="border-t border-border">
   <div class="mx-auto max-w-5xl px-6 py-20">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="comparison.heading">PrivacyPolGen vs. the alternatives.</h2>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'comparison.heading')}</h2>
     </div>
     <div class="rounded-card border border-border bg-bg-elevated overflow-x-auto">
       <div class="grid grid-cols-4 text-sm min-w-[580px]">
         <div class="p-4 text-xs text-fg-faint border-b border-border"></div>
-        <div class="p-4 font-medium text-center border-b border-l border-border bg-bg-card" data-i18n="comparison.colPrivacyPolGen">PrivacyPolGen</div>
-        <div class="p-4 text-fg-muted text-center border-b border-l border-border" data-i18n="comparison.colLawyer">Lawyer</div>
-        <div class="p-4 text-fg-muted text-center border-b border-l border-border" data-i18n="comparison.colPaidTemplate">Paid template</div>
+        <div class="p-4 font-medium text-center border-b border-l border-border bg-bg-card">{t(tx, 'comparison.colPrivacyPolGen')}</div>
+        <div class="p-4 text-fg-muted text-center border-b border-l border-border">{t(tx, 'comparison.colLawyer')}</div>
+        <div class="p-4 text-fg-muted text-center border-b border-l border-border">{t(tx, 'comparison.colPaidTemplate')}</div>
         {rowKeys.map((rowKey, i) => (
           <>
-            <div class="p-4 text-fg-muted border-t border-border" data-i18n={`comparison.rows.${rowKey}`}>{rowKey}</div>
-            <div class="p-4 text-center border-t border-l border-border bg-bg-card font-medium" data-i18n={`comparison.values.${valueKeys[i][0]}`}>{valueKeys[i][0]}</div>
-            <div class="p-4 text-center text-fg-muted border-t border-l border-border" data-i18n={`comparison.values.${valueKeys[i][1]}`}>{valueKeys[i][1]}</div>
-            <div class="p-4 text-center text-fg-muted border-t border-l border-border" data-i18n={`comparison.values.${valueKeys[i][2]}`}>{valueKeys[i][2]}</div>
+            <div class="p-4 text-fg-muted border-t border-border">{t(tx, `comparison.rows.${rowKey}`)}</div>
+            <div class="p-4 text-center border-t border-l border-border bg-bg-card font-medium">{t(tx, `comparison.values.${valueKeys[i][0]}`)}</div>
+            <div class="p-4 text-center text-fg-muted border-t border-l border-border">{t(tx, `comparison.values.${valueKeys[i][1]}`)}</div>
+            <div class="p-4 text-center text-fg-muted border-t border-l border-border">{t(tx, `comparison.values.${valueKeys[i][2]}`)}</div>
           </>
         ))}
       </div>

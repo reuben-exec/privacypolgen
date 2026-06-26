@@ -1,81 +1,94 @@
 ---
 // src/pages/privacy.astro
 import Layout from '@/layouts/Layout.astro';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Privacy Policy', url: '/privacy' },
+];
 ---
 
 <Layout
   title="Privacy Policy — PrivacyPolGen"
   description="PrivacyPolGen's own privacy policy — we collect no personal data. Everything runs client-side in your browser."
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
 >
+  <BreadcrumbList items={breadcrumbs} />
   <section class="border-b border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-3xl px-6 py-10">
-      <p class="text-sm text-fg-muted" data-i18n="privacyPage.breadcrumb">Privacy Policy</p>
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight" data-i18n="privacyPage.heading">Our Privacy Policy</h1>
-      <p class="mt-2 text-fg-muted text-sm" data-i18n="privacyPage.lastUpdated">Last updated: June 8, 2026</p>
+      <p class="text-sm text-fg-muted">{t(tx, 'privacyPage.breadcrumb')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'privacyPage.heading')}</h1>
+      <p class="mt-2 text-fg-muted text-sm">{t(tx, 'privacyPage.lastUpdated')}</p>
     </div>
   </section>
 
   <section class="mx-auto max-w-3xl px-6 py-12">
     <div class="prose prose-sm max-w-none text-fg-muted space-y-6 [&_h2]:text-lg [&_h2]:font-semibold [&_h2]:tracking-tight [&_h2]:text-fg [&_h2]:mt-10 [&_h2]:mb-3 [&_h3]:text-base [&_h3]:font-semibold [&_h3]:text-fg [&_h3]:mt-8 [&_h3]:mb-2 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_li]:leading-relaxed [&_strong]:text-fg">
 
-      <h2 data-i18n="privacyPage.sections.intro.title">Introduction</h2>
-      <p data-i18n="privacyPage.sections.intro.body">
-        PrivacyPolGen ("we," "us," or "our") operates the website at privacypolgen.com (the "Service"). This page explains our approach to privacy — which, in short, is that we collect almost nothing.
+      <h2>{t(tx, 'privacyPage.sections.intro.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.intro.body')}
       </p>
-      <p data-i18n="privacyPage.sections.intro.body2">
-        Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on our side. The privacy policy generator runs entirely in your browser.
+      <p>
+        {t(tx, 'privacyPage.sections.intro.body2')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.noCollection.title">Information We Do NOT Collect</h2>
-      <p data-i18n="privacyPage.sections.noCollection.body">
-        We do not collect, store, or process any personal information about you. Specifically:
+      <h2>{t(tx, 'privacyPage.sections.noCollection.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.noCollection.body')}
       </p>
       <ul>
-        <li data-i18n="privacyPage.sections.noCollection.list.0"><strong>No account data:</strong> We do not require or support user accounts.</li>
-        <li data-i18n="privacyPage.sections.noCollection.list.1"><strong>No personal information:</strong> We do not ask for or collect your name, email address, or any other personal identifier.</li>
-        <li data-i18n="privacyPage.sections.noCollection.list.2"><strong>No payment information:</strong> The Service is free. We do not process payments.</li>
-        <li data-i18n="privacyPage.sections.noCollection.list.3"><strong>No analytics:</strong> We do not run any analytics, tracking pixels, or telemetry on our site.</li>
-        <li data-i18n="privacyPage.sections.noCollection.list.4"><strong>No cookies for tracking:</strong> We do not use cookies for analytics, advertising, or any tracking purposes.</li>
-        <li data-i18n="privacyPage.sections.noCollection.list.5"><strong>No policy data:</strong> The answers you provide in the generator wizard are encoded directly into the URL. They are never sent to, stored on, or processed by any server.</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.0')}</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.1')}</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.2')}</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.3')}</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.4')}</li>
+        <li>{t(tx, 'privacyPage.sections.noCollection.list.5')}</li>
       </ul>
 
-      <h2 data-i18n="privacyPage.sections.technical.title">Technical Data</h2>
-      <p data-i18n="privacyPage.sections.technical.body">
-        Our hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. We do not access, analyze, or share this data.
+      <h2>{t(tx, 'privacyPage.sections.technical.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.technical.body')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.localStorage.title">Local Storage</h2>
-      <p data-i18n="privacyPage.sections.localStorage.body">
-        We use your browser's <code>localStorage</code> to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. We cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings.
+      <h2>{t(tx, 'privacyPage.sections.localStorage.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.localStorage.body')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.thirdParty.title">Third-Party Services</h2>
-      <p data-i18n="privacyPage.sections.thirdParty.body">
-        We use the following third-party services, which have their own privacy practices:
+      <h2>{t(tx, 'privacyPage.sections.thirdParty.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.thirdParty.body')}
       </p>
       <ul>
-        <li data-i18n="privacyPage.sections.thirdParty.list.0"><strong>Fonts (Google Fonts):</strong> Font files are loaded from Google's servers. Google may collect information about font requests per its <a href="https://policies.google.com/privacy" class="underline underline-offset-2 hover:text-fg" target="_blank" rel="noopener">privacy policy</a>. We self-host where possible to minimize this.</li>
-        <li data-i18n="privacyPage.sections.thirdParty.list.1"><strong>Hosting:</strong> Our static site is served via [your hosting provider]. Standard server logs may be retained temporarily for security and operational purposes.</li>
+        <li>{t(tx, 'privacyPage.sections.thirdParty.list.0')}</li>
+        <li>{t(tx, 'privacyPage.sections.thirdParty.list.1')}</li>
       </ul>
 
-      <h2 data-i18n="privacyPage.sections.dataRetention.title">Data Retention</h2>
-      <p data-i18n="privacyPage.sections.dataRetention.body">
-        Since we collect no personal data, there is nothing to retain. Any server logs kept by our hosting provider are subject to their retention policies and are not accessed by us.
+      <h2>{t(tx, 'privacyPage.sections.dataRetention.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.dataRetention.body')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.yourRights.title">Your Rights</h2>
-      <p data-i18n="privacyPage.sections.yourRights.body">
-        Because we collect no personal data, there is no personal data for us to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by our hosting provider, please contact us and we will investigate in good faith.
+      <h2>{t(tx, 'privacyPage.sections.yourRights.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.yourRights.body')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.changes.title">Changes to This Policy</h2>
-      <p data-i18n="privacyPage.sections.changes.body">
-        If we change this privacy policy, we will update the "Last updated" date at the top. Since we collect no data, changes are likely to be rare and minor.
+      <h2>{t(tx, 'privacyPage.sections.changes.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.changes.body')}
       </p>
 
-      <h2 data-i18n="privacyPage.sections.contact.title">Contact</h2>
-      <p data-i18n="privacyPage.sections.contact.body">
-        If you have questions about this privacy policy, please contact us at <a href="mailto:support@privacypolgen.com" class="underline underline-offset-2 hover:text-fg">support@privacypolgen.com</a>.
+      <h2>{t(tx, 'privacyPage.sections.contact.title')}</h2>
+      <p>
+        {t(tx, 'privacyPage.sections.contact.body')}
       </p>
 
     </div>

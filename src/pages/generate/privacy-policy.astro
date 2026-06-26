@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Wizard from '@/components/Wizard';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: t(tx, 'home'), url: '/' },
+  { name: t(tx, 'generatorPage.breadcrumb'), url: '/generate' },
+  { name: t(tx, 'generatorPage.breadcrumbSub'), url: '/generate/privacy-policy' },
+];
+---
+<Layout
+  title={t(tx, 'generatorPage.title')}
+  description={t(tx, 'generatorPage.description')}
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
+>
+  <BreadcrumbList items={breadcrumbs} />
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-6xl px-6 py-10">
+      <p class="text-sm text-fg-muted">{t(tx, 'generatorPage.breadcrumbSub')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'generatorPage.heading')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'generatorPage.subtext')}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-12">
+    <Wizard client:load />
+  </section>
+</Layout>

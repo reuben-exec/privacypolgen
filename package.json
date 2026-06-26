@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
+    "@astrojs/mdx": "^6.0.3",
     "@astrojs/react": "^5.0.7",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.0",
@@ -26,6 +27,8 @@
     "@types/react-dom": "^19.2.3",
     "astro": "^6.4.4",
     "clsx": "^2.1.1",
+    "docx": "^9.7.1",
+    "jspdf": "^4.2.1",
     "lucide-react": "^1.17.0",
     "pako": "^2.1.0",
     "react": "^19.2.7",
@@ -36,5 +39,8 @@
   "devDependencies": {
     "@types/pako": "^2.0.4",
     "vitest": "^3.2.6"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
   }
 }

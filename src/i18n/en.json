@@ -12,6 +12,9 @@
   "copy": "Copy",
   "prev": "Previous",
   "next": "Next",
+  "breadcrumb": {
+    "ariaLabel": "Breadcrumb"
+  },
   "header": {
     "home": "Home",
     "generator": "Generator",
@@ -19,12 +22,20 @@
     "pricing": "Pricing",
     "about": "About",
     "brand": "PrivacyPolGen",
-    "generate": "Generate",
+    "generateDesktop": "Generate",
+    "generateMobile": "Generate",
     "ariaToggleTheme": "Toggle theme",
     "ariaThemeDark": "Switch to light theme",
     "ariaThemeLight": "Switch to dark theme",
     "ariaMenu": "Menu",
-    "ariaClose": "Close menu"
+    "ariaClose": "Close menu",
+    "ariaNav": "Navigation",
+    "blog": "Blog",
+    "documentsLabel": "Documents",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "cookie": "Cookie Policy",
+    "languageLabel": "Language"
   },
   "hero": {
     "badge": "Free forever · No signup · GDPR · CCPA · COPPA",
@@ -42,7 +53,7 @@
   "homeIntro": {
     "heading": "Why you need a privacy policy",
     "body": "Every website, SaaS app, or e-commerce store that collects personal data needs a privacy policy. It's required by law under GDPR, CCPA, and dozens of other regulations worldwide. But hiring a lawyer costs $500+ per draft, and generic templates don't account for your specific business practices — the services you use, the data you collect, and the jurisdictions you operate in.",
-    "body2": "PrivacyPolGen solves this. Our intelligent wizard asks you 5 targeted questions about your business, walks you through the data you collect and the third-party services you integrate, then generates a complete, customized privacy policy in under 60 seconds. All of it happens in your browser — nothing is sent to a server."
+    "body2": "PrivacyPolGen solves this. My intelligent wizard asks you 5 targeted questions about your business, walks you through the data you collect and the third-party services you integrate, then generates a complete, customized privacy policy in under 60 seconds. All of it happens in your browser — nothing is sent to a server."
   },
   "features": {
     "label": "Features",
@@ -51,11 +62,11 @@
     "cards": {
       "laws": {
         "title": "Laws covered out of the box",
-        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and DPDP Act. Select the ones that apply to your business and we tailor the clauses accordingly."
+        "body": "GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, and DPDP Act. Select the ones that apply to your business and I tailor the clauses accordingly."
       },
       "stack": {
         "title": "Tailored to your stack",
-        "body": "Pick from 25+ popular third-party services — Stripe, Google Analytics, Plausible, Mailchimp, SendGrid, and more — and we add the right contractual disclosures for each one automatically."
+        "body": "Pick from 25+ popular third-party services — Stripe, Google Analytics, Plausible, Mailchimp, SendGrid, and more — and I add the right contractual disclosures for each one automatically."
       },
       "url": {
         "title": "Shareable public URL",
@@ -71,7 +82,7 @@
       },
       "privacy": {
         "title": "Zero data, zero tracking",
-        "body": "Your answers never leave your device. They're compressed and encoded into the URL itself using client-side DEFLATE. We don't run a backend, we don't log IPs, and we never see your policy content."
+        "body": "Your answers never leave your device. They're compressed and encoded into the URL itself using client-side DEFLATE. I don't run a backend, I don't log IPs, and I never see your policy content."
       }
     }
   },
@@ -80,12 +91,12 @@
     "heading": "Five steps. About a minute.",
     "steps": {
       "business": {
-        "title": "Tell us about your business",
-        "body": "Tell us your business name, website URL, business type, and primary jurisdiction. We pre-fill smart defaults for the most common cases."
+        "title": "Tell me about your business",
+        "body": "Tell me your business name, website URL, business type, and primary jurisdiction. I pre-fill smart defaults for the most common cases."
       },
       "data": {
         "title": "Pick what you collect",
-        "body": "Check off the kinds of data your business collects — names, email addresses, payment info, usage data, cookies, and more. We've pre-selected common items based on your industry."
+        "body": "Check off the kinds of data your business collects — names, email addresses, payment info, usage data, cookies, and more. I've pre-selected common items based on your industry."
       },
       "services": {
         "title": "List your services",
@@ -93,7 +104,7 @@
       },
       "laws": {
         "title": "Choose applicable laws",
-        "body": "Choose from GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, and PDPA-SG. We default to the strictest common case so you're covered everywhere."
+        "body": "Choose from GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, and PDPA-SG. I default to the strictest common case so you're covered everywhere."
       },
       "policy": {
         "title": "Get your policy",
@@ -197,7 +208,7 @@
       },
       {
         "q": "How to write a privacy policy?",
-        "a": "Writing a privacy policy involves three steps. First, audit what personal data your business collects (names, emails, payment info, cookies, analytics, etc.) and who you share it with (payment processors, analytics tools, email services). Second, identify the privacy laws that apply to you based on where your users are located (GDPR for EU, CCPA for California, etc.). Third, draft clauses covering: what data you collect, how you use it, cookies and tracking, third-party disclosures, data retention, security practices, user rights, and contact information. The easiest way is to use PrivacyPolGen — our free wizard asks 5 questions about your business and generates a complete, lawyer-grade privacy policy in under 60 seconds."
+        "a": "Writing a privacy policy involves three steps. First, audit what personal data your business collects (names, emails, payment info, cookies, analytics, etc.) and who you share it with (payment processors, analytics tools, email services). Second, identify the privacy laws that apply to you based on where your users are located (GDPR for EU, CCPA for California, etc.). Third, draft clauses covering: what data you collect, how you use it, cookies and tracking, third-party disclosures, data retention, security practices, user rights, and contact information. The easiest way is to use PrivacyPolGen — the free wizard asks 5 questions about your business and generates a complete, lawyer-grade privacy policy in under 60 seconds."
       },
       {
         "q": "How to write a privacy policy for an app?",
@@ -205,19 +216,19 @@
       },
       {
         "q": "How to create a privacy policy for free?",
-        "a": "You can create a complete, legally compliant privacy policy for free using PrivacyPolGen. Answer 5 quick questions about your business, the data you collect, the third-party services you use, and the laws that apply to you. Our wizard generates a fully customized policy in under 60 seconds — no account, no credit card, no data sent to a server. You can copy it as Markdown, HTML, or plain text, or share it via a public URL. The core generator is and always will be free."
+        "a": "You can create a complete, legally compliant privacy policy for free using PrivacyPolGen. Answer 5 quick questions about your business, the data you collect, the third-party services you use, and the laws that apply to you. The wizard generates a fully customized policy in under 60 seconds — no account, no credit card, no data sent to a server. You can copy it as Markdown, HTML, or plain text, or share it via a public URL. The core generator is and always will be free."
       },
       {
         "q": "Is this privacy policy generator really free?",
-        "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. We have a Premium tier planned with PDF/DOCX exports and multi-page policies, but the core generator will always be free."
+        "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. The core generator will always be free. I have a Premium tier planned with PDF/DOCX exports and multi-page policies, but the core generator will always be free."
       },
       {
         "q": "Does this cover GDPR, CCPA, and other laws?",
-        "a": "Yes. Select the laws that apply to your business in Step 4 of the wizard, and we'll include the appropriate clauses (GDPR legal basis, CCPA opt-out, COPPA parental consent, PIPEDA access rights, LGPD legal basis, DPDP Act grievance officer, PDPA-SG consent mechanisms)."
+        "a": "Yes. Select the laws that apply to your business in Step 4 of the wizard, and I'll include the appropriate clauses (GDPR legal basis, CCPA opt-out, COPPA parental consent, PIPEDA access rights, LGPD legal basis, DPDP Act grievance officer, PDPA-SG consent mechanisms)."
       },
       {
         "q": "Do I need an account to generate a privacy policy?",
-        "a": "No account required. Just answer the questions in our wizard and we'll generate your policy. Your answers are encoded into the shareable URL itself — nothing is sent to our servers."
+        "a": "No account required. Just answer the questions in the wizard and the policy will be generated. Your answers are encoded into the shareable URL itself — nothing is sent to my servers."
       },
       {
         "q": "How do I add the policy to my website?",
@@ -229,23 +240,23 @@
       },
       {
         "q": "Does the policy include a cookie section?",
-        "a": "Yes — if you select 'Cookies' in Step 2 of the wizard, we include a full cookies section describing essential, analytics, preference, and marketing cookies. We also list which third-party cookies each service you integrate may set."
+        "a": "Yes — if you select 'Cookies' in Step 2 of the wizard, I include a full cookies section describing essential, analytics, preference, and marketing cookies. I also list which third-party cookies each service you integrate may set."
       },
       {
         "q": "Where is my data stored?",
-        "a": "Nowhere. We use client-side compression (DEFLATE + Base64 URL-safe encoding) to pack your answers into the URL hash. When you share the URL, the recipient's browser decodes the policy locally. We do not run a backend, we do not log wizard answers, and we do not have access to your policy content."
+        "a": "Nowhere. The site uses client-side compression (DEFLATE + Base64 URL-safe encoding) to pack your answers into the URL hash. When you share the URL, the recipient's browser decodes the policy locally. I do not run a backend, I do not log wizard answers, and I do not have access to your policy content."
       },
       {
         "q": "Is the generated policy legally binding?",
-        "a": "The generated policy is a starting template that covers the most common legal requirements (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, PDPA-SG). However, every business is different. We strongly recommend having a lawyer review the final policy before relying on it, especially if you operate in regulated industries (health, finance, children's services)."
+        "a": "The generated policy is a starting template that covers the most common legal requirements (GDPR, CCPA/CPRA, CalOPPA, COPPA, PIPEDA, LGPD, DPDP Act, PDPA-SG). However, every business is different. I strongly recommend having a lawyer review the final policy before relying on it, especially if you operate in regulated industries (health, finance, children's services)."
       },
       {
         "q": "Will my policy update if laws change?",
-        "a": "The policy you generate is a static document at a specific point in time. If privacy laws change, you'll need to regenerate it and update the version on your site. We update our clause library continuously, and the wizard is always in sync with current best practices."
+        "a": "The policy you generate is a static document at a specific point in time. If privacy laws change, you'll need to regenerate it and update the version on your site. I update my clause library continuously, and the wizard is always in sync with current best practices."
       },
       {
         "q": "What if I don't know what laws apply to me?",
-        "a": "We default to selecting GDPR, CCPA/CPRA, and CalOPPA for everyone (which covers the strictest common case). If you're unsure, leaving the defaults selected is usually the safest choice — covering the most laws never hurts, and the policy will still be valid in jurisdictions where the law doesn't apply."
+        "a": "If you are unsure which privacy laws apply to your business, I recommend leaving the default selections (GDPR, CCPA/CPRA, and CalOPPA) as a starting point. If you're unsure, leaving the defaults selected is usually the safest choice — covering the most laws never hurts, and the policy will still be valid in jurisdictions where the law doesn't apply."
       },
       {
         "q": "What's the difference between the free and Premium tiers?",
@@ -253,14 +264,50 @@
       },
       {
         "q": "Can I use this for a client project?",
-        "a": "Absolutely. You can generate policies for unlimited client projects on the free tier. We just ask that you don't redistribute the generator itself or resell the output unmodified as a competing service."
+        "a": "Absolutely. You can generate policies for unlimited client projects on the free tier. I just ask that you don't redistribute the generator itself or resell the output unmodified as a competing service."
       }
     ]
   },
   "generatorPage": {
+    "title": "Privacy Policy Generator — PrivacyPolGen",
+    "description": "Create a free privacy policy for your website or app that complies with GDPR, CCPA, COPPA, and other regulations. No signup required.",
     "breadcrumb": "Generator",
+    "breadcrumbSub": "Privacy Policy",
     "heading": "Build your privacy policy",
     "subtext": "Five steps. About a minute. Your answers stay in your browser — nothing is sent to a server."
+  },
+  "generateHub": {
+    "breadcrumb": "Generate",
+    "heading": "Generate legal documents for your website",
+    "subtext": "Choose the type of policy or terms you need — all generated entirely in your browser with no data sent to a server.",
+    "card": {
+      "pp": {
+        "title": "Privacy Policy",
+        "desc": "Generate a complete, lawyer-grade privacy policy tailored to your business, data practices, and applicable laws."
+      },
+      "terms": {
+        "title": "Terms & Conditions",
+        "desc": "Generate terms and conditions that govern the use of your website or app, covering liability, intellectual property, and more."
+      },
+      "cookie": {
+        "title": "Cookie Policy",
+        "desc": "Generate a cookie policy that discloses your use of cookies, tracking technologies, and user consent choices."
+      }
+    }
+  },
+  "cookieGeneratorPage": {
+    "breadcrumb": "Cookie Policy Generator",
+    "title": "Cookie Policy Generator — PrivacyPolGen",
+    "description": "Create a free cookie policy for your website. Answer a few quick questions and get a complete, compliant cookie policy in seconds.",
+    "heading": "Generate your cookie policy",
+    "subtext": "Create a cookie policy that discloses your use of cookies, tracking technologies, and user consent choices."
+  },
+  "termsGeneratorPage": {
+    "breadcrumb": "Terms & Conditions Generator",
+    "title": "Terms & Conditions Generator — PrivacyPolGen",
+    "description": "Create free terms and conditions for your website, SaaS, or e-commerce store. No signup required, nothing sent to a server.",
+    "heading": "Generate your terms and conditions",
+    "subtext": "Create terms that govern the use of your website or app, covering liability, intellectual property, and more."
   },
   "examplesPage": {
     "breadcrumb": "Examples",
@@ -295,14 +342,20 @@
   },
   "serverError": {
     "label": "500",
+    "title": "Server Error — PrivacyPolGen",
+    "description": "I encountered an internal server error. Try refreshing the page or come back later.",
     "heading": "Something went wrong",
     "message": "An internal server error occurred. Try refreshing the page or come back later.",
+    "subtext": "I couldn't complete your request. The error has been logged and I'll look into it.",
     "backHome": "← Back home",
     "generate": "Generate a policy"
   },
   "notFound": {
     "label": "404",
+    "title": "Page not found — PrivacyPolGen",
+    "description": "The page you're looking for doesn't exist. Generate a free privacy policy instead.",
     "heading": "Page not found",
+    "subtext": "The page you're looking for doesn't exist. It may have been moved or deleted.",
     "messageLead": "The page you're looking for doesn't exist. Want to",
     "messageLink": "generate a privacy policy",
     "messageTrail": "instead?",
@@ -340,15 +393,15 @@
     },
     "terms": {
       "title": "Terms of Service — PrivacyPolGen",
-      "description": "PrivacyPolGen Terms of Service — terms governing the use of our free privacy policy generator."
+      "description": "PrivacyPolGen Terms of Service — terms governing the use of my free privacy policy generator."
     },
     "privacy": {
       "title": "Privacy Policy — PrivacyPolGen",
-      "description": "PrivacyPolGen's own privacy policy — we collect no personal data. Everything runs client-side in your browser."
+      "description": "PrivacyPolGen's own privacy policy — I collect no personal data. Everything runs client-side in your browser."
     },
     "contact": {
       "title": "Contact — PrivacyPolGen",
-      "description": "Get in touch with PrivacyPolGen. Reach us at support@privacypolgen.com."
+      "description": "Get in touch with PrivacyPolGen. Reach me at benatwork4747@gmail.com."
     },
     "policy": {
       "title": "Privacy Policy — PrivacyPolGen",
@@ -357,6 +410,42 @@
     "notFound": {
       "title": "Page not found — PrivacyPolGen",
       "description": "The page you're looking for doesn't exist."
+    },
+    "about": {
+      "title": "About — PrivacyPolGen",
+      "description": "Learn about PrivacyPolGen — a free, client-side privacy policy generator for indie developers, SaaS founders, and small businesses."
+    },
+    "blog": {
+      "title": "Privacy Policy Blog — PrivacyPolGen",
+      "description": "Tips, guides, and best practices for privacy policy compliance — from GDPR and CCPA to COPPA and beyond."
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy — PrivacyPolGen",
+      "description": "View a cookie policy generated by PrivacyPolGen. Each policy is encoded entirely in the URL with no data sent to a server."
+    },
+    "termsPolicy": {
+      "title": "Terms of Service — PrivacyPolGen",
+      "description": "View terms and conditions generated by PrivacyPolGen. Each document is encoded entirely in the URL with no data sent to a server."
+    },
+    "generateCookie": {
+      "title": "Generate Cookie Policy — PrivacyPolGen",
+      "description": "Create a free cookie policy for your website. Answer a few questions and get a complete, compliant cookie policy in seconds."
+    },
+    "generateTerms": {
+      "title": "Generate Terms & Conditions — PrivacyPolGen",
+      "description": "Create free terms and conditions for your website, SaaS, or e-commerce store. No signup required, nothing sent to a server."
+    },
+    "generateHub": {
+      "title": "Generate Legal Documents — PrivacyPolGen",
+      "description": "Create free privacy policies, terms and conditions, and cookie policies for your website. No signup required."
+    },
+    "404": {
+      "title": "Page not found — PrivacyPolGen",
+      "description": "The page you're looking for doesn't exist."
+    },
+    "500": {
+      "title": "Server Error — PrivacyPolGen",
+      "description": "I encountered an internal server error. Try refreshing the page or come back later."
     }
   },
   "termsPage": {
@@ -366,15 +455,15 @@
     "sections": {
       "intro": {
         "title": "1. Acceptance of Terms",
-        "body": "By accessing or using PrivacyPolGen (the \"Service\"), operated by PrivacyPolGen (\"we,\" \"us,\" or \"our\"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, do not use the Service."
+        "body": "By accessing or using PrivacyPolGen (the \"Service\"), operated by Reuben Richard Lancer (\"I,\" \"me,\" or \"my\"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms, do not use the Service."
       },
       "description": {
         "title": "2. Description of Service",
-        "body": "PrivacyPolGen is a free, client-side privacy policy generator. We provide templated legal language based on your inputs to help you create a starting-point privacy policy for your website, application, or business. The Service runs entirely in your browser — no data you enter is transmitted to, stored on, or processed by our servers."
+        "body": "PrivacyPolGen is a free, client-side privacy policy generator. I provide templated legal language based on your inputs to help you create a starting-point privacy policy for your website, application, or business. The Service runs entirely in your browser — no data you enter is transmitted to, stored on, or processed by my servers."
       },
       "notLegalAdvice": {
         "title": "3. Not Legal Advice",
-        "body": "The content generated by PrivacyPolGen is for informational purposes only and does not constitute legal advice. We are not a law firm, we are not your attorneys, and the use of this Service does not create an attorney-client relationship. You should not act or refrain from acting based on any content generated by the Service without first consulting a qualified attorney licensed in your jurisdiction. The generated policy is a starting template and may not address all legal requirements applicable to your specific situation, business model, or industry."
+        "body": "The content generated by PrivacyPolGen is for informational purposes only and does not constitute legal advice. I am not a law firm, I am not your attorney, and the use of this Service does not create an attorney-client relationship. You should not act or refrain from acting based on any content generated by the Service without first consulting a qualified attorney licensed in your jurisdiction. The generated policy is a starting template and may not address all legal requirements applicable to your specific situation, business model, or industry."
       },
       "noWarranties": {
         "title": "4. Disclaimer of Warranties",
@@ -382,23 +471,23 @@
       },
       "limitationLiability": {
         "title": "5. Limitation of Liability",
-        "body": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE SERVICE — INCLUDING BUT NOT LIMITED TO ANY FINES, PENALTIES, OR LEGAL LIABILITIES INCURRED AS A RESULT OF USING A GENERATED POLICY. OUR TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF $1.00 OR THE AMOUNT YOU HAVE PAID US IN THE PRECEDING TWELVE MONTHS."
+        "body": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL I BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATING TO YOUR USE OF, OR INABILITY TO USE, THE SERVICE — INCLUDING BUT NOT LIMITED TO ANY FINES, PENALTIES, OR LEGAL LIABILITIES INCURRED AS A RESULT OF USING A GENERATED POLICY. MY TOTAL LIABILITY TO YOU FOR ALL CLAIMS ARISING FROM OR RELATING TO THESE TERMS OR THE SERVICE SHALL NOT EXCEED THE GREATER OF $1.00 OR THE AMOUNT YOU HAVE PAID ME IN THE PRECEDING TWELVE MONTHS."
       },
       "indemnification": {
         "title": "6. Indemnification",
-        "body": "You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service, the privacy policy you generate, or your violation of these Terms."
+        "body": "You agree to defend, indemnify, and hold me harmless from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service, the privacy policy you generate, or your violation of these Terms."
       },
       "intellectualProperty": {
         "title": "7. Intellectual Property",
-        "body": "The Service, including its text, templates, clauses, and structure, is owned by us and protected by copyright and other intellectual property laws. The privacy policy you generate is yours to use, modify, and distribute for any lawful purpose. However, you may not copy, redistribute, or resell the generator itself or the underlying clause templates as a competing service."
+        "body": "The Service, including its text, templates, clauses, and structure, is owned by me and protected by copyright and other intellectual property laws. The privacy policy you generate is yours to use, modify, and distribute for any lawful purpose. However, you may not copy, redistribute, or resell the generator itself or the underlying clause templates as a competing service."
       },
       "thirdParty": {
         "title": "8. Third-Party Services",
-        "body": "The Service may display references to third-party services (e.g., analytics, payment processors). These references are provided for informational purposes only. We are not responsible for the content, privacy practices, or terms of any third-party services referenced in generated policies."
+        "body": "The Service may display references to third-party services (e.g., analytics, payment processors). These references are provided for informational purposes only. I am not responsible for the content, privacy practices, or terms of any third-party services referenced in generated policies."
       },
       "changes": {
         "title": "9. Changes to Terms",
-        "body": "We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \"Last updated\" date. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. We encourage you to review these Terms periodically."
+        "body": "I reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated \"Last updated\" date. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. I encourage you to review these Terms periodically."
       },
       "governingLaw": {
         "title": "10. Governing Law",
@@ -406,63 +495,63 @@
       },
       "contact": {
         "title": "11. Contact",
-        "body": "If you have any questions about these Terms, please contact us at support@privacypolgen.com."
+        "body": "If you have any questions about these Terms, please contact me at benatwork4747@gmail.com."
       }
     }
   },
   "privacyPage": {
     "breadcrumb": "Privacy Policy",
-    "heading": "Our Privacy Policy",
+    "heading": "My Privacy Policy",
     "lastUpdated": "Last updated: June 8, 2026",
     "sections": {
       "intro": {
         "title": "Introduction",
-        "body": "PrivacyPolGen (\"we,\" \"us,\" or \"our\") operates the website at privacypolgen.com (the \"Service\"). This page explains our approach to privacy — which, in short, is that we collect almost nothing.",
-        "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on our side. The privacy policy generator runs entirely in your browser."
+        "body": "PrivacyPolGen (\"I,\" \"me,\" or \"my\") operates the website at privacypolgen.com (the \"Service\"). This page explains my approach to privacy — which, in short, is that I collect almost nothing.",
+        "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on my side. The privacy policy generator runs entirely in your browser."
       },
       "noCollection": {
-        "title": "Information We Do NOT Collect",
-        "body": "We do not collect, store, or process any personal information about you. Specifically:",
+        "title": "Information I Do NOT Collect",
+        "body": "I do not collect, store, or process any personal information about you. Specifically:",
         "list": [
-          "No account data: We do not require or support user accounts.",
-          "No personal information: We do not ask for or collect your name, email address, or any other personal identifier.",
-          "No payment information: The Service is free. We do not process payments.",
-          "No analytics: We do not run any analytics, tracking pixels, or telemetry on our site.",
-          "No cookies for tracking: We do not use cookies for analytics, advertising, or any tracking purposes.",
+          "No account data: I do not require or support user accounts.",
+          "No personal information: I do not ask for or collect your name, email address, or any other personal identifier.",
+          "No payment information: The Service is free. I do not process payments.",
+          "No analytics: I do not run any analytics, tracking pixels, or telemetry on my site.",
+          "No cookies for tracking: I do not use cookies for analytics, advertising, or any tracking purposes.",
           "No policy data: The answers you provide in the generator wizard are encoded directly into the URL. They are never sent to, stored on, or processed by any server."
         ]
       },
       "technical": {
         "title": "Technical Data",
-        "body": "Our hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. We do not access, analyze, or share this data."
+        "body": "My hosting provider may automatically collect standard server log data such as your IP address, browser type, and requested pages. This data is used solely for the operational purposes of serving the website and preventing abuse. I do not access, analyze, or share this data."
       },
       "localStorage": {
         "title": "Local Storage",
-        "body": "We use your browser's localStorage to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. We cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings."
+        "body": "I use your browser's localStorage to remember two preferences: your selected theme (light/dark) and your language choice. This data stays on your device. I cannot access it, and it is never transmitted anywhere. You can clear these at any time via your browser settings."
       },
       "thirdParty": {
         "title": "Third-Party Services",
-        "body": "We use the following third-party services, which have their own privacy practices:",
+        "body": "I use the following third-party services, which have their own privacy practices:",
         "list": [
-          "Fonts (Google Fonts): Font files are loaded from Google's servers. Google may collect information about font requests per its privacy policy. We self-host where possible to minimize this.",
-          "Hosting: Our static site is served via our hosting provider. Standard server logs may be retained temporarily for security and operational purposes."
+          "Fonts (Google Fonts): Font files are loaded from Google's servers. Google may collect information about font requests per its privacy policy. I self-host where possible to minimize this.",
+          "Hosting: My static site is served via my hosting provider. Standard server logs may be retained temporarily for security and operational purposes."
         ]
       },
       "dataRetention": {
         "title": "Data Retention",
-        "body": "Since we collect no personal data, there is nothing to retain. Any server logs kept by our hosting provider are subject to their retention policies and are not accessed by us."
+        "body": "Since I collect no personal data, there is nothing to retain. Any server logs kept by my hosting provider are subject to their retention policies and are not accessed by me."
       },
       "yourRights": {
         "title": "Your Rights",
-        "body": "Because we collect no personal data, there is no personal data for us to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by our hosting provider, please contact us and we will investigate in good faith."
+        "body": "Because I collect no personal data, there is no personal data for me to provide, correct, or delete. If you have concerns about data that may be inadvertently captured in server logs by my hosting provider, please contact me and I will investigate in good faith."
       },
       "changes": {
         "title": "Changes to This Policy",
-        "body": "If we change this privacy policy, we will update the \"Last updated\" date at the top. Since we collect no data, changes are likely to be rare and minor."
+        "body": "If I change this privacy policy, I will update the \"Last updated\" date at the top. Since I collect no data, changes are likely to be rare and minor."
       },
       "contact": {
         "title": "Contact",
-        "body": "If you have questions about this privacy policy, please contact us at support@privacypolgen.com."
+        "body": "If you have questions about this privacy policy, please contact me at benatwork4747@gmail.com."
       }
     }
   },
@@ -471,8 +560,8 @@
     "heading": "About PrivacyPolGen",
     "subtext": "A simple, free privacy policy generator built for indie developers — not for big law firms.",
     "mission": {
-      "heading": "Our Mission",
-      "body": "Privacy policies shouldn't cost $500 or require a lawyer. We built PrivacyPolGen to give indie developers, SaaS founders, and small business owners a fast, free way to generate accurate privacy policies that comply with global regulations like GDPR, CCPA, and more.",
+      "heading": "My Mission",
+      "body": "Privacy policies shouldn't cost $500 or require a lawyer. I built PrivacyPolGen to give indie developers, SaaS founders, and small business owners a fast, free way to generate accurate privacy policies that comply with global regulations like GDPR, CCPA, and more.",
       "body2": "Everything runs in your browser — your data never touches a server. No accounts, no tracking, no hidden fees."
     },
     "howItWorks": {
@@ -492,7 +581,7 @@
     },
     "whyFree": {
       "heading": "Why Is It Free?",
-      "body": "We believe privacy compliance should be accessible to everyone. The core generator will always be free. We may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch."
+      "body": "I believe privacy compliance should be accessible to everyone. The core generator will always be free. I may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch."
     },
     "cta": {
       "heading": "Ready to generate your policy?",
@@ -503,10 +592,10 @@
   "contactPage": {
     "breadcrumb": "Contact",
     "heading": "Get in touch",
-    "subtext": "Questions, feedback, or just saying hi? We'd love to hear from you.",
+    "subtext": "Questions, feedback, or just saying hi? I'd love to hear from you.",
     "email": {
       "title": "Email",
-      "body": "We typically respond within 24 hours."
+      "body": "I typically respond within 24 hours."
     },
     "github": {
       "title": "GitHub",
@@ -514,7 +603,15 @@
     },
     "feature": {
       "title": "Feature Request",
-      "body": "Have an idea? We'd love to hear it."
+      "body": "Have an idea? I'd love to hear it."
+    },
+    "x": {
+      "title": "X (Twitter)",
+      "body": "Follow me for updates."
+    },
+    "instagram": {
+      "title": "Instagram",
+      "body": "Follow my dev journey."
     },
     "legal": {
       "title": "Legal Inquiry",
@@ -527,6 +624,10 @@
     "productGenerator": "Generator",
     "productExamples": "Examples",
     "productPricing": "Pricing",
+    "productPrivacy": "Privacy Policy",
+    "productTerms": "Terms & Conditions",
+    "productCookie": "Cookie Policy",
+    "productBlog": "Blog",
     "productAbout": "About",
     "legalHeading": "Legal",
     "legalPrivacy": "Privacy Policy",
@@ -534,6 +635,114 @@
     "legalContact": "Contact",
     "copyright": "Not legal advice. Consult an attorney for your specific situation.",
     "credit": "Built with Astro · Made for indie developers"
+  },
+  "cookieWizard": {
+    "stepTitles": [
+      "Business Info",
+      "Cookie Types",
+      "Contact & Legal"
+    ],
+    "step1": {
+      "heading": "Tell me about your business",
+      "subtitle": "I'll use this information to customize your cookie policy.",
+      "labelBusinessName": "Business name *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "Website URL *",
+      "placeholderWebsiteUrl": "https://acme.example"
+    },
+    "step2": {
+      "heading": "What types of cookies do you use?",
+      "subtitle": "Select all categories of cookies your website or application uses."
+    },
+    "cookieTypes": {
+      "essential": {
+        "desc": "Required for the website to function. Includes session cookies, CSRF tokens, and load balancers."
+      },
+      "analytics": {
+        "desc": "Collect anonymous usage data to help me improve the website experience. Includes page views, time on site, and referral sources."
+      },
+      "preference": {
+        "desc": "Remember user preferences such as language, theme, and region settings."
+      },
+      "marketing": {
+        "desc": "Track user behavior across websites for targeted advertising and personalized content."
+      }
+    },
+    "step3": {
+      "heading": "Legal details and consent",
+      "subtitle": "Configure legal compliance options for your cookie policy.",
+      "labelEmail": "Contact email *",
+      "placeholderEmail": "privacy@acme.example",
+      "labelLaw": "Applicable law",
+      "lawHelp": "Select the primary law that applies to your cookie practices.",
+      "placeholderLaw": "Select a law",
+      "labelConsent": "I have a cookie consent mechanism on my site"
+    },
+    "result": {
+      "heading": "Your cookie policy is ready.",
+      "subtitle": "Share the public link below, or copy it to your clipboard.",
+      "publicLink": "Public link",
+      "noticeTitle": "Important:",
+      "noticeText": "This is a starting-point template. Review it carefully and consult an attorney to ensure it matches your actual data practices.",
+      "openTab": "Open in a new tab",
+      "editAnswers": "\u2190 Edit your answers"
+    },
+    "nav": {
+      "generate": "Generate cookie policy"
+    }
+  },
+  "termsWizard": {
+    "stepTitles": [
+      "Business Info",
+      "Features",
+      "Contact"
+    ],
+    "step1": {
+      "heading": "Tell me about your business",
+      "subtitle": "I'll use this information to customize your terms.",
+      "labelBusinessName": "Business name *",
+      "placeholderBusinessName": "Acme Studios",
+      "labelWebsiteUrl": "Website URL *",
+      "placeholderWebsiteUrl": "https://acme.example",
+      "labelJurisdiction": "Primary jurisdiction",
+      "placeholderJurisdiction": "Select a jurisdiction"
+    },
+    "step2": {
+      "heading": "What features does your service offer?",
+      "subtitle": "Select all that apply."
+    },
+    "features": {
+      "accounts": {
+        "name": "User Accounts",
+        "desc": "Users can create accounts, log in, and manage their profiles."
+      },
+      "ugc": {
+        "name": "User-Generated Content",
+        "desc": "Users can post content such as comments, reviews, or media."
+      },
+      "payments": {
+        "name": "Payments",
+        "desc": "Users can make purchases or subscribe to paid services."
+      }
+    },
+    "step3": {
+      "heading": "Contact and legal information",
+      "subtitle": "Provide contact details and configure legal options.",
+      "labelEmail": "Contact email *",
+      "placeholderEmail": "privacy@acme.example"
+    },
+    "result": {
+      "heading": "Your terms and conditions are ready.",
+      "subtitle": "Share the public link below, or copy it to your clipboard.",
+      "publicLink": "Public link",
+      "noticeTitle": "Important:",
+      "noticeText": "This is a starting-point template. Review it carefully and consult an attorney to ensure it matches your actual business practices.",
+      "openTab": "Open in a new tab",
+      "editAnswers": "\u2190 Edit your answers"
+    },
+    "nav": {
+      "generate": "Generate terms"
+    }
   },
   "wizard": {
     "stepTitles": [
@@ -544,8 +753,8 @@
       "Contact"
     ],
     "step1": {
-      "heading": "Tell us about your business",
-      "subtitle": "We'll use these as defaults throughout your policy.",
+      "heading": "Tell me about your business",
+      "subtitle": "I'll use these as defaults throughout your policy.",
       "labelBusinessName": "Business name *",
       "placeholderBusinessName": "Acme Studios",
       "labelWebsiteUrl": "Website URL *",
@@ -555,15 +764,15 @@
     },
     "step2": {
       "heading": "What data do you collect?",
-      "subtitle": "Check everything that applies. We've pre-selected common items for your business type."
+      "subtitle": "Check everything that applies. I've pre-selected common items for your business type."
     },
     "step3": {
       "heading": "Which third-party services do you use?",
-      "subtitle": "We'll add the right disclosures for each."
+      "subtitle": "I'll add the right disclosures for each."
     },
     "step4": {
       "heading": "Which laws apply to you?",
-      "subtitle": "We default to the strictest common case. Leaving the defaults is usually safest."
+      "subtitle": "I default to the strictest common case. Leaving the defaults is usually safest."
     },
     "step5": {
       "heading": "How can users contact you?",
@@ -597,7 +806,10 @@
       "website": "Website",
       "businessType": "Type",
       "jurisdiction": "Jurisdiction",
+      "dataCollected": "Data collected",
+      "collectPrefix": "We collect ",
       "collectSentence": "We collect {types} to provide our services.",
+      "collectSuffix": " to provide our services.",
       "sectionsGenerated": "Sections Generated",
       "placeholders": {
         "business": "[Your Business Name]",
@@ -821,8 +1033,37 @@
     },
     "copy": "Copy {{format}}",
     "pdf": "PDF",
+    "docx": "DOCX",
     "pro": "Pro",
     "title": "Policy preview",
+    "copied": "Copied",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "termsView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Plain text"
+    },
+    "copy": "Copy {{format}}",
+    "pdf": "PDF",
+    "docx": "DOCX",
+    "pro": "Pro",
+    "title": "Terms preview",
+    "copied": "Copied",
+    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+  },
+  "cookieView": {
+    "tabs": {
+      "markdown": "Markdown",
+      "html": "HTML",
+      "plain": "Plain text"
+    },
+    "copy": "Copy {{format}}",
+    "pdf": "PDF",
+    "docx": "DOCX",
+    "pro": "Pro",
+    "title": "Cookie Policy preview",
     "copied": "Copied",
     "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
   },
@@ -835,8 +1076,80 @@
     "lastUpdated": "Last updated: {{date}}",
     "generateOwn": "Generate your own →"
   },
+  "cookieReader": {
+    "errorNoHash": "No cookie policy hash found in the URL. Generate a cookie policy first.",
+    "errorInvalid": "This cookie policy link is invalid or corrupted. Please generate a new one.",
+    "generateNew": "Generate a new cookie policy",
+    "loading": "Loading cookie policy…",
+    "title": "Cookie Policy — {{businessName}}",
+    "description": "Generate a compliant cookie policy for your website. Customize disclosures about cookies, tracking technologies, and user consent choices.",
+    "pageTitle": "Cookie Policy",
+    "pageSubtext": "Review your cookie policy. It details the cookies and tracking technologies used on this website and your rights regarding them.",
+    "lastUpdated": "Last updated: {{date}}",
+    "generateOwn": "Generate your own →"
+  },
+  "termsReader": {
+    "errorNoHash": "No terms hash found in the URL. Generate terms first.",
+    "errorInvalid": "This terms link is invalid or corrupted. Please generate a new one.",
+    "generateNew": "Generate new terms",
+    "loading": "Loading terms…",
+    "title": "Terms of Service — {{businessName}}",
+    "description": "Generate terms and conditions for your website, SaaS, or e-commerce store. Customize rules for accounts, UGC, payments, and more.",
+    "pageTitle": "Terms of Service",
+    "pageSubtext": "Review the terms and conditions that govern the use of this website, including legal disclaimers, liabilities, and user rights.",
+    "lastUpdated": "Last updated: {{date}}",
+    "generateOwn": "Generate your own →"
+  },
   "validation": {
     "required": "Please fill in the required fields",
     "contactEmail": "Please enter a valid email address"
+  },
+  "blogPage": {
+    "breadcrumb": "Blog",
+    "heading": "Privacy Policy Blog",
+    "subtext": "Tips, guides, and best practices for privacy policy compliance — from GDPR to CCPA and everything in between.",
+    "featuredArticle": {
+      "tag": "GDPR",
+      "title": "GDPR Privacy Policy Template: Complete Guide",
+      "description": "Complete GDPR privacy policy template with generator tips. Learn how to create compliant policies that protect users while being user-friendly.",
+      "readMore": "Read featured article"
+    },
+    "comingSoon": {
+      "heading": "Coming Soon: More Expert Content",
+      "text": "I'm currently developing additional blog posts covering CCPA compliance, comparison guides, and practical implementation strategies. I'm creating comprehensive guides to help you navigate privacy policy requirements across different jurisdictions and business needs.",
+      "cards": {
+        "gdpr": {
+          "title": "GDPR Compliance",
+          "description": "Complete templates and best practices for European data protection."
+        },
+        "ccpa": {
+          "title": "CCPA/CPRA Guide",
+          "description": "California privacy requirements and implementation strategies."
+        },
+        "generatorVsTemplate": {
+          "title": "Generator vs Template",
+          "description": "Comparative analysis to help you choose the right approach."
+        }
+      }
+    },
+    "cta": {
+      "heading": "Ready to Create Your Privacy Policy?",
+      "subtext": "Generate a compliant privacy policy in under 60 seconds using my intelligent generator. No legal expertise required.",
+      "generate": "Generate your policy",
+      "contact": "Contact me"
+    }
+  },
+  "blogPost": {
+    "breadcrumb": "Blog",
+    "backToBlog": "Back to blog",
+    "updated": "Updated",
+    "author": "Author",
+    "readTime": "min read",
+    "updatedOn": "Updated"
+  },
+  "documentType": {
+    "policy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookie": "Cookie Policy"
   }
 }

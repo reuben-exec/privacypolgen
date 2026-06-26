@@ -1,0 +1,82 @@
+{
+  "sections": [
+    {
+      "id": "acceptance",
+      "title": "Acceptance of Terms",
+      "includeWhen": "always",
+      "body": "By accessing or using {{websiteUrl}} (the \"Service\"), operated by {{businessName}} (\"we\", \"us\", or \"our\"), you agree to be bound by these Terms and Conditions (\"Terms\"). If you do not agree to these Terms, please do not access or use the Service.\n\nWe reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Service after any changes constitutes your acceptance of the new Terms. It is your responsibility to review these Terms periodically."
+    },
+    {
+      "id": "description",
+      "title": "Description of Service",
+      "includeWhen": "always",
+      "body": "{{websiteUrl}} provides a platform that allows users to {{serviceDescription}}. The Service is provided on an \"AS IS\" and \"AS AVAILABLE\" basis.\n\nWe reserve the right to modify, suspend, or discontinue the Service (or any part thereof) at any time with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the Service."
+    },
+    {
+      "id": "account-registration",
+      "title": "Account Registration",
+      "includeWhen": { "feature": "accounts" },
+      "body": "In order to access certain features of the Service, you may be required to create an account. When you create an account, you agree to:\n\n- Provide accurate, current, and complete registration information\n- Maintain and promptly update your account information as necessary\n- Keep your password secure and confidential\n- Be responsible for all activities that occur under your account\n- Notify us immediately of any unauthorized use of your account\n\nWe reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in our sole discretion."
+    },
+    {
+      "id": "user-conduct",
+      "title": "User Conduct and Prohibited Uses",
+      "includeWhen": "always",
+      "body": "You agree not to use the Service for any unlawful purpose or in violation of these Terms. You agree not to:\n\n- Violate any applicable law or regulation\n- Impersonate any person or entity or falsely state your affiliation\n- Interfere with or disrupt the operation of the Service\n- Attempt to gain unauthorized access to any part of the Service\n- Use the Service to transmit any harmful code, viruses, or malware\n- Engage in any activity that could damage, disable, or impair the Service\n- Collect or harvest any personally identifiable information from the Service\n- Use automated scripts, bots, or scrapers to access the Service without our express permission\n\n{{prohibitedUses}}"
+    },
+    {
+      "id": "user-content",
+      "title": "User-Generated Content",
+      "includeWhen": { "feature": "ugc" },
+      "body": "Our Service may allow you to post, upload, or otherwise submit content, including but not limited to text, images, videos, and comments (\"User Content\"). By submitting User Content, you grant us a non-exclusive, worldwide, royalty-free, sub-licensable, and transferable license to use, reproduce, modify, distribute, and display such User Content in connection with the Service.\n\nYou represent and warrant that:\n\n- You own or have the necessary rights to the User Content you submit\n- Your User Content does not violate the privacy rights, publicity rights, copyrights, or other intellectual property rights of any third party\n- Your User Content does not contain any material that is defamatory, obscene, unlawful, or otherwise objectionable\n\nWe reserve the right, but not the obligation, to monitor, edit, or remove User Content at our sole discretion. We are not responsible for any User Content submitted by users."
+    },
+    {
+      "id": "payment-terms",
+      "title": "Payment Terms",
+      "includeWhen": { "feature": "payments" },
+      "body": "Certain features of the Service may require payment. By purchasing any paid service, you agree to the following payment terms:\n\n- All fees are stated in {{currency}} and are exclusive of applicable taxes\n- Payment is due at the time of purchase unless otherwise agreed in writing\n- We accept the payment methods displayed on the Service\n- Fees are non-refundable except as expressly stated in our refund policy or as required by applicable law\n- We reserve the right to change our fees at any time. Changes will take effect at the start of the next billing period\n- If we are unable to process payment, we may suspend or terminate your access to paid features\n\nFailure to pay fees may result in the suspension or termination of your access to paid features. We may use third-party payment processors to handle payments, and by providing payment information you consent to our sharing of such information with these processors in accordance with our Privacy Policy."
+    },
+    {
+      "id": "intellectual-property",
+      "title": "Intellectual Property Rights",
+      "includeWhen": "always",
+      "body": "The Service and its original content, features, and functionality are and will remain the exclusive property of {{businessName}}. The Service is protected by copyright, trademark, and other laws of {{jurisdiction}} and international jurisdictions.\n\nOur trademarks and trade dress may not be used in connection with any product or service without our prior written consent. All other trademarks, service marks, and trade names used on the Service are the property of their respective owners.\n\nExcept as expressly provided in these Terms, nothing in these Terms shall be construed as granting any license or right to use any intellectual property of {{businessName}} without our prior written consent."
+    },
+    {
+      "id": "third-party-links",
+      "title": "Third-Party Links and Services",
+      "includeWhen": "always",
+      "body": "Our Service may contain links to third-party websites or services that are not owned or controlled by {{businessName}}. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.\n\nYou acknowledge and agree that {{businessName}} shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any third-party websites or services.\n\nWe strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit."
+    },
+    {
+      "id": "termination",
+      "title": "Termination",
+      "includeWhen": "always",
+      "body": "We may terminate or suspend your access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.\n\nUpon termination:\n\n- Your right to use the Service will immediately cease\n- We may delete your account and any associated data\n- Any provisions of these Terms that by their nature should survive termination shall survive, including but not limited to intellectual property provisions, warranty disclaimers, indemnity, and limitations of liability\n\nIf you wish to terminate your account, you may simply discontinue using the Service or contact us at {{contactEmail}}."
+    },
+    {
+      "id": "disclaimer",
+      "title": "Disclaimer and Limitation of Liability",
+      "includeWhen": "always",
+      "body": "THE SERVICE IS PROVIDED ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR COURSE OF PERFORMANCE.\n\n{{businessName}} DOES NOT WARRANT THAT:\n\n- THE SERVICE WILL FUNCTION UNINTERRUPTED, SECURE, OR AVAILABLE AT ANY PARTICULAR TIME OR LOCATION\n- ANY ERRORS OR DEFECTS WILL BE CORRECTED\n- THE SERVICE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS\n- THE RESULTS OF USING THE SERVICE WILL MEET YOUR REQUIREMENTS\n\nIN NO EVENT SHALL {{businessName}}, ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:\n\n- YOUR USE OF OR INABILITY TO USE THE SERVICE\n- ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICE\n- ANY CONTENT OBTAINED FROM THE SERVICE\n- UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT\n\nYOUR SOLE REMEDY FOR DISSATISFACTION WITH THE SERVICE IS TO STOP USING THE SERVICE.\n\nSOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU."
+    },
+    {
+      "id": "governing-law",
+      "title": "Governing Law",
+      "includeWhen": "always",
+      "body": "These Terms shall be governed and construed in accordance with the laws of {{jurisdiction}}, without regard to its conflict of law provisions.\n\nOur failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.\n\nThese Terms constitute the entire agreement between us regarding our Service and supersede and replace any prior agreements we might have had between us regarding the Service."
+    },
+    {
+      "id": "changes",
+      "title": "Changes to These Terms",
+      "includeWhen": "always",
+      "body": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.\n\nBy continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised Terms. If you do not agree to the new Terms, please stop using the Service."
+    },
+    {
+      "id": "contact",
+      "title": "Contact Information",
+      "includeWhen": "always",
+      "body": "If you have any questions about these Terms, please contact us:\n\n- By email: {{contactEmail}}\n- By visiting our website: {{websiteUrl}}"
+    }
+  ]
+}

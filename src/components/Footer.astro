@@ -1,11 +1,14 @@
 ---
 // src/components/Footer.astro
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const tx = await getTranslations();
 const year = new Date().getFullYear();
 ---
 <footer class="border-t border-border mt-24">
   <div class="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-4">
     <div class="md:col-span-2">
-      <div class="flex items-center gap-2 mb-3">
+      <a href="/" class="flex items-center gap-2 mb-3">
         <img
           src="/logo.png"
           alt=""
@@ -13,34 +16,38 @@ const year = new Date().getFullYear();
           height="28"
           class="logo-invert h-7 w-7 rounded-md"
         />
-        <span class="font-semibold tracking-tight" data-i18n="header.brand">PrivacyPolGen</span>
-      </div>
-      <p class="text-fg-muted text-sm max-w-sm" data-i18n="footer.tagline">
-        Free privacy policy generator for websites, SaaS apps, e-commerce stores, and mobile apps. GDPR, CCPA, COPPA compliant. No account required.
+        <span class="font-semibold tracking-tight">{t(tx, 'header.brand')}</span>
+      </a>
+      <p class="text-fg-muted text-sm max-w-sm">
+        {t(tx, 'footer.tagline')}
       </p>
     </div>
     <div>
-      <h4 class="text-sm font-medium mb-3" data-i18n="footer.productHeading">Product</h4>
+      <h4 class="text-sm font-medium mb-3">{t(tx, 'footer.productHeading')}</h4>
       <ul class="space-y-2 text-sm text-fg-muted">
-        <li><a class="hover:text-fg transition-colors" href="/generate" data-i18n="footer.productGenerator">Generator</a></li>
-        <li><a class="hover:text-fg transition-colors" href="/examples" data-i18n="footer.productExamples">Examples</a></li>
-        <li><a class="hover:text-fg transition-colors" href="/pricing" data-i18n="footer.productPricing">Pricing</a></li>
-        <li><a class="hover:text-fg transition-colors" href="/about" data-i18n="footer.productAbout">About</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/generate">{t(tx, 'footer.productGenerator')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/generate/privacy-policy">{t(tx, 'footer.productPrivacy')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/generate/terms">{t(tx, 'footer.productTerms')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/generate/cookie-policy">{t(tx, 'footer.productCookie')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/examples">{t(tx, 'footer.productExamples')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/pricing">{t(tx, 'footer.productPricing')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/blog">{t(tx, 'footer.productBlog')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/about">{t(tx, 'footer.productAbout')}</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="text-sm font-medium mb-3" data-i18n="footer.legalHeading">Legal</h4>
+      <h4 class="text-sm font-medium mb-3">{t(tx, 'footer.legalHeading')}</h4>
       <ul class="space-y-2 text-sm text-fg-muted">
-        <li><a class="hover:text-fg transition-colors" href="/privacy" data-i18n="footer.legalPrivacy">Privacy Policy</a></li>
-        <li><a class="hover:text-fg transition-colors" href="/terms" data-i18n="footer.legalTerms">Terms</a></li>
-        <li><a class="hover:text-fg transition-colors" href="/contact" data-i18n="footer.legalContact">Contact</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/privacy">{t(tx, 'footer.legalPrivacy')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/terms">{t(tx, 'footer.legalTerms')}</a></li>
+        <li><a class="hover:text-fg transition-colors" href="/contact">{t(tx, 'footer.legalContact')}</a></li>
       </ul>
     </div>
   </div>
   <div class="border-t border-border">
     <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-fg-faint">
-      <p>© {year} PrivacyPolGen. <span data-i18n="footer.copyright">Not legal advice. Consult an attorney for your specific situation.</span></p>
-      <p data-i18n="footer.credit">Built with Astro · Made for indie developers</p>
+      <p>© {year} Reuben Richard Lancer. {t(tx, 'footer.copyright')}</p>
+      <p>{t(tx, 'footer.credit')}</p>
     </div>
   </div>
 </footer>

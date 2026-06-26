@@ -1,5 +1,9 @@
 ---
 // src/components/sections/TrustBar.astro
+import { getTranslations, t } from '@/lib/i18n-server';
+interface Props { locale?: string }
+const { locale = 'en' } = Astro.props;
+const tx = await getTranslations(locale);
 const services = [
   'Google Analytics', 'Plausible', 'Mixpanel',
   'Stripe', 'PayPal', 'Mailchimp',
@@ -13,7 +17,7 @@ const services = [
       {services.map((s) => (
         <span class="text-sm text-fg-muted/80 font-mono">{s}</span>
       ))}
-      <span class="text-sm text-fg-faint font-mono italic" data-i18n="trustBar.more">+ many more</span>
+      <span class="text-sm text-fg-faint font-mono italic">{t(tx, 'trustBar.more')}</span>
     </div>
   </div>
 </section>

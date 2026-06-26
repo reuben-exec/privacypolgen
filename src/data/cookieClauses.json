@@ -1,0 +1,70 @@
+{
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "What Are Cookies",
+      "includeWhen": "always",
+      "body": "This Cookie Policy explains how {{businessName}} (\"we\", \"us\", or \"our\") uses cookies and similar tracking technologies on {{websiteUrl}} (the \"Service\").\n\nCookies are small text files that are stored on your device (computer, tablet, or mobile device) when you visit a website. They are widely used to make websites work more efficiently, enhance user experience, and provide information to website owners.\n\nThis policy explains what cookies are, how we use them, and your choices regarding their use."
+    },
+    {
+      "id": "types-of-cookies",
+      "title": "Types of Cookies We Use",
+      "includeWhen": "always",
+      "body": "We use the following categories of cookies on our Service:\n\n{{cookieTypesDescription}}\n\nWe may also use web beacons, pixel tags, and similar tracking technologies in connection with our Service. These are small electronic files that allow us to count users who have visited certain pages, open emails, and deliver other related website statistics."
+    },
+    {
+      "id": "essential-cookies",
+      "title": "Essential Cookies",
+      "includeWhen": { "cookieType": "essential" },
+      "body": "Essential cookies are necessary for the Service to function properly. They enable core functionality such as security, network management, and account access. These cookies do not collect any personally identifiable information and cannot be disabled in our systems.\n\nExamples of essential cookies we use:\n\n- Session cookies: To maintain your session while you navigate the Service\n- Authentication cookies: To verify your account when you log in\n- Security cookies: To protect against fraudulent activity\n- Load balancing cookies: To ensure the Service remains available and responsive\n\nYou can set your browser to block or alert you about these cookies, but some parts of the Service may not function properly without them."
+    },
+    {
+      "id": "analytics-cookies",
+      "title": "Analytics Cookies",
+      "includeWhen": { "cookieType": "analytics" },
+      "body": "Analytics cookies help us understand how visitors interact with our Service by collecting and reporting information anonymously. This allows us to improve the performance and user experience of our Service.\n\nWe use analytics cookies to:\n\n- Count the number of visitors to our Service\n- Understand which pages are most and least popular\n- See how visitors move around the Service\n- Measure the effectiveness of our content\n- Identify and fix technical issues\n\nThese cookies collect aggregated information that does not directly identify individual visitors. The data collected includes information such as pages visited, time spent on pages, referring URLs, and device information."
+    },
+    {
+      "id": "preference-cookies",
+      "title": "Preference and Functional Cookies",
+      "includeWhen": { "cookieType": "preference" },
+      "body": "Preference cookies enable our Service to remember information that changes the way the Service behaves or looks, such as your preferred language or the region you are in. These cookies enhance your experience by providing personalized features.\n\nWe use preference cookies to:\n\n- Remember your language preferences\n- Remember your region or time zone\n- Store your cookie consent preferences\n- Remember your display preferences (such as font size or color scheme)\n- Provide you with personalized content recommendations\n\nDisabling these cookies may affect the functionality and personalization of our Service."
+    },
+    {
+      "id": "marketing-cookies",
+      "title": "Advertising and Marketing Cookies",
+      "includeWhen": { "cookieType": "marketing" },
+      "body": "Advertising and marketing cookies are used to deliver advertisements that are relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns.\n\nThese cookies may be set through our Service by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other websites.\n\nWe use marketing cookies to:\n\n- Display targeted advertisements based on your browsing behavior\n- Measure the effectiveness of our marketing campaigns\n- Track conversions from advertisements\n- Build audience profiles for marketing purposes\n\nYou have the right to opt out of advertising and marketing cookies. See the \"Managing Cookies\" section below for instructions on how to manage your preferences."
+    },
+    {
+      "id": "third-party-cookies",
+      "title": "Third-Party Cookies",
+      "includeWhen": "always",
+      "body": "In addition to our own cookies, we may use various third-party services that also set cookies on our Service. These third-party cookies are governed by the respective privacy policies of the third parties.\n\n{{thirdPartyCookieDetails}}\n\nWe encourage you to review the privacy policies and cookie policies of these third-party services for more information about their data collection practices."
+    },
+    {
+      "id": "cookie-consent",
+      "title": "Cookie Consent",
+      "includeWhen": { "law": ["gdpr", "lgpd"] },
+      "body": "We are committed to ensuring that you have control over the use of cookies on our Service. Where required by applicable law, we obtain your prior consent before placing non-essential cookies on your device.\n\nWhen you first visit our Service, we present you with a cookie consent banner that allows you to:\n\n- Accept all cookies\n- Reject all non-essential cookies\n- Customize your cookie preferences\n\nYou may change your cookie preferences at any time through the cookie settings available on our Service. If you withdraw your consent, we will stop using the relevant cookies unless there is a legitimate interest to continue using them. Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal.\n\nBy using our Service, you agree to our use of cookies in accordance with this Cookie Policy."
+    },
+    {
+      "id": "managing-cookies",
+      "title": "How to Manage Cookies",
+      "includeWhen": "always",
+      "body": "You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by:\n\n**Browser Settings**: Most web browsers allow you to control cookies through their settings. You can typically find these settings in the \"Options\" or \"Preferences\" menu of your browser. You can:\n\n- Delete all cookies from your browser\n- Block third-party cookies\n- Block all cookies\n- Set your browser to notify you before a cookie is set\n\nPlease note that if you choose to block or delete cookies, some features of our Service may not function as intended.\n\n**Opt-Out Tools**: In addition, you can opt out of certain third-party cookies through industry opt-out mechanisms:\n\n- Network Advertising Initiative opt-out: https://optout.networkadvertising.org/\n- Digital Advertising Alliance opt-out: https://optout.aboutads.info/\n- Your Online Choices (EU): https://www.youronlinechoices.com/\n\n**Cookie Consent Tool**: Where applicable, you can manage your cookie preferences through our cookie consent tool available on our Service."
+    },
+    {
+      "id": "updates",
+      "title": "Updates to This Cookie Policy",
+      "includeWhen": "always",
+      "body": "We may update this Cookie Policy from time to time to reflect changes in our practices, technologies, legal requirements, or for other operational reasons.\n\nWhen we make changes, we will update the \"Last updated\" date at the top of this policy. If the changes are material, we will provide you with notice by posting a prominent notice on our Service or by sending you an email notification.\n\nWe encourage you to review this Cookie Policy periodically to stay informed about our use of cookies and related technologies."
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "includeWhen": "always",
+      "body": "If you have any questions, concerns, or requests regarding this Cookie Policy or our use of cookies, please contact us:\n\n- By email: {{contactEmail}}\n- By visiting our website: {{websiteUrl}}"
+    }
+  ]
+}

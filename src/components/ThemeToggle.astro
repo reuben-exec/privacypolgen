@@ -4,14 +4,17 @@
 // The initial data-theme is set on <html> by the inline script in
 // Layout.astro (before paint, so no FOUC). This component just flips it
 // and writes the user's choice to localStorage.
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const { locale = 'en' } = Astro.props;
+const tx = await getTranslations(locale);
+const toggleLabel = t(tx, 'header.ariaToggleTheme');
 ---
 <button
   type="button"
   class="theme-toggle inline-flex h-8 w-8 items-center justify-center rounded-button border border-border text-fg-muted transition-colors hover:bg-bg-hover hover:text-fg"
-  data-i18n-aria="header.ariaToggleTheme"
-  data-i18n-title="header.ariaToggleTheme"
-  aria-label="Toggle theme"
-  title="Toggle theme"
+  aria-label={toggleLabel}
+  title={toggleLabel}
 >
   <svg
     class="theme-icon-sun"
@@ -50,8 +53,8 @@
       var lang = 'en';
       try { lang = localStorage.getItem('ppg-lang') || 'en'; } catch (_) {}
       if (lang !== 'en') {
-        // In non-English, the i18n system will handle ARIA via data-i18n-aria.
-        // For the dynamic switch label, we'll still set it based on theme.
+        // In non-English, load translations from sessionStorage to update
+        // dynamic ARIA label based on theme state.
         try {
           var translations = JSON.parse(sessionStorage.getItem('ppg-translations-' + lang) || '{}');
           var key = theme === 'dark' ? 'header.ariaThemeDark' : 'header.ariaThemeLight';
