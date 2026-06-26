@@ -4,6 +4,7 @@ import Layout from '@/layouts/Layout.astro';
 import CookieWizard from '@/components/CookieWizard';
 import BreadcrumbList from '@/components/BreadcrumbList.astro';
 import { getTranslations, t } from '@/lib/i18n-server';
+import AdUnit from '@/components/AdUnit.astro';
 
 const locale = 'en';
 const tx = await getTranslations(locale);
@@ -32,4 +33,6 @@ const breadcrumbs = [
   <section class="mx-auto max-w-6xl px-6 py-12">
     <CookieWizard client:load />
   </section>
+
+  <AdUnit slot="XXXXXXXXXX" />
 </Layout>

@@ -41,7 +41,8 @@ jobs:
         run: pnpm build
         env:
           PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
-          LEMONSQUEEZY_CHECKOUT_URL: ${{ secrets.LEMONSQUEEZY_CHECKOUT_URL }}
+          PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
+          PUBLIC_LEMONSQUEEZY_CHECKOUT_URL: ${{ secrets.PUBLIC_LEMONSQUEEZY_CHECKOUT_URL }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

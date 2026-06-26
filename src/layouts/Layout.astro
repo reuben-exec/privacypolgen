@@ -8,6 +8,8 @@ import { getTranslations, t } from '@/lib/i18n-server';
 
 // Google AdSense — set PUBLIC_ADSENSE_CLIENT env var before deploying live
 const ADSENSE_CLIENT = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
+// Google Analytics (GA4) — set PUBLIC_GA_ID env var before deploying live
+const GA_ID = import.meta.env.PUBLIC_GA_ID || '';
 
 export interface Props {
   title: string;
@@ -69,6 +71,17 @@ if (pageKey) {
     <link rel="sitemap" href="/sitemap-index.xml" />
     {ADSENSE_CLIENT && (
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`} crossorigin="anonymous" />
+    )}
+    {GA_ID && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script define:vars={{ gaId: GA_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function(){window.dataLayer.push(arguments);}
+          window.gtag('js', new Date());
+          window.gtag('config', gaId);
+        </script>
+      </>
     )}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

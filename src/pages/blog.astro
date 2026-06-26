@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import AdUnit from '@/components/AdUnit.astro';
 import { getCollection } from 'astro:content';
 import { getTranslations, t } from '@/lib/i18n-server';
 
@@ -12,10 +13,15 @@ const breadcrumbs = [
   { name: 'Blog', url: '/blog' },
 ];
 
-// Fetch the featured post dynamically to get the correct pubDate
+// Fetch all published posts, sorted by pubDate descending
 const posts = await getCollection('blog', ({ data }) => !data.draft);
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
 const featuredPost = posts.find(p => p.id === 'gdpr-privacy-policy-template');
 const featuredDate = featuredPost?.data.pubDate ?? new Date('2024-01-15T10:00:00.000Z');
+
+// All other posts (excluding the featured one)
+const otherPosts = posts.filter(p => p.id !== 'gdpr-privacy-policy-template');
 ---
 
 <Layout
@@ -72,26 +78,50 @@ const featuredDate = featuredPost?.data.pubDate ?? new Date('2024-01-15T10:00:00
     </article>
   </section>
 
-  <section class="text-center mb-16 mx-auto max-w-3xl px-6">
-    <h2 class="text-2xl font-semibold mb-8">{t(tx, 'blogPage.comingSoon.heading')}</h2>
-    <p class="text-fg-muted mb-8 max-w-3xl mx-auto">
-      {t(tx, 'blogPage.comingSoon.text')}
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-      <div class="rounded-card border border-border bg-bg p-6">
-        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.gdpr.title')}</h3>
-        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.gdpr.description')}</p>
+  <AdUnit slot="XXXXXXXXXX" />
+
+  {otherPosts.length > 0 && (
+    <section class="mx-auto max-w-5xl px-6 py-8 mb-8">
+      <h2 class="text-2xl font-semibold mb-2">{t(tx, 'blogPage.allPosts.heading')}</h2>
+      <p class="text-fg-muted mb-10 max-w-3xl">{t(tx, 'blogPage.allPosts.text')}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherPosts.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="group rounded-card border border-border bg-bg p-6 transition-all hover:border-fg-muted/30 hover:shadow-sm hover:-translate-y-0.5"
+          >
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              {post.data.tags.map((tag) => (
+                <span class="rounded-full bg-bg-card border border-border px-2 py-0.5 text-[10px] uppercase tracking-wider text-fg-muted">{tag}</span>
+              ))}
+            </div>
+            <h3 class="text-base font-semibold tracking-tight text-fg group-hover:text-fg transition-colors mb-2">
+              {post.data.title}
+            </h3>
+            <p class="text-sm text-fg-muted leading-relaxed mb-4 line-clamp-3">
+              {post.data.description}
+            </p>
+            <div class="flex items-center gap-2 text-xs text-fg-muted">
+              <time datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </time>
+              <span>·</span>
+              <span class="inline-flex items-center gap-1 text-fg-muted group-hover:text-fg transition-colors">
+                Read more
+                <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </a>
+        ))}
       </div>
-      <div class="rounded-card border border-border bg-bg p-6">
-        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.ccpa.title')}</h3>
-        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.ccpa.description')}</p>
-      </div>
-      <div class="rounded-card border border-border bg-bg p-6">
-        <h3 class="text-lg font-semibold mb-3">{t(tx, 'blogPage.comingSoon.cards.generatorVsTemplate.title')}</h3>
-        <p class="text-fg-muted text-sm">{t(tx, 'blogPage.comingSoon.cards.generatorVsTemplate.description')}</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <section class="mx-auto max-w-3xl px-6 mb-20">
     <div class="rounded-card border border-border bg-bg-elevated p-16 text-center">

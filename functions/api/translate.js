@@ -1,23 +1,19 @@
 /**
- * Cloudflare Pages Function — Translation proxy
+ * Cloudflare Pages Function — Free translation proxy
  *
- * Proxies browser translation requests to Google Cloud Translation API v2.
- * The API key is stored as a Cloudflare Pages secret (GOOGLE_TRANSLATE_API_KEY)
- * and is NEVER exposed to the client.
+ * Uses Google Translate's free web endpoint (same as translate.google.com).
+ * No API key or billing required. Rate-limited by Google's internal throttling
+ * but sufficient for typical policy exports.
  *
  * POST /api/translate
  *   Body: { text: string, targetLang: string }
  *   Response: { translatedText: string }
  *   Error: { error: string } (status 4xx/5xx)
- *
- * Required secret:
- *   GOOGLE_TRANSLATE_API_KEY — Google Cloud API key with
- *   "Cloud Translation API" enabled.
- *
- * @see https://cloud.google.com/translate/docs
  */
 
-export async function onRequest({ request, env }) {
+const UPSTREAM_TIMEOUT = 10_000; // 10 seconds
+
+export async function onRequest({ request }) {
   // ── Method check ──────────────────────────────────────────────
   if (request.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
@@ -46,55 +42,84 @@ export async function onRequest({ request, env }) {
     });
   }
 
-  // ── API key ───────────────────────────────────────────────────
-  const apiKey = env.GOOGLE_TRANSLATE_API_KEY;
-  if (!apiKey) {
-    return new Response(
-      JSON.stringify({ error: 'Translation service not configured (missing API key)' }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } },
-    );
-  }
+  // ── Call Google Translate free web endpoint with retry ──────────
+  // Uses the same endpoint as translate.google.com — no API key needed.
+  const MAX_RETRIES = 2; // total attempts (1 initial + 1 retry)
+  let lastError = null;
 
-  // ── Call Google Cloud Translation API ─────────────────────────
-  try {
-    const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        q: text,
-        source: 'en',
-        target: targetLang,
-        format: 'text',
-      }),
-    });
-
-    const raw = await response.text();
-
-    if (!response.ok) {
-      throw new Error(`Google Cloud Translation API error (HTTP ${response.status}): ${raw}`);
-    }
-
-    let data;
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     try {
-      data = JSON.parse(raw);
-    } catch {
-      throw new Error(`Invalid JSON from Google API: ${raw.slice(0, 200)}`);
-    }
+      const url = new URL('https://translate.googleapis.com/translate_a/single');
+      url.searchParams.set('client', 'gtx');
+      url.searchParams.set('sl', 'en');
+      url.searchParams.set('tl', targetLang);
+      url.searchParams.set('dt', 't');
+      url.searchParams.set('q', text);
 
-    const translatedText = data?.data?.translations?.[0]?.translatedText;
-    if (!translatedText) {
-      throw new Error('Unexpected response format from Google API');
-    }
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), UPSTREAM_TIMEOUT);
 
-    return new Response(JSON.stringify({ translatedText }), {
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    return new Response(JSON.stringify({ error: msg }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+      const response = await fetch(url.toString(), {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        },
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeout);
+
+      if (!response.ok) {
+        lastError = `Translation service unavailable (HTTP ${response.status})`;
+        if (response.status >= 500 && attempt < MAX_RETRIES - 1) {
+          // Retry on 5xx after a brief pause
+          await new Promise((r) => setTimeout(r, 500));
+          continue;
+        }
+        return new Response(
+          JSON.stringify({ error: lastError }),
+          { status: 502, headers: { 'Content-Type': 'application/json' } },
+        );
+      }
+
+      const data = await response.json();
+
+      // Response format: [[["translated text","source text",...], ...], ...]
+      // Each segment is translated individually and joined by newlines.
+      if (!Array.isArray(data) || !Array.isArray(data[0])) {
+        return new Response(
+          JSON.stringify({ error: 'Unexpected response format from translation service' }),
+          { status: 502, headers: { 'Content-Type': 'application/json' } },
+        );
+      }
+
+      // Rejoin translated segments, preserving paragraph breaks
+      const segments = data[0];
+      const translatedParts = segments
+        .filter((seg) => Array.isArray(seg) && seg[0])
+        .map((seg) => seg[0]);
+      const translatedText = translatedParts.join('');
+
+      if (!translatedText) {
+        return new Response(
+          JSON.stringify({ error: 'Translation returned empty result' }),
+          { status: 502, headers: { 'Content-Type': 'application/json' } },
+        );
+      }
+
+      return new Response(JSON.stringify({ translatedText }), {
+        headers: { 'Content-Type': 'application/json' },
+      });
+    } catch (err) {
+      lastError = err instanceof Error ? err.message : String(err);
+      if (attempt < MAX_RETRIES - 1) {
+        await new Promise((r) => setTimeout(r, 500));
+        continue;
+      }
+    }
   }
+
+  return new Response(
+    JSON.stringify({ error: lastError || 'Translation failed after retries' }),
+    { status: 502, headers: { 'Content-Type': 'application/json' } },
+  );
 }

@@ -49,7 +49,7 @@ export function PolicyView({ policy }: { policy: GeneratedPolicy }) {
         md = await translateMarkdown(policy.markdown, exportLang);
         setTranslating(false);
       }
-      await exportPdf({ ...policy, markdown: md }, buildExportOverrides(t));
+      await exportPdf({ ...policy, markdown: md }, { ...buildExportOverrides(t), language: exportLang });
     } catch (err) {
       setTranslating(false);
       console.error('PDF download failed:', err);
@@ -66,7 +66,7 @@ export function PolicyView({ policy }: { policy: GeneratedPolicy }) {
         md = await translateMarkdown(policy.markdown, exportLang);
         setTranslating(false);
       }
-      await exportDocx({ ...policy, markdown: md }, buildExportOverrides(t));
+      await exportDocx({ ...policy, markdown: md }, { ...buildExportOverrides(t), language: exportLang });
     } catch (err) {
       setTranslating(false);
       console.error('DOCX download failed:', err);

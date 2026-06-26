@@ -3,9 +3,13 @@
 name = "privacypolgen"
 compatibility_date = "2026-06-14"
 
-# Required secret (set via Cloudflare Dashboard > Pages > privacypolgen > Settings > Environment variables):
-#   GOOGLE_TRANSLATE_API_KEY — Google Cloud API key with Cloud Translation API enabled.
-#
+pages_build_output_dir = "dist"
 
-[pages]
-output_dir = "dist"
+# Public environment variables (visible in client-side HTML, no security risk)
+[vars]
+PUBLIC_TURNSTILE_SITE_KEY = "0x4AAAAAADrnimF1Ud0x-uK7"
+
+# Required secrets (set via `wrangler pages secret put <NAME>`):
+#   GOOGLE_TRANSLATE_API_KEY — Google Cloud API key with Cloud Translation API enabled.
+#   TURNSTILE_SECRET_KEY     — Cloudflare Turnstile siteverify secret.
+#   RESEND_API_KEY           — Resend API key (https://resend.com) for feedback/review emails.

@@ -112,7 +112,7 @@ describe('encodePolicyToHash + decodeHashToPolicy', () => {
   it('accepts a full URL or query string and still decodes', () => {
     const hash = encodePolicyToHash(fixture());
     const fromUrl = decodeHashToPolicy(
-      `https://privacypolgen.com/p?h=${hash}`
+      `https://www.privacypolgen.in/p?h=${hash}`
     );
     expect(fromUrl).not.toBeNull();
     expect(encodePolicyToHash(fromUrl!)).toBe(hash);

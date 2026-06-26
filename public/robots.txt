@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /p
 
-Sitemap: https://privacypolgen.com/sitemap-index.xml
+Sitemap: https://www.privacypolgen.in/sitemap-index.xml

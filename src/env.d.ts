@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly PUBLIC_ADSENSE_CLIENT: string;
+  readonly PUBLIC_GA_ID: string;
   readonly PUBLIC_LEMONSQUEEZY_CHECKOUT_URL: string;
 }
 

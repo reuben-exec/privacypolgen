@@ -24,6 +24,62 @@ const generatorHrefs = ['/generate/privacy-policy', '/generate/terms', '/generat
   breadcrumbs={breadcrumbs}
 >
   <BreadcrumbList items={breadcrumbs} />
+
+  <!-- SoftwareApplication JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'PrivacyPolGen',
+    description: 'Free privacy policy generator for websites, SaaS, e-commerce, and mobile apps. Generate GDPR, CCPA, COPPA, and DPDP compliant privacy policies in under 60 seconds. No signup needed.',
+    url: 'https://www.privacypolgen.in/generate',
+    applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Privacy Policy Generator',
+    operatingSystem: 'Any',
+    browserRequirements: 'Modern web browser (Chrome, Firefox, Safari, Edge)',
+    softwareVersion: '1.0',
+    image: 'https://www.privacypolgen.in/og.png',
+    author: {
+      '@type': 'Person',
+      name: 'Reuben Richard Lancer',
+      url: 'https://github.com/reuben-exec',
+    },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Free',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Generate privacy policies with HTML, Markdown, and plain text export',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Premium',
+        price: '13.00',
+        priceCurrency: 'USD',
+        description: 'PDF and DOCX export, white-label, and edit-key features',
+      },
+    ],
+    featureList: [
+      'GDPR-compliant privacy policy generation',
+      'CCPA/CPRA-compliant privacy policy generation',
+      'COPPA-compliant privacy policy for children\'s apps',
+      'DPDP-compliant privacy policy for India',
+      'Multiple export formats (HTML, Markdown, plain text)',
+      'Shareable policy links via URL hash',
+      'i18n support in 17 languages',
+      'No signup or server-side storage required',
+    ],
+    sameAs: [
+      'https://github.com/reuben-exec/privacypolgen',
+      'https://x.com/classic_bruv04',
+    ],
+    softwareHelp: {
+      '@type': 'WebPage',
+      url: 'https://www.privacypolgen.in/contact',
+    },
+    inLanguage: ['en', 'es', 'fr', 'de', 'hi', 'ja', 'zh', 'pt', 'ru', 'ar', 'bn', 'nl', 'ko', 'ta', 'tr', 'vi', 'ka'],
+  })} />
+
   <section class="border-b border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <p class="text-sm text-fg-muted">{t(tx, 'generateHub.breadcrumb')}</p>

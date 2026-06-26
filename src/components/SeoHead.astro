@@ -34,7 +34,7 @@ function buildSchema() {
       '@type': 'SoftwareApplication',
       name: 'PrivacyPolGen',
       description: 'Free privacy policy generator for websites, SaaS, e-commerce, and mobile apps.',
-      url: 'https://privacypolgen.com',
+      url: 'https://www.privacypolgen.in',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Any',
       offers: {
@@ -92,7 +92,7 @@ function buildSchema() {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: 'https://privacypolgen.com/generate',
+          urlTemplate: 'https://www.privacypolgen.in/generate',
         },
         'query-input': 'required name=search_term_string',
       },
@@ -121,6 +121,10 @@ function buildSchema() {
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
 {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+<!-- hreflang — English-only build; Google Translate handles client-side i18n -->
+<link rel="alternate" hreflang="en" href={canonicalUrl} />
+<link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
 <!-- Open Graph -->
 <meta property="og:type" content={ogType} />

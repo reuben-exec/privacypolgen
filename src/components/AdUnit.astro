@@ -1,0 +1,38 @@
+---
+// src/components/AdUnit.astro
+// Reusable AdSense ad slot — only renders when PUBLIC_ADSENSE_CLIENT is set.
+// Usage: <AdUnit slot="1234567890" format="auto" className="my-8" />
+// Replace placeholder slot IDs with real ones from your AdSense dashboard.
+
+interface Props {
+  slot: string;
+  format?: 'auto' | 'horizontal' | 'vertical' | 'rectangle';
+  className?: string;
+}
+
+const adClient = import.meta.env.PUBLIC_ADSENSE_CLIENT || '';
+const { slot, format = 'auto', className = '' } = Astro.props;
+---
+
+{adClient && (
+  <div class:list={['ad-container', className].filter(Boolean)}>
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={adClient}
+      data-ad-slot={slot}
+      data-ad-format={format}
+      data-full-width-responsive="true"
+    />
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+)}
+
+<style>
+  .ad-container {
+    max-width: 48rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    min-height: 90px;
+  }
+</style>

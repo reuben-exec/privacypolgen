@@ -1,8 +1,10 @@
 // src/lib/export.ts
 // Client-side PDF + DOCX export for generated policies.
 // Dynamic-imports jspdf / docx only when a user clicks download.
+// Supports Unicode rendering via Noto Sans font family for non-Latin scripts.
 
 import type { GeneratedPolicy } from '@/lib/generator';
+import { getFontForLanguage, getSecondaryFont, fetchFont, type FontInfo } from '@/lib/fonts';
 
 /** Localization overrides for PDF/DOCX export. All fields optional — English defaults used when omitted. */
 export interface ExportOverrides {
@@ -10,6 +12,8 @@ export interface ExportOverrides {
   generatedBy?: string;
   pageLabel?: string;
   filename?: string;
+  /** Language code (e.g. 'es', 'ar', 'ko') for Unicode font selection. Defaults to 'en'. */
+  language?: string;
 }
 
 // ── Helpers ──────────────────────────────────────────────────
@@ -41,11 +45,56 @@ function triggerDownload(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
 
+/**
+ * Converts an ArrayBuffer to a binary string (required by jsPDF's addFileToVFS).
+ */
+function arrayBufferToBinaryString(buffer: ArrayBuffer): string {
+  const bytes = new Uint8Array(buffer);
+  let binary = '';
+  for (let i = 0; i < bytes.length; i++) {
+    binary += String.fromCharCode(bytes[i]!);
+  }
+  return binary;
+}
+
+/**
+ * Checks whether a string contains primarily non-Latin characters
+ * (CJK, Arabic, Devanagari, etc.) to determine if we need special font handling.
+ */
+function isLatinScript(langCode: string): boolean {
+  return ['en', 'de', 'es', 'fr', 'pt', 'nl', 'tr', 'vi', 'ru'].includes(langCode);
+}
+
 // ── PDF Export ───────────────────────────────────────────────
 
 export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverrides): Promise<void> {
   const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+
+  const langCode = overrides?.language ?? 'en';
+  const useCustomFont = langCode !== 'en' && !isLatinScript(langCode);
+
+  // ── Load & register Unicode font if needed ───────────────────
+  let primaryFontId = 'helvetica';
+  let primaryFontName = 'Noto Sans';
+  let hasCustomFont = false;
+
+  if (useCustomFont) {
+    try {
+      const primaryFont = getFontForLanguage(langCode);
+      const buffer = await fetchFont(primaryFont);
+      const binaryStr = arrayBufferToBinaryString(buffer);
+      const vfsName = `NotoSans-${langCode}.ttf`;
+
+      doc.addFileToVFS(vfsName, binaryStr);
+      doc.addFont(vfsName, 'noto', 'normal');
+      primaryFontId = 'noto';
+      primaryFontName = primaryFont.name;
+      hasCustomFont = true;
+    } catch (err) {
+      console.warn(`Failed to load font for ${langCode}, falling back to Helvetica:`, err);
+    }
+  }
 
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
@@ -59,10 +108,21 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
   const pageLabel = overrides?.pageLabel ?? 'Page';
   const filename = overrides?.filename ?? 'privacy-policy';
 
+  // Set the active font
+  const setFont = (style: 'normal' | 'bold' | 'italic' = 'normal') => {
+    if (hasCustomFont) {
+      // Custom Noto Sans only has 'normal' weight — use it for all styles
+      doc.setFont(primaryFontId, 'normal');
+    } else {
+      doc.setFont('helvetica', style);
+    }
+  };
+
   const addHeaderFooter = (pageNum: number) => {
     // Header
     doc.setFontSize(8);
     doc.setTextColor(160);
+    setFont();
     doc.text(preparedBy, margin, 10);
     // Footer
     doc.text(generatedBy, margin, pageH - 8);
@@ -93,7 +153,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^# /.test(line) && !/^## /.test(line)) {
       ensureSpace(18);
       doc.setFontSize(20);
-      doc.setFont('helvetica', 'bold');
+      setFont('bold');
       doc.setTextColor(9);
       const title = sanitizeForPdf(stripMarkdownInline(line.replace(/^# /, '')));
       doc.text(title, pageW / 2, y + 7, { align: 'center' });
@@ -106,7 +166,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
       ensureSpace(16);
       y += 4;
       doc.setFontSize(13);
-      doc.setFont('helvetica', 'bold');
+      setFont('bold');
       doc.setTextColor(9);
       const heading = sanitizeForPdf(stripMarkdownInline(line.replace(/^## /, '')));
       doc.text(heading, margin, y + 5);
@@ -124,7 +184,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
       ensureSpace(12);
       y += 3;
       doc.setFontSize(11);
-      doc.setFont('helvetica', 'bold');
+      setFont('bold');
       doc.setTextColor(9);
       const heading = sanitizeForPdf(stripMarkdownInline(line.replace(/^### /, '')));
       doc.text(heading, margin, y + 4);
@@ -136,7 +196,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^>\s/.test(line)) {
       ensureSpace(20);
       doc.setFontSize(8);
-      doc.setFont('helvetica', 'italic');
+      setFont('italic');
       doc.setTextColor(130);
       const text = sanitizeForPdf(stripMarkdownInline(line.replace(/^>\s*/, '')));
       const split = doc.splitTextToSize(text, contentW - 4);
@@ -153,7 +213,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^\*[^*]+\*$/.test(line) && !/\*\*/.test(line)) {
       ensureSpace(10);
       doc.setFontSize(9);
-      doc.setFont('helvetica', 'italic');
+      setFont('italic');
       doc.setTextColor(130);
       const text = sanitizeForPdf(stripMarkdownInline(line.replace(/^\*/, '').replace(/\*$/, '')));
       const split = doc.splitTextToSize(text, contentW);
@@ -170,7 +230,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^\*\*[^*]+\*\*$/.test(line) || /^\*\*[^*]+\*\*:?\s/.test(line)) {
       ensureSpace(8);
       doc.setFontSize(9);
-      doc.setFont('helvetica', 'bold');
+      setFont('bold');
       doc.setTextColor(120);
       const text = sanitizeForPdf(stripMarkdownInline(line));
       doc.text(text, margin, y + 4);
@@ -182,7 +242,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^[-*]\s+/.test(line)) {
       ensureSpace(6);
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
+      setFont();
       doc.setTextColor(50);
       const text = sanitizeForPdf(stripMarkdownInline(line.replace(/^[-*]\s+/, '')));
       const split = doc.splitTextToSize(text, contentW - 6);
@@ -200,7 +260,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     if (/^\d+\.\s+/.test(line)) {
       ensureSpace(6);
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
+      setFont();
       doc.setTextColor(50);
       const text = sanitizeForPdf(stripMarkdownInline(line.replace(/^\d+\.\s+/, '')));
       const split = doc.splitTextToSize(text, contentW - 6);
@@ -217,7 +277,7 @@ export async function exportPdf(policy: GeneratedPolicy, overrides?: ExportOverr
     // Regular paragraph
     ensureSpace(8);
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    setFont();
     doc.setTextColor(50);
     const text = sanitizeForPdf(stripMarkdownInline(line));
     const split = doc.splitTextToSize(text, contentW);
@@ -249,6 +309,44 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
     BorderStyle, convertInchesToTwip,
   } = docx;
 
+  const langCode = overrides?.language ?? 'en';
+  const useCustomFont = langCode !== 'en' && !isLatinScript(langCode);
+
+  // ── Load Unicode fonts for DOCX embedding ──────────────────
+  let primaryFontName = 'Georgia'; // default for English / Latin
+  let secondaryFontName: string | undefined;
+  const embeddedFonts: Array<{ name: string; data: ArrayBuffer }> = [];
+
+  if (useCustomFont) {
+    try {
+      const primaryFont = getFontForLanguage(langCode);
+      const primaryBuffer = await fetchFont(primaryFont);
+      primaryFontName = primaryFont.name;
+      embeddedFonts.push({ name: primaryFont.name, data: primaryBuffer });
+
+      // CJK languages also need the Latin font for mixed-in English terms
+      const secondary = getSecondaryFont(langCode);
+      if (secondary) {
+        const secondaryBuffer = await fetchFont(secondary);
+        secondaryFontName = secondary.name;
+        embeddedFonts.push({ name: secondary.name, data: secondaryBuffer });
+      }
+    } catch (err) {
+      console.warn(`Failed to load font for ${langCode}, falling back to Georgia:`, err);
+      primaryFontName = 'Georgia';
+    }
+  }
+
+  // Font descriptor for TextRun objects
+  const fontDescriptor = useCustomFont && embeddedFonts.length > 0
+    ? {
+        ascii: secondaryFontName ?? primaryFontName,
+        eastAsia: primaryFontName,
+        cs: primaryFontName,
+        hAnsi: secondaryFontName ?? primaryFontName,
+      }
+    : undefined;
+
   const children: InstanceType<typeof Paragraph>[] = [];
 
   const lines = policy.markdown.split('\n');
@@ -266,7 +364,11 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
       children.push(new Paragraph({
         heading: HeadingLevel.TITLE,
         alignment: AlignmentType.CENTER,
-        children: [new TextRun({ text: stripMarkdownInline(line.replace(/^# /, '')), bold: true })],
+        children: [new TextRun({
+          text: stripMarkdownInline(line.replace(/^# /, '')),
+          bold: true,
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
+        })],
         spacing: { after: 200 },
       }));
       continue;
@@ -277,7 +379,11 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
       children.push(new Paragraph({
         heading: HeadingLevel.HEADING_1,
         border: { bottom: { color: 'CCCCCC', space: 4, style: BorderStyle.SINGLE, size: 6 } },
-        children: [new TextRun({ text: stripMarkdownInline(line.replace(/^## /, '')), bold: true })],
+        children: [new TextRun({
+          text: stripMarkdownInline(line.replace(/^## /, '')),
+          bold: true,
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
+        })],
         spacing: { before: 300, after: 150 },
       }));
       continue;
@@ -287,7 +393,11 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
     if (/^### /.test(line)) {
       children.push(new Paragraph({
         heading: HeadingLevel.HEADING_2,
-        children: [new TextRun({ text: stripMarkdownInline(line.replace(/^### /, '')), bold: true })],
+        children: [new TextRun({
+          text: stripMarkdownInline(line.replace(/^### /, '')),
+          bold: true,
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
+        })],
         spacing: { before: 200, after: 100 },
       }));
       continue;
@@ -303,6 +413,7 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
           italics: true,
           size: 16,
           color: '888888',
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
         })],
       }));
       continue;
@@ -317,6 +428,7 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
           italics: true,
           size: 18,
           color: '888888',
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
         })],
       }));
       continue;
@@ -331,6 +443,7 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
           bold: true,
           size: 18,
           color: '888888',
+          ...(fontDescriptor ? { font: fontDescriptor } : {}),
         })],
       }));
       continue;
@@ -340,7 +453,7 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
     if (/^[-*]\s+/.test(line)) {
       children.push(new Paragraph({
         bullet: { level: 0 },
-        children: parseInlineFormatting(stripNonBoldMarkdown(line.replace(/^[-*]\s+/, '')), TextRun),
+        children: parseInlineFormatting(stripNonBoldMarkdown(line.replace(/^[-*]\s+/, '')), TextRun, fontDescriptor),
         spacing: { after: 60 },
       }));
       continue;
@@ -350,7 +463,7 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
     if (/^\d+\.\s+/.test(line)) {
       children.push(new Paragraph({
         numbering: { reference: 'default-numbering', level: 0 },
-        children: parseInlineFormatting(stripNonBoldMarkdown(line.replace(/^\d+\.\s+/, '')), TextRun),
+        children: parseInlineFormatting(stripNonBoldMarkdown(line.replace(/^\d+\.\s+/, '')), TextRun, fontDescriptor),
         spacing: { after: 60 },
       }));
       continue;
@@ -358,17 +471,23 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
 
     // Regular paragraph
     children.push(new Paragraph({
-      children: parseInlineFormatting(stripNonBoldMarkdown(line), TextRun),
+      children: parseInlineFormatting(stripNonBoldMarkdown(line), TextRun, fontDescriptor),
       spacing: { after: 80 },
     }));
   }
 
   const doc = new Document({
+    ...(embeddedFonts.length > 0 ? {
+      fonts: embeddedFonts.map((f) => ({
+        name: f.name,
+        data: new Uint8Array(f.data) as Buffer,
+      })),
+    } : {}),
     styles: {
       default: {
         document: {
           run: {
-            font: 'Georgia',
+            font: primaryFontName,
             size: 22,
           },
         },
@@ -391,8 +510,18 @@ export async function exportDocx(policy: GeneratedPolicy, overrides?: ExportOver
           children: [new Paragraph({
             alignment: AlignmentType.CENTER,
             children: [
-              new TextRun({ text: `${overrides?.generatedBy ?? 'Generated by PrivacyPolGen.com'}  |  ${overrides?.pageLabel ?? 'Page'} `, size: 16, color: '999999' }),
-              new TextRun({ children: [PageNumber.CURRENT], size: 16, color: '999999' }),
+              new TextRun({
+                text: `${overrides?.generatedBy ?? 'Generated by PrivacyPolGen.com'}  |  ${overrides?.pageLabel ?? 'Page'} `,
+                size: 16,
+                color: '999999',
+                ...(fontDescriptor ? { font: fontDescriptor } : {}),
+              }),
+              new TextRun({
+                children: [PageNumber.CURRENT],
+                size: 16,
+                color: '999999',
+                ...(fontDescriptor ? { font: fontDescriptor } : {}),
+              }),
             ],
           })],
         }),
@@ -429,16 +558,27 @@ function sanitizeForPdf(text: string): string {
 }
 
 // Simple inline formatting parser for DOCX TextRuns
-function parseInlineFormatting(text: string, TextRun: typeof import("docx").TextRun) {
+function parseInlineFormatting(
+  text: string,
+  TextRun: typeof import("docx").TextRun,
+  fontDescriptor?: { ascii: string; eastAsia: string; cs: string; hAnsi: string },
+) {
   // Split on bold markers to handle them inline
   const runs: InstanceType<typeof TextRun>[] = [];
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   for (const part of parts) {
     if (/^\*\*[^*]+\*\*$/.test(part)) {
-      runs.push(new TextRun({ text: part.replace(/^\*\*/, '').replace(/\*\*$/, ''), bold: true }));
+      runs.push(new TextRun({
+        text: part.replace(/^\*\*/, '').replace(/\*\*$/, ''),
+        bold: true,
+        ...(fontDescriptor ? { font: fontDescriptor } : {}),
+      }));
     } else if (part) {
-      runs.push(new TextRun({ text: part }));
+      runs.push(new TextRun({
+        text: part,
+        ...(fontDescriptor ? { font: fontDescriptor } : {}),
+      }));
     }
   }
-  return runs.length > 0 ? runs : [new TextRun({ text })];
+  return runs.length > 0 ? runs : [new TextRun({ text, ...(fontDescriptor ? { font: fontDescriptor } : {}) })];
 }

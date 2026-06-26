@@ -76,7 +76,7 @@ export function DocumentView({
         md = await translateMarkdown(markdown, exportLang);
         setTranslating(false);
       }
-      await exportPdf({ ...policyObject, markdown: md }, buildExportOverrides(t));
+      await exportPdf({ ...policyObject, markdown: md }, { ...buildExportOverrides(t), language: exportLang });
     } catch (err) {
       setTranslating(false);
       console.error('PDF download failed:', err);
@@ -93,7 +93,7 @@ export function DocumentView({
         md = await translateMarkdown(markdown, exportLang);
         setTranslating(false);
       }
-      await exportDocx({ ...policyObject, markdown: md }, buildExportOverrides(t));
+      await exportDocx({ ...policyObject, markdown: md }, { ...buildExportOverrides(t), language: exportLang });
     } catch (err) {
       setTranslating(false);
       console.error('DOCX download failed:', err);

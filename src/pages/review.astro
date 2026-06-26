@@ -1,13 +1,14 @@
 ---
 // src/pages/review.astro
 // Review page — users can leave feedback about PrivacyPolGen.
-// Submissions are sent via FormSubmit to benatwork4747@gmail.com.
+// Submissions are sent via Cloudflare Email Service to benatwork4747@gmail.com.
 // No registration needed, completely free, unlimited submissions.
 import Layout from '@/layouts/Layout.astro';
 import BreadcrumbList from '@/components/BreadcrumbList.astro';
 import { getTranslations, t } from '@/lib/i18n-server';
 
 const tx = await getTranslations();
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '';
 
 const breadcrumbs = [
   { name: 'Home', url: '/' },
@@ -25,16 +26,16 @@ const breadcrumbs = [
 
   <!-- Hero -->
   <section class="border-b border-border bg-bg-elevated/30">
-    <div class="mx-auto max-w-3xl px-6 py-10">
+    <div class="mx-auto max-w-3xl px-6 pt-20 pb-10">
       <p class="text-sm text-fg-muted">{t(tx, 'reviewPage.breadcrumb')}</p>
       <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'reviewPage.heading')}</h1>
-      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'reviewPage.subtext')}</p>
+      <p class="mt-2 text-fg-faint max-w-2xl">{t(tx, 'reviewPage.subtext')}</p>
     </div>
   </section>
 
   <!-- Review Form -->
   <section class="mx-auto max-w-3xl px-6 py-16">
-    <!-- Success state (shown after form submission redirects with ?success=true) -->
+    <!-- Success state (shown after successful submission) -->
     <div id="success-message" class="hidden rounded-card border border-border bg-bg-elevated p-8 text-center">
       <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-fg/10">
         <svg class="h-8 w-8 text-fg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -65,16 +66,9 @@ const breadcrumbs = [
     <!-- The form (hidden on success) -->
     <div id="review-form">
       <form
-        action="https://formsubmit.co/benatwork4747@gmail.com"
-        method="POST"
-        class="rounded-card border border-border bg-bg-elevated p-6 md:p-8 space-y-6"
+        id="review-form-el"
+        class="review-form rounded-card border border-border bg-bg-elevated p-6 md:p-8 space-y-6"
       >
-        <!-- FormSubmit configuration -->
-        <input type="hidden" name="_subject" value="New Review from PrivacyPolGen">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="/review?success=true">
-        <input type="hidden" name="_template" value="box">
-
         <!-- Name -->
         <div>
           <label for="name" class="label">{t(tx, 'reviewPage.nameLabel')}</label>
@@ -84,6 +78,18 @@ const breadcrumbs = [
             name="name"
             required
             placeholder={t(tx, 'reviewPage.namePlaceholder')}
+            class="input mt-1.5"
+          />
+        </div>
+
+        <!-- Email (optional) -->
+        <div>
+          <label for="r-email" class="label">{t(tx, 'reviewPage.emailLabel')}</label>
+          <input
+            type="email"
+            id="r-email"
+            name="email"
+            placeholder={t(tx, 'reviewPage.emailPlaceholder')}
             class="input mt-1.5"
           />
         </div>
@@ -302,31 +308,31 @@ const breadcrumbs = [
           <div class="star-rating mt-1.5 flex flex-row-reverse justify-end gap-1">
             <input type="radio" id="star5" name="rating" value="5" required />
             <label for="star5" title="5 stars">
-              <svg class="star-icon h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="star-icon h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </label>
             <input type="radio" id="star4" name="rating" value="4" />
             <label for="star4" title="4 stars">
-              <svg class="star-icon h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="star-icon h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </label>
             <input type="radio" id="star3" name="rating" value="3" />
             <label for="star3" title="3 stars">
-              <svg class="star-icon h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="star-icon h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </label>
             <input type="radio" id="star2" name="rating" value="2" />
             <label for="star2" title="2 stars">
-              <svg class="star-icon h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="star-icon h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </label>
             <input type="radio" id="star1" name="rating" value="1" />
             <label for="star1" title="1 star">
-              <svg class="star-icon h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="star-icon h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </label>
@@ -347,7 +353,7 @@ const breadcrumbs = [
         </div>
 
         <!-- Timezone notice -->
-        <div class="rounded-card border border-border bg-bg p-4 flex items-start gap-3">
+        <div class="rounded-button bg-bg-card p-4 flex items-start gap-3">
           <svg class="mt-0.5 h-5 w-5 shrink-0 text-fg-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/>
             <polyline points="12 6 12 12 16 14"/>
@@ -355,9 +361,15 @@ const breadcrumbs = [
           <p class="text-sm text-fg-muted leading-relaxed">{t(tx, 'reviewPage.timezoneNotice')}</p>
         </div>
 
+        <!-- Turnstile -->
+        {TURNSTILE_SITE_KEY && (
+          <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="auto"></div>
+        )}
+
         <!-- Submit -->
         <button
           type="submit"
+          id="review-submit"
           class="btn-primary w-full"
         >{t(tx, 'reviewPage.submit')}</button>
       </form>
@@ -385,7 +397,7 @@ const breadcrumbs = [
   .star-rating label:hover,
   .star-rating label:hover ~ label,
   .star-rating input:checked ~ label {
-    color: #eab308; /* yellow-500 */
+    color: #f59e0b; /* amber-500 */
   }
 
   .star-rating label:hover {
@@ -409,35 +421,111 @@ const breadcrumbs = [
   .star-rating label:hover .star-icon,
   .star-rating label:hover ~ label .star-icon,
   .star-rating input:checked ~ label .star-icon {
-    fill: #eab308;
+    fill: #f59e0b;
+  }
+
+  /* ── Review Form ────────────────────────────────────────────── */
+  .review-form .label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-fg-muted);
+  }
+
+  .review-form .input {
+    background-color: var(--color-bg);
+    border-color: var(--color-border);
+  }
+
+  .review-form .input:focus {
+    border-color: var(--color-fg-faint);
+    background-color: var(--color-bg);
   }
 </style>
 
-<script is:inline>
+<script is:inline define:vars={{ TURNSTILE_SITE_KEY }}>
   (function () {
-    // Show success message if redirected after form submission
-    var params = new URLSearchParams(window.location.search);
-    if (params.get('success') === 'true') {
-      var form = document.getElementById('review-form');
-      var success = document.getElementById('success-message');
-      if (form && success) {
-        form.classList.add('hidden');
-        success.classList.remove('hidden');
-        // Clean URL without reload
-        if (window.history.replaceState) {
-          var clean = window.location.pathname;
-          window.history.replaceState(null, '', clean);
+    var form = document.getElementById('review-form-el');
+    var formWrapper = document.getElementById('review-form');
+    var successEl = document.getElementById('success-message');
+    var errorEl = document.getElementById('error-message');
+    var errorText = document.getElementById('error-text');
+    var submitBtn = document.getElementById('review-submit');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Get Turnstile token
+      var turnstileToken = '';
+      var turnstileWidget = form.querySelector('.cf-turnstile');
+      if (turnstileWidget && typeof turnstile !== 'undefined') {
+        turnstileToken = turnstile.getResponse(turnstileWidget);
+        if (!turnstileToken) {
+          var hiddenInput = turnstileWidget.querySelector('[name="cf-turnstile-response"]');
+          if (hiddenInput) turnstileToken = hiddenInput.value;
         }
       }
-    }
-
-    // Show error if redirected with ?error=true
-    if (params.get('error') === 'true') {
-      var errorEl = document.getElementById('error-message');
-      if (errorEl) {
-        errorEl.classList.remove('hidden');
-        errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!turnstileToken) {
+        var directInput = form.querySelector('input[name="cf-turnstile-response"]');
+        if (directInput) turnstileToken = directInput.value;
       }
-    }
+
+      if (TURNSTILE_SITE_KEY && !turnstileToken) {
+        errorEl.classList.remove('hidden');
+        errorText.textContent = 'Please complete the CAPTCHA.';
+        return;
+      }
+
+      // Get selected rating
+      var ratingInput = form.querySelector('input[name="rating"]:checked');
+      var rating = ratingInput ? ratingInput.value : null;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      var data = {
+        name: form.querySelector('#name').value,
+        email: form.querySelector('#r-email').value,
+        type: 'review',
+        rating: rating,
+        country: form.querySelector('#country').value,
+        message: form.querySelector('#review').value,
+        turnstileToken: turnstileToken,
+      };
+
+      try {
+        var res = await fetch('/api/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        var result = await res.json();
+
+        if (result.success) {
+          formWrapper.classList.add('hidden');
+          successEl.classList.remove('hidden');
+          if (window.history.replaceState) {
+            window.history.replaceState(null, '', window.location.pathname);
+          }
+        } else {
+          errorEl.classList.remove('hidden');
+          errorText.textContent = result.error || 'Something went wrong. Please try again or email me directly at benatwork4747@gmail.com.';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Submit Review';
+        }
+      } catch {
+        errorEl.classList.remove('hidden');
+        errorText.textContent = 'Network error. Please try again.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Review';
+      }
+    });
   })();
 </script>
+
+<!-- Load Turnstile if site key is present -->
+{TURNSTILE_SITE_KEY && (
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+)}

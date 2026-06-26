@@ -169,7 +169,7 @@
       },
       "premium": {
         "name": "Premium",
-        "price": "$19",
+        "price": "$13",
         "period": "one-time",
         "description": "For businesses that need polished exports and integrations.",
         "cta": "Upgrade to Premium",
@@ -363,6 +363,21 @@
     "backHome": "← Back home",
     "generate": "Generate a policy"
   },
+  "maintenance": {
+    "title": "Under Maintenance — PrivacyPolGen",
+    "description": "PrivacyPolGen is temporarily offline while I ship improvements including premium features and Google Analytics. Check back soon!",
+    "heading": "Under Maintenance",
+    "subtext": "I'm making improvements to PrivacyPolGen. The site will be back shortly.",
+    "status": {
+      "fixes": "Fixing known issues and edge cases",
+      "analytics": "Setting up Google Analytics (GA4)",
+      "paywall": "Integrating LemonSqueezy premium paywall",
+      "adsense": "Preparing AdSense ad placements",
+      "cleanup": "Code cleanup and optimization"
+    },
+    "note": "In the meantime, you can reach out via the",
+    "contact": "contact page"
+  },
   "homeCta": {
     "heading": "Ready to ship your privacy policy?",
     "subtext": "It takes less than a minute. Generate a comprehensive, compliant privacy policy tailored to your exact business — no account, no credit card, no catch.",
@@ -507,7 +522,7 @@
     "sections": {
       "intro": {
         "title": "Introduction",
-        "body": "PrivacyPolGen (\"I,\" \"me,\" or \"my\") operates the website at privacypolgen.com (the \"Service\"). This page explains my approach to privacy — which, in short, is that I collect almost nothing.",
+        "body": "PrivacyPolGen (\"I,\" \"me,\" or \"my\") operates the website at www.privacypolgen.in (the \"Service\"). This page explains my approach to privacy — which, in short, is that I collect almost nothing.",
         "body2": "Unlike most online services, PrivacyPolGen does not have a backend server. There is no database, no user accounts, no analytics tracking, and no data storage on my side. The privacy policy generator runs entirely in your browser."
       },
       "noCollection": {
@@ -606,7 +621,9 @@
     "successTitle": "Thank you for your review!",
     "successBody": "Your feedback has been sent to my inbox. I appreciate you taking the time to share your thoughts.",
     "successLink": "Write another review",
-    "errorMessage": "Something went wrong. Please try again or email me directly at benatwork4747@gmail.com."
+    "errorMessage": "Something went wrong. Please try again or email me directly at benatwork4747@gmail.com.",
+    "emailLabel": "Email (optional)",
+    "emailPlaceholder": "your@email.com (for replies)"
   },
   "contactPage": {
     "breadcrumb": "Contact",
@@ -635,6 +652,26 @@
     "legal": {
       "title": "Legal Inquiry",
       "body": "For legal questions or requests."
+    },
+    "form": {
+      "heading": "Send a message",
+      "subtext": "Fill out the form below and I'll get back to you as soon as possible.",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email (optional)",
+      "emailPlaceholder": "your@email.com",
+      "typeLabel": "Type",
+      "typeGeneral": "General Inquiry",
+      "typeBug": "Bug Report",
+      "typeFeature": "Feature Request",
+      "messageLabel": "Message",
+      "messagePlaceholder": "How can I help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message sent!",
+      "successBody": "Thank you for reaching out. I'll get back to you as soon as I can.",
+      "successLink": "Send another message",
+      "errorMessage": "Something went wrong. Please try again or email me directly at benatwork4747@gmail.com."
     }
   },
   "footer": {
@@ -704,7 +741,7 @@
       "noticeTitle": "Important:",
       "noticeText": "This is a starting-point template. Review it carefully and consult an attorney to ensure it matches your actual data practices.",
       "openTab": "Open in a new tab",
-      "editAnswers": "\u2190 Edit your answers"
+      "editAnswers": "← Edit your answers"
     },
     "nav": {
       "generate": "Generate cookie policy"
@@ -757,7 +794,7 @@
       "noticeTitle": "Important:",
       "noticeText": "This is a starting-point template. Review it carefully and consult an attorney to ensure it matches your actual business practices.",
       "openTab": "Open in a new tab",
-      "editAnswers": "\u2190 Edit your answers"
+      "editAnswers": "← Edit your answers"
     },
     "nav": {
       "generate": "Generate terms"
@@ -1133,23 +1170,9 @@
       "description": "Complete GDPR privacy policy template with generator tips. Learn how to create compliant policies that protect users while being user-friendly.",
       "readMore": "Read featured article"
     },
-    "comingSoon": {
-      "heading": "Coming Soon: More Expert Content",
-      "text": "I'm currently developing additional blog posts covering CCPA compliance, comparison guides, and practical implementation strategies. I'm creating comprehensive guides to help you navigate privacy policy requirements across different jurisdictions and business needs.",
-      "cards": {
-        "gdpr": {
-          "title": "GDPR Compliance",
-          "description": "Complete templates and best practices for European data protection."
-        },
-        "ccpa": {
-          "title": "CCPA/CPRA Guide",
-          "description": "California privacy requirements and implementation strategies."
-        },
-        "generatorVsTemplate": {
-          "title": "Generator vs Template",
-          "description": "Comparative analysis to help you choose the right approach."
-        }
-      }
+    "allPosts": {
+      "heading": "All Articles",
+      "text": "Browse our complete library of privacy policy guides, compliance checklists, and expert insights."
     },
     "cta": {
       "heading": "Ready to Create Your Privacy Policy?",
