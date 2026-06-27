@@ -20,6 +20,8 @@ export interface Props {
   noindex?: boolean;
   /** Hide the header/footer chrome (used on /p policy view) */
   bare?: boolean;
+  /** Suppress the announcement banner (used on /maintenance and similar) */
+  hideAnnouncement?: boolean;
   /** SEO schema type for JSON-LD */
   schemaType?: 'WebApplication' | 'FAQPage' | 'WebPage' | 'Article' | 'BreadcrumbList';
   /** Article-specific props for JSON-LD */
@@ -43,7 +45,7 @@ export interface Props {
   pageKey?: string;
 }
 
-const { title, description, canonical, ogType, noindex, bare = false, schemaType = 'WebApplication', article, breadcrumbs, pageKey } = Astro.props;
+const { title, description, canonical, ogType, noindex, bare = false, hideAnnouncement = false, schemaType = 'WebApplication', article, breadcrumbs, pageKey } = Astro.props;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
 
 // Build-time i18n SEO lookup: resolve localized title/description from translation JSON
@@ -119,7 +121,7 @@ if (pageKey) {
       Skip to content
     </a>
     {!bare && <Header />}
-    {!bare && <AnnouncementBanner client:load />}
+    {!bare && !hideAnnouncement && <AnnouncementBanner client:load />}
     <main id="main-content" class="flex-1">
       <slot />
     </main>
