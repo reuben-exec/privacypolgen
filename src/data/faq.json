@@ -29,7 +29,7 @@
   },
   {
     "q": "Is PrivacyPolGen really free with no hidden costs?",
-    "a": "Yes — PrivacyPolGen is completely free to use with no hidden costs, no credit card required, and no time limits. You can generate, copy, customize, and host your privacy policy free of charge forever. I do not sell your data, show paywalls, or limit the number of policies you can generate. The core generator will always remain free. I plan to introduce a Premium tier in the future that adds optional features like PDF and DOCX export formats, cookie banner code generation, custom branding, and hosted policy pages with version history — but everything you need to create a compliant privacy policy is available on the free tier, now and always."
+    "a": "Yes — PrivacyPolGen is completely free to use with no hidden costs, no credit card required, and no time limits. You can generate, copy, customize, and host your privacy policy free of charge forever. I do not sell your data, show paywalls, or limit the number of policies you can generate. Everything you need to create a compliant privacy policy is available on the free tier, now and always."
   },
   {
     "q": "Does this privacy policy generator support GDPR, CCPA, and other international laws?",
@@ -45,7 +45,7 @@
   },
   {
     "q": "Can I edit or customize my privacy policy after generating it?",
-    "a": "Yes, you have full control over your privacy policy after generating it. The output is provided in Markdown and HTML formats, which you can edit in any text editor, code editor, or word processor. You can add, remove, or modify any sections to better fit your specific business practices. The policy is yours to customize freely — I do not place any restrictions or watermarks on generated content. For simple edits, just paste the HTML into your website and make changes directly. For more advanced editing, my future Premium tier will offer in-app editing with version history, but the free tier already gives you complete and unrestricted access to your policy content."
+    "a": "Yes, you have full control over your privacy policy after generating it. The output is provided in Markdown and HTML formats, which you can edit in any text editor, code editor, or word processor. You can add, remove, or modify any sections to better fit your specific business practices. The policy is yours to customize freely — I do not place any restrictions or watermarks on generated content."
   },
   {
     "q": "Does the privacy policy include a cookie policy and cookie disclosure?",
@@ -68,8 +68,8 @@
     "a": "If you are unsure which privacy laws apply to your business, I recommend selecting the safest default option. PrivacyPolGen defaults to including GDPR (EU/EEA/UK), CCPA/CPRA (California), and CalOPPA (California) for all users. These three laws collectively represent the strictest and most comprehensive privacy requirements globally. A policy written to satisfy GDPR standards will generally satisfy most other privacy laws as well, since GDPR is widely considered the gold standard for data protection. If your business is physically located in Canada, Brazil, India, Singapore, or other regions with their own privacy laws, you can easily add those specific laws in Step 4 of the wizard. When in doubt, including more legal coverage is always safer than including less — extra clauses do not invalidate your policy, but missing required clauses could put you at risk of non-compliance."
   },
   {
-    "q": "What is the difference between the free and Premium tiers?",
-    "a": "PrivacyPolGen's free tier gives you everything you need to create a complete, legally compliant privacy policy: unlimited policy generation, Markdown and HTML output formats, plain text export, and a shareable hosted URL — all at no cost and without an account. The Premium tier, coming soon, will add advanced features for businesses that need more: PDF and DOCX export formats, customizable cookie banner code generation, custom branding on hosted policy pages, in-app editing with version history, multi-language policy support, and priority support. The core generator will always remain free — Premium is entirely optional and designed for businesses with more sophisticated needs."
+    "q": "Is PrivacyPolGen completely free?",
+    "a": "PrivacyPolGen is completely free to use with no hidden costs, no credit card required, and no time limits. You can generate, copy, customize, and host your privacy policy free of charge forever. I do not sell your data, show paywalls, or limit the number of policies you can generate. Everything you need to create a compliant privacy policy is available now and always."
   },
   {
     "q": "Can I use PrivacyPolGen for client projects and commercial use?",

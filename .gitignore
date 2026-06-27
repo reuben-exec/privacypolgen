@@ -46,3 +46,6 @@ _fix_*.py
 screenshot-google.png
 screenshots.mjs
 screenshots/
+
+# Premium archive (preserved locally, stripped from repo)
+premium_stuff/

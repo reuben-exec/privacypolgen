@@ -6,17 +6,10 @@ import { PolicyView } from '@/components/PolicyView';
 import { I18nProvider, useI18n } from '@/lib/I18nProvider';
 import { localizePath } from '@/lib/i18n';
 import { buildGeneratorOverrides } from '@/lib/buildOverrides';
-import { onPremiumReturn } from '@/lib/premium';
-
 function PolicyReaderInner() {
   const { t, locale } = useI18n();
   const [error, setError] = useState<string | null>(null);
   const [hash, setHash] = useState<string | null>(null);
-
-  // Check for premium return on mount
-  useEffect(() => {
-    onPremiumReturn();
-  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

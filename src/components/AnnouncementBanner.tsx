@@ -30,8 +30,8 @@ export default function AnnouncementBanner() {
     <div className="relative bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white px-4 py-2.5 text-sm">
       <div className="mx-auto max-w-6xl flex items-center justify-between gap-4">
         <p className="flex-1 text-center">
-          <span className="font-semibold">✅ Maintenance complete!</span>{' '}
-          We're back online with PDF/DOCX exports, cookie consent banner generator, and more.
+          <span className="font-semibold">✅ PrivacyPolGen is now fully live!</span>{' '}
+          Generate free privacy policies, terms &amp; conditions, and cookie policies — no sign-up required.
         </p>
         <button
           onClick={dismiss}

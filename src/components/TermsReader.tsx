@@ -7,17 +7,10 @@ import { DocumentView } from '@/components/DocumentView';
 import { I18nProvider, useI18n } from '@/lib/I18nProvider';
 import { localizePath } from '@/lib/i18n';
 import { buildTermsOverrides } from '@/lib/buildOverrides';
-import { onPremiumReturn } from '@/lib/premium';
-
 function TermsReaderInner() {
   const { t, locale } = useI18n();
   const [error, setError] = useState<string | null>(null);
   const [hash, setHash] = useState<string | null>(null);
-
-  // Check for premium return on mount
-  useEffect(() => {
-    onPremiumReturn();
-  }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

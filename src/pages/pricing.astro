@@ -1,7 +1,6 @@
 ---
 // src/pages/pricing.astro
 import Layout from '@/layouts/Layout.astro';
-import Pricing from '@/components/sections/Pricing.astro';
 import FAQ from '@/components/sections/FAQ.astro';
 import BreadcrumbList from '@/components/BreadcrumbList.astro';
 import { getTranslations, t } from '@/lib/i18n-server';
@@ -16,18 +15,17 @@ const breadcrumbs = [
 ---
 <Layout
   title="Pricing — PrivacyPolGen"
-  description="PrivacyPolGen is free forever. Premium adds PDF/DOCX export, custom branding, and hosted policy pages."
+  description="PrivacyPolGen is completely free forever. No hidden costs, no credit card required."
   schemaType="BreadcrumbList"
   breadcrumbs={breadcrumbs}
 >
   <BreadcrumbList items={breadcrumbs} />
   <section class="border-b border-border bg-bg-elevated/30">
     <div class="mx-auto max-w-6xl px-6 py-10">
-      <p class="text-sm text-fg-muted">{t(tx, 'pricingPage.breadcrumb')}</p>
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'pricingPage.heading')}</h1>
-      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'pricingPage.subtext')}</p>
+      <p class="text-sm text-fg-muted">Pricing</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Simple, fair pricing.</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">PrivacyPolGen is completely free forever. No hidden costs, no credit card required.</p>
     </div>
   </section>
-  <Pricing locale={locale} />
   <FAQ locale={locale} schemaType="FAQPage" />
 </Layout>

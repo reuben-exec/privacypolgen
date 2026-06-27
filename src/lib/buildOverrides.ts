@@ -4,7 +4,6 @@
 import type { GeneratorOverrides } from '@/lib/generator';
 import type { TermsGeneratorOverrides } from '@/lib/terms-generator';
 import type { CookieGeneratorOverrides } from '@/lib/cookie-generator';
-import type { ExportOverrides } from '@/lib/export';
 
 type TFunc = (key: string, params?: Record<string, string>) => string;
 
@@ -130,12 +129,3 @@ export function buildCookieOverrides(t: TFunc, locale: string): CookieGeneratorO
   };
 }
 
-/** Build ExportOverrides from i18n t() and businessName. */
-export function buildExportOverrides(t: TFunc): ExportOverrides {
-  return {
-    preparedBy: tx(t, 'policy.export.preparedBy'),
-    generatedBy: tx(t, 'policy.export.generatedBy'),
-    pageLabel: tx(t, 'policy.export.pageLabel'),
-    filename: tx(t, 'policy.export.filename'),
-  };
-}

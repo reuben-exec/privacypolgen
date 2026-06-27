@@ -42,7 +42,6 @@ jobs:
         env:
           PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
-          PUBLIC_LEMONSQUEEZY_CHECKOUT_URL: ${{ secrets.PUBLIC_LEMONSQUEEZY_CHECKOUT_URL }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
