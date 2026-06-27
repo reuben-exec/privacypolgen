@@ -8,6 +8,7 @@ import { useI18n } from '@/lib/I18nProvider';
 import { useToast } from '@/components/Toast';
 import { buildExportOverrides } from '@/lib/buildOverrides';
 import { EXPORT_LANGUAGES, translateMarkdown } from '@/lib/translate';
+import { PremiumGate, usePremiumGate } from '@/components/PremiumGate';
 
 function useTheme(): 'dark' | 'light' {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -56,6 +57,7 @@ export function DocumentView({
   const [translating, setTranslating] = useState(false);
   const theme = useTheme();
   const toast = useToast();
+  const { premium, mounted: premiumMounted, checkPremium } = usePremiumGate();
 
   const value =
     format === 'markdown' ? markdown :
@@ -68,6 +70,7 @@ export function DocumentView({
   const policyObject = { markdown, html, plainText, hash, businessName, websiteUrl, generatedAt };
 
   const handlePdfDownload = async () => {
+    if (premiumMounted && !checkPremium()) return;
     try {
       const { exportPdf } = await import('@/lib/export');
       let md = markdown;
@@ -85,6 +88,7 @@ export function DocumentView({
   };
 
   const handleDocxDownload = async () => {
+    if (premiumMounted && !checkPremium()) return;
     try {
       const { exportDocx } = await import('@/lib/export');
       let md = markdown;
@@ -157,24 +161,28 @@ export function DocumentView({
             </span>
           )}
           <CopyButton value={value} label={t(`${i18nPrefix}.copy`, { format: formatLabel })} />
-          <button
-            type="button"
-            onClick={handlePdfDownload}
-            disabled={translating}
-            className="inline-flex h-8 items-center rounded-button border border-border bg-bg-elevated px-3 text-xs font-medium text-fg-muted hover:text-fg hover:bg-bg-card transition-colors disabled:opacity-50"
-          >
-            <svg className="h-3.5 w-3.5 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            {t(`${i18nPrefix}.pdf`)}
-          </button>
-          <button
-            type="button"
-            onClick={handleDocxDownload}
-            disabled={translating}
-            className="inline-flex h-8 items-center rounded-button border border-border bg-bg-elevated px-3 text-xs font-medium text-fg-muted hover:text-fg hover:bg-bg-card transition-colors disabled:opacity-50"
-          >
-            <svg className="h-3.5 w-3.5 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1-2 2h7l5 5v11a2 2 0 0 1-2 2z"/></svg>
-            {t(`${i18nPrefix}.docx`)}
-          </button>
+          <PremiumGate feature="pdf" badge={premium}>
+            <button
+              type="button"
+              onClick={handlePdfDownload}
+              disabled={translating}
+              className="inline-flex h-8 items-center rounded-button border border-border bg-bg-elevated px-3 text-xs font-medium text-fg-muted hover:text-fg hover:bg-bg-card transition-colors disabled:opacity-50"
+            >
+              <svg className="h-3.5 w-3.5 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              {t(`${i18nPrefix}.pdf`)}
+            </button>
+          </PremiumGate>
+          <PremiumGate feature="docx" badge={premium}>
+            <button
+              type="button"
+              onClick={handleDocxDownload}
+              disabled={translating}
+              className="inline-flex h-8 items-center rounded-button border border-border bg-bg-elevated px-3 text-xs font-medium text-fg-muted hover:text-fg hover:bg-bg-card transition-colors disabled:opacity-50"
+            >
+              <svg className="h-3.5 w-3.5 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1-2 2h7l5 5v11a2 2 0 0 1-2 2z"/></svg>
+              {t(`${i18nPrefix}.docx`)}
+            </button>
+          </PremiumGate>
         </div>
       </div>
       <div className="rounded-md border border-border bg-bg-elevated overflow-hidden">

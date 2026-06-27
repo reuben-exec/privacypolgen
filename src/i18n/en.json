@@ -169,7 +169,7 @@
       },
       "premium": {
         "name": "Premium",
-        "price": "$13",
+        "price": "$13.99",
         "period": "one-time",
         "description": "For businesses that need polished exports and integrations.",
         "cta": "Upgrade to Premium",
@@ -178,11 +178,7 @@
         "features": [
           "Everything in Free",
           "PDF and DOCX export",
-          "Cookie banner code generator",
-          "Custom branding (your logo + colors)",
-          "Hosted policy page with custom domain",
-          "Version history & diffs",
-          "Priority support"
+          "Cookie banner code generator"
         ]
       }
     }
@@ -221,7 +217,7 @@
       },
       {
         "q": "Is this privacy policy generator really free?",
-        "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. The core generator will always be free. I have a Premium tier planned with PDF/DOCX exports and multi-page policies, but the core generator will always be free."
+        "a": "Yes. You can generate, copy, and host the resulting privacy policy completely free of charge. The core generator will always be free. The Premium tier offers PDF/DOCX export and cookie banner code generation, but the core generator is and always will be free."
       },
       {
         "q": "Does this cover GDPR, CCPA, and other laws?",
@@ -261,7 +257,7 @@
       },
       {
         "q": "What's the difference between the free and Premium tiers?",
-        "a": "Free gives you a complete privacy policy in markdown, HTML, and plain text — copy/paste into your site. Premium adds PDF and DOCX export, cookie banner code generation, custom branding, and hosted policy pages with version history."
+        "a": "Free gives you a complete privacy policy in markdown, HTML, and plain text — copy/paste into your site. Premium adds PDF and DOCX export and cookie banner code generation."
       },
       {
         "q": "Can I use this for a client project?",
@@ -293,6 +289,10 @@
       "cookie": {
         "title": "Cookie Policy",
         "desc": "Generate a cookie policy that discloses your use of cookies, tracking technologies, and user consent choices."
+      },
+      "cookieBanner": {
+        "title": "Cookie Consent Banner",
+        "desc": "Generate a customizable cookie consent banner for your website. GDPR-ready with category toggles and script blocking."
       }
     }
   },
@@ -401,7 +401,7 @@
     },
     "pricing": {
       "title": "Pricing — PrivacyPolGen",
-      "description": "PrivacyPolGen is free forever. Premium adds PDF/DOCX export, custom branding, and hosted policy pages."
+      "description": "PrivacyPolGen is free forever. Premium adds PDF/DOCX export and cookie banner code generation."
     },
     "examples": {
       "title": "Example privacy policies — PrivacyPolGen",
@@ -462,6 +462,14 @@
     "500": {
       "title": "Server Error — PrivacyPolGen",
       "description": "I encountered an internal server error. Try refreshing the page or come back later."
+    },
+    "generateCookieBanner": {
+      "title": "Cookie Consent Banner Generator — PrivacyPolGen",
+      "description": "Generate a free, customizable cookie consent banner for your website. GDPR-ready with category toggles, script blocking, and localStorage persistence."
+    },
+    "updates": {
+      "title": "Update Logs — PrivacyPolGen",
+      "description": "Track all changes, improvements, and new features in PrivacyPolGen."
     }
   },
   "termsPage": {
@@ -597,7 +605,7 @@
     },
     "whyFree": {
       "heading": "Why Is It Free?",
-      "body": "I believe privacy compliance should be accessible to everyone. The core generator will always be free. I may introduce optional premium features (like PDF export) in the future, but the generator itself stays free — no signup, no limits, no catch."
+      "body": "I believe privacy compliance should be accessible to everyone. The core generator will always be free. Optional Premium features like PDF/DOCX export and cookie banner generation are available for businesses that need polished exports — but the generator itself stays free, no signup, no limits, no catch."
     },
     "cta": {
       "heading": "Ready to generate your policy?",
@@ -690,7 +698,9 @@
     "legalTerms": "Terms",
     "legalContact": "Contact",
     "copyright": "Not legal advice. Consult an attorney for your specific situation.",
-    "credit": "Built with Astro · Made for indie developers"
+    "credit": "Built with Astro · Made for indie developers",
+    "productCookieBanner": "Cookie Banner",
+    "productUpdateLogs": "Update Logs"
   },
   "cookieWizard": {
     "stepTitles": [
@@ -1092,8 +1102,7 @@
     "docx": "DOCX",
     "pro": "Pro",
     "title": "Policy preview",
-    "copied": "Copied",
-    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+    "copied": "Copied"
   },
   "termsView": {
     "tabs": {
@@ -1106,8 +1115,7 @@
     "docx": "DOCX",
     "pro": "Pro",
     "title": "Terms preview",
-    "copied": "Copied",
-    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+    "copied": "Copied"
   },
   "cookieView": {
     "tabs": {
@@ -1120,8 +1128,7 @@
     "docx": "DOCX",
     "pro": "Pro",
     "title": "Cookie Policy preview",
-    "copied": "Copied",
-    "pdfComingSoon": "PDF export is a Premium feature. Coming soon."
+    "copied": "Copied"
   },
   "policyReader": {
     "errorNoHash": "No policy hash found in the URL. Generate a policy first.",
@@ -1193,5 +1200,61 @@
     "policy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookie": "Cookie Policy"
+  },
+  "premium": {
+    "gate": {
+      "title": "Premium Feature",
+      "description": "This feature requires a one-time Premium purchase ($13.99).",
+      "cta": "Unlock with Premium",
+      "unavailable": "Premium purchase is not yet available. Check back soon!",
+      "restore": "Already purchased? Your premium access is active."
+    }
+  },
+  "cookieBannerPage": {
+    "breadcrumb": "Cookie Banner Generator",
+    "title": "Cookie Consent Banner Generator — PrivacyPolGen",
+    "description": "Generate a free, customizable cookie consent banner for your website. GDPR-ready with category toggles, script blocking, and localStorage persistence.",
+    "heading": "Cookie Consent Banner Generator",
+    "subtext": "Generate a ready-to-paste cookie consent banner for your website. Customize position, colors, and cookie categories.",
+    "premiumBadge": "Premium",
+    "backToGenerators": "Back to Generators",
+    "configHeading": "Configuration",
+    "positionLabel": "Banner Position",
+    "colorsLabel": "Colors",
+    "categoriesLabel": "Cookie Categories",
+    "urlsLabel": "URLs",
+    "expiryLabel": "Consent Expiry (days)",
+    "previewHeading": "Live Preview",
+    "codeHeading": "Generated Code",
+    "pasteNote": "Paste this code before the closing </body> tab of your HTML pages.",
+    "faqHeading": "Frequently Asked Questions"
+  },
+  "updates": {
+    "pageTitle": "Update Logs",
+    "pageDescription": "Track all changes, improvements, and new features in PrivacyPolGen.",
+    "backToHome": "← Back to Home",
+    "entries": [
+      {
+        "version": "v1.0.1",
+        "date": "June 26, 2026",
+        "title": "Premium Features & Generators",
+        "items": [
+          "Added PDF and DOCX export for privacy policies, terms, and cookie policies",
+          "Added Cookie Consent Banner Generator — GDPR-ready with category toggles and script blocking",
+          "Added Cookie Policy Generator — generate compliant cookie policies from quick questions",
+          "Added Terms & Conditions Generator — generate terms covering liability, IP, and UGC",
+          "Added Premium paywall gate with LemonSqueezy checkout integration",
+          "Added Google Analytics (GA4) support",
+          "Added Google AdSense ad placements",
+          "Fixed edge cases in URL compression and policy rendering",
+          "Performance optimizations across all generators",
+          "UI/UX improvements and bug fixes"
+        ]
+      }
+    ]
+  },
+  "announcementBanner": {
+    "message": "✅ Maintenance complete! We're back online with PDF/DOCX exports, cookie consent banner generator, and more.",
+    "dismiss": "Dismiss"
   }
 }

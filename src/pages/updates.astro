@@ -1,0 +1,70 @@
+---
+// src/pages/updates.astro
+import Layout from '@/layouts/Layout.astro';
+import BreadcrumbList from '@/components/BreadcrumbList.astro';
+import { getTranslations, t } from '@/lib/i18n-server';
+
+const locale = 'en';
+const tx = await getTranslations(locale);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Update Logs', url: '/updates' },
+];
+
+// Access updates entries directly (t() only handles strings)
+const updatesRoot = (tx as Record<string, any>)['updates'] ?? {};
+const updatesEntries: any[] = updatesRoot['entries'] ?? [];
+---
+
+<Layout
+  title="Update Logs — PrivacyPolGen"
+  description="Track all changes, improvements, and new features in PrivacyPolGen."
+  pageKey="updates"
+  schemaType="BreadcrumbList"
+  breadcrumbs={breadcrumbs}
+>
+  <BreadcrumbList items={breadcrumbs} />
+
+  <!-- Hero -->
+  <section class="border-b border-border bg-bg-elevated/30">
+    <div class="mx-auto max-w-3xl px-6 py-10">
+      <p class="text-sm text-fg-muted">{t(tx, 'updates.pageTitle')}</p>
+      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">{t(tx, 'updates.pageTitle')}</h1>
+      <p class="mt-2 text-fg-muted max-w-2xl">{t(tx, 'updates.pageDescription')}</p>
+    </div>
+  </section>
+
+  <!-- Entries -->
+  <section class="mx-auto max-w-3xl px-6 py-16">
+    <div class="space-y-16">
+      {updatesEntries.map((entry: any) => (
+        <article class="relative border-l-2 border-purple-500/40 pl-8">
+          <!-- Timeline dot -->
+          <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-purple-500 ring-4 ring-bg" />
+
+          <div class="flex items-baseline gap-3 mb-3">
+            <span class="text-sm font-mono font-semibold text-purple-400">{entry.version}</span>
+            <time class="text-sm text-fg-muted">{entry.date}</time>
+          </div>
+          <h2 class="text-xl font-semibold mb-4">{entry.title}</h2>
+          <ul class="space-y-2">
+            {entry.items.map((item: string) => (
+              <li class="flex items-start gap-2 text-fg-muted text-sm">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-400/60" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <!-- Back link -->
+    <div class="mt-16 pt-8 border-t border-border">
+      <a href="/" class="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+        {t(tx, 'updates.backToHome')}
+      </a>
+    </div>
+  </section>
+</Layout>

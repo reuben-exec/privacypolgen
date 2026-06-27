@@ -618,7 +618,7 @@ function WizardContent() {
                               <div className="text-sm font-medium leading-tight text-fg">{item.label}</div>
                             </div>
                             <button type="button" onClick={() => toggleDataDesc(item.id)}
-                              className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-surface hover:text-fg"
+                              className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-bg-elevated hover:text-fg"
                               aria-label={expanded ? 'Hide description' : 'Show description'}>
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                                 className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`}>
@@ -651,7 +651,7 @@ function WizardContent() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <h3 className="text-xs font-semibold uppercase tracking-wider text-fg-muted/80">{t(`wizard.serviceCategories.${currentGroupKey}`)}</h3>
-                    <span className="rounded-full bg-surface px-2 py-0.5 text-[11px] font-medium text-fg-muted">{currentServiceGroupIndex + 1}/{totalServicePages}</span>
+                    <span className="rounded-full bg-bg-elevated px-2 py-0.5 text-[11px] font-medium text-fg-muted">{currentServiceGroupIndex + 1}/{totalServicePages}</span>
                   </div>
                   <label className="flex cursor-pointer items-center gap-2 text-xs text-fg-muted">
                     <input type="checkbox"
@@ -676,7 +676,7 @@ function WizardContent() {
                           <div className="text-sm font-medium leading-tight text-fg">{service.name}</div>
                         </div>
                         <button type="button" onClick={() => toggleServiceDesc(service.id)}
-                          className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-surface hover:text-fg"
+                          className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-bg-elevated hover:text-fg"
                           aria-label={expanded ? 'Hide description' : 'Show description'}>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                             className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`}>
@@ -697,12 +697,12 @@ function WizardContent() {
                 {totalServicePages > 1 && (
                   <div className="flex items-center justify-between pt-2">
                     <button type="button" onClick={() => setCurrentServiceGroupIndex(i => Math.max(0, i - 1))} disabled={currentServiceGroupIndex === 0}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-fg transition-colors hover:bg-surface disabled:cursor-not-allowed disabled:opacity-40">
+                      className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-fg transition-colors hover:bg-bg-elevated disabled:cursor-not-allowed disabled:opacity-40">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5"><path d="M15 18l-6-6 6-6" /></svg>
                       {t('prev')}
                     </button>
                     <button type="button" onClick={() => setCurrentServiceGroupIndex(i => Math.min(totalServicePages - 1, i + 1))} disabled={currentServiceGroupIndex >= totalServicePages - 1}
-                      className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-fg transition-colors hover:bg-surface disabled:cursor-not-allowed disabled:opacity-40">
+                      className="inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-1.5 text-xs font-medium text-fg transition-colors hover:bg-bg-elevated disabled:cursor-not-allowed disabled:opacity-40">
                       {t('next')}
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5"><path d="M9 18l6-6-6-6" /></svg>
                     </button>
@@ -735,7 +735,7 @@ function WizardContent() {
                           <div className="mt-0.5 text-xs text-fg-muted/70">{lawFullName} · {lawRegion}</div>
                         </div>
                         <button type="button" onClick={() => toggleLawDesc(lawId)}
-                          className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-surface hover:text-fg"
+                          className="mt-0.5 shrink-0 rounded-md p-1 text-fg-muted hover:bg-bg-elevated hover:text-fg"
                           aria-label={expanded ? 'Hide description' : 'Show description'}>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
                             className={`h-4 w-4 transition-transform ${expanded ? 'rotate-180' : ''}`}>
@@ -794,7 +794,7 @@ function WizardContent() {
           {!showResult && (
             <div className="flex items-center justify-between pt-2">
               <button type="button" onClick={() => { setStep(s => Math.max(1, s - 1)); setShowValidation(false) }} disabled={step <= 1}
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-surface disabled:cursor-not-allowed disabled:opacity-40">
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-bg-elevated disabled:cursor-not-allowed disabled:opacity-40">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                 {t('wizard.nav.back')}
               </button>
@@ -816,7 +816,7 @@ function WizardContent() {
 
           {/* Validation message */}
           {showValidation && !requiredFieldsValid && (
-            <div className="flex items-center gap-2 rounded-lg border border-dashed border-fg-muted/30 bg-surface/50 px-4 py-3 text-sm text-fg-muted">
+            <div className="flex items-center gap-2 rounded-lg border border-dashed border-fg-muted/30 bg-bg-elevated/50 px-4 py-3 text-sm text-fg-muted">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 shrink-0 text-amber-500"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
               {t('validation.required')}
             </div>
@@ -849,11 +849,11 @@ function WizardContent() {
               <div>
                 <label className="mb-1.5 block text-xs font-medium text-fg-muted">{t('wizard.result.publicLink')}</label>
                 <div className="flex gap-2">
-                  <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-border bg-surface px-3 py-2 font-mono text-xs text-fg-muted truncate" title={`${typeof window !== "undefined" ? window.location.origin : ""}${generatedUrl}`}>
+                  <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-border bg-bg-elevated px-3 py-2 font-mono text-xs text-fg-muted truncate" title={`${typeof window !== "undefined" ? window.location.origin : ""}${generatedUrl}`}>
                     {`${typeof window !== "undefined" ? window.location.origin : ""}${generatedUrl}`}
                   </div>
                   <button type="button" onClick={copyLink}
-                    className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-fg transition-colors hover:bg-surface">
+                    className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-fg transition-colors hover:bg-bg-elevated">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
                       {copiedLink
                         ? <polyline points="20 6 9 17 4 12" />
@@ -874,7 +874,7 @@ function WizardContent() {
 
               <div className="flex gap-3">
                 <button type="button" onClick={() => { setStep(1); setGeneratedUrl(''); setShowValidation(false) }}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-surface">
+                  className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-bg-elevated">
                   {t('wizard.result.editAnswers')}
                 </button>
               </div>
@@ -902,7 +902,7 @@ function WizardContent() {
             </div>
 
             <div className="overflow-hidden rounded-xl border border-border bg-bg shadow-sm ring-1 ring-fg/5">
-              <div className="flex items-center gap-1.5 border-b border-border bg-surface px-3 py-2">
+              <div className="flex items-center gap-1.5 border-b border-border bg-bg-elevated px-3 py-2">
                 <div className="h-2.5 w-2.5 rounded-full bg-fg-muted/20"></div>
                 <div className="h-2.5 w-2.5 rounded-full bg-fg-muted/20"></div>
                 <div className="h-2.5 w-2.5 rounded-full bg-fg-muted/20"></div>
@@ -920,7 +920,7 @@ function WizardContent() {
               </div>
             </div>
             <button type="button" onClick={() => setShowMobilePreview(v => !v)}
-              className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-bg px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-surface lg:hidden">
+              className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-bg px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-bg-elevated lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
                 <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
               </svg>
@@ -937,11 +937,11 @@ function WizardContent() {
             <div className="mb-3 flex items-center justify-between">
               <span className="text-sm font-semibold text-fg">{t('wizard.preview.livePreview')}</span>
               <span className="inline-flex items-center rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-semibold text-accent">{stepTitles[step - 1]}</span>
-              <button type="button" onClick={() => setShowMobilePreview(false)} className="rounded-lg p-1.5 text-fg-muted hover:bg-surface">
+              <button type="button" onClick={() => setShowMobilePreview(false)} className="rounded-lg p-1.5 text-fg-muted hover:bg-bg-elevated">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
               </button>
             </div>
-            <div className="rounded-xl border border-border bg-surface p-4">
+            <div className="rounded-xl border border-border bg-bg-elevated p-4">
               <PolicyPreviewContent
                 answers={answers}
                 step={step}

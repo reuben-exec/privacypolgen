@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import SeoHead from '@/components/SeoHead.astro';
+import AnnouncementBanner from '@/components/AnnouncementBanner.tsx';
 import { getTranslations, t } from '@/lib/i18n-server';
 
 // Google AdSense — set PUBLIC_ADSENSE_CLIENT env var before deploying live
@@ -118,6 +119,7 @@ if (pageKey) {
       Skip to content
     </a>
     {!bare && <Header />}
+    {!bare && <AnnouncementBanner client:load />}
     <main id="main-content" class="flex-1">
       <slot />
     </main>

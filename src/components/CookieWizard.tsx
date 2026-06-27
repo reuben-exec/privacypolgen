@@ -209,11 +209,11 @@ function CookieWizardContent() {
             <div>
               <label className="mb-1.5 block text-xs font-medium text-fg-muted">{t('cookieWizard.result.publicLink')}</label>
               <div className="flex gap-2">
-                <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-border bg-surface px-3 py-2 font-mono text-xs text-fg-muted truncate" title={`${typeof window !== 'undefined' ? window.location.origin : ''}${generatedUrl}`}>
+                <div className="min-w-0 flex-1 overflow-hidden rounded-lg border border-border bg-bg-elevated px-3 py-2 font-mono text-xs text-fg-muted truncate" title={`${typeof window !== 'undefined' ? window.location.origin : ''}${generatedUrl}`}>
                   {`${typeof window !== 'undefined' ? window.location.origin : ''}${generatedUrl}`}
                 </div>
                 <button type="button" onClick={copyLink}
-                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-fg transition-colors hover:bg-surface">
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-xs font-medium text-fg transition-colors hover:bg-bg-elevated">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
                     {copiedLink ? <polyline points="20 6 9 17 4 12" /> : <><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></>}
                   </svg>
@@ -231,7 +231,7 @@ function CookieWizardContent() {
 
             <div className="flex gap-3">
               <button type="button" onClick={() => { setStep(1); setGeneratedUrl(''); setShowValidation(false) }}
-                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-surface">
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-bg-elevated">
                 {t('cookieWizard.result.editAnswers')}
               </button>
             </div>
@@ -243,7 +243,7 @@ function CookieWizardContent() {
       {step < 4 && (
         <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
           <button type="button" onClick={() => { setStep(s => Math.max(1, s - 1)); setShowValidation(false) }} disabled={step <= 1}
-            className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-surface disabled:cursor-not-allowed disabled:opacity-40">
+            className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-fg transition-colors hover:bg-bg-elevated disabled:cursor-not-allowed disabled:opacity-40">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             {t('wizard.nav.back')}
           </button>
@@ -264,7 +264,7 @@ function CookieWizardContent() {
       )}
 
       {showValidation && !requiredFieldsValid && (
-        <div className="mt-4 flex items-center gap-2 rounded-lg border border-dashed border-fg-muted/30 bg-surface/50 px-4 py-3 text-sm text-fg-muted">
+        <div className="mt-4 flex items-center gap-2 rounded-lg border border-dashed border-fg-muted/30 bg-bg-elevated/50 px-4 py-3 text-sm text-fg-muted">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 shrink-0 text-amber-500"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
           {t('validation.required')}
         </div>
