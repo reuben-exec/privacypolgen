@@ -42,4 +42,7 @@ jobs:
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: bac6330c07e1b39aa6a11545bbe3a6d0
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           command: pages deploy dist --project-name=privacypolgen
+          preCommands: wrangler whoami
