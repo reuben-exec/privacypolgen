@@ -38,14 +38,11 @@ jobs:
           PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
 
-      - name: Install Wrangler globally
+      - name: Install Wrangler
         run: npm install -g wrangler
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: bac6330c07e1b39aa6a11545bbe3a6d0
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy dist --project-name=privacypolgen
-          preCommands: wrangler whoami
+        run: wrangler pages deploy dist --project-name=privacypolgen
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: bac6330c07e1b39aa6a11545bbe3a6d0
