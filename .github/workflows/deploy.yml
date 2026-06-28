@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: 'npm'
@@ -39,7 +39,7 @@ jobs:
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: pages deploy dist --project-name=privacypolgen --commit-dirty=true
+          command: pages deploy dist --project-name=privacypolgen
