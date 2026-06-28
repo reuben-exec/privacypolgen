@@ -1,5 +1,5 @@
 # Deploy to Cloudflare Pages
-# Trigger: push to main, or manual dispatch
+# Trigger: push to master, or manual dispatch
 # Requires: CF_API_TOKEN secret set in GitHub repo settings
 
 name: Deploy to Cloudflare Pages
