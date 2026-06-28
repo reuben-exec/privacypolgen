@@ -38,6 +38,9 @@ jobs:
           PUBLIC_ADSENSE_CLIENT: ${{ secrets.PUBLIC_ADSENSE_CLIENT }}
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
 
+      - name: Install Wrangler globally
+        run: npm install -g wrangler
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
