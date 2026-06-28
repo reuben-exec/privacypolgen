@@ -1,0 +1,27 @@
+# Security.txt — https://securitytxt.org
+# Defines the preferred method for security researchers to
+# responsibly disclose vulnerabilities in this project.
+
+# Contact email for vulnerability reports
+Contact: mailto:benatwork4747@gmail.com
+
+# Alternative contact — GitHub Issues (once repo is public)
+Contact: https://github.com/reuben-exec/privacypolgen/issues
+
+# Encryption key for secure communication (optional)
+# PGP fingerprint available on request
+
+# Preferred languages for disclosure
+Preferred-Languages: en
+
+# Canonical URL for this file
+Canonical: https://www.privacypolgen.in/.well-known/security.txt
+
+# Expiry date — 1 year from creation
+Expires: 2027-06-28T20:00:00.000Z
+
+# Policy URL (optional — link to disclosure policy)
+# Policy: https://www.privacypolgen.in/security-policy
+
+# Attribution
+Acknowledgments: https://github.com/reuben-exec/privacypolgen/graphs/contributors
