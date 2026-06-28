@@ -108,7 +108,8 @@ function buildSchema() {
         '@type': 'ListItem',
         position: i + 1,
         name: b.name,
-        item: b.url,
+        // Resolve to absolute URL — schema.org requires absolute URLs for item
+        item: b.url.startsWith('http') ? b.url : new URL(b.url, Astro.site).toString(),
       })),
     };
   }

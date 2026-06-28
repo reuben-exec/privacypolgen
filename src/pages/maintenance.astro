@@ -1,0 +1,19 @@
+---
+// Maintenance page — redirects to home
+// This file exists solely to overwrite the old cached maintenance page
+// on the Cloudflare edge. The real maintenance page was deleted in v1.0.2.
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting — PrivacyPolGen</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <link rel="canonical" href="/" />
+  </head>
+  <body>
+    <script>window.location.replace("/");</script>
+    <p>Redirecting to <a href="/">PrivacyPolGen</a>…</p>
+  </body>
+</html>

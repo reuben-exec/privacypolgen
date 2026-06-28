@@ -15,7 +15,7 @@ export default defineConfig({
         // Exclude noindex viewer pages and error pages
         // filter receives the full URL, e.g. https://www.privacypolgen.in/p/
         const path = new URL(page).pathname.replace(/\/$/, '');
-        const noindexPaths = ['/p', '/c', '/t', '/404', '/500'];
+        const noindexPaths = ['/p', '/c', '/t', '/404', '/500', '/maintenance'];
         if (noindexPaths.some(p => path === p || path.startsWith(p + '/'))) {
           return false;
         }
